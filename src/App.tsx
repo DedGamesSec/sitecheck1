@@ -207,7 +207,7 @@ export default function App() {
       linkIcon.setAttribute("type", "image/svg+xml");
       document.head.appendChild(linkIcon);
     }
-    linkIcon.setAttribute("href", "/favicon.svg");
+    linkIcon.setAttribute("href", `${import.meta.env.BASE_URL}favicon.svg`);
 
     const descriptions: Record<string, Record<string, string>> = {
       ru: {
@@ -717,9 +717,9 @@ export default function App() {
             </motion.div>
           )}
 
-          {activePage === "early-access" && (
+          {(activePage === "download" || activePage === "early-access") && (
             <motion.div
-              key="early-access-page"
+              key={`${activePage}-page`}
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
@@ -730,6 +730,7 @@ export default function App() {
               <div className="flex-1 flex flex-col bg-[#0A0A0B]/90 backdrop-blur-sm">
                 <EarlyAccessPage />
               </div>
+              <PageNavigationFooter currentPage={activePage} />
               <Footer 
                 onOpenPrivacy={() => {
                   setLegalModalTab("privacy");

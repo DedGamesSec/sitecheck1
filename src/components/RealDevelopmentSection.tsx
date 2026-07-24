@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { useTranslation } from "../i18n/LanguageContext";
 import { LanguageCode } from "../i18n/languages";
 import { motion, AnimatePresence } from "motion/react";
-import { Shield, Award, Cpu, Network, FileCode, CheckCircle2, Copy, Download, ExternalLink, Sparkles, Send, AlertTriangle, RefreshCw, AlertCircle, Play, Info, ShieldCheck, Milestone, BarChart3 } from "lucide-react";
-import { SiTelegram, SiVk } from "react-icons/si";
+import { Shield, Award, Cpu, Network, FileCode, CheckCircle2, Copy, Download, ExternalLink, Sparkles, Send, AlertTriangle, RefreshCw, AlertCircle, Play, Info, ShieldCheck, Milestone } from "lucide-react";
+import { SiTelegram, SiVk, SiGithub } from "react-icons/si";
 
-const certImg = "/real_cert.jpg";
-const graphImg = "/real_obsidian.png";
+const base = typeof import.meta !== "undefined" ? import.meta.env.BASE_URL : "/";
+const certImg = `${base}real_cert.jpg`;
+const graphImg = `${base}real_obsidian.png`;
 
 export default function RealDevelopmentSection({ onlyRoadmap = false }: { onlyRoadmap?: boolean }) {
   const { t, language } = useTranslation();
@@ -336,7 +337,7 @@ export default function RealDevelopmentSection({ onlyRoadmap = false }: { onlyRo
                         )}
                       </button>
                       <a
-                        href="/rubert_fraud_int8.onnx"
+                        href={`${base}rubert_fraud_int8.onnx`}
                         download="rubert_fraud_int8.onnx"
                         className="flex-1 py-2.5 px-3 rounded-lg font-mono text-xs font-bold border border-[#2E7DFF]/50 bg-[#2E7DFF]/10 hover:bg-[#2E7DFF]/20 text-[#2E7DFF] transition-all flex items-center justify-center gap-1.5"
                       >
@@ -399,6 +400,15 @@ export default function RealDevelopmentSection({ onlyRoadmap = false }: { onlyRo
                           </span>
                         </div>
                       </div>
+                      <a
+                        href="https://github.com/TrustNodeLab"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-3 inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-[#111827] border border-[#2E7DFF]/20 hover:border-[#2E7DFF]/50 text-gray-400 hover:text-[#2E7DFF] transition-all font-mono text-[10px] font-semibold w-full justify-center"
+                      >
+                        <SiGithub className="w-3.5 h-3.5" />
+                        {language === "ru" ? "Исходный код на GitHub" : "Source code on GitHub"}
+                      </a>
                     </div>
                   </div>
 
@@ -501,6 +511,17 @@ export default function RealDevelopmentSection({ onlyRoadmap = false }: { onlyRo
                       <SiVk className="w-4 h-4 text-[#2E7DFF]" />
                       {language === "ru" ? "Сообщить во VK" : "Report via VK"}
                     </a>
+                    <a
+                      href="https://github.com/TrustNodeLab/security"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="GitHub"
+                      title="GitHub"
+                      className="inline-flex items-center justify-center gap-2 min-h-11 px-4 py-2.5 rounded-xl bg-[#111A2E] border border-[#2E7DFF]/40 text-gray-200 hover:text-white hover:bg-[#15233D] transition-colors font-sans text-xs font-bold"
+                    >
+                      <SiGithub className="w-4 h-4 text-[#2E7DFF]" />
+                      {language === "ru" ? "Сообщить на GitHub" : "Report via GitHub"}
+                    </a>
                   </div>
                 </div>
 
@@ -539,36 +560,18 @@ export default function RealDevelopmentSection({ onlyRoadmap = false }: { onlyRo
                       </div>
                     ))}
                   </div>
+                  <a
+                    href="https://github.com/TrustNodeLab"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-5 inline-flex items-center gap-2 text-gray-400 hover:text-[#2E7DFF] font-mono text-[10px] transition-colors"
+                  >
+                    <SiGithub className="w-3.5 h-3.5" />
+                    {language === "ru" ? "Все проекты TrustNode на GitHub" : "All TrustNode projects on GitHub"}
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
                 </div>
 
-                {/* Quality Metrics */}
-                <div className="p-6 rounded-2xl bg-[#0C0D11]/90 border border-[#1F2937]/50">
-                  <div className="flex items-center gap-2.5 mb-5 border-b border-white/[0.04] pb-3">
-                    <BarChart3 className="w-5 h-5 text-[#2E7DFF]" />
-                    <h4 className="font-display font-bold text-base text-white">
-                      {language === "ru" ? "Метрики качества" : "Quality Metrics"}
-                    </h4>
-                  </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                    {(language === "ru" ? [
-                      { label: "Точность модели (Precision / Recall)", value: "92% / 88%", note: "Целевые показатели на этапе архитектуры" },
-                      { label: "Покрытие тестами", value: "[TODO: подставить реальное значение]", note: "Агрегированный показатель по модулю" },
-                      { label: "Независимые аудиты", value: "[TODO: подставить реальное значение]", note: "Внешние проверки безопасности" },
-                      { label: "Критические инциденты в проде", value: "[TODO: подставить реальное значение]", note: "Зафиксированные инциденты в production" },
-                    ] : [
-                      { label: "Model accuracy (Precision / Recall)", value: "92% / 88%", note: "Target indicators at architecture stage" },
-                      { label: "Test coverage", value: "[TODO: substitute real value]", note: "Aggregated module coverage metric" },
-                      { label: "Independent audits", value: "[TODO: substitute real value]", note: "External security reviews" },
-                      { label: "Critical incidents in production", value: "[TODO: substitute real value]", note: "Recorded production incidents" },
-                    ]).map((metric, idx) => (
-                      <div key={idx} className="p-4 rounded-xl bg-black/40 border border-white/[0.03] space-y-2">
-                        <div className="font-mono text-[9px] text-gray-500 uppercase tracking-wider leading-snug">{metric.label}</div>
-                        <div className="font-display font-bold text-xl text-[#2E7DFF]">{metric.value}</div>
-                        <div className="font-sans text-[10px] text-gray-600 leading-relaxed">{metric.note}</div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
               </motion.div>
             )}
 

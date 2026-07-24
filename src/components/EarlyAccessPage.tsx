@@ -216,12 +216,13 @@ export default function EarlyAccessPage() {
                     {uiText.github}
                   </a>
                   <a
-                    href="#rustore-link-tbd"
+                    href="https://github.com/TrustNodeLab"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-full sm:flex-1 py-3.5 px-4 rounded-xl font-sans text-xs font-bold bg-[#111A2E] border border-[#2E7DFF]/40 text-gray-200 hover:text-white hover:bg-[#15233D] transition-colors flex items-center justify-center gap-2"
                   >
-                    {/* TODO: ссылка появится позже */}
                     <ExternalLink className="w-4 h-4" />
-                    {uiText.rustore}
+                    {language === "ru" ? "GitHub организации" : "GitHub Organization"}
                   </a>
                 </div>
 

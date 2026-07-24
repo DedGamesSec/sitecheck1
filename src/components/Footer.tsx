@@ -106,6 +106,15 @@ const Footer = React.memo(function Footer({ onOpenPrivacy, onOpenTerms }: Footer
             <p className="font-mono text-[9px] text-gray-600 mt-2 uppercase tracking-widest max-w-full break-words whitespace-normal text-center md:text-left">
               {t.footer.version}
             </p>
+            <a
+              href="https://github.com/TrustNodeLab"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 inline-flex items-center gap-1.5 font-mono text-[9px] text-gray-500 hover:text-[#2E7DFF] transition-colors"
+            >
+              <SiGithub className="w-3 h-3" />
+              TrustNodeLab on GitHub
+            </a>
           </div>
         </div>
 

@@ -35,6 +35,20 @@
     background-color: #070709;
     color: #F5F5F0;
     font-family: 'Inter', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    overscroll-behavior: none;
+  }
+
+  @media (max-width: 640px) {
+    html {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 380px) {
+    html {
+      font-size: 12px;
+    }
   }
 }
 
