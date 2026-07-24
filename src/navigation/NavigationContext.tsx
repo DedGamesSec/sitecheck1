@@ -10,7 +10,9 @@ interface NavigationContextValue {
 const NavigationContext = createContext<NavigationContextValue | null>(null);
 
 function resolvePageFromPath(path: string): PageId {
-  const normalized = path.replace(/\/+$/, "") || "/";
+  const base = import.meta.env.BASE_URL || "/";
+  const stripped = path.startsWith(base) ? path.slice(base.length - 1) : path;
+  const normalized = stripped.replace(/\/+$/, "") || "/";
   if (normalized === "/" || normalized === "/index.html") return "home";
   if (normalized === "/how-it-works") return "how-it-works";
   if (normalized === "/tech") return "tech";
@@ -38,7 +40,8 @@ export function NavigationProvider({ children }: { children: React.ReactNode }) 
 
   const navigateTo = (page: PageId, anchorId?: string) => {
     setActivePage(page);
-    const path = page === "home" ? "/" : `/${page}`;
+    const base = import.meta.env.BASE_URL || "/";
+    const path = page === "home" ? base : `${base}${page}`;
     
     // Update browser history
     if (window.location.pathname !== path) {
