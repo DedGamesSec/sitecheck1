@@ -1,0 +1,7 @@
+{
+  "name": "TrustNode",
+  "description": "TrustNode - Advanced local dome and protection ecosystem with integrated database tracking.",
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

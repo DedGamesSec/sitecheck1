@@ -1,0 +1,272 @@
+export interface SkyLabels {
+  sun: string;
+  sunDesc: string;
+  moon: string;
+  moonDesc: string;
+  venus: string;
+  venusDesc: string;
+  mars: string;
+  marsDesc: string;
+  jupiter: string;
+  jupiterDesc: string;
+  saturn: string;
+  saturnDesc: string;
+  comet: string;
+  asteroid: string;
+  constellation: string;
+  magnitude: string;
+  altitude: string;
+  keplerianOrbitAlt: string;
+  orbit: string;
+  az: string;
+}
+
+export const SKY_LABELS_I18N: Record<string, SkyLabels> = {
+  ru: {
+    sun: "Солнце",
+    sunDesc: "Звезда G2V",
+    moon: "Луна",
+    moonDesc: "Естественный спутник",
+    venus: "Венера",
+    venusDesc: "Планета (-4.2m)",
+    mars: "Марс",
+    marsDesc: "Планета (Красная)",
+    jupiter: "Юпитер",
+    jupiterDesc: "Газовый гигант",
+    saturn: "Сатурн",
+    saturnDesc: "Планета с кольцами",
+    comet: "Комета",
+    asteroid: "Астероид",
+    constellation: "Созвездие",
+    magnitude: "Вид. величина",
+    altitude: "Высота над горизонтом",
+    keplerianOrbitAlt: "Кеплерова орбита // Высота",
+    orbit: "Орбита",
+    az: "Аз"
+  },
+  en: {
+    sun: "Sun",
+    sunDesc: "Star G2V",
+    moon: "Moon",
+    moonDesc: "Natural Satellite",
+    venus: "Venus",
+    venusDesc: "Planet (-4.2m)",
+    mars: "Mars",
+    marsDesc: "Red Planet",
+    jupiter: "Jupiter",
+    jupiterDesc: "Gas Giant",
+    saturn: "Saturn",
+    saturnDesc: "Ringed Planet",
+    comet: "Comet",
+    asteroid: "Asteroid",
+    constellation: "Constellation",
+    magnitude: "Magnitude",
+    altitude: "Altitude above horizon",
+    keplerianOrbitAlt: "Keplerian Orbit // Alt",
+    orbit: "Orbit",
+    az: "Az"
+  },
+  es: {
+    sun: "Sol",
+    sunDesc: "Estrella G2V",
+    moon: "Luna",
+    moonDesc: "Satélite Natural",
+    venus: "Venus",
+    venusDesc: "Planeta (-4.2m)",
+    mars: "Marte",
+    marsDesc: "Planeta Rojo",
+    jupiter: "Júpiter",
+    jupiterDesc: "Gigante Gaseoso",
+    saturn: "Saturno",
+    saturnDesc: "Planeta con Anillos",
+    comet: "Cometa",
+    asteroid: "Asteroide",
+    constellation: "Constelación",
+    magnitude: "Magnitud",
+    altitude: "Altitud sobre el horizonte",
+    keplerianOrbitAlt: "Órbita Kepleriana // Alt",
+    orbit: "Órbita",
+    az: "Az"
+  },
+  zh: {
+    sun: "太阳",
+    sunDesc: "G2V恒星",
+    moon: "月球",
+    moonDesc: "天然卫星",
+    venus: "金星",
+    venusDesc: "行星 (-4.2m)",
+    mars: "火星",
+    marsDesc: "红色行星",
+    jupiter: "木星",
+    jupiterDesc: "气态巨行星",
+    saturn: "土星",
+    saturnDesc: "带环行星",
+    comet: "彗星",
+    asteroid: "小行星",
+    constellation: "星座",
+    magnitude: "星等",
+    altitude: "地平高度",
+    keplerianOrbitAlt: "开普勒轨道 // 高度",
+    orbit: "轨道",
+    az: "方位角"
+  },
+  ar: {
+    sun: "الشمس",
+    sunDesc: "نجم G2V",
+    moon: "القمر",
+    moonDesc: "قمر طبيعي",
+    venus: "الزهرة",
+    venusDesc: "كوكب (-4.2m)",
+    mars: "المريخ",
+    marsDesc: "الكوكب الأحمر",
+    jupiter: "المشتري",
+    jupiterDesc: "عملاق غازي",
+    saturn: "زحل",
+    saturnDesc: "كوكب ذو حلقات",
+    comet: "مذنب",
+    asteroid: "كويكب",
+    constellation: "كوكبة",
+    magnitude: "القدر الظاهري",
+    altitude: "الارتفاع فوق الأفق",
+    keplerianOrbitAlt: "مدار كبلري // الارتفاع",
+    orbit: "المدار",
+    az: "السمت"
+  },
+  fr: {
+    sun: "Soleil",
+    sunDesc: "Étoile G2V",
+    moon: "Lune",
+    moonDesc: "Satellite Naturel",
+    venus: "Vénus",
+    venusDesc: "Planète (-4.2m)",
+    mars: "Mars",
+    marsDesc: "Planète Rouge",
+    jupiter: "Jupiter",
+    jupiterDesc: "Géante Gazeuse",
+    saturn: "Saturne",
+    saturnDesc: "Planète à Anneaux",
+    comet: "Comète",
+    asteroid: "Asteroide",
+    constellation: "Constellation",
+    magnitude: "Magnitude",
+    altitude: "Altitude au-dessus de l'horizon",
+    keplerianOrbitAlt: "Orbite Képlérienne // Alt",
+    orbit: "Orbite",
+    az: "Az"
+  },
+  de: {
+    sun: "Sonne",
+    sunDesc: "Stern G2V",
+    moon: "Mond",
+    moonDesc: "Natürlicher Satellit",
+    venus: "Venus",
+    venusDesc: "Planet (-4.2m)",
+    mars: "Mars",
+    marsDesc: "Roter Planet",
+    jupiter: "Jupiter",
+    jupiterDesc: "Gasriese",
+    saturn: "Saturn",
+    saturnDesc: "Ringplanet",
+    comet: "Komet",
+    asteroid: "Asteroid",
+    constellation: "Sternbild",
+    magnitude: "Helligkeit",
+    altitude: "Höhe über dem Horizont",
+    keplerianOrbitAlt: "Keplersche Umlaufbahn // Höhe",
+    orbit: "Umlaufbahn",
+    az: "Az"
+  },
+  pt: {
+    sun: "Sol",
+    sunDesc: "Estrela G2V",
+    moon: "Lua",
+    moonDesc: "Satélite Natural",
+    venus: "Vênus",
+    venusDesc: "Planeta (-4.2m)",
+    mars: "Marte",
+    marsDesc: "Planeta Vermelho",
+    jupiter: "Júpiter",
+    jupiterDesc: "Gigante Gasoso",
+    saturn: "Saturno",
+    saturnDesc: "Planeta com Anéis",
+    comet: "Cometa",
+    asteroid: "Asteroide",
+    constellation: "Constelação",
+    magnitude: "Magnitude",
+    altitude: "Altitude acima do horizonte",
+    keplerianOrbitAlt: "Órbita Kepleriana // Alt",
+    orbit: "Órbita",
+    az: "Az"
+  },
+  hi: {
+    sun: "सूर्य",
+    sunDesc: "G2V तारा",
+    moon: "चंद्रमा",
+    moonDesc: "प्राकृतिक उपग्रह",
+    venus: "शुक्र",
+    venusDesc: "ग्रह (-4.2m)",
+    mars: "मंगल",
+    marsDesc: "लाल ग्रह",
+    jupiter: "बृहस्पति",
+    jupiterDesc: "गैस विशालकाय",
+    saturn: "शनि",
+    saturnDesc: "वलय वाला ग्रह",
+    comet: "धूमкеतु",
+    asteroid: "क्षुद्रग्रह",
+    constellation: "नक्षत्र",
+    magnitude: "परिमाण",
+    altitude: "क्षितिज से ऊपर ऊंचाई",
+    keplerianOrbitAlt: "केप्लेरियन कक्षा // ऊंचाई",
+    orbit: "कक्षा",
+    az: "दिगंश"
+  },
+  ja: {
+    sun: "太陽",
+    sunDesc: "G2V型主系列星",
+    moon: "月",
+    moonDesc: "自然衛星",
+    venus: "金星",
+    venusDesc: "惑星 (-4.2m)",
+    mars: "火星",
+    marsDesc: "赤い惑星",
+    jupiter: "木星",
+    jupiterDesc: "ガス巨大惑星",
+    saturn: "土星",
+    saturnDesc: "環のある惑星",
+    comet: "彗星",
+    asteroid: "小惑星",
+    constellation: "星座",
+    magnitude: "実視等級",
+    altitude: "地平高度",
+    keplerianOrbitAlt: "ケプラー軌道 // 高度",
+    orbit: "軌道",
+    az: "方位角"
+  },
+  tr: {
+    sun: "Güneş",
+    sunDesc: "G2V Yıldızı",
+    moon: "Ay",
+    moonDesc: "Doğal Uydu",
+    venus: "Venüs",
+    venusDesc: "Gezegen (-4.2m)",
+    mars: "Mars",
+    marsDesc: "Kızıl Gezegen",
+    jupiter: "Jüpiter",
+    jupiterDesc: "Gaz Devi",
+    saturn: "Satürn",
+    saturnDesc: "Halkalı Gezegen",
+    comet: "Kuyruklu Yıldız",
+    asteroid: "Asteroit",
+    constellation: "Takımyıldız",
+    magnitude: "Kadir",
+    altitude: "Ufuktan Yükseklik",
+    keplerianOrbitAlt: "Kepler Yörüngesi // Yükseklik",
+    orbit: "Yörünge",
+    az: "Az"
+  }
+};
+
+export function getSkyLabel(key: keyof SkyLabels, lang: string): string {
+  const dict = SKY_LABELS_I18N[lang] || SKY_LABELS_I18N["en"];
+  return dict[key] || SKY_LABELS_I18N["en"][key] || "";
+}

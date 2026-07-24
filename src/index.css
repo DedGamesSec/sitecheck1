@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scrollbar-gutter: stable;
+    scrollbar-width: thin;
+    scrollbar-color: #2E7DFF #0A0A0B;
+  }
+
+  html::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  html::-webkit-scrollbar-track {
+    background: #0A0A0B;
+  }
+
+  html::-webkit-scrollbar-thumb {
+    background: #111827;
+    border-radius: 5px;
+    border: 2px solid #0A0A0B;
+  }
+
+  html::-webkit-scrollbar-thumb:hover {
+    background: #2E7DFF;
+  }
+
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-color: #070709;
+    color: #F5F5F0;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .eco-mode *,
+  .eco-mode *::before,
+  .eco-mode *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .eco-mode .animate-ping,
+  .eco-mode .animate-pulse,
+  .eco-mode .animate-bounce {
+    animation: none !important;
+  }
+}

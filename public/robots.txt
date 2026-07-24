@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mishapitolin.github.io/sitemap.xml
