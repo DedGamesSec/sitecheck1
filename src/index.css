@@ -36,7 +36,6 @@
     color: #F5F5F0;
     font-family: 'Inter', sans-serif;
     -webkit-tap-highlight-color: transparent;
-    overscroll-behavior: none;
   }
 
   @media (max-width: 640px) {

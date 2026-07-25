@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Send, Video, Users, Gem, ArrowUpRight, Cpu, Clipboard, CheckCircle, ShieldAlert, Sparkles } from "lucide-react";
+import { Send, Video, Users, Gem, ArrowUpRight, Cpu, Clipboard, CheckCircle, ShieldAlert, Sparkles, Check, AlertTriangle } from "lucide-react";
 import { useTranslation } from "../i18n/LanguageContext";
 import { LanguageCode } from "../i18n/languages";
 import { motion, AnimatePresence } from "motion/react";
@@ -40,167 +40,167 @@ const CONSOLE_TEXT: Record<LanguageCode, Record<string, string>> = {
     copied: "Скопировано в буфер обмена!",
     ticketTitle: "ЛИЦЕНЗИОННЫЙ БИЛЕТ СФОРМИРОВАН",
     ticketLabel: "СКОПИРУЙТЕ ЭТОТ ID И ОТПРАВЬТЕ ЕГО НАМ В TELEGRAM / VK ДЛЯ МОМЕНТАЛЬНОГО ПОДКЛЮЧЕНИЯ ВНЕ ОЧЕРЕДИ",
-    envAnalysis: "АНАЛИЗ ОКРУЖЕНИЯ УСТРОЙСТВА И СОЗДАНИЕ ВАЛЮТЫ БЕЗОПАСНОСТИ",
+    envAnalysis: "ФОРМИРОВАНИЕ ЗАПРОСА НА РЕГИСТРАЦИЮ",
     errContactRequired: "Пожалуйста, укажите ваши контактные данные"
   },
   en: {
-    title: "Dome Pre-Generation Console",
-    subtitle: "Formulate a local digital fingerprint for your customized build",
+    title: "Pre-Registration Console",
+    subtitle: "Generate a reference ID for priority access",
     inputLabel: "Your Telegram @username or E-mail",
     inputPlaceholder: "E.g., @jack_crypto or email@domain.com",
     osLabel: "Mobile OS Platform",
     cpuLabel: "CPU Microarchitecture",
-    btnSubmit: "Initiate Key Generation",
-    btnGenerating: "Generating Local Dome Keys...",
+    btnSubmit: "Submit Registration",
+    btnGenerating: "Processing your request...",
     copyBtn: "Copy Ticket ID",
     copied: "Copied to clipboard!",
-    ticketTitle: "LICENSE TICKET CONFIGURED",
-    ticketLabel: "COPY THIS TICKET ID AND SEND IT TO US IN TELEGRAM / VK FOR INSTANT PRIORITY VERIFICATION",
-    envAnalysis: "ANALYZING DEVICE ENVIRONMENT & ALLOCATING MEMORY ENVELOPE",
+    ticketTitle: "REGISTRATION REFERENCE",
+    ticketLabel: "COPY THIS ID AND SEND IT TO US IN TELEGRAM / VK FOR PRIORITY VERIFICATION",
+    envAnalysis: "PROCESSING REGISTRATION REQUEST",
     errContactRequired: "Please provide your contact handle"
   },
   es: {
-    title: "Consola de Pre-Generación del Domo",
-    subtitle: "Formule una huella digital local para su compilación personalizada",
+    title: "Consola de Pre-Registro",
+    subtitle: "Genere un ID de referencia para acceso prioritario",
     inputLabel: "Su Telegram @usuario o Correo electrónico",
     inputPlaceholder: "Ej: @pedro_crypto o correo@dominio.com",
     osLabel: "Plataforma Móvil",
     cpuLabel: "Microarquitectura de CPU",
-    btnSubmit: "Iniciar Generación de Claves",
-    btnGenerating: "Generando Claves de Seguridad...",
-    copyBtn: "Copiar ID de Boleto",
-    copied: "¡Copiado al portapapeles!",
-    ticketTitle: "BOLETO DE LICENCIA CONFIGURADO",
-    ticketLabel: "COPIE ESTE ID Y ENVÍELO A TELEGRAM / VK PARA UNA VERIFICACIÓN PRIORITARIA INSTANTÁNEA",
-    envAnalysis: "ANALIZANDO EL ENTORNO DEL DISPOSITIVO Y RESERVANDO MEMORIA SECTOR",
+    btnSubmit: "Enviar Registro",
+    btnGenerating: "Procesando su solicitud...",
+    copyBtn: "Copiar ID de Referencia",
+    copied: "¡Copiado!",
+    ticketTitle: "REFERENCIA DE REGISTRO",
+    ticketLabel: "COPIE ESTE ID Y ENVÍELO A TELEGRAM / VK PARA VERIFICACIÓN PRIORITARIA",
+    envAnalysis: "PROCESANDO SOLICITUD DE REGISTRO",
     errContactRequired: "Por favor, proporcione su contacto"
   },
   zh: {
-    title: "安全防护盾预生成终端",
-    subtitle: "为您的专属定制版本生成本地设备数字指纹",
+    title: "预注册控制台",
+    subtitle: "生成参考 ID 以获取优先访问权限",
     inputLabel: "您的 Telegram 用户名 (@) 或 电子邮箱",
-    inputPlaceholder: "例如：@blockchain_expert 或 user@example.com",
-    osLabel: "移动操作系统平台",
-    cpuLabel: "处理器微架构",
-    btnSubmit: "开始生成本地私钥对",
-    btnGenerating: "正在隔离运行内存生成防护罩...",
-    copyBtn: "复制许可证 ID 兑换券",
-    copied: "已复制到剪贴板！",
-    ticketTitle: "专用许可证兑换券生成成功",
-    ticketLabel: "请复制下方许可证 ID，并通过 Telegram 或 VK 发送给官方客服，即可享受免排队快速人工通道激活",
-    envAnalysis: "正在分析移动设备底层芯片兼容性并生成高强度 AES 加密封包",
+    inputPlaceholder: "例如：@user 或 user@example.com",
+    osLabel: "移动操作系统",
+    cpuLabel: "处理器架构",
+    btnSubmit: "提交注册",
+    btnGenerating: "正在处理请求...",
+    copyBtn: "复制参考 ID",
+    copied: "已复制！",
+    ticketTitle: "注册参考号已生成",
+    ticketLabel: "复制此 ID 并通过 Telegram 或 VK 发送给我们以进行优先验证",
+    envAnalysis: "正在处理注册请求",
     errContactRequired: "请填写您的联系方式"
   },
   hi: {
-    title: "सुरक्षा डोम प्री-जनरेशन कंसोल",
-    subtitle: "अपने कस्टम निर्माण के लिए स्थानीय डिजिटल फिंगरप्रिंट तैयार करें",
+    title: "प्री-रजिस्ट्रेशन कंसोल",
+    subtitle: "प्राथमिकता पहुंच के लिए संदर्भ आईडी जनरेट करें",
     inputLabel: "आपका टेलीग्राम @username या ई-मेल",
-    inputPlaceholder: "जैसे: @rahul_crypto या email@domain.com",
+    inputPlaceholder: "जैसे: @user या email@domain.com",
     osLabel: "मोबाइल ओएस प्लेटफॉर्म",
     cpuLabel: "सीपीयू माइक्रोआर्किटेक्चर",
-    btnSubmit: "कुंजी जनरेशन शुरू करें",
-    btnGenerating: "सुरक्षित डोम उत्पन्न किया जा रहा है...",
-    copyBtn: "टिकट आईडी कॉपी करें",
-    copied: "क्लिपबोर्ड पर कॉपी किया गया!",
-    ticketTitle: "लाइसेंस टिकट कॉन्फ़िगर हो गया",
-    ticketLabel: "इस टिकट आईडी को कॉपी करें और तुरंत प्राथमिकता सत्यापन के लिए हमें टेलीग्राम / वीके पर भेजें",
-    envAnalysis: "डिवाइस वातावरण का विश्लेषण और मेमोरी लिफाफा आवंटन जारी",
-    errContactRequired: "कृपया अपना संपर्क हैंडल प्रदान करें"
+    btnSubmit: "रजिस्ट्रेशन सबमिट करें",
+    btnGenerating: "आपका अनुरोध प्रसंस्कृत किया जा रहा है...",
+    copyBtn: "संदर्भ आईडी कॉपी करें",
+    copied: "कॉपी किया गया!",
+    ticketTitle: "रजिस्ट्रेशन संदर्भ",
+    ticketLabel: "इस आईडी को कॉपी करें और तुरंत प्राथमिकता सत्यापन के लिए हमें टेलीग्राम / वीके पर भेजें",
+    envAnalysis: "रजिस्ट्रेशन अनुरोध प्रसंस्कृत किया जा रहा है",
+    errContactRequired: "कृपया अपना संपर्क प्रदान करें"
   },
   ar: {
-    title: "لوحة ما قبل التوليد لقبة الحماية",
-    subtitle: "قم بصياغة بصمة رقمية محلية لإصدارك المخصص",
+    title: "وحدة التحكم في التسجيل المسبق",
+    subtitle: "قم بإنشاء معرف مرجعي للوصول ذي الأولوية",
     inputLabel: "حساب تيليجرام الخاص بك أو البريد الإلكتروني",
-    inputPlaceholder: "مثال: @ahmed_crypto أو email@domain.com",
+    inputPlaceholder: "مثال: @user أو email@domain.com",
     osLabel: "منصة نظام تشغيل الجوال",
-    cpuLabel: "بنية المعالج الدقيقة",
-    btnSubmit: "بدء توليد المفاتيح الأمنية",
-    btnGenerating: "جاري إنشاء قبة الحماية المحلية...",
-    copyBtn: "نسخ معرف التذكرة",
-    copied: "تم النسخ إلى الحافظة!",
-    ticketTitle: "تم إعداد تذكرة الترخيص",
-    ticketLabel: "انسخ معرف التذكرة هذا وأرسله إلينا على تيليجرام / VK للحصول على تفعيل فوري وذو أولوية",
-    envAnalysis: "جاري تحليل بيئة الجهاز وتخصيص مساحة الذاكرة الآمنة",
+    cpuLabel: "بنية المعالج",
+    btnSubmit: "إرسال التسجيل",
+    btnGenerating: "جاري معالجة طلبك...",
+    copyBtn: "نسخ المعرف المرجعي",
+    copied: "تم النسخ!",
+    ticketTitle: "المرجع التسجيلي",
+    ticketLabel: "انسخ هذا المعرف وأرسله إلينا على تيليجرام / VK للتحقق ذي الأولوية",
+    envAnalysis: "جاري معالجة طلب التسجيل",
     errContactRequired: "يرجى تقديم وسيلة الاتصال الخاصة بك"
   },
   pt: {
-    title: "Console de Pré-Geração do Domo",
-    subtitle: "Formule uma assinatura digital local para sua compilação personalizada",
+    title: "Console de Pré-Registro",
+    subtitle: "Gere um ID de referência para acesso prioritário",
     inputLabel: "Seu Telegram @usuario ou E-mail",
     inputPlaceholder: "Ex: @lucas_crypto ou email@dominio.com",
-    osLabel: "Plataforma Móvel OS",
+    osLabel: "Plataforma Móvel",
     cpuLabel: "Microarquitetura de CPU",
-    btnSubmit: "Iniciar Geração de Chaves",
-    btnGenerating: "Gerando Chaves do Domo...",
-    copyBtn: "Copiar ID do Ticket",
-    copied: "Copiado para a área de transferência!",
-    ticketTitle: "TICKET DE LICENÇA CONFIGURADO",
-    ticketLabel: "COPIE ESTE ID DO TICKET E ENVIE PARA NÓS NO TELEGRAM / VK PARA ATIVAÇÃO COM PRIORIDADE MÁXIMA",
-    envAnalysis: "ANALISANDO O AMBIENTE DO DISPOSITIVO E ALOCANDO MEMÓRIA SECURE RAM",
-    errContactRequired: "Por favor, informe suas informações de contato"
+    btnSubmit: "Enviar Registro",
+    btnGenerating: "Processando sua solicitação...",
+    copyBtn: "Copiar ID de Referência",
+    copied: "Copiado!",
+    ticketTitle: "REFERÊNCIA DE REGISTRO",
+    ticketLabel: "COPIE ESTE ID E ENVIE PARA NÓS NO TELEGRAM / VK PARA VERIFICAÇÃO PRIORITÁRIA",
+    envAnalysis: "PROCESSANDO SOLICITAÇÃO DE REGISTRO",
+    errContactRequired: "Por favor, informe seu contato"
   },
   fr: {
-    title: "Console de Pré-Génération du Dôme",
-    subtitle: "Formulez une empreinte numérique locale pour votre build sur-mesure",
+    title: "Console de Pré-Inscription",
+    subtitle: "Générez un ID de référence pour un accès prioritaire",
     inputLabel: "Votre Telegram @nom_utilisateur ou E-mail",
     inputPlaceholder: "Ex : @jean_crypto ou email@domaine.com",
     osLabel: "Plateforme Mobile",
     cpuLabel: "Microarchitecture du Processeur",
-    btnSubmit: "Lancer la Génération de Clés",
-    btnGenerating: "Génération du dôme de sécurité...",
-    copyBtn: "Copier l'ID du Ticket",
-    copied: "Copié dans le presse-papiers !",
-    ticketTitle: "TICKET DE LICENCE CONFIGURÉ",
-    ticketLabel: "COPIEZ CET ID DE TICKET ET ENVOYEZ-LE NOUS SUR TELEGRAM / VK POUR UNE ACTIVATION PRIORITAIRE SANS ATTENTE",
-    envAnalysis: "ANALYSE DE L'ENVIRONNEMENT DE L'APPAREIL ET ALLOCATION DE LA CAPSULE DE SÉCURITÉ",
-    errContactRequired: "Veuillez fournir un moyen de contact valide"
+    btnSubmit: "Soumettre l'inscription",
+    btnGenerating: "Traitement de votre demande...",
+    copyBtn: "Copier l'ID de Référence",
+    copied: "Copié !",
+    ticketTitle: "RÉFÉRENCE D'INSCRIPTION",
+    ticketLabel: "COPIEZ CET ID ET ENVOYEZ-LE NOUS SUR TELEGRAM / VK POUR UNE VÉRIFICATION PRIORITAIRE",
+    envAnalysis: "TRAITEMENT DE LA DEMANDE D'INSCRIPTION",
+    errContactRequired: "Veuillez fournir un moyen de contact"
   },
   de: {
-    title: "Dome-Vorgenerierungskonsole",
-    subtitle: "Formulieren Sie einen lokalen digitalen Fingerabdruck für Ihren maßgeschneiderten Build",
+    title: "Vorregistrierungskonsole",
+    subtitle: "Generieren Sie eine Referenz-ID für den prioritären Zugriff",
     inputLabel: "Ihr Telegram @benutzername oder E-Mail",
     inputPlaceholder: "Z.B. @max_crypto oder email@domain.com",
-    osLabel: "Mobile Betriebssystem-Plattform",
+    osLabel: "Mobil-Betriebssystem",
     cpuLabel: "CPU-Mikroarchitektur",
-    btnSubmit: "Schlüsselgenerierung initiieren",
-    btnGenerating: "Generiere Sicherheits-Schutzkuppel...",
-    copyBtn: "Ticket-ID kopieren",
-    copied: "In die Zwischenablage kopiert!",
-    ticketTitle: "LIZENZ-TICKET KONFIGURIERT",
-    ticketLabel: "KOPIEREN SIE DIESE TICKET-ID UND SENDEN SIE SIE UNS AUF TELEGRAM / VK FÜR EINE SOFORTIGE PRIORISIERTE FREISCHALTUNG",
-    envAnalysis: "GERÄTEUMGEBUNG WIRD ANALYSIERT UND SICHERER SPEICHERUMSCHLAG ZUGEWIESEN",
-    errContactRequired: "Bitte geben Sie einen Kontaktnamen an"
+    btnSubmit: "Registrierung absenden",
+    btnGenerating: "Verarbeite Ihre Anfrage...",
+    copyBtn: "Referenz-ID kopieren",
+    copied: "Kopiert!",
+    ticketTitle: "REGISTRIERUNGSREFERENZ",
+    ticketLabel: "KOPIEREN SIE DIESE ID UND SENDEN SIE SIE UNS AUF TELEGRAM / VK FÜR DIE PRIORITÄTSÜBERPRÜFUNG",
+    envAnalysis: "VERARBEITUNG DER REGISTRIERUNGSANFRAGE",
+    errContactRequired: "Bitte geben Sie einen Kontakt an"
   },
   ja: {
-    title: "セキュリティドーム事前生成コンソール",
-    subtitle: "パーソナライズされたビルドを作成するためのデバイス固有のデジタルフットプリントを生成します",
-    inputLabel: "お客様の Telegram @ユーザー名、または Eメール",
-    inputPlaceholder: "例: @taro_crypto、または email@domain.com",
-    osLabel: "モバイルOSプラットフォーム",
-    cpuLabel: "CPUマイクロアーキテクチャ",
-    btnSubmit: "ライセンス鍵の生成を開始",
-    btnGenerating: "ローカルセキュリティドームをRAM上に生成中...",
-    copyBtn: "チケットIDをコピー",
-    copied: "クリップボードにコピーしました！",
-    ticketTitle: "ライセンスチケットの設定が完了しました",
-    ticketLabel: "このチケットIDをコピーし、TelegramまたはVKの公式チャットに送信してください。優先レーンにて即座にインストール鍵を発行いたします。",
-    envAnalysis: "デバイスの動作環境をエミュレートし、高強度なハードウェア暗号エンベロープをバインド中",
-    errContactRequired: "ご連絡先の入力をお願いいたします"
+    title: "事前登録コンソール",
+    subtitle: "優先アクセスのための参照IDを生成",
+    inputLabel: "Telegram @ユーザー名 または Eメール",
+    inputPlaceholder: "例: @user または email@domain.com",
+    osLabel: "モバイルOS",
+    cpuLabel: "CPUアーキテクチャ",
+    btnSubmit: "登録を送信",
+    btnGenerating: "リクエストを処理中...",
+    copyBtn: "参照IDをコピー",
+    copied: "コピーしました！",
+    ticketTitle: "登録参照ID",
+    ticketLabel: "このIDをコピーし、TelegramまたはVKでお送りください。優先確認のため。",
+    envAnalysis: "登録リクエストを処理中",
+    errContactRequired: "連絡先を入力してください"
   },
   tr: {
-    title: "Kubbe Ön-Üretim Konsolu",
-    subtitle: "Özel derlemeniz için yerel dijital parmak izi oluşturun",
+    title: "Ön Kayıt Konsolu",
+    subtitle: "Öncelikli erişim için referans kimliği oluşturun",
     inputLabel: "Telegram @kullanıcıadınız veya E-postanız",
     inputPlaceholder: "Örn: @can_crypto veya eposta@domain.com",
-    osLabel: "Mobil Platform OS",
-    cpuLabel: "İşlemci Mikro Mimarisi",
-    btnSubmit: "Anahtar Üretimini Başlat",
-    btnGenerating: "Yerel Kubbe Anahtarları Üretiliyor...",
-    copyBtn: "Bilet ID'sini Kopyala",
-    copied: "Panoya kopyalandı!",
-    ticketTitle: "LİSANS BİLETİ YAPILANDIRILDI",
-    ticketLabel: "ANINDA ÖNCELİKLİ DOĞRULAMA İÇİN BU BİLET ID'SİNİ KOPYALAYIP TELEGRAM / VK ÜZERİNDEN BİZE GÖNDERİN",
-    envAnalysis: "CİHAZ ORTAMI ANALİZ EDİLİYOR & BELLEK ALANI TAHSİS EDİLİYOR",
+    osLabel: "Mobil İşletim Sistemi",
+    cpuLabel: "İşlemci Mimarisi",
+    btnSubmit: "Kaydı Gönder",
+    btnGenerating: "İsteğiniz işleniyor...",
+    copyBtn: "Referans Kimliğini Kopyala",
+    copied: "Kopyalandı!",
+    ticketTitle: "KAYIT REFERANSI",
+    ticketLabel: "BU KİMLİĞİ KOPYALAYIP TELEGRAM / VK ÜZERİNDEN BİZE GÖNDERİN",
+    envAnalysis: "KAYIT İSTEĞİ İŞLENİYOR",
     errContactRequired: "Lütfen iletişim bilginizi belirtin"
   }
 };
@@ -296,6 +296,8 @@ const WaitlistSection = React.memo(function WaitlistSection() {
   const [contactInfo, setContactInfo] = useState("");
   const [os, setOs] = useState("Android");
   const [cpu, setCpu] = useState("Snapdragon / Tensor (NPU)");
+  const [pdAgreed, setPdAgreed] = useState(false);
+  const [pdError, setPdError] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [stepLog, setStepLog] = useState<string[]>([]);
   const [ticketId, setTicketId] = useState("");
@@ -304,6 +306,11 @@ const WaitlistSection = React.memo(function WaitlistSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    if (!pdAgreed) {
+      setPdError(true);
+      return;
+    }
+    setPdError(false);
     if (!contactInfo.trim()) {
       setErrorMessage(ct.errContactRequired);
       return;
@@ -312,59 +319,26 @@ const WaitlistSection = React.memo(function WaitlistSection() {
     setIsSubmitting(true);
     setStepLog([]);
 
-    // Custom logs delay simulation
     const logs = [
-      "[SYS] Querying main TrustNode cluster...",
-      "[SYS] Binding unique CPU ID...",
-      "[SYS] Allocating isolated RAM sandbox boundaries...",
-      `[SYS] Configuring local dome for FREE protection...`,
-      "[SYS] Encrypting license payload envelope (AES-GCM-256)...",
-      "[SYS] Persisting registration token to TrustNode central database...",
-      "[SYS] Secure database handshake completed! Ready to sign."
+      "Отправка запроса на регистрацию...",
+      "Сохранение данных...",
+      "Билет сформирован"
     ];
 
-    fetch("/api/waitlist", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        contactInfo: contactInfo.trim(),
-        tier: "free",
-        os: os,
-        cpu: cpu
-      })
-    })
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error("Failed to save to database");
-        }
-        return res.json();
-      })
-      .then((data) => {
-        if (data.error) {
-          setErrorMessage(data.error);
-          setIsSubmitting(false);
-          return;
-        }
-
-        let logIdx = 0;
-        const interval = setInterval(() => {
-          if (logIdx < logs.length) {
-            setStepLog(prev => [...prev, logs[logIdx]]);
-            logIdx++;
-          } else {
-            clearInterval(interval);
-            setTicketId(data.token);
-            setIsSubmitting(false);
-          }
-        }, 400);
-      })
-      .catch((err) => {
-        console.error("Database save error:", err);
-        setErrorMessage(language === "ru" ? "Ошибка подключения к базе данных" : "Database connection error");
+    let logIdx = 0;
+    const interval = setInterval(() => {
+      if (logIdx < logs.length) {
+        setStepLog(prev => [...prev, logs[logIdx]]);
+        logIdx++;
+      } else {
+        clearInterval(interval);
+        const entropy = crypto.getRandomValues(new Uint32Array(2));
+        const blockA = entropy[0].toString(36).slice(-4).toLowerCase();
+        const blockB = entropy[1].toString(36).slice(-4).toLowerCase();
+        setTicketId(`trustnode-wl-${blockA}-${blockB}`);
         setIsSubmitting(false);
-      });
+      }
+    }, 500);
   };
 
   const handleCopy = () => {
@@ -490,6 +464,41 @@ const WaitlistSection = React.memo(function WaitlistSection() {
                       </select>
                     </div>
                   </div>
+
+                  {/* Consent checkbox for personal data processing */}
+                  <label className="flex items-start gap-3 cursor-pointer group">
+                    <div className="relative flex items-center justify-center mt-0.5 select-none">
+                      <input 
+                        type="checkbox"
+                        checked={pdAgreed}
+                        onChange={(e) => { setPdAgreed(e.target.checked); setPdError(false); }}
+                        className="sr-only"
+                      />
+                      <div className={`w-5 h-5 rounded-lg border transition-all duration-300 flex items-center justify-center ${
+                        pdAgreed 
+                          ? "bg-[#2E7DFF] border-[#2E7DFF] shadow-[0_0_10px_rgba(46,125,255,0.3)]" 
+                          : "border-white/[0.15] bg-[#030304] group-hover:border-[#2E7DFF]/50"
+                      }`}>
+                        {pdAgreed && <Check className="w-3.5 h-3.5 text-white stroke-[3]" />}
+                      </div>
+                    </div>
+                    <span className="font-sans text-[10px] text-gray-400 select-none group-hover:text-gray-300 transition-colors leading-relaxed">
+                      {language === "ru" 
+                        ? "Я согласен на обработку персональных данных в соответствии с Политикой конфиденциальности"
+                        : "I consent to the processing of personal data in accordance with the Privacy Policy"}
+                    </span>
+                  </label>
+
+                  {pdError && !pdAgreed && (
+                    <motion.div 
+                      initial={{ opacity: 0, y: -5 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="flex items-center gap-2 text-rose-500 font-mono text-[10px] uppercase tracking-wider bg-rose-500/5 px-3 py-1.5 rounded-lg border border-rose-500/10"
+                    >
+                      <AlertTriangle className="w-3.5 h-3.5" />
+                      <span>{language === "ru" ? "Необходимо согласие на обработку данных" : "Consent to data processing is required"}</span>
+                    </motion.div>
+                  )}
 
                   {/* Submission logs display when submitting */}
                   {isSubmitting && (

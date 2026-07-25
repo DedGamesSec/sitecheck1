@@ -1,8 +1,11 @@
 import React, { useState } from "react";
-import { Check, ShieldCheck, Sparkles, AlertTriangle, ArrowLeft, Clipboard, CheckCircle, Loader2, Download, ExternalLink } from "lucide-react";
+import { Check, ShieldCheck, Sparkles, AlertTriangle, ArrowLeft, Clipboard, CheckCircle, Loader2, Download, ExternalLink, MessageCircle } from "lucide-react";
 import { useTranslation } from "../i18n/LanguageContext";
 import { useNavigation } from "../navigation/NavigationContext";
 import { motion, AnimatePresence } from "motion/react";
+
+const VK_LEAF_URL = "https://vk.ru/app53923535_-238449687#/c766be8c-8fcd-4139-9602-ea72493bf655";
+const GITHUB_APK_URL = "https://github.com/TrustNodeLab/trustnodelab.github.io/releases/download/1.2.0/app-arm64-v8a-release.apk";
 
 export default function EarlyAccessPage() {
   const { t, language } = useTranslation();
@@ -23,6 +26,7 @@ export default function EarlyAccessPage() {
       copied: "Скопировано!",
       reset: "← Назад",
       github: "Скачать с GitHub",
+      vkLeaf: "Заполнить анкету VK",
       rustore: "Скачать в RUStore",
     },
     en: {
@@ -32,6 +36,7 @@ export default function EarlyAccessPage() {
       copied: "Copied!",
       reset: "← Back",
       github: "Download from GitHub",
+      vkLeaf: "Fill VK Form",
       rustore: "Download in RUStore",
     },
   }[language === "ru" ? "ru" : "en"];
@@ -207,7 +212,16 @@ export default function EarlyAccessPage() {
                     {copied ? uiText.copied : uiText.copy}
                   </button>
                   <a
-                    href="https://github.com/TrustNodeLab/releases"
+                    href={VK_LEAF_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:flex-1 py-3.5 px-4 rounded-xl font-sans text-xs font-bold bg-[#111A2E] border border-[#2E7DFF]/40 text-gray-200 hover:text-white hover:bg-[#15233D] transition-colors flex items-center justify-center gap-2"
+                  >
+                    <MessageCircle className="w-4 h-4" />
+                    {uiText.vkLeaf}
+                  </a>
+                  <a
+                    href={GITHUB_APK_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full sm:flex-1 py-3.5 px-4 rounded-xl font-sans text-xs font-bold bg-[#111A2E] border border-[#2E7DFF]/40 text-gray-200 hover:text-white hover:bg-[#15233D] transition-colors flex items-center justify-center gap-2"
