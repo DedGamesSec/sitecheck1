@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useTranslation } from "../i18n/LanguageContext";
 import { LanguageCode } from "../i18n/languages";
 import { motion, AnimatePresence } from "motion/react";
-import { Shield, Award, Cpu, Network, FileCode, CheckCircle2, Copy, Download, ExternalLink, Sparkles, Send, AlertTriangle, RefreshCw, AlertCircle, Play, Info, ShieldCheck, Milestone } from "lucide-react";
+import { Shield, Award, Cpu, Network, FileCode, CheckCircle2, Copy, ExternalLink, Sparkles, Send, AlertTriangle, RefreshCw, AlertCircle, Play, Info, ShieldCheck, Milestone } from "lucide-react";
 import { SiTelegram, SiVk, SiGithub } from "react-icons/si";
 
 const base = typeof import.meta !== "undefined" ? import.meta.env.BASE_URL : "/";
@@ -12,7 +12,6 @@ const graphImg = `${base}real_obsidian.png`;
 export default function RealDevelopmentSection({ onlyRoadmap = false }: { onlyRoadmap?: boolean }) {
   const { t, language } = useTranslation();
   const [activeTab, setActiveTab] = useState<"awards" | "graph" | "onnx" | "roadmap">(onlyRoadmap ? "roadmap" : "awards");
-  const [copiedModelName, setCopiedModelName] = useState(false);
 
   const dui = t.realDev.devUi;
   const tTitle = t.realDev.title;
@@ -28,12 +27,6 @@ export default function RealDevelopmentSection({ onlyRoadmap = false }: { onlyRo
   const currentAward = t.realDev.awardDetails;
   const currentGraph = t.realDev.graphDetails;
   const currentOnnx = t.realDev.onnxDetails;
-
-  const handleCopyModelName = () => {
-    navigator.clipboard.writeText("rubert_fraud_int8.onnx");
-    setCopiedModelName(true);
-    setTimeout(() => setCopiedModelName(false), 2000);
-  };
 
   return (
     <section 
@@ -318,33 +311,7 @@ export default function RealDevelopmentSection({ onlyRoadmap = false }: { onlyRo
                       </div>
                     </div>
 
-                    {/* Actions inside card */}
-                    <div className="mt-6 flex flex-col sm:flex-row gap-2">
-                      <button 
-                        onClick={handleCopyModelName}
-                        className="flex-1 py-2.5 px-3 rounded-lg font-mono text-xs font-bold border border-[#1F2937]/60 bg-[#111827] hover:border-[#2E7DFF]/40 text-[#F5F5F0] hover:text-[#2E7DFF] transition-all flex items-center justify-center gap-1.5"
-                      >
-                        {copiedModelName ? (
-                          <>
-                            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
-                            <span className="text-emerald-500">{dui.copied}</span>
-                          </>
-                        ) : (
-                          <>
-                            <Copy className="w-3.5 h-3.5 shrink-0" />
-                            <span>{dui.copyName}</span>
-                          </>
-                        )}
-                      </button>
-                      <a
-                        href={`${base}rubert_fraud_int8.onnx`}
-                        download="rubert_fraud_int8.onnx"
-                        className="flex-1 py-2.5 px-3 rounded-lg font-mono text-xs font-bold border border-[#2E7DFF]/50 bg-[#2E7DFF]/10 hover:bg-[#2E7DFF]/20 text-[#2E7DFF] transition-all flex items-center justify-center gap-1.5"
-                      >
-                        <Download className="w-3.5 h-3.5 shrink-0" />
-                        <span>{dui.dlOnnx}</span>
-                      </a>
-                    </div>
+
                   </div>
 
                   {/* Right Column: Dynamic Neural Tester & Telegram Ticket Portal */}
