@@ -48,8 +48,9 @@ const PAGE_CTA: Record<string, { ru: string; en: string }> = {
 
 export default function ExplorePagesSection() {
   const { t, language } = useTranslation();
-  const { navigateTo } = useNavigation();
+  const { activePage, navigateTo } = useNavigation();
   const isRu = language === "ru";
+  const visiblePages = HEADER_PAGES.filter((p) => p.id !== activePage);
 
   return (
     <section 
@@ -75,8 +76,8 @@ export default function ExplorePagesSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
-          {HEADER_PAGES.map((page) => {
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-3xl mx-auto">
+          {visiblePages.map((page) => {
             const Icon = PAGE_ICONS[page.id];
             const badge = PAGE_BADGES[page.id]?.[isRu ? "ru" : "en"] || "";
             const desc = PAGE_DESCRIPTIONS[page.id]?.[isRu ? "ru" : "en"] || "";

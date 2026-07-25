@@ -230,7 +230,7 @@ export default function Header({ isEcoMode, onToggleEcoMode }: HeaderProps) {
             </div>
             <div className="flex items-center gap-2">
               <div className="shrink-0">{renderEcoButton()}</div>
-              <div className="flex-1">
+              <div className="flex-1 min-w-0">
                 <LanguageSwitcher variant="mobile" />
               </div>
             </div>

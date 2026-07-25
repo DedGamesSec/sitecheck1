@@ -26,6 +26,11 @@ function resolvePageFromPath(path: string): PageId {
 
 export function NavigationProvider({ children }: { children: React.ReactNode }) {
   const [activePage, setActivePage] = useState<PageId>(() => {
+    const saved = sessionStorage.getItem("redirect");
+    if (saved) {
+      sessionStorage.removeItem("redirect");
+      return resolvePageFromPath(saved);
+    }
     return resolvePageFromPath(window.location.pathname);
   });
 

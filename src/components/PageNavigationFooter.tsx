@@ -3,7 +3,7 @@ import { ArrowRight, Sparkles } from "lucide-react";
 import { useNavigation, PageId } from "../navigation/NavigationContext";
 import { useTranslation } from "../i18n/LanguageContext";
 import { motion } from "motion/react";
-import { ORDERED_PAGES } from "../navigation/pages.config";
+import { HEADER_PAGES } from "../navigation/pages.config";
 
 const NEXT_LABEL: Record<string, string> = {
   ru: "Следующий раздел",
@@ -126,7 +126,7 @@ interface PageNavigationFooterProps {
 export default function PageNavigationFooter({ currentPage }: PageNavigationFooterProps) {
   const { navigateTo } = useNavigation();
   const { t, language } = useTranslation();
-  const pagesSeq = ORDERED_PAGES;
+  const pagesSeq = HEADER_PAGES;
 
   // Find index of current page in sequence
   const currentIndex = pagesSeq.findIndex((p) => p.id === currentPage);

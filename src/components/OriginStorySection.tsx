@@ -57,7 +57,7 @@ const TIMELINE_BY_LANG: Partial<Record<LanguageCode, Array<{ badge: string; titl
     {
       badge: "МОСКВА // СЕНТЯБРЬ 2026",
       title: "Выход на федеральный финал",
-      desc: "По результатам триумфальной победы проект был успешно представлен на федеральном суперфинале научно-исследовательских работ в Москве в сентябре 2026 года для демонстрации эффективности мобильного купола защиты."
+      desc: "По результатам триумфальной победы проект отобран для представления на федеральном суперфинале научно-исследовательских работ в Москве в сентябре 2026 года для демонстрации эффективности мобильного купола защиты."
     },
     {
       badge: "АРХИТЕКТОР + AI-ПОДРЯДЧИКИ",
@@ -78,8 +78,8 @@ const TIMELINE_BY_LANG: Partial<Record<LanguageCode, Array<{ badge: string; titl
     },
     {
       badge: "FEDERAL SUPERFINAL",
-      title: "National Superfinal Moscow",
-      desc: "Following the regional triumph, the project was selected for presentation at the prestigious federal scientific research superfinal in Moscow in September 2026 to demonstrate its real-time defense capabilities."
+      title: "National Superfinal Moscow (Upcoming)",
+      desc: "Following the regional triumph, the project has been selected for presentation at the prestigious federal scientific research superfinal in Moscow in September 2026 to demonstrate its real-time defense capabilities."
     },
     {
       badge: "AI-DRIVEN WORKFLOW",

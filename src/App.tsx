@@ -757,6 +757,7 @@ export default function App() {
               <div className="flex-1 flex flex-col bg-[#0A0A0B]/90 backdrop-blur-sm">
                 <ComparisonSection />
               </div>
+              <PageNavigationFooter currentPage={activePage} />
               <Footer 
                 onOpenPrivacy={() => {
                   setLegalModalTab("privacy");

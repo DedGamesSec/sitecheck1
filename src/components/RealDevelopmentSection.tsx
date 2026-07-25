@@ -396,7 +396,7 @@ export default function RealDevelopmentSection({ onlyRoadmap = false }: { onlyRo
                           <span>{language === "ru" ? "СТАТУС:" : "STATUS:"}</span>
                           <span className="text-emerald-400 flex items-center gap-1">
                             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping" />
-                            {language === "ru" ? "ФАЗА КАЛИБРОВКИ" : "CALIBRATION PHASE"}
+                            {language === "ru" ? "ПОЛНОСТЬЮ ГОТОВ (MVP)" : "FULLY READY (MVP)"}
                           </span>
                         </div>
                       </div>
