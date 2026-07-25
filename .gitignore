@@ -6,3 +6,10 @@ coverage/
 *.log
 .env*
 !.env.example
+server.ts
+waitlist_db.json
+trustnode*.zip
+*.zip
+#Дизайн/
+Frame 1.svg
+original_logo.svg
