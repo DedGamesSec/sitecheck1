@@ -386,7 +386,7 @@ const ru: Translations = {
       {
         badge: "МОСКВА // СЕНТЯБРЬ 2026",
         title: "Выход на федеральный финал",
-        desc: "По результатам триумфальной победы проект был успешно представлен на федеральном суперфинале научно-исследовательских работ в Москве в сентябре 2026 года для демонстрации эффективности мобильного купола защиты."
+        desc: "После успеха на региональном уровне проект был отобран для презентации на престижном региональном научно-исследовательском финале НИР в Москве в сентябре 2026 года, где будут продемонстрированы его возможности в сфере защиты от мошенничества."
       },
       {
         badge: "АРХИТЕКТОР + AI-ПОДРЯДЧИКИ",
@@ -897,7 +897,7 @@ const en: Translations = {
       {
         badge: "FEDERAL SUPERFINAL",
         title: "National Superfinal Moscow",
-        desc: "Following the regional triumph, the project was selected for presentation at the prestigious federal scientific research superfinal in Moscow in September 2026 to demonstrate its real-time defense capabilities."
+        desc: "After success at the regional level, the project was selected for presentation at the prestigious regional scientific research final (NIR) in Moscow in September 2026, where its fraud protection capabilities will be demonstrated."
       },
       {
         badge: "AI-DRIVEN WORKFLOW",
