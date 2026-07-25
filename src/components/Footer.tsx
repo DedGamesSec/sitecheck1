@@ -115,6 +115,9 @@ const Footer = React.memo(function Footer({ onOpenPrivacy, onOpenTerms }: Footer
               <SiGithub className="w-3 h-3" />
               TrustNodeLab on GitHub
             </a>
+            <p className="font-mono text-[9px] text-gray-600 mt-2">
+              Mikhail Pitolin &lt;mikhailpitolin@gmail.com&gt;
+            </p>
           </div>
         </div>
 
