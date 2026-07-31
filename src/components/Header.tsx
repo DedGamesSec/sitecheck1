@@ -1,23 +1,22 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X, Radar } from "lucide-react";
-import { SiTelegram, SiVk, SiTiktok, SiGithub } from "react-icons/si";
+import { Menu, X, Leaf, ALargeSmall } from "lucide-react";
 import MiniLogo from "./MiniLogo";
+import LanguageSwitcher from "./LanguageSwitcher";
 import { useTranslation } from "../i18n/LanguageContext";
 import { useNavigation, PageId } from "../navigation/NavigationContext";
+import { useSeniorMode } from "../context/SeniorModeContext";
+import { useEcoMode } from "../context/EcoModeContext";
 import { HEADER_PAGES } from "../navigation/pages.config";
 
 export const RUSTORE_URL = "https://www.rustore.ru/catalog/app/com.frauddetector.app";
 export const PRODUCT_RADAR_URL = "https://productradar.ru/product/trustnode/";
 export const GITHUB_APK_URL = "https://github.com/TrustNodeLab/trustnodelab.github.io/releases/download/1.2.0/app-arm64-v8a-release.apk";
 
-const SiTelegramIcon = SiTelegram as React.ComponentType<any>;
-const SiVkIcon = SiVk as React.ComponentType<any>;
-const SiTiktokIcon = SiTiktok as React.ComponentType<any>;
-const SiGithubIcon = SiGithub as React.ComponentType<any>;
-
 export default function Header() {
   const { t } = useTranslation();
   const { activePage, navigateTo } = useNavigation();
+  const { seniorMode, toggleSeniorMode } = useSeniorMode();
+  const { ecoMode, toggleEcoMode } = useEcoMode();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -68,35 +67,6 @@ export default function Header() {
     };
   }, [isOpen]);
 
-  const socialLinks = [
-    {
-      href: "https://t.me/TrustNode_team",
-      label: "Telegram",
-      Icon: SiTelegramIcon,
-    },
-    {
-      href: "https://vk.com/trustnode",
-      label: "VK",
-      Icon: SiVkIcon,
-    },
-    {
-      href: "https://github.com/TrustNodeLab",
-      label: "GitHub",
-      Icon: SiGithubIcon,
-    },
-    {
-      href: "https://www.tiktok.com/@trusrnode?_r=1&_t=ZS-97fr5YVyPCs",
-      label: "TikTok",
-      Icon: SiTiktokIcon,
-    },
-  ] as const;
-
-  const productRadarLink = {
-    href: PRODUCT_RADAR_URL,
-    label: "Product Radar",
-    Icon: Radar,
-  };
-
   const navPages = HEADER_PAGES;
 
   const getPageLabel = (page: PageId) => {
@@ -126,22 +96,38 @@ export default function Header() {
     );
   };
 
-  const renderSocialButton = (link: (typeof socialLinks)[number] | typeof productRadarLink) => {
-    const Icon = link.Icon;
-    return (
-      <a
-        key={link.label}
-        href={link.href}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={link.label}
-        title={link.label}
-        className="flex-1 min-h-11 flex items-center justify-center rounded-xl bg-[#0F0F12] border border-[#1F2937] text-[#2E7DFF] hover:text-white hover:border-[#2E7DFF]/35 hover:bg-[#2E7DFF]/10 transition-all duration-300"
-      >
-        <Icon className="w-4 h-4" />
-      </a>
-    );
-  };
+  const utilityButtonClass =
+    "inline-flex items-center justify-center w-11 h-11 rounded-xl border transition-all duration-300 cursor-pointer";
+
+  const renderEcoButton = () => (
+    <button
+      onClick={toggleEcoMode}
+      aria-label={ecoMode ? t.header.ecoOn : t.header.ecoOff}
+      title={ecoMode ? t.header.ecoOn : t.header.ecoOff}
+      className={`${utilityButtonClass} ${
+        ecoMode
+          ? "bg-emerald-500/15 border-emerald-500/40 text-emerald-400 shadow-[0_0_12px_rgba(16,185,129,0.22)]"
+          : "bg-[#0A162C]/60 border-[#2E7DFF]/30 text-[#2E7DFF] hover:text-white hover:bg-[#2E7DFF]/20"
+      }`}
+    >
+      <Leaf className="w-4 h-4" />
+    </button>
+  );
+
+  const renderSeniorButton = () => (
+    <button
+      onClick={toggleSeniorMode}
+      aria-label={seniorMode ? t.header.seniorOn : t.header.seniorOff}
+      title={seniorMode ? t.header.seniorOn : t.header.seniorOff}
+      className={`${utilityButtonClass} ${
+        seniorMode
+          ? "bg-amber-500/15 border-amber-500/40 text-amber-400 shadow-[0_0_12px_rgba(245,158,11,0.22)]"
+          : "bg-[#0A162C]/60 border-[#2E7DFF]/30 text-[#2E7DFF] hover:text-white hover:bg-[#2E7DFF]/20"
+      }`}
+    >
+      <ALargeSmall className="w-4 h-4" />
+    </button>
+  );
 
   const currentPageLabel = getPageLabel(activePage);
 
@@ -212,9 +198,10 @@ export default function Header() {
 
             <div className="h-px bg-[#1F2937]/30 my-1" />
 
-            <div className="flex gap-2">
-              {socialLinks.map((link) => renderSocialButton(link))}
-              {renderSocialButton(productRadarLink)}
+            <div className="flex items-center gap-2">
+              {renderEcoButton()}
+              {renderSeniorButton()}
+              <LanguageSwitcher variant="mobile" />
             </div>
           </div>
         </div>

@@ -1,12 +1,9 @@
 import React from "react";
 import { SiTelegram, SiVk, SiTiktok, SiGithub } from "react-icons/si";
-import { Leaf, ALargeSmall, Radar } from "lucide-react";
+import { Radar } from "lucide-react";
 import MiniLogo from "./MiniLogo";
-import LanguageSwitcher from "./LanguageSwitcher";
 import { useTranslation } from "../i18n/LanguageContext";
 import { useNavigation } from "../navigation/NavigationContext";
-import { useSeniorMode } from "../context/SeniorModeContext";
-import { useEcoMode } from "../context/EcoModeContext";
 import { FOOTER_SITEMAP_PAGES } from "../navigation/pages.config";
 import { PRODUCT_RADAR_URL } from "./Header";
 
@@ -24,8 +21,6 @@ interface FooterProps {
 const Footer = React.memo(function Footer({ onOpenPrivacy, onOpenTerms }: FooterProps) {
   const { t, language } = useTranslation();
   const { navigateTo } = useNavigation();
-  const { ecoMode, toggleEcoMode } = useEcoMode();
-  const { seniorMode, toggleSeniorMode } = useSeniorMode();
   const currentYear = new Date().getFullYear();
   const copyright = t.footer.copyright.replace("{year}", String(currentYear));
   const sitemapHeading = {
@@ -54,39 +49,6 @@ const Footer = React.memo(function Footer({ onOpenPrivacy, onOpenTerms }: Footer
 
   const socialButtonClass =
     "font-mono text-sm text-gray-400 hover:text-[#2E7DFF] hover:border-[#2E7DFF]/40 transition-all duration-300 flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[#0F0F12]/80 border border-[#1F2937]/50 min-h-11";
-
-  const utilityButtonClass =
-    "inline-flex items-center justify-center w-11 h-11 rounded-xl border transition-all duration-300 cursor-pointer";
-
-  const renderEcoButton = () => (
-    <button
-      onClick={toggleEcoMode}
-      aria-label={ecoMode ? t.header.ecoOn : t.header.ecoOff}
-      title={ecoMode ? t.header.ecoOn : t.header.ecoOff}
-      className={`${utilityButtonClass} ${
-        ecoMode
-          ? "bg-emerald-500/15 border-emerald-500/40 text-emerald-400 shadow-[0_0_12px_rgba(16,185,129,0.22)]"
-          : "bg-[#0A162C]/60 border-[#2E7DFF]/30 text-[#2E7DFF] hover:text-white hover:bg-[#2E7DFF]/20"
-      }`}
-    >
-      <Leaf className="w-4 h-4" />
-    </button>
-  );
-
-  const renderSeniorButton = () => (
-    <button
-      onClick={toggleSeniorMode}
-      aria-label={seniorMode ? t.header.seniorOn : t.header.seniorOff}
-      title={seniorMode ? t.header.seniorOn : t.header.seniorOff}
-      className={`${utilityButtonClass} ${
-        seniorMode
-          ? "bg-amber-500/15 border-amber-500/40 text-amber-400 shadow-[0_0_12px_rgba(245,158,11,0.22)]"
-          : "bg-[#0A162C]/60 border-[#2E7DFF]/30 text-[#2E7DFF] hover:text-white hover:bg-[#2E7DFF]/20"
-      }`}
-    >
-      <ALargeSmall className="w-4 h-4" />
-    </button>
-  );
 
   return (
     <footer 
@@ -206,38 +168,30 @@ const Footer = React.memo(function Footer({ onOpenPrivacy, onOpenTerms }: Footer
           </p>
         </div>
 
-        {/* Product Radar — full-width third row of the unified rectangle */}
-        <div className="footer-area-store flex flex-col gap-3 footer-btn-rect lg:-mt-3">
-          <div className="footer-btn-row">
-            {storeLinks.map(({ href, label, Icon }) => (
-              <a 
-                key={href}
-                href={href}
-                target="_blank" 
-                rel="noopener noreferrer"
-                aria-label={label}
-                title={label}
-                className={socialButtonClass}
-              >
-                <span className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-[#0A162C]/60 border border-[#2E7DFF]/30 text-[#2E7DFF] shrink-0">
-                  {Icon || (
-                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                      <polyline points="7 10 12 15 17 10" />
-                      <line x1="12" y1="15" x2="12" y2="3" />
-                    </svg>
-                  )}
-                </span>
-                <span className="whitespace-nowrap">{label}</span>
-              </a>
-            ))}
-          </div>
-          {/* Bottom utility row — Eco, text enlarge, language (equal square buttons) */}
-          <div className="flex items-center justify-center gap-2 lg:justify-end">
-            {renderEcoButton()}
-            {renderSeniorButton()}
-            <LanguageSwitcher variant="desktop" />
-          </div>
+        {/* Product Radar — standard-size button, centered under rows 1 + 2 */}
+        <div className="footer-area-store flex flex-wrap items-center justify-center gap-3 lg:-mt-3 lg:self-start">
+          {storeLinks.map(({ href, label, Icon }) => (
+            <a 
+              key={href}
+              href={href}
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label={label}
+              title={label}
+              className={socialButtonClass}
+            >
+              <span className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-[#0A162C]/60 border border-[#2E7DFF]/30 text-[#2E7DFF] shrink-0">
+                {Icon || (
+                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                  </svg>
+                )}
+              </span>
+              <span className="whitespace-nowrap">{label}</span>
+            </a>
+          ))}
         </div>
       </div>
     </footer>
