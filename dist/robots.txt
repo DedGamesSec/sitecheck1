@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://trustnodelab.github.io/sitemap.xml
