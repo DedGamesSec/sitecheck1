@@ -91,9 +91,9 @@ const Footer = React.memo(function Footer({ onOpenPrivacy, onOpenTerms }: Footer
           </nav>
         </div>
 
-        {/* Social buttons — right column, staircase */}
+        {/* Social buttons — right column, rows stacked with a shared right edge */}
         <div className="footer-area-social flex flex-wrap justify-center gap-3 lg:flex-col lg:flex-nowrap lg:items-end lg:justify-end">
-          <div className="flex flex-wrap justify-center gap-3 lg:mr-24">
+          <div className="flex flex-wrap justify-center gap-3">
             {socialLinks.slice(0, 2).map(({ href, label, Icon }) => (
               <a 
                 key={label}
@@ -111,7 +111,7 @@ const Footer = React.memo(function Footer({ onOpenPrivacy, onOpenTerms }: Footer
               </a>
             ))}
           </div>
-          <div className="flex flex-wrap justify-center gap-3 lg:mr-12">
+          <div className="flex flex-wrap justify-center gap-3">
             {socialLinks.slice(2, 4).map(({ href, label, Icon }) => (
               <a 
                 key={label}
@@ -168,8 +168,8 @@ const Footer = React.memo(function Footer({ onOpenPrivacy, onOpenTerms }: Footer
           </p>
         </div>
 
-        {/* Product Radar — bottom right, continues the staircase */}
-        <div className="footer-area-store flex flex-wrap items-center justify-center gap-3 lg:justify-end lg:self-start">
+        {/* Product Radar — bottom row, same right edge as the social rows */}
+        <div className="footer-area-store flex flex-wrap items-center justify-center gap-3 lg:justify-end lg:self-start lg:-mt-3">
           {storeLinks.map(({ href, label, Icon }) => (
             <a 
               key={href}
