@@ -49,7 +49,14 @@ export default function Header() {
       const target = e.target as Node;
       const drawer = document.getElementById("mobile-drawer");
       const toggle = document.getElementById("mobile-menu-toggle");
-      if (drawer && toggle && !drawer.contains(target) && !toggle.contains(target)) {
+      const langMenu = document.getElementById("language-switcher-portal");
+      if (
+        drawer &&
+        toggle &&
+        !drawer.contains(target) &&
+        !toggle.contains(target) &&
+        !(langMenu && langMenu.contains(target))
+      ) {
         setIsOpen(false);
       }
     };
