@@ -1405,40 +1405,40 @@ const es: Translations = {
   },
 
   comparisonPage: {
-    title: "Honest Comparison",
-    subtitle: "An objective comparative analysis of TrustNode vs leading global security solutions",
-    badge: "COMPARISON // FACTS",
-    thFeature: "Feature",
+    title: "Comparación honesta",
+    subtitle: "Un análisis comparativo objetivo de TrustNode frente a las principales soluciones de seguridad globales",
+    badge: "COMPARACIÓN // HECHOS",
+    thFeature: "Característica",
     thTrustNode: "TrustNode (TN1)",
     thKaspersky: "Kaspersky",
     thNorton: "Norton",
     thBitdefender: "Bitdefender",
     thGoogleSpam: "Google Protection",
     features: {
-      textAnalysis: "Text Analysis (BERT, rules, risk scoring, URL, homoglyphs)",
-      voiceAnalysis: "Real-time Call Voice Analysis",
-      visualAnalysis: "Visual Analysis (fake UIs, wallets, phishing)",
-      socialEngDetect: "Social Engineering Detection (Neural + AI Agents)",
-      behavioralRasp: "Behavioral Analysis & RASP Monitoring",
-      familyDefense: "Parent-Child Family Defense (Guardian System)",
-      beaconSystem: "Beacon System (VK Contact Alerts on fraud)",
-      offlineOnDevice: "100% Offline (On-device execution)",
-      pricing: "Monetization Model"
+      textAnalysis: "Análisis de texto (BERT, reglas, puntuación de riesgo, URL, homoglifos)",
+      voiceAnalysis: "Análisis de voz de llamadas en tiempo real",
+      visualAnalysis: "Análisis visual (interfaces falsas, carteras, phishing)",
+      socialEngDetect: "Detección de ingeniería social (red neuronal + agentes de IA)",
+      behavioralRasp: "Análisis de comportamiento y monitoreo RASP",
+      familyDefense: "Defensa familiar Parent-Child (sistema Guardian)",
+      beaconSystem: "Sistema Beacon (alertas a contactos de VK ante fraudes)",
+      offlineOnDevice: "100% sin conexión (ejecución en el dispositivo)",
+      pricing: "Modelo de monetización"
     },
     status: {
-      yes: "✅ Yes",
+      yes: "✅ Sí",
       no: "❌ No",
-      inDev: "🛠 In Dev"
+      inDev: "🛠 En desarrollo"
     },
     pricingValues: {
       trustNode: "Gratis",
-      kaspersky: "Sub from ~1990₽/yr",
-      norton: "Sub from ~$39.99/yr",
-      bitdefender: "Sub from ~$29.99/yr",
-      googleSpam: "Free"
+      kaspersky: "Suscripción desde ~1990₽/año",
+      norton: "Suscripción desde ~$39.99/año",
+      bitdefender: "Suscripción desde ~$29.99/año",
+      googleSpam: "Gratis"
     },
-    disclaimer: "We strive for maximum objectivity. If you spot any inaccuracy, please contact us on Telegram.",
-    telegramBtn: "Contact on Telegram"
+    disclaimer: "Nos esforzamos por lograr la máxima objetividad. Si detectas alguna imprecisión, contáctanos en Telegram.",
+    telegramBtn: "Contactar por Telegram"
   }
 };
 
@@ -1885,40 +1885,40 @@ const zh: Translations = {
   },
 
   comparisonPage: {
-    title: "Honest Comparison",
-    subtitle: "An objective comparative analysis of TrustNode vs leading global security solutions",
-    badge: "COMPARISON // FACTS",
-    thFeature: "Feature",
+    title: "诚实对比",
+    subtitle: "对 TrustNode 与领先全球安全解决方案的客观对比分析",
+    badge: "对比 // 事实",
+    thFeature: "功能",
     thTrustNode: "TrustNode (TN1)",
     thKaspersky: "Kaspersky",
     thNorton: "Norton",
     thBitdefender: "Bitdefender",
     thGoogleSpam: "Google Protection",
     features: {
-      textAnalysis: "Text Analysis (BERT, rules, risk scoring, URL, homoglyphs)",
-      voiceAnalysis: "Real-time Call Voice Analysis",
-      visualAnalysis: "Visual Analysis (fake UIs, wallets, phishing)",
-      socialEngDetect: "Social Engineering Detection (Neural + AI Agents)",
-      behavioralRasp: "Behavioral Analysis & RASP Monitoring",
-      familyDefense: "Parent-Child Family Defense (Guardian System)",
-      beaconSystem: "Beacon System (VK Contact Alerts on fraud)",
-      offlineOnDevice: "100% Offline (On-device execution)",
-      pricing: "Monetization Model"
+      textAnalysis: "文本分析（BERT、规则、风险评分、URL、同形字符）",
+      voiceAnalysis: "实时通话语音分析",
+      visualAnalysis: "视觉分析（伪造界面、钱包、钓鱼）",
+      socialEngDetect: "社交工程检测（神经网络 + AI 代理）",
+      behavioralRasp: "行为分析与 RASP 监控",
+      familyDefense: "亲子家庭防护（守护者系统）",
+      beaconSystem: "信标系统（检测到欺诈时通过 VK 提醒联系人）",
+      offlineOnDevice: "100% 离线（设备端执行）",
+      pricing: "变现模式"
     },
     status: {
-      yes: "✅ Yes",
-      no: "❌ No",
-      inDev: "🛠 In Dev"
+      yes: "✅ 有",
+      no: "❌ 无",
+      inDev: "🛠 开发中"
     },
     pricingValues: {
       trustNode: "免费",
-      kaspersky: "Sub from ~1990₽/yr",
-      norton: "Sub from ~$39.99/yr",
-      bitdefender: "Sub from ~$29.99/yr",
-      googleSpam: "Free"
+      kaspersky: "订阅约 ~1990₽/年",
+      norton: "订阅约 ~$39.99/年",
+      bitdefender: "订阅约 ~$29.99/年",
+      googleSpam: "免费"
     },
-    disclaimer: "We strive for maximum objectivity. If you spot any inaccuracy, please contact us on Telegram.",
-    telegramBtn: "Contact on Telegram"
+    disclaimer: "我们力求最大程度的客观性。如发现任何不准确之处，请在 Telegram 上联系我们。",
+    telegramBtn: "在 Telegram 上联系"
   }
 };
 
@@ -1930,7 +1930,7 @@ const tr: Translations = {
     earlyAccess: "Erken Erişim"
   },
   brand: {
-    tagline: "On-Device Shield",
+    tagline: "Cihaz İçi Kalkan",
     footerTagline: "Cihaz anlamsal güvenliği"
   },
   hero: {
@@ -2365,40 +2365,40 @@ const tr: Translations = {
   },
 
   comparisonPage: {
-    title: "Honest Comparison",
-    subtitle: "An objective comparative analysis of TrustNode vs leading global security solutions",
-    badge: "COMPARISON // FACTS",
-    thFeature: "Feature",
+    title: "Dürüst Karşılaştırma",
+    subtitle: "TrustNode ile önde gelen küresel güvenlik çözümlerinin objektif karşılaştırmalı analizi",
+    badge: "KARŞILAŞTIRMA // GERÇEKLER",
+    thFeature: "Özellik",
     thTrustNode: "TrustNode (TN1)",
     thKaspersky: "Kaspersky",
     thNorton: "Norton",
     thBitdefender: "Bitdefender",
     thGoogleSpam: "Google Protection",
     features: {
-      textAnalysis: "Text Analysis (BERT, rules, risk scoring, URL, homoglyphs)",
-      voiceAnalysis: "Real-time Call Voice Analysis",
-      visualAnalysis: "Visual Analysis (fake UIs, wallets, phishing)",
-      socialEngDetect: "Social Engineering Detection (Neural + AI Agents)",
-      behavioralRasp: "Behavioral Analysis & RASP Monitoring",
-      familyDefense: "Parent-Child Family Defense (Guardian System)",
-      beaconSystem: "Beacon System (VK Contact Alerts on fraud)",
-      offlineOnDevice: "100% Offline (On-device execution)",
-      pricing: "Monetization Model"
+      textAnalysis: "Metin analizi (BERT, kurallar, risk puanlama, URL, homoglifler)",
+      voiceAnalysis: "Gerçek zamanlı arama ses analizi",
+      visualAnalysis: "Görsel analiz (sahte arayüzler, cüzdanlar, kimlik avı)",
+      socialEngDetect: "Sosyal mühendislik tespiti (sinir ağı + AI aracıları)",
+      behavioralRasp: "Davranış analizi ve RASP izleme",
+      familyDefense: "Ebeveyn-Çocuk aile koruması (Guardian sistemi)",
+      beaconSystem: "Beacon sistemi (dolandırıcılıkta VK temaslarına uyarı)",
+      offlineOnDevice: "%100 çevrimdışı (cihaz üzerinde çalışır)",
+      pricing: "Para kazanma modeli"
     },
     status: {
-      yes: "✅ Yes",
-      no: "❌ No",
-      inDev: "🛠 In Dev"
+      yes: "✅ Evet",
+      no: "❌ Hayır",
+      inDev: "🛠 Geliştirme aşamasında"
     },
     pricingValues: {
       trustNode: "Ücretsiz",
-      kaspersky: "Sub from ~1990₽/yr",
-      norton: "Sub from ~$39.99/yr",
-      bitdefender: "Sub from ~$29.99/yr",
-      googleSpam: "Free"
+      kaspersky: "Yıllık ~1990₽ abonelik",
+      norton: "Yıllık ~$39.99 abonelik",
+      bitdefender: "Yıllık ~$29.99 abonelik",
+      googleSpam: "Ücretsiz"
     },
-    disclaimer: "We strive for maximum objectivity. If you spot any inaccuracy, please contact us on Telegram.",
-    telegramBtn: "Contact on Telegram"
+    disclaimer: "Maksimum objektiflik için çaba gösteriyoruz. Herhangi bir yanlışlık fark ederseniz, lütfen Telegram üzerinden bizimle iletişime geçin.",
+    telegramBtn: "Telegram'dan iletişime geçin"
   }
 };
 
@@ -2845,40 +2845,40 @@ const hi: Translations = {
   },
 
   comparisonPage: {
-    title: "Honest Comparison",
-    subtitle: "An objective comparative analysis of TrustNode vs leading global security solutions",
-    badge: "COMPARISON // FACTS",
-    thFeature: "Feature",
+    title: "ईमानदार तुलना",
+    subtitle: "TrustNode बनाम प्रमुख वैश्विक सुरक्षा समाधानों का एक वस्तुनिष्ठ तुलनात्मक विश्लेषण",
+    badge: "तुलना // तथ्य",
+    thFeature: "सुविधा",
     thTrustNode: "TrustNode (TN1)",
     thKaspersky: "Kaspersky",
     thNorton: "Norton",
     thBitdefender: "Bitdefender",
     thGoogleSpam: "Google Protection",
     features: {
-      textAnalysis: "Text Analysis (BERT, rules, risk scoring, URL, homoglyphs)",
-      voiceAnalysis: "Real-time Call Voice Analysis",
-      visualAnalysis: "Visual Analysis (fake UIs, wallets, phishing)",
-      socialEngDetect: "Social Engineering Detection (Neural + AI Agents)",
-      behavioralRasp: "Behavioral Analysis & RASP Monitoring",
-      familyDefense: "Parent-Child Family Defense (Guardian System)",
-      beaconSystem: "Beacon System (VK Contact Alerts on fraud)",
-      offlineOnDevice: "100% Offline (On-device execution)",
-      pricing: "Monetization Model"
+      textAnalysis: "पाठ विश्लेषण (BERT, नियम, जोखिम स्कोरिंग, URL, होमोग्लिफ)",
+      voiceAnalysis: "रीयल-टाइम कॉल वॉयस विश्लेषण",
+      visualAnalysis: "दृश्य विश्लेषण (नकली यूआई, वॉलेट, फ़िशिंग)",
+      socialEngDetect: "सोशल इंजीनियरिंग डिटेक्शन (न्यूरल + AI एजेंट)",
+      behavioralRasp: "व्यवहार विश्लेषण और RASP निगरानी",
+      familyDefense: "पेरेंट-चाइल्ड फैमिली डिफेंस (गार्जियन सिस्टम)",
+      beaconSystem: "बीकन सिस्टम (धोखाधड़ी पर VK संपर्क अलर्ट)",
+      offlineOnDevice: "100% ऑफ़लाइन (ऑन-डिवाइस निष्पादन)",
+      pricing: "मुद्रीकरण मॉडल"
     },
     status: {
-      yes: "✅ Yes",
-      no: "❌ No",
-      inDev: "🛠 In Dev"
+      yes: "✅ हाँ",
+      no: "❌ नहीं",
+      inDev: "🛠 विकास में"
     },
     pricingValues: {
-      trustNode: "निःशुल्क",
-      kaspersky: "Sub from ~1990₽/yr",
-      norton: "Sub from ~$39.99/yr",
-      bitdefender: "Sub from ~$29.99/yr",
-      googleSpam: "Free"
+      trustNode: "मुफ़्त",
+      kaspersky: "सदस्यता ~1990₽/वर्ष से",
+      norton: "सदस्यता ~$39.99/वर्ष से",
+      bitdefender: "सदस्यता ~$29.99/वर्ष से",
+      googleSpam: "मुफ़्त"
     },
-    disclaimer: "We strive for maximum objectivity. If you spot any inaccuracy, please contact us on Telegram.",
-    telegramBtn: "Contact on Telegram"
+    disclaimer: "हम अधिकतम निष्पक्षता के लिए प्रयास करते हैं। यदि आपको कोई अशुद्धि दिखे, तो कृपया हमसे Telegram पर संपर्क करें।",
+    telegramBtn: "Telegram पर संपर्क करें"
   }
 };
 
@@ -3325,40 +3325,40 @@ const ar: Translations = {
   },
 
   comparisonPage: {
-    title: "Honest Comparison",
-    subtitle: "An objective comparative analysis of TrustNode vs leading global security solutions",
-    badge: "COMPARISON // FACTS",
-    thFeature: "Feature",
+    title: "مقارنة صادقة",
+    subtitle: "تحليل مقارن موضوعي لـ TrustNode مقابل الحلول الأمنية العالمية الرائدة",
+    badge: "مقارنة // حقائق",
+    thFeature: "الميزة",
     thTrustNode: "TrustNode (TN1)",
     thKaspersky: "Kaspersky",
     thNorton: "Norton",
     thBitdefender: "Bitdefender",
     thGoogleSpam: "Google Protection",
     features: {
-      textAnalysis: "Text Analysis (BERT, rules, risk scoring, URL, homoglyphs)",
-      voiceAnalysis: "Real-time Call Voice Analysis",
-      visualAnalysis: "Visual Analysis (fake UIs, wallets, phishing)",
-      socialEngDetect: "Social Engineering Detection (Neural + AI Agents)",
-      behavioralRasp: "Behavioral Analysis & RASP Monitoring",
-      familyDefense: "Parent-Child Family Defense (Guardian System)",
-      beaconSystem: "Beacon System (VK Contact Alerts on fraud)",
-      offlineOnDevice: "100% Offline (On-device execution)",
-      pricing: "Monetization Model"
+      textAnalysis: "تحليل النصوص (BERT، القواعد، تقييم المخاطر، URL، المتشابهات البصرية)",
+      voiceAnalysis: "تحليل صوت المكالمات في الوقت الفعلي",
+      visualAnalysis: "التحليل البصري (واجهات مزيفة، محافظ، تصيد)",
+      socialEngDetect: "كشف الهندسة الاجتماعية (شبكة عصبية + وكلاء ذكاء اصطناعي)",
+      behavioralRasp: "تحليل السلوك ومراقبة RASP",
+      familyDefense: "حماية الأسرة (نظام الوصي)",
+      beaconSystem: "نظام المنارة (تنبيهات جهات الاتصال عبر VK عند الاحتيال)",
+      offlineOnDevice: "100% دون اتصال (تنفيذ على الجهاز)",
+      pricing: "نموذج تحقيق الدخل"
     },
     status: {
-      yes: "✅ Yes",
-      no: "❌ No",
-      inDev: "🛠 In Dev"
+      yes: "✅ نعم",
+      no: "❌ لا",
+      inDev: "🛠 قيد التطوير"
     },
     pricingValues: {
-      trustNode: "مجاني",
-      kaspersky: "Sub from ~1990₽/yr",
-      norton: "Sub from ~$39.99/yr",
-      bitdefender: "Sub from ~$29.99/yr",
-      googleSpam: "Free"
+      trustNode: "مجانًا",
+      kaspersky: "اشتراك من ~1990₽/سنة",
+      norton: "اشتراك من ~$39.99/سنة",
+      bitdefender: "اشتراك من ~$29.99/سنة",
+      googleSpam: "مجانًا"
     },
-    disclaimer: "We strive for maximum objectivity. If you spot any inaccuracy, please contact us on Telegram.",
-    telegramBtn: "Contact on Telegram"
+    disclaimer: "نحن نسعى لأقصى درجات الموضوعية. إذا لاحظت أي عدم دقة، يرجى التواصل معنا عبر Telegram.",
+    telegramBtn: "تواصل عبر Telegram"
   }
 };
 
@@ -3805,40 +3805,40 @@ const pt: Translations = {
   },
 
   comparisonPage: {
-    title: "Honest Comparison",
-    subtitle: "An objective comparative analysis of TrustNode vs leading global security solutions",
-    badge: "COMPARISON // FACTS",
-    thFeature: "Feature",
+    title: "Comparação Honesta",
+    subtitle: "Uma análise comparativa objetiva do TrustNode frente às principais soluções de segurança globais",
+    badge: "COMPARAÇÃO // FATOS",
+    thFeature: "Recurso",
     thTrustNode: "TrustNode (TN1)",
     thKaspersky: "Kaspersky",
     thNorton: "Norton",
     thBitdefender: "Bitdefender",
     thGoogleSpam: "Google Protection",
     features: {
-      textAnalysis: "Text Analysis (BERT, rules, risk scoring, URL, homoglyphs)",
-      voiceAnalysis: "Real-time Call Voice Analysis",
-      visualAnalysis: "Visual Analysis (fake UIs, wallets, phishing)",
-      socialEngDetect: "Social Engineering Detection (Neural + AI Agents)",
-      behavioralRasp: "Behavioral Analysis & RASP Monitoring",
-      familyDefense: "Parent-Child Family Defense (Guardian System)",
-      beaconSystem: "Beacon System (VK Contact Alerts on fraud)",
-      offlineOnDevice: "100% Offline (On-device execution)",
-      pricing: "Monetization Model"
+      textAnalysis: "Análise de texto (BERT, regras, pontuação de risco, URL, homoglifos)",
+      voiceAnalysis: "Análise de voz de chamadas em tempo real",
+      visualAnalysis: "Análise visual (interfaces falsas, carteiras, phishing)",
+      socialEngDetect: "Detecção de engenharia social (rede neural + agentes de IA)",
+      behavioralRasp: "Análise comportamental e monitoramento RASP",
+      familyDefense: "Defesa familiar Pai-Filho (sistema Guardian)",
+      beaconSystem: "Sistema Beacon (alertas de contato VK sobre fraude)",
+      offlineOnDevice: "100% offline (execução no dispositivo)",
+      pricing: "Modelo de monetização"
     },
     status: {
-      yes: "✅ Yes",
-      no: "❌ No",
-      inDev: "🛠 In Dev"
+      yes: "✅ Sim",
+      no: "❌ Não",
+      inDev: "🛠 Em desenvolvimento"
     },
     pricingValues: {
       trustNode: "Grátis",
-      kaspersky: "Sub from ~1990₽/yr",
-      norton: "Sub from ~$39.99/yr",
-      bitdefender: "Sub from ~$29.99/yr",
-      googleSpam: "Free"
+      kaspersky: "Assinatura a partir de ~1990₽/ano",
+      norton: "Assinatura a partir de ~$39.99/ano",
+      bitdefender: "Assinatura a partir de ~$29.99/ano",
+      googleSpam: "Grátis"
     },
-    disclaimer: "We strive for maximum objectivity. If you spot any inaccuracy, please contact us on Telegram.",
-    telegramBtn: "Contact on Telegram"
+    disclaimer: "Buscamos a máxima objetividade. Se você notar alguma imprecisão, entre em contato conosco no Telegram.",
+    telegramBtn: "Fale conosco no Telegram"
   }
 };
 
@@ -4285,40 +4285,40 @@ const fr: Translations = {
   },
 
   comparisonPage: {
-    title: "Honest Comparison",
-    subtitle: "An objective comparative analysis of TrustNode vs leading global security solutions",
-    badge: "COMPARISON // FACTS",
-    thFeature: "Feature",
+    title: "Comparaison honnête",
+    subtitle: "Une analyse comparative objective de TrustNode par rapport aux principales solutions de sécurité mondiales",
+    badge: "COMPARAISON // FAITS",
+    thFeature: "Fonctionnalité",
     thTrustNode: "TrustNode (TN1)",
     thKaspersky: "Kaspersky",
     thNorton: "Norton",
     thBitdefender: "Bitdefender",
     thGoogleSpam: "Google Protection",
     features: {
-      textAnalysis: "Text Analysis (BERT, rules, risk scoring, URL, homoglyphs)",
-      voiceAnalysis: "Real-time Call Voice Analysis",
-      visualAnalysis: "Visual Analysis (fake UIs, wallets, phishing)",
-      socialEngDetect: "Social Engineering Detection (Neural + AI Agents)",
-      behavioralRasp: "Behavioral Analysis & RASP Monitoring",
-      familyDefense: "Parent-Child Family Defense (Guardian System)",
-      beaconSystem: "Beacon System (VK Contact Alerts on fraud)",
-      offlineOnDevice: "100% Offline (On-device execution)",
-      pricing: "Monetization Model"
+      textAnalysis: "Analyse de texte (BERT, règles, notation du risque, URL, homoglyphes)",
+      voiceAnalysis: "Analyse vocale des appels en temps réel",
+      visualAnalysis: "Analyse visuelle (interfaces factices, portefeuilles, phishing)",
+      socialEngDetect: "Détection d'ingénierie sociale (réseau neuronal + agents IA)",
+      behavioralRasp: "Analyse comportementale et surveillance RASP",
+      familyDefense: "Défense familiale Parent-Enfant (système Guardian)",
+      beaconSystem: "Système Beacon (alertes des contacts VK en cas de fraude)",
+      offlineOnDevice: "100% hors ligne (exécution sur l'appareil)",
+      pricing: "Modèle de monétisation"
     },
     status: {
-      yes: "✅ Yes",
-      no: "❌ No",
-      inDev: "🛠 In Dev"
+      yes: "✅ Oui",
+      no: "❌ Non",
+      inDev: "🛠 En développement"
     },
     pricingValues: {
       trustNode: "Gratuit",
-      kaspersky: "Sub from ~1990₽/yr",
-      norton: "Sub from ~$39.99/yr",
-      bitdefender: "Sub from ~$29.99/yr",
-      googleSpam: "Free"
+      kaspersky: "Abonnement à partir de ~1990₽/an",
+      norton: "Abonnement à partir de ~$39.99/an",
+      bitdefender: "Abonnement à partir de ~$29.99/an",
+      googleSpam: "Gratuit"
     },
-    disclaimer: "We strive for maximum objectivity. If you spot any inaccuracy, please contact us on Telegram.",
-    telegramBtn: "Contact on Telegram"
+    disclaimer: "Nous nous efforçons d'atteindre une objectivité maximale. Si vous repérez une inexactitude, contactez-nous sur Telegram.",
+    telegramBtn: "Contacter sur Telegram"
   }
 };
 
@@ -4443,7 +4443,7 @@ const de: Translations = {
         desc: "Ein komprimiertes rubert-tiny2 neuronales Netz, das Anrufe und Texte in Echtzeit analysiert. Erkennt versteckte Gesprächsskripte, Manipulationen und Rollen wie „sicheres Konto“."
       },
       {
-        name: "Social Engineering (Social Eng. Layer)",
+        name: "Soziale Manipulation (Social Engineering Layer)",
         tech: "DeGenome (18 Primitive)",
         desc: "Identifiziert Manipulationstaktiken mithilfe der DeGenome-Taxonomie von 18 Primitiven: künstliche Dringlichkeit, Druckreden, Angstauslöser und Isolationsaufforderungen."
       },
@@ -4657,7 +4657,7 @@ const de: Translations = {
     badge: "GESCHICHTE UND TEAM",
     timeline: [
       {
-        badge: "COLLEGE RESEARCH",
+        badge: "KOLLEG-FORSCHUNG",
         title: "Akademische Grundlagen",
         desc: "Entwickelt am Radiotechnischen Kolleg Tscheljabinsk in der Studiengruppe KB-284 (Fachrichtung 10.02.05 — Informationssicherheit automatisierter Systeme) unter der wissenschaftlichen Leitung von Natalia Anna Morozkova."
       },
@@ -4765,40 +4765,40 @@ const de: Translations = {
   },
 
   comparisonPage: {
-    title: "Honest Comparison",
-    subtitle: "An objective comparative analysis of TrustNode vs leading global security solutions",
-    badge: "COMPARISON // FACTS",
-    thFeature: "Feature",
+    title: "Ehrlicher Vergleich",
+    subtitle: "Eine objektive vergleichende Analyse von TrustNode gegenüber führenden globalen Sicherheitslösungen",
+    badge: "VERGLEICH // FAKTEN",
+    thFeature: "Merkmal",
     thTrustNode: "TrustNode (TN1)",
     thKaspersky: "Kaspersky",
     thNorton: "Norton",
     thBitdefender: "Bitdefender",
     thGoogleSpam: "Google Protection",
     features: {
-      textAnalysis: "Text Analysis (BERT, rules, risk scoring, URL, homoglyphs)",
-      voiceAnalysis: "Real-time Call Voice Analysis",
-      visualAnalysis: "Visual Analysis (fake UIs, wallets, phishing)",
-      socialEngDetect: "Social Engineering Detection (Neural + AI Agents)",
-      behavioralRasp: "Behavioral Analysis & RASP Monitoring",
-      familyDefense: "Parent-Child Family Defense (Guardian System)",
-      beaconSystem: "Beacon System (VK Contact Alerts on fraud)",
-      offlineOnDevice: "100% Offline (On-device execution)",
-      pricing: "Monetization Model"
+      textAnalysis: "Textanalyse (BERT, Regeln, Risiko-Scoring, URL, Homoglyphen)",
+      voiceAnalysis: "Echtzeit-Sprachanalyse von Anrufen",
+      visualAnalysis: "Visuelle Analyse (gefälschte Oberflächen, Wallets, Phishing)",
+      socialEngDetect: "Social-Engineering-Erkennung (neuronales Netz + KI-Agenten)",
+      behavioralRasp: "Verhaltensanalyse und RASP-Überwachung",
+      familyDefense: "Familienverteidigung Parent-Child (Guardian-System)",
+      beaconSystem: "Beacon-System (VK-Kontaktbenachrichtigung bei Betrug)",
+      offlineOnDevice: "100% offline (Ausführung auf dem Gerät)",
+      pricing: "Monetarisierungsmodell"
     },
     status: {
-      yes: "✅ Yes",
-      no: "❌ No",
-      inDev: "🛠 In Dev"
+      yes: "✅ Ja",
+      no: "❌ Nein",
+      inDev: "🛠 In Entwicklung"
     },
     pricingValues: {
       trustNode: "Kostenlos",
-      kaspersky: "Sub from ~1990₽/yr",
-      norton: "Sub from ~$39.99/yr",
-      bitdefender: "Sub from ~$29.99/yr",
-      googleSpam: "Free"
+      kaspersky: "Abo ab ~1990₽/Jahr",
+      norton: "Abo ab ~$39.99/Jahr",
+      bitdefender: "Abo ab ~$29.99/Jahr",
+      googleSpam: "Kostenlos"
     },
-    disclaimer: "We strive for maximum objectivity. If you spot any inaccuracy, please contact us on Telegram.",
-    telegramBtn: "Contact on Telegram"
+    disclaimer: "Wir streben nach maximaler Objektivität. Falls Sie eine Ungenauigkeit bemerken, kontaktieren Sie uns bitte über Telegram.",
+    telegramBtn: "Kontakt über Telegram"
   }
 };
 
@@ -5245,40 +5245,40 @@ const ja: Translations = {
   },
 
   comparisonPage: {
-    title: "Honest Comparison",
-    subtitle: "An objective comparative analysis of TrustNode vs leading global security solutions",
-    badge: "COMPARISON // FACTS",
-    thFeature: "Feature",
+    title: "誠実な比較",
+    subtitle: "TrustNode と主要なグローバルセキュリティソリューションの客観的な比較分析",
+    badge: "比較 // 事実",
+    thFeature: "機能",
     thTrustNode: "TrustNode (TN1)",
     thKaspersky: "Kaspersky",
     thNorton: "Norton",
     thBitdefender: "Bitdefender",
     thGoogleSpam: "Google Protection",
     features: {
-      textAnalysis: "Text Analysis (BERT, rules, risk scoring, URL, homoglyphs)",
-      voiceAnalysis: "Real-time Call Voice Analysis",
-      visualAnalysis: "Visual Analysis (fake UIs, wallets, phishing)",
-      socialEngDetect: "Social Engineering Detection (Neural + AI Agents)",
-      behavioralRasp: "Behavioral Analysis & RASP Monitoring",
-      familyDefense: "Parent-Child Family Defense (Guardian System)",
-      beaconSystem: "Beacon System (VK Contact Alerts on fraud)",
-      offlineOnDevice: "100% Offline (On-device execution)",
-      pricing: "Monetization Model"
+      textAnalysis: "テキスト分析（BERT、ルール、リスクスコアリング、URL、ホモグリフ）",
+      voiceAnalysis: "リアルタイム通話音声分析",
+      visualAnalysis: "ビジュアル分析（偽造UI、ウォレット、フィッシング）",
+      socialEngDetect: "ソーシャルエンジニアリング検出（ニューラルネット + AIエージェント）",
+      behavioralRasp: "行動分析とRASP監視",
+      familyDefense: "親子ファミリー防御（Guardianシステム）",
+      beaconSystem: "ビーコンシステム（不正時VKコンタクトへの通知）",
+      offlineOnDevice: "100%オフライン（端末内実行）",
+      pricing: "収益化モデル"
     },
     status: {
-      yes: "✅ Yes",
-      no: "❌ No",
-      inDev: "🛠 In Dev"
+      yes: "✅ あり",
+      no: "❌ なし",
+      inDev: "🛠 開発中"
     },
     pricingValues: {
       trustNode: "無料",
-      kaspersky: "Sub from ~1990₽/yr",
-      norton: "Sub from ~$39.99/yr",
-      bitdefender: "Sub from ~$29.99/yr",
-      googleSpam: "Free"
+      kaspersky: "年間サブスク ~1990₽",
+      norton: "年間サブスク ~$39.99",
+      bitdefender: "年間サブスク ~$29.99",
+      googleSpam: "無料"
     },
-    disclaimer: "We strive for maximum objectivity. If you spot any inaccuracy, please contact us on Telegram.",
-    telegramBtn: "Contact on Telegram"
+    disclaimer: "最大限の客観性を追求しています。誤りに気づいた場合は、Telegram にてご連絡ください。",
+    telegramBtn: "Telegram で連絡する"
   }
 };
 
