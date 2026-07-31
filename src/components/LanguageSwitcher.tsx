@@ -72,7 +72,7 @@ export default function LanguageSwitcher({ variant = "desktop" }: LanguageSwitch
   const buttonClass =
     variant === "desktop"
       ? "inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#0A162C]/60 hover:bg-[#2E7DFF]/20 border border-[#2E7DFF]/30 text-xs font-mono font-medium text-[#2E7DFF] hover:text-white transition-all duration-300 hover:shadow-[0_0_12px_rgba(46,125,255,0.25)] cursor-pointer"
-      : "w-full flex items-center justify-between gap-2 px-3 py-2.5 rounded-xl bg-[#0F0F12] border border-[#1F2937] text-gray-300 cursor-pointer";
+      : "flex items-center justify-center w-11 h-11 rounded-xl bg-[#0F0F12] border border-[#1F2937] text-gray-300 hover:border-[#2E7DFF]/35 hover:bg-[#2E7DFF]/10 hover:text-white transition-all duration-300 cursor-pointer";
 
   return (
     <div className="relative" ref={containerRef} id={`language-switcher-${variant}`}>

@@ -104,7 +104,51 @@
 .footer-area-legal   { grid-area: legal; }
 .footer-area-store   { grid-area: store; }
 
-@media (max-width: 1023px) {
+/* Footer social/store buttons: unified rectangle, all rows the same width */
+.footer-btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+/* Tablet + Desktop (md: ≥768px) — buttons stretch into an equal-width rectangle */
+@media (min-width: 768px) {
+  .footer-btn-rect {
+    width: 20rem;
+  }
+
+  .footer-btn-row {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+
+  .footer-btn-row > a {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+}
+
+/* Tablet only (md: 768px–1023px) — single column, centered rectangle */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "brand"
+      "sitemap"
+      "social"
+      "legal"
+      "store";
+  }
+
+  .footer-area-social,
+  .footer-area-store {
+    justify-self: center;
+  }
+}
+
+/* Mobile (<768px) */
+@media (max-width: 767px) {
   .footer-grid {
     grid-template-columns: 1fr;
     grid-template-areas:
