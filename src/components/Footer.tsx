@@ -78,12 +78,12 @@ const Footer = React.memo(function Footer({ onOpenPrivacy, onOpenTerms }: Footer
             <h3 className="font-mono text-[10px] text-[#2E7DFF] uppercase tracking-[0.18em] mb-3">
               {sitemapHeading}
             </h3>
-            <nav className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <nav className="grid grid-cols-1 sm:grid-cols-2 gap-2 items-start">
               {FOOTER_SITEMAP_PAGES.map((page) => (
                 <button
                   key={page.id}
                   onClick={() => navigateTo(page.id)}
-                  className="text-left font-sans text-sm text-gray-400 hover:text-[#2E7DFF] transition-colors cursor-pointer"
+                  className="text-left font-sans text-sm leading-6 text-gray-400 hover:text-[#2E7DFF] transition-colors cursor-pointer"
                 >
                   {t.pageNames[page.labelKey]}
                 </button>
@@ -110,19 +110,19 @@ const Footer = React.memo(function Footer({ onOpenPrivacy, onOpenTerms }: Footer
                 {t.footer.termsLink}
               </button>
             </div>
-            <p className="font-mono text-[9px] text-gray-600 mt-2 uppercase tracking-widest max-w-full break-words whitespace-normal text-center md:text-left">
+            <p className="font-mono text-[11px] text-gray-600 mt-2 uppercase tracking-widest max-w-full break-words whitespace-normal text-center md:text-left">
               {t.footer.version}
             </p>
             <a
               href="https://github.com/TrustNodeLab"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 inline-flex items-center gap-1.5 font-mono text-[9px] text-gray-500 hover:text-[#2E7DFF] transition-colors"
+              className="mt-2 inline-flex items-center gap-1.5 font-mono text-[11px] text-gray-500 hover:text-[#2E7DFF] transition-colors"
             >
               <SiGithubIcon className="w-3 h-3" />
               {t.footer.githubOrg}
             </a>
-            <p className="font-mono text-[9px] text-gray-600 mt-2">
+            <p className="font-mono text-[11px] text-gray-600 mt-2">
               Mikhail Pitolin &lt;mikhailpitolin@gmail.com&gt;
             </p>
           </div>
@@ -138,12 +138,12 @@ const Footer = React.memo(function Footer({ onOpenPrivacy, onOpenTerms }: Footer
               rel="noopener noreferrer"
               aria-label={label}
               title={label}
-              className="font-mono text-xs text-gray-400 hover:text-[#2E7DFF] hover:border-[#2E7DFF]/40 transition-all duration-300 flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[#0F0F12]/80 border border-[#1F2937]/50 min-h-11"
+              className="font-mono text-sm text-gray-400 hover:text-[#2E7DFF] hover:border-[#2E7DFF]/40 transition-all duration-300 flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[#0F0F12]/80 border border-[#1F2937]/50 min-h-11 min-w-[140px]"
             >
               <span className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-[#0A162C]/60 border border-[#2E7DFF]/30 text-[#2E7DFF] shrink-0">
                 <Icon className="w-4 h-4" />
               </span>
-              <span>{label === "VK" ? "VKontakte" : label}</span>
+              <span className="whitespace-nowrap">{label === "VK" ? "VKontakte" : label}</span>
             </a>
           ))}
 
@@ -157,7 +157,7 @@ const Footer = React.memo(function Footer({ onOpenPrivacy, onOpenTerms }: Footer
               rel="noopener noreferrer"
               aria-label={label}
               title={label}
-              className="font-mono text-xs text-gray-400 hover:text-[#2E7DFF] hover:border-[#2E7DFF]/40 transition-all duration-300 flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[#0F0F12]/80 border border-[#1F2937]/50 min-h-11"
+              className="font-mono text-sm text-gray-400 hover:text-[#2E7DFF] hover:border-[#2E7DFF]/40 transition-all duration-300 flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[#0F0F12]/80 border border-[#1F2937]/50 min-h-11 min-w-[140px]"
             >
               <span className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-[#0A162C]/60 border border-[#2E7DFF]/30 text-[#2E7DFF] shrink-0">
                 {Icon || (
@@ -168,7 +168,7 @@ const Footer = React.memo(function Footer({ onOpenPrivacy, onOpenTerms }: Footer
                   </svg>
                 )}
               </span>
-              <span>{label}</span>
+              <span className="whitespace-nowrap">{label}</span>
             </a>
           ))}
         </div>
