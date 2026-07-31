@@ -89,3 +89,28 @@
     animation: none !important;
   }
 }
+
+.footer-grid {
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas:
+    "brand   sitemap social"
+    ".       legal   store";
+}
+
+.footer-area-brand   { grid-area: brand; }
+.footer-area-sitemap { grid-area: sitemap; }
+.footer-area-social  { grid-area: social; }
+.footer-area-legal   { grid-area: legal; }
+.footer-area-store   { grid-area: store; }
+
+@media (max-width: 1023px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "brand"
+      "sitemap"
+      "social"
+      "legal"
+      "store";
+  }
+}

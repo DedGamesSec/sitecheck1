@@ -54,10 +54,9 @@ const Footer = React.memo(function Footer({ onOpenPrivacy, onOpenTerms }: Footer
       style={{ paddingBottom: "max(3rem, env(safe-area-inset-bottom))" }}
       id="footer"
     >
-      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[auto,1fr,auto] gap-8 items-start">
-        
-        {/* Left: Brand Identity */}
-        <div className="flex items-center gap-3">
+      <div className="max-w-6xl mx-auto grid gap-x-8 gap-y-6 footer-grid">
+        {/* Brand Identity */}
+        <div className="flex items-center gap-3 footer-area-brand">
           <div className="w-8 h-10 flex items-center justify-center bg-[#111827]/30 rounded-lg border border-[#2E7DFF]/10">
             <MiniLogo />
           </div>
@@ -72,64 +71,26 @@ const Footer = React.memo(function Footer({ onOpenPrivacy, onOpenTerms }: Footer
           </div>
         </div>
 
-        {/* Center: Sitemap + legal */}
-        <div className="grid grid-cols-1 md:grid-cols-[minmax(0,220px),1fr] gap-8">
-          <div>
-            <h3 className="font-mono text-[10px] text-[#2E7DFF] uppercase tracking-[0.18em] mb-3">
-              {sitemapHeading}
-            </h3>
-            <nav className="grid grid-cols-1 sm:grid-cols-2 gap-2 items-start">
-              {FOOTER_SITEMAP_PAGES.map((page) => (
-                <button
-                  key={page.id}
-                  onClick={() => navigateTo(page.id)}
-                  className="text-left font-sans text-sm leading-6 text-gray-400 hover:text-[#2E7DFF] transition-colors cursor-pointer"
-                >
-                  {t.pageNames[page.labelKey]}
-                </button>
-              ))}
-            </nav>
-          </div>
-
-          <div className="text-center md:text-left flex flex-col items-center md:items-start gap-1 max-w-full px-2">
-            <p className="font-sans text-xs text-gray-400 max-w-full break-words">
-              {copyright}
-            </p>
-            <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 mt-1.5 max-w-full">
-              <button 
-                onClick={onOpenPrivacy} 
-                className="font-sans text-[10px] sm:text-xs text-gray-400 hover:text-[#2E7DFF] hover:underline cursor-pointer transition-colors break-words text-center md:text-left"
+        {/* Sitemap nav */}
+        <div className="footer-area-sitemap">
+          <h3 className="font-mono text-[10px] text-[#2E7DFF] uppercase tracking-[0.18em] mb-3">
+            {sitemapHeading}
+          </h3>
+          <nav className="grid grid-cols-1 sm:grid-cols-2 gap-2 items-start">
+            {FOOTER_SITEMAP_PAGES.map((page) => (
+              <button
+                key={page.id}
+                onClick={() => navigateTo(page.id)}
+                className="text-left font-sans text-sm text-gray-400 hover:text-[#2E7DFF] transition-colors cursor-pointer leading-6"
               >
-                {t.footer.privacyLink}
+                {t.pageNames[page.labelKey]}
               </button>
-              <span className="text-gray-700 text-xs hidden sm:inline select-none">|</span>
-              <button 
-                onClick={onOpenTerms} 
-                className="font-sans text-[10px] sm:text-xs text-gray-400 hover:text-[#2E7DFF] hover:underline cursor-pointer transition-colors break-words text-center md:text-left"
-              >
-                {t.footer.termsLink}
-              </button>
-            </div>
-            <p className="font-mono text-[11px] text-gray-600 mt-2 uppercase tracking-widest max-w-full break-words whitespace-normal text-center md:text-left">
-              {t.footer.version}
-            </p>
-            <a
-              href="https://github.com/TrustNodeLab"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-2 inline-flex items-center gap-1.5 font-mono text-[11px] text-gray-500 hover:text-[#2E7DFF] transition-colors"
-            >
-              <SiGithubIcon className="w-3 h-3" />
-              {t.footer.githubOrg}
-            </a>
-            <p className="font-mono text-[11px] text-gray-600 mt-2">
-              Mikhail Pitolin &lt;mikhailpitolin@gmail.com&gt;
-            </p>
-          </div>
+            ))}
+          </nav>
         </div>
 
-        {/* Right: Social / Tech Links */}
-        <div className="flex flex-wrap items-center justify-center lg:justify-end gap-3 max-w-full">
+        {/* Social icons */}
+        <div className="flex flex-wrap items-center justify-center lg:justify-end gap-3 footer-area-social">
           {socialLinks.map(({ href, label, Icon }) => (
             <a 
               key={label}
@@ -138,7 +99,7 @@ const Footer = React.memo(function Footer({ onOpenPrivacy, onOpenTerms }: Footer
               rel="noopener noreferrer"
               aria-label={label}
               title={label}
-              className="font-mono text-sm text-gray-400 hover:text-[#2E7DFF] hover:border-[#2E7DFF]/40 transition-all duration-300 flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[#0F0F12]/80 border border-[#1F2937]/50 min-h-11 min-w-[140px]"
+              className="font-mono text-sm text-gray-400 hover:text-[#2E7DFF] hover:border-[#2E7DFF]/40 transition-all duration-300 flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[#0F0F12]/80 border border-[#1F2937]/50 min-h-11"
             >
               <span className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-[#0A162C]/60 border border-[#2E7DFF]/30 text-[#2E7DFF] shrink-0">
                 <Icon className="w-4 h-4" />
@@ -146,9 +107,47 @@ const Footer = React.memo(function Footer({ onOpenPrivacy, onOpenTerms }: Footer
               <span className="whitespace-nowrap">{label === "VK" ? "VKontakte" : label}</span>
             </a>
           ))}
+        </div>
 
-          <div className="w-full h-px bg-[#1F2937]/30 my-1" />
+        {/* Legal / copyright block */}
+        <div className="text-center md:text-left flex flex-col items-center md:items-start gap-1 max-w-full px-2 footer-area-legal">
+          <p className="font-sans text-xs text-gray-400 max-w-full break-words">
+            {copyright}
+          </p>
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 mt-1.5 max-w-full">
+            <button 
+              onClick={onOpenPrivacy} 
+              className="font-sans text-xs sm:text-sm text-gray-400 hover:text-[#2E7DFF] hover:underline cursor-pointer transition-colors break-words text-center md:text-left"
+            >
+              {t.footer.privacyLink}
+            </button>
+            <span className="text-gray-700 text-xs hidden sm:inline select-none">|</span>
+            <button 
+              onClick={onOpenTerms} 
+              className="font-sans text-xs sm:text-sm text-gray-400 hover:text-[#2E7DFF] hover:underline cursor-pointer transition-colors break-words text-center md:text-left"
+            >
+              {t.footer.termsLink}
+            </button>
+          </div>
+          <p className="font-mono text-[11px] text-gray-500 mt-2 uppercase tracking-widest max-w-full break-words whitespace-normal text-center md:text-left">
+            {t.footer.version}
+          </p>
+          <a
+            href="https://github.com/TrustNodeLab"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 inline-flex items-center gap-1.5 font-mono text-[11px] text-gray-400 hover:text-[#2E7DFF] transition-colors"
+          >
+            <SiGithubIcon className="w-3.5 h-3.5" />
+            {t.footer.githubOrg}
+          </a>
+          <p className="font-mono text-[11px] text-gray-500 mt-2">
+            Mikhail Pitolin &lt;mikhailpitolin@gmail.com&gt;
+          </p>
+        </div>
 
+        {/* Store / tech links — same grid row as legal block */}
+        <div className="flex flex-wrap items-center justify-center lg:justify-end gap-3 self-start footer-area-store">
           {storeLinks.map(({ href, label, Icon }) => (
             <a 
               key={href}
@@ -157,7 +156,7 @@ const Footer = React.memo(function Footer({ onOpenPrivacy, onOpenTerms }: Footer
               rel="noopener noreferrer"
               aria-label={label}
               title={label}
-              className="font-mono text-sm text-gray-400 hover:text-[#2E7DFF] hover:border-[#2E7DFF]/40 transition-all duration-300 flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[#0F0F12]/80 border border-[#1F2937]/50 min-h-11 min-w-[140px]"
+              className="font-mono text-sm text-gray-400 hover:text-[#2E7DFF] hover:border-[#2E7DFF]/40 transition-all duration-300 flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[#0F0F12]/80 border border-[#1F2937]/50 min-h-11"
             >
               <span className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-[#0A162C]/60 border border-[#2E7DFF]/30 text-[#2E7DFF] shrink-0">
                 {Icon || (
@@ -172,7 +171,6 @@ const Footer = React.memo(function Footer({ onOpenPrivacy, onOpenTerms }: Footer
             </a>
           ))}
         </div>
-
       </div>
     </footer>
   );
