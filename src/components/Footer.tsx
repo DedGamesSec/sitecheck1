@@ -5,7 +5,7 @@ import MiniLogo from "./MiniLogo";
 import { useTranslation } from "../i18n/LanguageContext";
 import { useNavigation } from "../navigation/NavigationContext";
 import { FOOTER_SITEMAP_PAGES } from "../navigation/pages.config";
-import { RUSTORE_URL, PRODUCT_RADAR_URL } from "./Header";
+import { PRODUCT_RADAR_URL } from "./Header";
 
 const SiTelegramIcon = SiTelegram as React.ComponentType<any>;
 const SiVkIcon = SiVk as React.ComponentType<any>;
@@ -44,9 +44,11 @@ const Footer = React.memo(function Footer({ onOpenPrivacy, onOpenTerms }: Footer
   ] as const;
 
   const storeLinks = [
-    { href: RUSTORE_URL, label: t.header.rustore, Icon: null as React.ReactNode | null, external: true },
     { href: PRODUCT_RADAR_URL, label: t.header.radar, Icon: <Radar className="w-4 h-4" />, external: true },
   ];
+
+  const socialButtonClass =
+    "font-mono text-sm text-gray-400 hover:text-[#2E7DFF] hover:border-[#2E7DFF]/40 transition-all duration-300 flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[#0F0F12]/80 border border-[#1F2937]/50 min-h-11";
 
   return (
     <footer 
@@ -55,28 +57,28 @@ const Footer = React.memo(function Footer({ onOpenPrivacy, onOpenTerms }: Footer
       id="footer"
     >
       <div className="max-w-6xl mx-auto grid gap-x-8 gap-y-6 footer-grid">
-        {/* Brand Identity */}
-        <div className="flex items-center gap-3 footer-area-brand">
-          <div className="w-8 h-10 flex items-center justify-center bg-[#111827]/30 rounded-lg border border-[#2E7DFF]/10">
-            <MiniLogo />
-          </div>
-          
-          <div className="flex flex-col">
+
+        {/* Brand Identity — centered, full-width first row */}
+        <div className="footer-area-brand flex flex-col items-center gap-1 text-center">
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-10 flex items-center justify-center bg-[#111827]/30 rounded-lg border border-[#2E7DFF]/10">
+              <MiniLogo />
+            </div>
             <span className="font-display font-bold text-base text-[#F5F5F0] tracking-tight">
               Trust<span className="text-[#2E7DFF]">Node</span>
             </span>
-            <span className="font-mono text-[9px] text-gray-400 uppercase tracking-widest">
-              {t.brand.footerTagline}
-            </span>
           </div>
+          <span className="font-mono text-[9px] text-gray-400 uppercase tracking-widest">
+            {t.brand.footerTagline}
+          </span>
         </div>
 
-        {/* Sitemap nav */}
+        {/* Sitemap nav — left column */}
         <div className="footer-area-sitemap">
           <h3 className="font-mono text-[10px] text-[#2E7DFF] uppercase tracking-[0.18em] mb-3">
             {sitemapHeading}
           </h3>
-          <nav className="grid grid-cols-1 sm:grid-cols-2 gap-2 items-start">
+          <nav className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 items-start">
             {FOOTER_SITEMAP_PAGES.map((page) => (
               <button
                 key={page.id}
@@ -89,28 +91,48 @@ const Footer = React.memo(function Footer({ onOpenPrivacy, onOpenTerms }: Footer
           </nav>
         </div>
 
-        {/* Social icons */}
-        <div className="flex flex-wrap items-center justify-center lg:justify-end gap-3 footer-area-social">
-          {socialLinks.map(({ href, label, Icon }) => (
-            <a 
-              key={label}
-              href={href}
-              target="_blank" 
-              rel="noopener noreferrer"
-              aria-label={label}
-              title={label}
-              className="font-mono text-sm text-gray-400 hover:text-[#2E7DFF] hover:border-[#2E7DFF]/40 transition-all duration-300 flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[#0F0F12]/80 border border-[#1F2937]/50 min-h-11"
-            >
-              <span className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-[#0A162C]/60 border border-[#2E7DFF]/30 text-[#2E7DFF] shrink-0">
-                <Icon className="w-4 h-4" />
-              </span>
-              <span className="whitespace-nowrap">{label === "VK" ? "VKontakte" : label}</span>
-            </a>
-          ))}
+        {/* Social buttons — right column, staircase */}
+        <div className="footer-area-social flex flex-wrap justify-center gap-3 lg:flex-col lg:flex-nowrap lg:items-end lg:justify-end">
+          <div className="flex flex-wrap justify-center gap-3 lg:mr-24">
+            {socialLinks.slice(0, 2).map(({ href, label, Icon }) => (
+              <a 
+                key={label}
+                href={href}
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label={label}
+                title={label}
+                className={socialButtonClass}
+              >
+                <span className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-[#0A162C]/60 border border-[#2E7DFF]/30 text-[#2E7DFF] shrink-0">
+                  <Icon className="w-4 h-4" />
+                </span>
+                <span className="whitespace-nowrap">{label === "VK" ? "VKontakte" : label}</span>
+              </a>
+            ))}
+          </div>
+          <div className="flex flex-wrap justify-center gap-3 lg:mr-12">
+            {socialLinks.slice(2, 4).map(({ href, label, Icon }) => (
+              <a 
+                key={label}
+                href={href}
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label={label}
+                title={label}
+                className={socialButtonClass}
+              >
+                <span className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-[#0A162C]/60 border border-[#2E7DFF]/30 text-[#2E7DFF] shrink-0">
+                  <Icon className="w-4 h-4" />
+                </span>
+                <span className="whitespace-nowrap">{label === "VK" ? "VKontakte" : label}</span>
+              </a>
+            ))}
+          </div>
         </div>
 
-        {/* Legal / copyright block */}
-        <div className="text-center md:text-left flex flex-col items-center md:items-start gap-1 max-w-full px-2 footer-area-legal">
+        {/* Legal / copyright block — bottom left */}
+        <div className="text-center md:text-left flex flex-col items-center md:items-start gap-1 max-w-full footer-area-legal">
           <p className="font-sans text-xs text-gray-400 max-w-full break-words">
             {copyright}
           </p>
@@ -146,8 +168,8 @@ const Footer = React.memo(function Footer({ onOpenPrivacy, onOpenTerms }: Footer
           </p>
         </div>
 
-        {/* Store / tech links — same grid row as legal block */}
-        <div className="flex flex-wrap items-center justify-center lg:justify-end gap-3 self-start footer-area-store">
+        {/* Product Radar — bottom right, continues the staircase */}
+        <div className="footer-area-store flex flex-wrap items-center justify-center gap-3 lg:justify-end lg:self-start">
           {storeLinks.map(({ href, label, Icon }) => (
             <a 
               key={href}
@@ -156,7 +178,7 @@ const Footer = React.memo(function Footer({ onOpenPrivacy, onOpenTerms }: Footer
               rel="noopener noreferrer"
               aria-label={label}
               title={label}
-              className="font-mono text-sm text-gray-400 hover:text-[#2E7DFF] hover:border-[#2E7DFF]/40 transition-all duration-300 flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[#0F0F12]/80 border border-[#1F2937]/50 min-h-11"
+              className={socialButtonClass}
             >
               <span className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-[#0A162C]/60 border border-[#2E7DFF]/30 text-[#2E7DFF] shrink-0">
                 {Icon || (

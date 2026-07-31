@@ -405,21 +405,6 @@ export default function App() {
                         {t.hero.titleSub}
                       </p>
 
-                      {/* Download CTA */}
-                      <a
-                        href="https://www.rustore.ru/catalog/app/com.frauddetector.app"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mt-8 inline-flex items-center gap-2.5 px-6 py-3.5 rounded-2xl bg-[#2E7DFF] text-white font-sans text-sm font-bold hover:bg-[#2E7DFF]/90 transition-all duration-300 cursor-pointer shadow-[0_0_25px_rgba(46,125,255,0.3)] hover:shadow-[0_0_35px_rgba(46,125,255,0.5)] pointer-events-auto"
-                        id="hero-download-btn"
-                      >
-                        <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                          <polyline points="7 10 12 15 17 10" />
-                          <line x1="12" y1="15" x2="12" y2="3" />
-                        </svg>
-                        {t.header.rustore}
-                      </a>
                     </motion.div>
 
                     {/* Scroll Down Indicator */}

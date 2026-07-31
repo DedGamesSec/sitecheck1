@@ -91,10 +91,11 @@
 }
 
 .footer-grid {
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: 1fr auto;
   grid-template-areas:
-    "brand   sitemap social"
-    ".       legal   store";
+    "brand   brand"
+    "sitemap social"
+    "legal   store";
 }
 
 .footer-area-brand   { grid-area: brand; }
