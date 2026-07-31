@@ -302,11 +302,11 @@ export default function RealDevelopmentSection({ onlyRoadmap = false }: { onlyRo
                           </li>
                           <li className="flex justify-between">
                             <span>{dui.params}</span>
-                            <span className="text-gray-200">~29.1M (optimized)</span>
+                            <span className="text-gray-200">{onnxConsole.paramValue}</span>
                           </li>
                           <li className="flex justify-between">
                             <span>{dui.latency}</span>
-                            <span className="text-[#2E7DFF]">&lt;14ms (on mobile CPU)</span>
+                            <span className="text-[#2E7DFF]">{onnxConsole.latencyValue}</span>
                           </li>
                         </ul>
                       </div>
@@ -540,7 +540,7 @@ interface OnnxPreset {
 }
 
 interface OnnxDictType {
-  title: string; subtitle: string; placeholder: string; btnRun: string; btnRunning: string; resultHeader: string; fraudLabel: string; safeLabel: string; attentionTitle: string; presetTitle: string; feedbackHeader: string; feedbackSub: string; errType: string; errFalsePositive: string; errFalseNegative: string; errOther: string; commentLabel: string; commentPlaceholder: string; btnTg: string; btnCopy: string; copied: string; modelStatusSafe: string; modelStatusSuspicious: string; modelStatusFraud: string; hideTicketForm: string; ticketSpec: string; consoleRootFile: string; consoleSuccess: string; consoleQuant: string; consoleCompat: string;
+  title: string; subtitle: string; placeholder: string; btnRun: string; btnRunning: string; resultHeader: string; fraudLabel: string; safeLabel: string; attentionTitle: string; presetTitle: string; feedbackHeader: string; feedbackSub: string; errType: string; errFalsePositive: string; errFalseNegative: string; errOther: string; commentLabel: string; commentPlaceholder: string; btnTg: string; btnCopy: string; copied: string; modelStatusSafe: string; modelStatusSuspicious: string; modelStatusFraud: string; hideTicketForm: string; ticketSpec: string; consoleRootFile: string; consoleSuccess: string; consoleQuant: string; consoleCompat: string; paramValue: string; latencyValue: string;
 }
 
 const ONNX_DICT: Record<LanguageCode, OnnxDictType> = {
@@ -575,6 +575,8 @@ const ONNX_DICT: Record<LanguageCode, OnnxDictType> = {
     consoleSuccess: "УСПЕХ",
     consoleQuant: "КВАНТИЗАЦИЯ: INT8 (динамическая)",
     consoleCompat: "СОВМЕСТИМОСТЬ: ORT 1.18+",
+    paramValue: "~29.1M (оптимизировано)",
+    latencyValue: "<14ms (на мобильном CPU)",
   },
   en: {
     title: "Interactive RuBERT ONNX Test Lab",
@@ -607,6 +609,8 @@ const ONNX_DICT: Record<LanguageCode, OnnxDictType> = {
     consoleSuccess: "SUCCESS",
     consoleQuant: "QUANTIZATION: INT8 (dynamic)",
     consoleCompat: "COMPATIBILITY: ORT 1.18+",
+    paramValue: "~29.1M (optimized)",
+    latencyValue: "<14ms (on mobile CPU)",
   },
   tr: {
     title: "Etkileşimli RuBERT ONNX Test Laboratuvarı",
@@ -639,6 +643,8 @@ const ONNX_DICT: Record<LanguageCode, OnnxDictType> = {
     consoleSuccess: "BAŞARILI",
     consoleQuant: "KANTİZASYON: INT8 (dinamik)",
     consoleCompat: "UYUMLULUK: ORT 1.18+",
+    paramValue: "~29.1M (optimize edilmiş)",
+    latencyValue: "<14ms (mobil CPU'da)",
   },
   es: {
     title: "Laboratorio de pruebas interactivo RuBERT ONNX",
@@ -671,6 +677,8 @@ const ONNX_DICT: Record<LanguageCode, OnnxDictType> = {
     consoleSuccess: "ÉXITO",
     consoleQuant: "CUANTIZACIÓN: INT8 (dinámica)",
     consoleCompat: "COMPATIBILIDAD: ORT 1.18+",
+    paramValue: "~29.1M (optimizado)",
+    latencyValue: "<14ms (en CPU móvil)",
   },
   zh: {
     title: "交互式 RuBERT ONNX 测试实验室",
@@ -703,6 +711,8 @@ const ONNX_DICT: Record<LanguageCode, OnnxDictType> = {
     consoleSuccess: "成功",
     consoleQuant: "量化：INT8（动态）",
     consoleCompat: "兼容性：ORT 1.18+",
+    paramValue: "~29.1M (已优化)",
+    latencyValue: "<14ms（移动端 CPU）",
   },
   hi: {
     title: "इंटरैक्टिव RuBERT ONNX टेस्ट लैब",
@@ -735,6 +745,8 @@ const ONNX_DICT: Record<LanguageCode, OnnxDictType> = {
     consoleSuccess: "सफलता",
     consoleQuant: "क्वांटाइज़ेशन: INT8 (डायनामिक)",
     consoleCompat: "संगतता: ORT 1.18+",
+    paramValue: "~29.1M (अनुकूलित)",
+    latencyValue: "<14ms (मोबाइल CPU पर)",
   },
   ar: {
     title: "مختبر اختبار RuBERT ONNX التفاعلي",
@@ -767,6 +779,8 @@ const ONNX_DICT: Record<LanguageCode, OnnxDictType> = {
     consoleSuccess: "نجاح",
     consoleQuant: "القياس الكمي: INT8 (ديناميكي)",
     consoleCompat: "التوافق: ORT 1.18+",
+    paramValue: "~29.1M (محسّن)",
+    latencyValue: "<14ms (على معالج الهاتف)",
   },
   pt: {
     title: "Laboratório de Teste Interativo RuBERT ONNX",
@@ -799,6 +813,8 @@ const ONNX_DICT: Record<LanguageCode, OnnxDictType> = {
     consoleSuccess: "SUCESSO",
     consoleQuant: "QUANTIZAÇÃO: INT8 (dinâmica)",
     consoleCompat: "COMPATIBILIDADE: ORT 1.18+",
+    paramValue: "~29.1M (otimizado)",
+    latencyValue: "<14ms (em CPU móvel)",
   },
   fr: {
     title: "Laboratoire de test interactif RuBERT ONNX",
@@ -831,6 +847,8 @@ const ONNX_DICT: Record<LanguageCode, OnnxDictType> = {
     consoleSuccess: "SUCCÈS",
     consoleQuant: "QUANTIFICATION : INT8 (dynamique)",
     consoleCompat: "COMPATIBILITÉ : ORT 1.18+",
+    paramValue: "~29.1M (optimisé)",
+    latencyValue: "<14ms (sur CPU mobile)",
   },
   de: {
     title: "Interaktives RuBERT-ONNX-Testlabor",
@@ -863,6 +881,8 @@ const ONNX_DICT: Record<LanguageCode, OnnxDictType> = {
     consoleSuccess: "ERFOLG",
     consoleQuant: "QUANTISIERUNG: INT8 (dynamisch)",
     consoleCompat: "KOMPATIBILITÄT: ORT 1.18+",
+    paramValue: "~29.1M (optimiert)",
+    latencyValue: "<14ms (auf Mobil-CPU)",
   },
   ja: {
     title: "インタラクティブ RuBERT ONNX テストラボ",
@@ -895,6 +915,8 @@ const ONNX_DICT: Record<LanguageCode, OnnxDictType> = {
     consoleSuccess: "成功",
     consoleQuant: "量子化：INT8（動的）",
     consoleCompat: "互換性：ORT 1.18+",
+    paramValue: "~29.1M（最適化済み）",
+    latencyValue: "<14ms（モバイルCPU）",
   },
 };
 
