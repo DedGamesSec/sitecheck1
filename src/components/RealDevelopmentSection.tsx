@@ -17,12 +17,11 @@ export default function RealDevelopmentSection({ onlyRoadmap = false }: { onlyRo
   const tTitle = t.realDev.title;
   const tSubtitle = t.realDev.subtitle;
   const tBadge = t.realDev.badge;
+  const rmp = t.roadmapPage;
 
-  const displayTitle = onlyRoadmap ? (language === "ru" ? "Дорожная Карта" : "Development Roadmap") : tTitle;
-  const displaySubtitle = onlyRoadmap 
-    ? (language === "ru" ? "Статус разработки TrustNode, политика безопасного раскрытия и фазы развертывания интеллектуальных модулей" : "Current progress of TrustNode, responsible disclosure policy, and semantic core deployment timeline") 
-    : tSubtitle;
-  const displayBadge = onlyRoadmap ? (language === "ru" ? "СТАТУС И ПЛАНЫ" : "STATUS & PLAN") : tBadge;
+  const displayTitle = onlyRoadmap ? rmp.title : tTitle;
+  const displaySubtitle = onlyRoadmap ? rmp.subtitle : tSubtitle;
+  const displayBadge = onlyRoadmap ? rmp.badge : tBadge;
 
   const currentAward = t.realDev.awardDetails;
   const currentGraph = t.realDev.graphDetails;
@@ -340,30 +339,28 @@ export default function RealDevelopmentSection({ onlyRoadmap = false }: { onlyRo
                     <div>
                       <div className="flex justify-between items-center mb-4">
                         <span className="font-mono text-[9px] text-emerald-400 uppercase tracking-widest bg-emerald-950/40 border border-emerald-500/30 px-2 py-0.5 rounded-full">
-                          {language === "ru" ? "ГОТОВЫЙ MVP" : "READY MVP"}
+                          {rmp.readyMvp}
                         </span>
                         <span className="font-mono text-xs text-gray-500">v1.2.0</span>
                       </div>
                       <h4 className="font-display font-bold text-xl text-white mb-2">TrustNode 1 (TN1)</h4>
                       <p className="font-sans text-xs text-gray-400 leading-relaxed mb-4">
-                        {language === "ru" 
-                          ? "Полностью готовое, протестированное Android-приложение для локальной сигнатурной защиты. Требует только дообучения весов и калибровки порогов."
-                          : "Fully operational and tested Android package for localized signature protection. Requires only model threshold calibration and weight fine-tuning."}
+                        {rmp.tn1Desc}
                       </p>
                       <div className="p-3 bg-black/40 rounded-xl border border-emerald-500/10 font-mono text-[10px] text-emerald-400/90 space-y-1 mb-4">
                         <div className="flex justify-between">
-                          <span>{language === "ru" ? "ПАКЕТ:" : "PACKAGE:"}</span>
+                          <span>{rmp.packageLabel}</span>
                           <span className="text-gray-300">com.frauddetector.app</span>
                         </div>
                         <div className="flex justify-between">
-                          <span>{language === "ru" ? "ДВИЖОК ЯДРА:" : "CORE ENGINE:"}</span>
+                          <span>{rmp.coreEngineLabel}</span>
                           <span className="text-gray-300">Heuristics v1.2</span>
                         </div>
                         <div className="flex justify-between">
-                          <span>{language === "ru" ? "СТАТУС:" : "STATUS:"}</span>
+                          <span>{rmp.statusLabel}</span>
                           <span className="text-emerald-400 flex items-center gap-1">
                             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping" />
-                            {language === "ru" ? "ПОЛНОСТЬЮ ГОТОВ (MVP)" : "FULLY READY (MVP)"}
+                            {rmp.fullyReady}
                           </span>
                         </div>
                       </div>
@@ -374,7 +371,7 @@ export default function RealDevelopmentSection({ onlyRoadmap = false }: { onlyRo
                         className="mt-3 inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-[#111827] border border-[#2E7DFF]/20 hover:border-[#2E7DFF]/50 text-gray-400 hover:text-[#2E7DFF] transition-all font-mono text-[10px] font-semibold w-full justify-center"
                       >
                         <SiGithub className="w-3.5 h-3.5" />
-                        {language === "ru" ? "Исходный код на GitHub" : "Source code on GitHub"}
+                        {rmp.sourceGithub}
                       </a>
                     </div>
                   </div>
@@ -384,24 +381,22 @@ export default function RealDevelopmentSection({ onlyRoadmap = false }: { onlyRo
                     <div>
                       <div className="flex justify-between items-center mb-4">
                         <span className="font-mono text-[9px] text-[#2E7DFF] uppercase tracking-widest bg-[#0A162C]/40 border border-[#2E7DFF]/30 px-2 py-0.5 rounded-full">
-                          {language === "ru" ? "В РАЗРАБОТКЕ" : "UNDER DEVELOPMENT"}
+                          {rmp.underDevelopment}
                         </span>
                         <span className="font-mono text-xs text-gray-500">v2.0-alpha</span>
                       </div>
                       <h4 className="font-display font-bold text-xl text-white mb-2">TrustNode 3 (TN3) / PHANTOM 2.0</h4>
                       <p className="font-sans text-xs text-gray-400 leading-relaxed mb-4">
-                        {language === "ru"
-                          ? "7-слойная патентная архитектура PHANTOM 2.0 с независимым ИИ-консенсусом и системой оповещений Beacon."
-                          : "7-layer patent PHANTOM 2.0 architecture featuring independent AI consensus routing and Beacon notification networks."}
+                        {rmp.tn3Desc}
                       </p>
                       <div className="p-3 bg-black/40 rounded-xl border border-[#2E7DFF]/10 font-mono text-[10px] text-gray-300 space-y-1 mb-4">
                         <div className="flex justify-between">
-                          <span>{language === "ru" ? "СРОК СДАЧИ:" : "DEADLINE:"}</span>
-                          <span className="text-[#2E7DFF] font-bold">{language === "ru" ? "СЕНТЯБРЬ 2026" : "SEPTEMBER 2026"}</span>
+                          <span>{rmp.deadlineLabel}</span>
+                          <span className="text-[#2E7DFF] font-bold">{rmp.september2026}</span>
                         </div>
                         <div className="flex justify-between">
-                          <span>{language === "ru" ? "ФАЗА:" : "PHASE:"}</span>
-                          <span className="text-amber-500 font-bold">{language === "ru" ? "Проектирование Архитектуры" : "Architecture Phase"}</span>
+                          <span>{rmp.phaseLabel}</span>
+                          <span className="text-amber-500 font-bold">{rmp.architecturePhase}</span>
                         </div>
                       </div>
                     </div>
@@ -412,28 +407,26 @@ export default function RealDevelopmentSection({ onlyRoadmap = false }: { onlyRo
                     <div>
                       <div className="flex justify-between items-center mb-4">
                         <span className="font-mono text-[9px] text-amber-500 uppercase tracking-widest bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded-full">
-                          {language === "ru" ? "КОНЦЕПТ-СПЕЦИФИКАЦИЯ" : "CONCEPTUAL SPEC"}
+                          {rmp.conceptualSpec}
                         </span>
                         <span className="font-mono text-xs text-gray-500">v3.0-design</span>
                       </div>
                       <h4 className="font-display font-bold text-xl text-white mb-2">Kira Voice Assistant</h4>
                       <p className="font-sans text-xs text-gray-400 leading-relaxed mb-4">
-                        {language === "ru"
-                          ? "Речевой интент-анализатор для блокирования манипулятивного речевого воздействия непосредственно в ходе живого разговора."
-                          : "Speech-intent analyzer to capture and neutralize manipulative speech acts during live dial channels."}
+                        {rmp.kiraDesc}
                       </p>
                       <div className="p-3 bg-black/40 rounded-xl border border-amber-500/10 font-mono text-[10px] text-amber-500 space-y-1 mb-4">
                         <div className="flex justify-between">
-                          <span>{language === "ru" ? "СТАТУС:" : "STATUS:"}</span>
-                          <span className="font-bold">{language === "ru" ? "Проектирование" : "Design Phase"}</span>
+                          <span>{rmp.statusLabel}</span>
+                          <span className="font-bold">{rmp.designPhase}</span>
                         </div>
                         <div className="flex justify-between">
-                          <span>{language === "ru" ? "КЛЮЧЕВОЙ КОМПОНЕНТ:" : "CORE COMPONENT:"}</span>
+                          <span>{rmp.coreComponentLabel}</span>
                           <span className="text-gray-300">Speech-Intent-Core</span>
                         </div>
                         <div className="flex justify-between">
-                          <span>{language === "ru" ? "ИНТЕГРАЦИЯ:" : "INTEGRATION:"}</span>
-                          <span className="text-gray-300">{language === "ru" ? "Локальное расширение ОЗУ" : "Local RAM Add-on"}</span>
+                          <span>{rmp.integrationLabel}</span>
+                          <span className="text-gray-300">{rmp.ramAddon}</span>
                         </div>
                       </div>
                     </div>
@@ -446,12 +439,10 @@ export default function RealDevelopmentSection({ onlyRoadmap = false }: { onlyRo
                     <ShieldCheck className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
                     <div>
                       <h4 className="font-display font-bold text-base text-white">
-                        {language === "ru" ? "Политика ответственного раскрытия" : "Responsible Disclosure Policy"}
+                        {rmp.disclosureTitle}
                       </h4>
                       <p className="font-sans text-xs text-gray-400 leading-relaxed mt-2">
-                        {language === "ru"
-                          ? "Если вы обнаружили потенциальную уязвимость в TrustNode, сообщите об этом команде напрямую. Мы не публикуем детали уязвимостей до их устранения и благодарим исследователей за ответственный подход."
-                          : "If you discover a potential vulnerability in TrustNode, please report it directly to our team. We do not publish vulnerability details until they are resolved and appreciate responsible disclosure from security researchers."}
+                        {rmp.disclosureDesc}
                       </p>
                     </div>
                   </div>
@@ -465,7 +456,7 @@ export default function RealDevelopmentSection({ onlyRoadmap = false }: { onlyRo
                       className="inline-flex items-center justify-center gap-2 min-h-11 px-4 py-2.5 rounded-xl bg-[#111A2E] border border-[#2E7DFF]/40 text-gray-200 hover:text-white hover:bg-[#15233D] transition-colors font-sans text-xs font-bold"
                     >
                       <SiTelegram className="w-4 h-4 text-[#2E7DFF]" />
-                      {language === "ru" ? "Сообщить в Telegram" : "Report via Telegram"}
+                      {rmp.reportTelegram}
                     </a>
                     <a
                       href="https://vk.com/trustnode"
@@ -476,7 +467,7 @@ export default function RealDevelopmentSection({ onlyRoadmap = false }: { onlyRo
                       className="inline-flex items-center justify-center gap-2 min-h-11 px-4 py-2.5 rounded-xl bg-[#111A2E] border border-[#2E7DFF]/40 text-gray-200 hover:text-white hover:bg-[#15233D] transition-colors font-sans text-xs font-bold"
                     >
                       <SiVk className="w-4 h-4 text-[#2E7DFF]" />
-                      {language === "ru" ? "Сообщить во VK" : "Report via VK"}
+                      {rmp.reportVk}
                     </a>
                     <a
                       href="https://github.com/TrustNodeLab/security"
@@ -487,7 +478,7 @@ export default function RealDevelopmentSection({ onlyRoadmap = false }: { onlyRo
                       className="inline-flex items-center justify-center gap-2 min-h-11 px-4 py-2.5 rounded-xl bg-[#111A2E] border border-[#2E7DFF]/40 text-gray-200 hover:text-white hover:bg-[#15233D] transition-colors font-sans text-xs font-bold"
                     >
                       <SiGithub className="w-4 h-4 text-[#2E7DFF]" />
-                      {language === "ru" ? "Сообщить на GitHub" : "Report via GitHub"}
+                      {rmp.reportGithub}
                     </a>
                   </div>
                 </div>
@@ -497,25 +488,11 @@ export default function RealDevelopmentSection({ onlyRoadmap = false }: { onlyRo
                   <div className="flex items-center gap-2.5 mb-5 border-b border-white/[0.04] pb-3">
                     <Milestone className="w-5 h-5 text-[#2E7DFF]" />
                     <h4 className="font-display font-bold text-base text-white">
-                      {language === "ru" ? "Вехи разработки и релизов" : "Development & Release Milestones"}
+                      {rmp.milestonesTitle}
                     </h4>
                   </div>
                   <div className="space-y-4">
-                    {(language === "ru" ? [
-                      { date: "2024–2025", title: "Научные истоки и региональный НИР", desc: "Проект зародился в ГБПОУ ЧРТ (КБ-284) и занял I место на областном научно-исследовательском конкурсе." },
-                      { date: "v1.2.0", title: "TrustNode 1 (TN1) — Ready MVP", desc: "Полностью готовое Android-приложение для локальной сигнатурной защиты. Фаза калибровки порогов и дообучения весов." },
-                      { date: "2025", title: "Интеграция ONNX-ядра", desc: "Внедрение модели rubert_fraud_int8.onnx для локального семантического инференса на устройстве без облака." },
-                      { date: "СЕНТЯБРЬ 2026", title: "PHANTOM 2.0 — Architecture Phase", desc: "7-слойная патентная архитектура TN3 с независимым ИИ-консенсусом. Срок сдачи: сентябрь 2026." },
-                      { date: "СЕНТЯБРЬ 2026", title: "Федеральный суперфинал (Москва)", desc: "Представление проекта на федеральном суперфинале научно-исследовательских работ." },
-                      { date: "v3.0-design", title: "Kira Voice Assistant — Conceptual Spec", desc: "Речевой интент-анализатор для блокирования манипулятивного речевого воздействия. Фаза проектирования." },
-                    ] : [
-                      { date: "2024–2025", title: "Academic origins & regional NIR victory", desc: "Project born at Chelyabinsk Radiotechnical College (KB-284) and won 1st place in the regional scientific research competition." },
-                      { date: "v1.2.0", title: "TrustNode 1 (TN1) — Ready MVP", desc: "Fully operational Android package for localized signature protection. Calibration phase for threshold tuning and weight fine-tuning." },
-                      { date: "2025", title: "ONNX core integration", desc: "Deployment of rubert_fraud_int8.onnx model for local on-device semantic inference without cloud dependency." },
-                      { date: "SEPTEMBER 2026", title: "PHANTOM 2.0 — Architecture Phase", desc: "7-layer patent TN3 architecture with independent AI consensus routing. Deadline: September 2026." },
-                      { date: "SEPTEMBER 2026", title: "Federal superfinal (Moscow)", desc: "Project presentation at the prestigious federal scientific research superfinal." },
-                      { date: "v3.0-design", title: "Kira Voice Assistant — Conceptual Spec", desc: "Speech-intent analyzer to neutralize manipulative speech acts during live calls. Design phase." },
-                    ]).map((milestone, idx) => (
+                    {rmp.milestones.map((milestone, idx) => (
                       <div key={idx} className="flex gap-4 items-start">
                         <div className="shrink-0 w-24 font-mono text-[9px] text-[#2E7DFF] uppercase tracking-wider pt-0.5">
                           {milestone.date}
@@ -534,7 +511,7 @@ export default function RealDevelopmentSection({ onlyRoadmap = false }: { onlyRo
                     className="mt-5 inline-flex items-center gap-2 text-gray-400 hover:text-[#2E7DFF] font-mono text-[10px] transition-colors"
                   >
                     <SiGithub className="w-3.5 h-3.5" />
-                    {language === "ru" ? "Все проекты TrustNode на GitHub" : "All TrustNode projects on GitHub"}
+                    {rmp.allProjectsGithub}
                     <ExternalLink className="w-3 h-3" />
                   </a>
                 </div>

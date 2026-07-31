@@ -309,4 +309,36 @@ export interface Translations {
     disclaimer: string;
     telegramBtn: string;
   };
+  roadmapPage: {
+    title: string;
+    subtitle: string;
+    badge: string;
+    readyMvp: string;
+    underDevelopment: string;
+    conceptualSpec: string;
+    tn1Desc: string;
+    packageLabel: string;
+    coreEngineLabel: string;
+    statusLabel: string;
+    fullyReady: string;
+    sourceGithub: string;
+    tn3Desc: string;
+    deadlineLabel: string;
+    september2026: string;
+    phaseLabel: string;
+    architecturePhase: string;
+    kiraDesc: string;
+    designPhase: string;
+    coreComponentLabel: string;
+    integrationLabel: string;
+    ramAddon: string;
+    disclosureTitle: string;
+    disclosureDesc: string;
+    reportTelegram: string;
+    reportVk: string;
+    reportGithub: string;
+    milestonesTitle: string;
+    milestones: Array<{ date: string; title: string; desc: string }>;
+    allProjectsGithub: string;
+  };
 }

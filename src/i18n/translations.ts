@@ -479,6 +479,46 @@ const ru: Translations = {
     },
     disclaimer: "Мы стремимся к максимальной объективности. Если вы заметили неточность, пожалуйста, свяжитесь с нами в Telegram.",
     telegramBtn: "Написать в Telegram"
+  },
+
+  roadmapPage: {
+    title: "Дорожная Карта",
+    subtitle: "Статус разработки TrustNode, политика безопасного раскрытия и фазы развертывания интеллектуальных модулей",
+    badge: "СТАТУС И ПЛАНЫ",
+    readyMvp: "ГОТОВЫЙ MVP",
+    underDevelopment: "В РАЗРАБОТКЕ",
+    conceptualSpec: "КОНЦЕПТ-СПЕЦИФИКАЦИЯ",
+    tn1Desc: "Полностью готовое, протестированное Android-приложение для локальной сигнатурной защиты. Требует только дообучения весов и калибровки порогов.",
+    packageLabel: "ПАКЕТ:",
+    coreEngineLabel: "ДВИЖОК ЯДРА:",
+    statusLabel: "СТАТУС:",
+    fullyReady: "ПОЛНОСТЬЮ ГОТОВ (MVP)",
+    sourceGithub: "Исходный код на GitHub",
+    tn3Desc: "7-слойная патентная архитектура PHANTOM 2.0 с независимым ИИ-консенсусом и системой оповещений Beacon.",
+    deadlineLabel: "СРОК СДАЧИ:",
+    september2026: "СЕНТЯБРЬ 2026",
+    phaseLabel: "ФАЗА:",
+    architecturePhase: "Проектирование Архитектуры",
+    kiraDesc: "Речевой интент-анализатор для блокирования манипулятивного речевого воздействия непосредственно в ходе живого разговора.",
+    designPhase: "Проектирование",
+    coreComponentLabel: "КЛЮЧЕВОЙ КОМПОНЕНТ:",
+    integrationLabel: "ИНТЕГРАЦИЯ:",
+    ramAddon: "Локальное расширение ОЗУ",
+    disclosureTitle: "Политика ответственного раскрытия",
+    disclosureDesc: "Если вы обнаружили потенциальную уязвимость в TrustNode, сообщите об этом команде напрямую. Мы не публикуем детали уязвимостей до их устранения и благодарим исследователей за ответственный подход.",
+    reportTelegram: "Сообщить в Telegram",
+    reportVk: "Сообщить во VK",
+    reportGithub: "Сообщить на GitHub",
+    milestonesTitle: "Вехи разработки и релизов",
+    milestones: [
+      { date: "2024–2025", title: "Научные истоки и региональный НИР", desc: "Проект зародился в ГБПОУ ЧРТ (КБ-284) и занял I место на областном научно-исследовательском конкурсе." },
+      { date: "v1.2.0", title: "TrustNode 1 (TN1) — Ready MVP", desc: "Полностью готовое Android-приложение для локальной сигнатурной защиты. Фаза калибровки порогов и дообучения весов." },
+      { date: "2025", title: "Интеграция ONNX-ядра", desc: "Внедрение модели rubert_fraud_int8.onnx для локального семантического инференса на устройстве без облака." },
+      { date: "СЕНТЯБРЬ 2026", title: "PHANTOM 2.0 — Architecture Phase", desc: "7-слойная патентная архитектура TN3 с независимым ИИ-консенсусом. Срок сдачи: сентябрь 2026." },
+      { date: "СЕНТЯБРЬ 2026", title: "Федеральный суперфинал (Москва)", desc: "Представление проекта на федеральном суперфинале научно-исследовательских работ." },
+      { date: "v3.0-design", title: "Kira Voice Assistant — Conceptual Spec", desc: "Речевой интент-анализатор для блокирования манипулятивного речевого воздействия. Фаза проектирования." }
+    ],
+    allProjectsGithub: "Все проекты TrustNode на GitHub"
   }
 };
 
@@ -959,6 +999,46 @@ const en: Translations = {
     },
     disclaimer: "We strive for maximum objectivity. If you spot any inaccuracy, please contact us on Telegram.",
     telegramBtn: "Contact on Telegram"
+  },
+
+  roadmapPage: {
+    title: "Development Roadmap",
+    subtitle: "Current progress of TrustNode, responsible disclosure policy, and semantic core deployment timeline",
+    badge: "STATUS & PLAN",
+    readyMvp: "READY MVP",
+    underDevelopment: "UNDER DEVELOPMENT",
+    conceptualSpec: "CONCEPTUAL SPEC",
+    tn1Desc: "Fully operational and tested Android package for localized signature protection. Requires only model threshold calibration and weight fine-tuning.",
+    packageLabel: "PACKAGE:",
+    coreEngineLabel: "CORE ENGINE:",
+    statusLabel: "STATUS:",
+    fullyReady: "FULLY READY (MVP)",
+    sourceGithub: "Source code on GitHub",
+    tn3Desc: "7-layer patent PHANTOM 2.0 architecture featuring independent AI consensus routing and Beacon notification networks.",
+    deadlineLabel: "DEADLINE:",
+    september2026: "SEPTEMBER 2026",
+    phaseLabel: "PHASE:",
+    architecturePhase: "Architecture Phase",
+    kiraDesc: "Speech-intent analyzer to capture and neutralize manipulative speech acts during live dial channels.",
+    designPhase: "Design Phase",
+    coreComponentLabel: "CORE COMPONENT:",
+    integrationLabel: "INTEGRATION:",
+    ramAddon: "Local RAM Add-on",
+    disclosureTitle: "Responsible Disclosure Policy",
+    disclosureDesc: "If you discover a potential vulnerability in TrustNode, please report it directly to our team. We do not publish vulnerability details until they are resolved and appreciate responsible disclosure from security researchers.",
+    reportTelegram: "Report via Telegram",
+    reportVk: "Report via VK",
+    reportGithub: "Report via GitHub",
+    milestonesTitle: "Development & Release Milestones",
+    milestones: [
+      { date: "2024–2025", title: "Academic origins & regional NIR victory", desc: "Project born at Chelyabinsk Radiotechnical College (KB-284) and won 1st place in the regional scientific research competition." },
+      { date: "v1.2.0", title: "TrustNode 1 (TN1) — Ready MVP", desc: "Fully operational Android package for localized signature protection. Calibration phase for threshold tuning and weight fine-tuning." },
+      { date: "2025", title: "ONNX core integration", desc: "Deployment of rubert_fraud_int8.onnx model for local on-device semantic inference without cloud dependency." },
+      { date: "SEPTEMBER 2026", title: "PHANTOM 2.0 — Architecture Phase", desc: "7-layer patent TN3 architecture with independent AI consensus routing. Deadline: September 2026." },
+      { date: "SEPTEMBER 2026", title: "Federal superfinal (Moscow)", desc: "Project presentation at the prestigious federal scientific research superfinal." },
+      { date: "v3.0-design", title: "Kira Voice Assistant — Conceptual Spec", desc: "Speech-intent analyzer to neutralize manipulative speech acts during live calls. Design phase." }
+    ],
+    allProjectsGithub: "All TrustNode projects on GitHub"
   }
 };
 
@@ -1439,6 +1519,46 @@ const es: Translations = {
     },
     disclaimer: "Nos esforzamos por lograr la máxima objetividad. Si detectas alguna imprecisión, contáctanos en Telegram.",
     telegramBtn: "Contactar por Telegram"
+  },
+
+  roadmapPage: {
+    title: "Hoja de Ruta de Desarrollo",
+    subtitle: "Progreso actual de TrustNode, política de divulgación responsable y cronograma de despliegue del núcleo semántico",
+    badge: "ESTADO Y PLAN",
+    readyMvp: "LISTO MVP",
+    underDevelopment: "EN DESARROLLO",
+    conceptualSpec: "ESPECIFICACIÓN CONCEPTUAL",
+    tn1Desc: "Paquete Android totalmente operativo y probado para la protección local por firmas. Solo requiere calibración de umbrales del modelo y ajuste fino de pesos.",
+    packageLabel: "PAQUETE:",
+    coreEngineLabel: "MOTOR PRINCIPAL:",
+    statusLabel: "ESTADO:",
+    fullyReady: "TOTALMENTE LISTO (MVP)",
+    sourceGithub: "Código fuente en GitHub",
+    tn3Desc: "Arquitectura patentada PHANTOM 2.0 de 7 capas con enrutamiento de consenso de IA independiente y redes de notificación Beacon.",
+    deadlineLabel: "PLAZO:",
+    september2026: "SEPTIEMBRE 2026",
+    phaseLabel: "FASE:",
+    architecturePhase: "Fase de Arquitectura",
+    kiraDesc: "Analizador de intención del habla para capturar y neutralizar actos de habla manipuladores durante llamadas en vivo.",
+    designPhase: "Fase de Diseño",
+    coreComponentLabel: "COMPONENTE PRINCIPAL:",
+    integrationLabel: "INTEGRACIÓN:",
+    ramAddon: "Módulo de RAM local",
+    disclosureTitle: "Política de divulgación responsable",
+    disclosureDesc: "Si descubre una posible vulnerabilidad en TrustNode, repórtela directamente a nuestro equipo. No publicamos detalles de vulnerabilidades hasta que se resuelven y valoramos la divulgación responsable por parte de los investigadores de seguridad.",
+    reportTelegram: "Reportar por Telegram",
+    reportVk: "Reportar por VK",
+    reportGithub: "Reportar por GitHub",
+    milestonesTitle: "Hitos de Desarrollo y Lanzamientos",
+    milestones: [
+      { date: "2024–2025", title: "Orígenes académicos y victoria regional en NIR", desc: "Proyecto nacido en la Facultad de Radiotelecomunicación de Cheliábinsk (KB-284), ganador del 1.er lugar en el concurso regional de investigación científica." },
+      { date: "v1.2.0", title: "TrustNode 1 (TN1) — Ready MVP", desc: "Paquete Android totalmente operativo para protección local por firmas. Fase de calibración de umbrales y ajuste fino de pesos." },
+      { date: "2025", title: "Integración del núcleo ONNX", desc: "Despliegue del modelo rubert_fraud_int8.onnx para inferencia semántica local en el dispositivo sin dependencia de la nube." },
+      { date: "SEPTIEMBRE 2026", title: "PHANTOM 2.0 — Fase de Arquitectura", desc: "Arquitectura patentada TN3 de 7 capas con enrutamiento de consenso de IA independiente. Plazo: septiembre de 2026." },
+      { date: "SEPTIEMBRE 2026", title: "Superfinal federal (Moscú)", desc: "Presentación del proyecto en la prestigiosa superfinal federal de investigación científica." },
+      { date: "v3.0-design", title: "Kira Voice Assistant — Especificación Conceptual", desc: "Analizador de intención del habla para neutralizar actos de habla manipuladores durante llamadas en vivo. Fase de diseño." }
+    ],
+    allProjectsGithub: "Todos los proyectos de TrustNode en GitHub"
   }
 };
 
@@ -1919,6 +2039,46 @@ const zh: Translations = {
     },
     disclaimer: "我们力求最大程度的客观性。如发现任何不准确之处，请在 Telegram 上联系我们。",
     telegramBtn: "在 Telegram 上联系"
+  },
+
+  roadmapPage: {
+    title: "发展路线图",
+    subtitle: "TrustNode 的当前进展、负责任披露政策与语义核心部署时间表",
+    badge: "状态与计划",
+    readyMvp: "就绪 MVP",
+    underDevelopment: "开发中",
+    conceptualSpec: "概念规格",
+    tn1Desc: "完全可用且经过测试的 Android 本地签名防护包。只需调整模型阈值和微调权重。",
+    packageLabel: "软件包:",
+    coreEngineLabel: "核心引擎:",
+    statusLabel: "状态:",
+    fullyReady: "完全就绪 (MVP)",
+    sourceGithub: "GitHub 上的源代码",
+    tn3Desc: "7 层专利 PHANTOM 2.0 架构，具备独立 AI 共识路由与 Beacon 通知网络。",
+    deadlineLabel: "截止日期:",
+    september2026: "2026 年 9 月",
+    phaseLabel: "阶段:",
+    architecturePhase: "架构阶段",
+    kiraDesc: "语音意图分析器，用于在实时通话中捕捉并消除操纵性言语行为。",
+    designPhase: "设计阶段",
+    coreComponentLabel: "核心组件:",
+    integrationLabel: "集成:",
+    ramAddon: "本地内存扩展",
+    disclosureTitle: "负责任披露政策",
+    disclosureDesc: "如果您在 TrustNode 中发现潜在漏洞，请直接向我们的团队报告。在漏洞修复完成之前我们不会公开其细节，并感谢安全研究人员的负责任披露。",
+    reportTelegram: "通过 Telegram 报告",
+    reportVk: "通过 VK 报告",
+    reportGithub: "通过 GitHub 报告",
+    milestonesTitle: "开发与发布里程碑",
+    milestones: [
+      { date: "2024–2025", title: "学术起源与地区科研竞赛获奖", desc: "项目诞生于车里雅宾斯克无线电技术学院 (KB-284)，并在地区科研竞赛中获得第一名。" },
+      { date: "v1.2.0", title: "TrustNode 1 (TN1) — 就绪 MVP", desc: "完全可用的 Android 本地签名防护包。阈值调整与权重微调的校准阶段。" },
+      { date: "2025", title: "ONNX 核心集成", desc: "部署 rubert_fraud_int8.onnx 模型，实现不依赖云端的设备端本地语义推理。" },
+      { date: "2026 年 9 月", title: "PHANTOM 2.0 — 架构阶段", desc: "具备独立 AI 共识路由的 7 层专利 TN3 架构。截止日期：2026 年 9 月。" },
+      { date: "2026 年 9 月", title: "联邦超级总决赛（莫斯科）", desc: "在著名的联邦科研超级总决赛上进行项目展示。" },
+      { date: "v3.0-design", title: "Kira 语音助手 — 概念规格", desc: "语音意图分析器，用于在实时通话中消除操纵性言语行为。设计阶段。" }
+    ],
+    allProjectsGithub: "GitHub 上的所有 TrustNode 项目"
   }
 };
 
@@ -2399,6 +2559,46 @@ const tr: Translations = {
     },
     disclaimer: "Maksimum objektiflik için çaba gösteriyoruz. Herhangi bir yanlışlık fark ederseniz, lütfen Telegram üzerinden bizimle iletişime geçin.",
     telegramBtn: "Telegram'dan iletişime geçin"
+  },
+
+  roadmapPage: {
+    title: "Geliştirme Yol Haritası",
+    subtitle: "TrustNode'un mevcut ilerlemesi, sorumlu açıklama politikası ve anlamsal çekirdek dağıtım zaman çizelgesi",
+    badge: "DURUM VE PLAN",
+    readyMvp: "HAZIR MVP",
+    underDevelopment: "GELİŞTİRME AŞAMASINDA",
+    conceptualSpec: "KAVRAMSAL SPEC",
+    tn1Desc: "Yerel imza koruması için tamamen çalışır durumda ve test edilmiş Android paketi. Yalnızca model eşik kalibrasyonu ve ağırlık ince ayarı gerektirir.",
+    packageLabel: "PAKET:",
+    coreEngineLabel: "ÇEKİRDEK MOTOR:",
+    statusLabel: "DURUM:",
+    fullyReady: "TAMAMEN HAZIR (MVP)",
+    sourceGithub: "GitHub'da kaynak kodu",
+    tn3Desc: "Bağımsız yapay zeka konsensüs yönlendirmesi ve Beacon bildirim ağlarına sahip 7 katmanlı patentli PHANTOM 2.0 mimarisi.",
+    deadlineLabel: "SON TESLİM:",
+    september2026: "EYLÜL 2026",
+    phaseLabel: "FAZ:",
+    architecturePhase: "Mimari Faz",
+    kiraDesc: "Canlı görüşmeler sırasında manipülatif konuşma eylemlerini yakalamak ve etkisiz hale getirmek için konuşma-niyet analizörü.",
+    designPhase: "Tasarım Fazı",
+    coreComponentLabel: "ANA BİLEŞEN:",
+    integrationLabel: "ENTEGRASYON:",
+    ramAddon: "Yerel RAM eklentisi",
+    disclosureTitle: "Sorumlu Açıklama Politikası",
+    disclosureDesc: "TrustNode'da potansiyel bir güvenlik açığı keşfederseniz, lütfen doğrudan ekibimize bildirin. Güvenlik açıkları çözülene kadar detaylarını yayınlamıyor ve güvenlik araştırmacılarının sorumlu açıklamalarını takdir ediyoruz.",
+    reportTelegram: "Telegram ile bildir",
+    reportVk: "VK ile bildir",
+    reportGithub: "GitHub ile bildir",
+    milestonesTitle: "Geliştirme ve Sürüm Kilometre Taşları",
+    milestones: [
+      { date: "2024–2025", title: "Akademik kökenler ve bölgesel NIR zaferi", desc: "Proje Çelyabinsk Radyo Teknik Koleji'nde (KB-284) doğdu ve bölgesel bilimsel araştırma yarışmasında 1. oldu." },
+      { date: "v1.2.0", title: "TrustNode 1 (TN1) — Ready MVP", desc: "Yerel imza koruması için tamamen çalışır durumda Android paketi. Eşik ayarlama ve ağırlık ince ayarı için kalibrasyon aşaması." },
+      { date: "2025", title: "ONNX çekirdek entegrasyonu", desc: "Bulut bağımlılığı olmadan cihaz üzerinde yerel anlamsal çıkarım için rubert_fraud_int8.onnx modelinin dağıtımı." },
+      { date: "EYLÜL 2026", title: "PHANTOM 2.0 — Mimari Faz", desc: "Bağımsız yapay zeka konsensüs yönlendirmesine sahip 7 katmanlı patentli TN3 mimarisi. Son teslim: Eylül 2026." },
+      { date: "EYLÜL 2026", title: "Federal süper final (Moskova)", desc: "Projenin prestijli federal bilimsel araştırma süper finalinde sunumu." },
+      { date: "v3.0-design", title: "Kira Ses Asistanı — Kavramsal Spec", desc: "Canlı görüşmeler sırasında manipülatif konuşma eylemlerini etkisiz hale getiren konuşma-niyet analizörü. Tasarım fazı." }
+    ],
+    allProjectsGithub: "GitHub'daki tüm TrustNode projeleri"
   }
 };
 
@@ -2879,6 +3079,46 @@ const hi: Translations = {
     },
     disclaimer: "हम अधिकतम निष्पक्षता के लिए प्रयास करते हैं। यदि आपको कोई अशुद्धि दिखे, तो कृपया हमसे Telegram पर संपर्क करें।",
     telegramBtn: "Telegram पर संपर्क करें"
+  },
+
+  roadmapPage: {
+    title: "विकास रोडमैप",
+    subtitle: "TrustNode की वर्तमान प्रगति, जिम्मेदार प्रकटीकरण नीति और सिमेंटिक कोर परिनियोजन समयरेखा",
+    badge: "स्थिति और योजना",
+    readyMvp: "तैयार MVP",
+    underDevelopment: "विकास में",
+    conceptualSpec: "संकल्पनात्मक विनिर्देश",
+    tn1Desc: "लोकल सिग्नेचर सुरक्षा के लिए पूर्ण रूप से चालू और परीक्षित Android पैकेज। केवल मॉडल थ्रेशोल्ड अंशांकन और वेट फाइन-ट्यूनिंग की आवश्यकता है।",
+    packageLabel: "पैकेज:",
+    coreEngineLabel: "कोर इंजन:",
+    statusLabel: "स्थिति:",
+    fullyReady: "पूरी तरह तैयार (MVP)",
+    sourceGithub: "GitHub पर सोर्स कोड",
+    tn3Desc: "स्वतंत्र AI सर्वसम्मति रूटिंग और बीकन सूचना नेटवर्क वाली 7-परत पेटेंट PHANTOM 2.0 वास्तुकला।",
+    deadlineLabel: "समय सीमा:",
+    september2026: "सितंबर 2026",
+    phaseLabel: "चरण:",
+    architecturePhase: "आर्किटेक्चर चरण",
+    kiraDesc: "लाइव कॉल के दौरान हेरफेर करने वाले भाषण कृत्यों को पकड़ने और बेअसर करने के लिए भाषण-आशय विश्लेषक।",
+    designPhase: "डिज़ाइन चरण",
+    coreComponentLabel: "मुख्य घटक:",
+    integrationLabel: "एकीकरण:",
+    ramAddon: "लोकल RAM ऐड-ऑन",
+    disclosureTitle: "जिम्मेदार प्रकटीकरण नीति",
+    disclosureDesc: "यदि आपको TrustNode में कोई संभावित कमजोरी मिले, तो कृपया सीधे हमारी टीम को सूचित करें। हम कमजोरियों के समाधान होने तक उनके विवरण प्रकाशित नहीं करते हैं और सुरक्षा शोधकर्ताओं के जिम्मेदार प्रकटीकरण की सराहना करते हैं।",
+    reportTelegram: "टेलीग्राम से रिपोर्ट करें",
+    reportVk: "VK से रिपोर्ट करें",
+    reportGithub: "GitHub से रिपोर्ट करें",
+    milestonesTitle: "विकास और रिलीज़ माइलस्टोन",
+    milestones: [
+      { date: "2024–2025", title: "शैक्षणिक उत्पत्ति और क्षेत्रीय NIR जीत", desc: "चेल्याबिंस्क रेडियोटेक्निकल कॉलेज (KB-284) में जन्मी परियोजना ने क्षेत्रीय वैज्ञानिक अनुसंधान प्रतियोगिता में पहला स्थान जीता।" },
+      { date: "v1.2.0", title: "TrustNode 1 (TN1) — रेडी MVP", desc: "लोकल सिग्नेचर सुरक्षा के लिए पूर्ण रूप से चालू Android पैकेज। थ्रेशोल्ड समायोजन और वेट फाइन-ट्यूनिंग के लिए अंशांकन चरण।" },
+      { date: "2025", title: "ONNX कोर एकीकरण", desc: "क्लाउड निर्भरता के बिना डिवाइस पर स्थानीय सिमेंटिक इन्फरेंस के लिए rubert_fraud_int8.onnx मॉडल की परिनियोजन।" },
+      { date: "सितंबर 2026", title: "PHANTOM 2.0 — आर्किटेक्चर चरण", desc: "स्वतंत्र AI सर्वसम्मति रूटिंग वाली 7-परत पेटेंट TN3 वास्तुकला। समय सीमा: सितंबर 2026।" },
+      { date: "सितंबर 2026", title: "संघीय सुपरफाइनल (मास्को)", desc: "प्रतिष्ठित संघीय वैज्ञानिक अनुसंधान सुपरफाइनल में परियोजना प्रस्तुति।" },
+      { date: "v3.0-design", title: "किरा वॉइस असिस्टेंट — संकल्पनात्मक विनिर्देश", desc: "लाइव कॉल के दौरान हेरफेर करने वाले भाषण कृत्यों को बेअसर करने के लिए भाषण-आशय विश्लेषक। डिज़ाइन चरण।" }
+    ],
+    allProjectsGithub: "GitHub पर सभी TrustNode प्रोजेक्ट"
   }
 };
 
@@ -3359,6 +3599,46 @@ const ar: Translations = {
     },
     disclaimer: "نحن نسعى لأقصى درجات الموضوعية. إذا لاحظت أي عدم دقة، يرجى التواصل معنا عبر Telegram.",
     telegramBtn: "تواصل عبر Telegram"
+  },
+
+  roadmapPage: {
+    title: "خارطة طريق التطوير",
+    subtitle: "التقدم الحالي لـ TrustNode، سياسة الكشف المسؤول، والجدول الزمني لتطوير النواة الدلالية",
+    badge: "الحالة والخطة",
+    readyMvp: "MVP جاهز",
+    underDevelopment: "قيد التطوير",
+    conceptualSpec: "المواصفات المفاهيمية",
+    tn1Desc: "حزمة Android كاملة التشغيل ومختبرة للحماية المحلية بالتوقيعات. لا تتطلب سوى معايرة عتبات النموذج وضبط أوزان دقيق.",
+    packageLabel: "الحزمة:",
+    coreEngineLabel: "المحرك الأساسي:",
+    statusLabel: "الحالة:",
+    fullyReady: "جاهز تماماً (MVP)",
+    sourceGithub: "الكود المصدري على GitHub",
+    tn3Desc: "بنية PHANTOM 2.0 الحاصلة على براءة اختراع من 7 طبقات مع توجيه إجماع ذكاء اصطناعي مستقل وشبكات إشعارات Beacon.",
+    deadlineLabel: "الموعد النهائي:",
+    september2026: "سبتمبر 2026",
+    phaseLabel: "المرحلة:",
+    architecturePhase: "مرحلة التصميم المعماري",
+    kiraDesc: "محلل نية الكلام لالتقاط وتحييد أفعال الكلام المتلاعبة أثناء المكالمات المباشرة.",
+    designPhase: "مرحلة التصميم",
+    coreComponentLabel: "المكوّن الأساسي:",
+    integrationLabel: "التكامل:",
+    ramAddon: "إضافة ذاكرة الوصول العشوائي المحلية",
+    disclosureTitle: "سياسة الكشف المسؤول",
+    disclosureDesc: "إذا اكتشفت ثغرة محتملة في TrustNode، فيرجى إبلاغ فريقنا مباشرة. لا ننشر تفاصيل الثغرات حتى يتم إصلاحها ونقدّر الكشف المسؤول من باحثي الأمن.",
+    reportTelegram: "الإبلاغ عبر Telegram",
+    reportVk: "الإبلاغ عبر VK",
+    reportGithub: "الإبلاغ عبر GitHub",
+    milestonesTitle: "معالم التطوير والإصدارات",
+    milestones: [
+      { date: "2024–2025", title: "الأصول الأكاديمية والفوز الإقليمي في البحث العلمي", desc: "مشروع وُلد في كلية تشيليابينسك للراديو التقنية (KB-284) وحصل على المركز الأول في المسابقة الإقليمية للبحث العلمي." },
+      { date: "v1.2.0", title: "TrustNode 1 (TN1) — Ready MVP", desc: "حزمة Android كاملة التشغيل للحماية المحلية بالتوقيعات. مرحلة معايرة ضبط العتبات وضبط الأوزان بدقة." },
+      { date: "2025", title: "دمج نواة ONNX", desc: "نشر نموذج rubert_fraud_int8.onnx للاستدلال الدلالي المحلي على الجهاز دون الاعتماد على السحابة." },
+      { date: "سبتمبر 2026", title: "PHANTOM 2.0 — مرحلة التصميم المعماري", desc: "بنية TN3 الحاصلة على براءة اختراع من 7 طبقات مع توجيه إجماع ذكاء اصطناعي مستقل. الموعد النهائي: سبتمبر 2026." },
+      { date: "سبتمبر 2026", title: "النهائي الفيدرالي الفائق (موسكو)", desc: "عرض المشروع في النهائي الفيدرالي الفائق المرموق للبحث العلمي." },
+      { date: "v3.0-design", title: "مساعد كيرا الصوتي — المواصفات المفاهيمية", desc: "محلل نية الكلام لتحييد أفعال الكلام المتلاعبة أثناء المكالمات المباشرة. مرحلة التصميم." }
+    ],
+    allProjectsGithub: "جميع مشاريع TrustNode على GitHub"
   }
 };
 
@@ -3839,6 +4119,46 @@ const pt: Translations = {
     },
     disclaimer: "Buscamos a máxima objetividade. Se você notar alguma imprecisão, entre em contato conosco no Telegram.",
     telegramBtn: "Fale conosco no Telegram"
+  },
+
+  roadmapPage: {
+    title: "Roteiro de Desenvolvimento",
+    subtitle: "Progresso atual do TrustNode, política de divulgação responsável e cronograma de implantação do núcleo semântico",
+    badge: "STATUS E PLANO",
+    readyMvp: "MVP PRONTO",
+    underDevelopment: "EM DESENVOLVIMENTO",
+    conceptualSpec: "ESPECIFICAÇÃO CONCEITUAL",
+    tn1Desc: "Pacote Android totalmente operacional e testado para proteção local por assinaturas. Requer apenas calibração de limites do modelo e ajuste fino dos pesos.",
+    packageLabel: "PACOTE:",
+    coreEngineLabel: "MOTOR PRINCIPAL:",
+    statusLabel: "STATUS:",
+    fullyReady: "TOTALMENTE PRONTO (MVP)",
+    sourceGithub: "Código-fonte no GitHub",
+    tn3Desc: "Arquitetura patenteada PHANTOM 2.0 de 7 camadas com roteamento de consenso de IA independente e redes de notificação Beacon.",
+    deadlineLabel: "PRAZO:",
+    september2026: "SETEMBRO DE 2026",
+    phaseLabel: "FASE:",
+    architecturePhase: "Fase de Arquitetura",
+    kiraDesc: "Analisador de intenção de fala para capturar e neutralizar atos manipulativos de fala durante chamadas ao vivo.",
+    designPhase: "Fase de Design",
+    coreComponentLabel: "COMPONENTE PRINCIPAL:",
+    integrationLabel: "INTEGRAÇÃO:",
+    ramAddon: "Complemento de RAM local",
+    disclosureTitle: "Política de Divulgação Responsável",
+    disclosureDesc: "Se você descobrir uma possível vulnerabilidade no TrustNode, relate-a diretamente à nossa equipe. Não publicamos detalhes de vulnerabilidades até que sejam resolvidas e valorizamos a divulgação responsável por parte de pesquisadores de segurança.",
+    reportTelegram: "Relatar via Telegram",
+    reportVk: "Relatar via VK",
+    reportGithub: "Relatar via GitHub",
+    milestonesTitle: "Marcos de Desenvolvimento e Lançamentos",
+    milestones: [
+      { date: "2024–2025", title: "Origens acadêmicas e vitória regional na pesquisa científica", desc: "Projeto nascido no Colégio Radiotécnico de Chelyabinsk (KB-284), vencedor do 1.º lugar na competição regional de pesquisa científica." },
+      { date: "v1.2.0", title: "TrustNode 1 (TN1) — Ready MVP", desc: "Pacote Android totalmente operacional para proteção local por assinaturas. Fase de calibração de limites e ajuste fino dos pesos." },
+      { date: "2025", title: "Integração do núcleo ONNX", desc: "Implantação do modelo rubert_fraud_int8.onnx para inferência semântica local no dispositivo sem dependência de nuvem." },
+      { date: "SETEMBRO DE 2026", title: "PHANTOM 2.0 — Fase de Arquitetura", desc: "Arquitetura patenteada TN3 de 7 camadas com roteamento de consenso de IA independente. Prazo: setembro de 2026." },
+      { date: "SETEMBRO DE 2026", title: "Superfinal federal (Moscou)", desc: "Apresentação do projeto na prestigiada superfinal federal de pesquisa científica." },
+      { date: "v3.0-design", title: "Kira Voice Assistant — Especificação Conceitual", desc: "Analisador de intenção de fala para neutralizar atos manipulativos de fala durante chamadas ao vivo. Fase de design." }
+    ],
+    allProjectsGithub: "Todos os projetos TrustNode no GitHub"
   }
 };
 
@@ -4319,6 +4639,46 @@ const fr: Translations = {
     },
     disclaimer: "Nous nous efforçons d'atteindre une objectivité maximale. Si vous repérez une inexactitude, contactez-nous sur Telegram.",
     telegramBtn: "Contacter sur Telegram"
+  },
+
+  roadmapPage: {
+    title: "Feuille de route de développement",
+    subtitle: "Progrès actuels de TrustNode, politique de divulgation responsable et calendrier de déploiement du noyau sémantique",
+    badge: "STATUT ET PLAN",
+    readyMvp: "MVP PRÊT",
+    underDevelopment: "EN DÉVELOPPEMENT",
+    conceptualSpec: "SPÉCIFICATION CONCEPTUELLE",
+    tn1Desc: "Paquet Android entièrement opérationnel et testé pour la protection locale par signatures. Nécessite uniquement l'étalonnage des seuils du modèle et l'ajustement fin des poids.",
+    packageLabel: "PAQUET :",
+    coreEngineLabel: "MOTEUR PRINCIPAL :",
+    statusLabel: "STATUT :",
+    fullyReady: "ENTIÈREMENT PRÊT (MVP)",
+    sourceGithub: "Code source sur GitHub",
+    tn3Desc: "Architecture brevetée PHANTOM 2.0 en 7 couches avec routage de consensus IA indépendant et réseaux de notification Beacon.",
+    deadlineLabel: "ÉCHÉANCE :",
+    september2026: "SEPTEMBRE 2026",
+    phaseLabel: "PHASE :",
+    architecturePhase: "Phase d'architecture",
+    kiraDesc: "Analyseur d'intention vocale pour capturer et neutraliser les actes de parole manipulateurs lors d'appels en direct.",
+    designPhase: "Phase de conception",
+    coreComponentLabel: "COMPOSANT PRINCIPAL :",
+    integrationLabel: "INTÉGRATION :",
+    ramAddon: "Extension RAM locale",
+    disclosureTitle: "Politique de divulgation responsable",
+    disclosureDesc: "Si vous découvrez une vulnérabilité potentielle dans TrustNode, signalez-la directement à notre équipe. Nous ne publions pas les détails des vulnérabilités avant leur résolution et apprécions la divulgation responsable des chercheurs en sécurité.",
+    reportTelegram: "Signaler via Telegram",
+    reportVk: "Signaler via VK",
+    reportGithub: "Signaler via GitHub",
+    milestonesTitle: "Jalons de développement et de versions",
+    milestones: [
+      { date: "2024–2025", title: "Origines académiques et victoire régionale en recherche scientifique", desc: "Projet né au Collège de radiotélécommunication de Tcheliabinsk (KB-284), vainqueur de la 1re place au concours régional de recherche scientifique." },
+      { date: "v1.2.0", title: "TrustNode 1 (TN1) — Ready MVP", desc: "Paquet Android entièrement opérationnel pour la protection locale par signatures. Phase d'étalonnage des seuils et d'ajustement fin des poids." },
+      { date: "2025", title: "Intégration du noyau ONNX", desc: "Déploiement du modèle rubert_fraud_int8.onnx pour l'inférence sémantique locale sur l'appareil sans dépendance au cloud." },
+      { date: "SEPTEMBRE 2026", title: "PHANTOM 2.0 — Phase d'architecture", desc: "Architecture brevetée TN3 en 7 couches avec routage de consensus IA indépendant. Échéance : septembre 2026." },
+      { date: "SEPTEMBRE 2026", title: "Superfinale fédérale (Moscou)", desc: "Présentation du projet à la prestigieuse superfinale fédérale de recherche scientifique." },
+      { date: "v3.0-design", title: "Kira Voice Assistant — Spécification conceptuelle", desc: "Analyseur d'intention vocale pour neutraliser les actes de parole manipulateurs lors d'appels en direct. Phase de conception." }
+    ],
+    allProjectsGithub: "Tous les projets TrustNode sur GitHub"
   }
 };
 
@@ -4799,6 +5159,46 @@ const de: Translations = {
     },
     disclaimer: "Wir streben nach maximaler Objektivität. Falls Sie eine Ungenauigkeit bemerken, kontaktieren Sie uns bitte über Telegram.",
     telegramBtn: "Kontakt über Telegram"
+  },
+
+  roadmapPage: {
+    title: "Entwicklungs-Roadmap",
+    subtitle: "Aktueller Fortschritt von TrustNode, Richtlinie zur verantwortungsvollen Offenlegung und Zeitplan für die Bereitstellung des semantischen Kerns",
+    badge: "STATUS & PLAN",
+    readyMvp: "FERTIGES MVP",
+    underDevelopment: "IN ENTWICKLUNG",
+    conceptualSpec: "KONZEPT-SPEZIFIKATION",
+    tn1Desc: "Voll funktionsfähiges und getestetes Android-Paket für lokalen Signaturschutz. Benötigt nur Modellschwellenkalibrierung und Gewichts-Feintuning.",
+    packageLabel: "PAKET:",
+    coreEngineLabel: "KERNMOTOR:",
+    statusLabel: "STATUS:",
+    fullyReady: "VOLLSTÄNDIG FERTIG (MVP)",
+    sourceGithub: "Quellcode auf GitHub",
+    tn3Desc: "Patentierte PHANTOM-2.0-Architektur mit 7 Schichten, unabhängigem KI-Konsens-Routing und Beacon-Benachrichtigungsnetzwerken.",
+    deadlineLabel: "FRIST:",
+    september2026: "SEPTEMBER 2026",
+    phaseLabel: "PHASE:",
+    architecturePhase: "Architekturphase",
+    kiraDesc: "Sprachintent-Analysator, um manipulative Sprechakte während Live-Anrufen zu erfassen und zu neutralisieren.",
+    designPhase: "Entwurfsphase",
+    coreComponentLabel: "KERNKOMPONENTE:",
+    integrationLabel: "INTEGRATION:",
+    ramAddon: "Lokales RAM-Add-on",
+    disclosureTitle: "Richtlinie zur verantwortungsvollen Offenlegung",
+    disclosureDesc: "Wenn Sie eine potenzielle Schwachstelle in TrustNode entdecken, melden Sie diese bitte direkt unserem Team. Wir veröffentlichen keine Details zu Schwachstellen, bis sie behoben sind, und schätzen die verantwortungsvolle Offenlegung durch Sicherheitsforscher.",
+    reportTelegram: "Per Telegram melden",
+    reportVk: "Per VK melden",
+    reportGithub: "Per GitHub melden",
+    milestonesTitle: "Entwicklungs- und Release-Meilensteine",
+    milestones: [
+      { date: "2024–2025", title: "Akademische Ursprünge und regionaler NIR-Sieg", desc: "Projekt am Tscheljabinsker Radiotechnischen Kolleg (KB-284) entstanden und beim regionalen wissenschaftlichen Forschungswettbewerb auf Platz 1." },
+      { date: "v1.2.0", title: "TrustNode 1 (TN1) — Ready MVP", desc: "Voll funktionsfähiges Android-Paket für lokalen Signaturschutz. Kalibrierphase für Schwellenabstimmung und Gewichts-Feintuning." },
+      { date: "2025", title: "ONNX-Kernintegration", desc: "Bereitstellung des Modells rubert_fraud_int8.onnx für lokale semantische Inferenz auf dem Gerät ohne Cloud-Abhängigkeit." },
+      { date: "SEPTEMBER 2026", title: "PHANTOM 2.0 — Architekturphase", desc: "Patentierte TN3-Architektur mit 7 Schichten und unabhängigem KI-Konsens-Routing. Frist: September 2026." },
+      { date: "SEPTEMBER 2026", title: "Bundes-Superfinale (Moskau)", desc: "Präsentation des Projekts beim renommierten föderalen Superfinale der wissenschaftlichen Forschung." },
+      { date: "v3.0-design", title: "Kira Voice Assistant — Konzeptspezifikation", desc: "Sprachintent-Analysator, um manipulative Sprechakte während Live-Anrufen zu neutralisieren. Entwurfsphase." }
+    ],
+    allProjectsGithub: "Alle TrustNode-Projekte auf GitHub"
   }
 };
 
@@ -5279,6 +5679,46 @@ const ja: Translations = {
     },
     disclaimer: "最大限の客観性を追求しています。誤りに気づいた場合は、Telegram にてご連絡ください。",
     telegramBtn: "Telegram で連絡する"
+  },
+
+  roadmapPage: {
+    title: "開発ロードマップ",
+    subtitle: "TrustNode の現在の進捗状況、責任ある開示ポリシー、セマンティックコア展開のタイムライン",
+    badge: "ステータスと計画",
+    readyMvp: "準備完了 MVP",
+    underDevelopment: "開発中",
+    conceptualSpec: "コンセプト仕様",
+    tn1Desc: "ローカル署名保護のための完全稼働・テスト済みの Android パッケージ。モデルの閾値調整と重みのファインチューニングのみが必要です。",
+    packageLabel: "パッケージ:",
+    coreEngineLabel: "コアエンジン:",
+    statusLabel: "ステータス:",
+    fullyReady: "完全準備完了 (MVP)",
+    sourceGithub: "GitHub のソースコード",
+    tn3Desc: "独立した AI コンセンサスルーティングと Beacon 通知ネットワークを備えた 7 層特許 PHANTOM 2.0 アーキテクチャ。",
+    deadlineLabel: "期限:",
+    september2026: "2026年9月",
+    phaseLabel: "フェーズ:",
+    architecturePhase: "アーキテクチャフェーズ",
+    kiraDesc: "ライブ通話中の操作的な発話を捕捉・中和する音声意図分析器。",
+    designPhase: "デザインフェーズ",
+    coreComponentLabel: "主要コンポーネント:",
+    integrationLabel: "統合:",
+    ramAddon: "ローカル RAM アドオン",
+    disclosureTitle: "責任ある開示ポリシー",
+    disclosureDesc: "TrustNode に潜在的な脆弱性を発見した場合は、直接チームにご報告ください。脆弱性が解決されるまで詳細は公開せず、セキュリティ研究者による責任ある開示に感謝しています。",
+    reportTelegram: "Telegram で報告",
+    reportVk: "VK で報告",
+    reportGithub: "GitHub で報告",
+    milestonesTitle: "開発・リリースのマイルストーン",
+    milestones: [
+      { date: "2024–2025", title: "学術的な起源と地域研究コンテストでの勝利", desc: "チェリャビンスク無線技術専門学校 (KB-284) で生まれたプロジェクトが、地域科学研究コンテストで 1 位を獲得しました。" },
+      { date: "v1.2.0", title: "TrustNode 1 (TN1) — 準備完了 MVP", desc: "ローカル署名保護のための完全稼働の Android パッケージ。閾値調整と重みのファインチューニングのためのキャリブレーションフェーズ。" },
+      { date: "2025", title: "ONNX コア統合", desc: "クラウド依存なしで端末上でローカルにセマンティック推論を行う rubert_fraud_int8.onnx モデルの展開。" },
+      { date: "2026年9月", title: "PHANTOM 2.0 — アーキテクチャフェーズ", desc: "独立した AI コンセンサスルーティングを備えた 7 層特許 TN3 アーキテクチャ。期限: 2026 年 9 月。" },
+      { date: "2026年9月", title: "連邦スーパーファイナル（モスクワ）", desc: "権威ある連邦科学研究スーパーファイナルでのプロジェクト発表。" },
+      { date: "v3.0-design", title: "Kira ボイスアシスタント — コンセプト仕様", desc: "ライブ通話中の操作的な発話を中和する音声意図分析器。デザインフェーズ。" }
+    ],
+    allProjectsGithub: "GitHub のすべての TrustNode プロジェクト"
   }
 };
 
