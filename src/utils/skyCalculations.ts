@@ -400,9 +400,10 @@ export function getLiveZenithConstellationStatus(now: Date = new Date(), lang: s
     }
   }
 
-  const constellationName = lang === "ru" ? getRussianName(bestConstellationCode) : bestConstellationCode;
-  const timeStr = new Intl.DateTimeFormat(lang === "ru" ? "ru-RU" : "en-GB", {
-    timeZone: "Europe/Moscow",
+  const isRu = lang === "ru";
+  const constellationName = isRu ? getRussianName(bestConstellationCode) : bestConstellationCode;
+  const timeStr = new Intl.DateTimeFormat(isRu ? "ru-RU" : "en-GB", {
+    timeZone: isRu ? "Europe/Moscow" : "UTC",
     hour: "2-digit",
     minute: "2-digit",
     hour12: false
@@ -423,5 +424,5 @@ export function getLiveZenithConstellationStatus(now: Date = new Date(), lang: s
   };
   const prefix = prefixMap[lang] || prefixMap.en;
 
-  return `${prefix}: ${constellationName} // ${timeStr} MSK`;
+  return `${prefix}: ${constellationName} // ${timeStr} ${isRu ? "MSK" : "GMT"}`;
 }

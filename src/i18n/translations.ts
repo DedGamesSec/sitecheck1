@@ -689,7 +689,7 @@ const en: Translations = {
         desc: "Top award in the Information Technology track for the best practical cybersecurity system at a student competition."
       },
       {
-        val: "MSK // 2026",
+        val: "MOSCOW // 2026",
         label: "National final",
         desc: "An official invitation to the all-Russian IT research super-final in Moscow (September 2026)."
       },
@@ -1209,7 +1209,7 @@ const es: Translations = {
         desc: "Máximo galardón en la categoría de Tecnologías de la Información al mejor sistema práctico de ciberseguridad."
       },
       {
-        val: "MSK // 2026",
+        val: "MOSCÚ // 2026",
         label: "Final nacional",
         desc: "Invitación oficial a la gran final panrusa de investigación en TI en Moscú (septiembre de 2026)."
       },
@@ -1729,7 +1729,7 @@ const zh: Translations = {
         desc: "在信息技术组别中荣获最佳实用网络安全系统的最高奖项。"
       },
       {
-        val: "MSK // 2026",
+        val: "莫斯科 // 2026",
         label: "全国总决赛",
         desc: "受邀参加将于2026年9月在莫斯科举行的全俄IT科研总决赛。"
       },
@@ -2249,7 +2249,7 @@ const tr: Translations = {
         desc: "En iyi pratik siber güvenlik sistemi dalında Bilgi Teknolojileri bölümünde en yüksek ödül."
       },
       {
-        val: "MSK // 2026",
+        val: "MOSKOVA // 2026",
         label: "Federal Final",
         desc: "Eylül 2026'da Moskova'da düzenlenecek ulusal BT araştırmaları süper finaline resmi davet."
       },
@@ -2769,7 +2769,7 @@ const hi: Translations = {
         desc: "सर्वश्रेष्ठ व्यावहारिक साइबर-सुरक्षा प्रणाली के लिए इन्फ़ॉर्मेशन टेक्नोलॉजी श्रेणी में सर्वोच्च पुरस्कार।"
       },
       {
-        val: "MSK // 2026",
+        val: "मास्को // 2026",
         label: "राष्ट्रीय फ़ाइनल",
         desc: "मॉस्को में होने वाले अखिल-रूसी IT शोध सुपर-फ़ाइनल (सितंबर 2026) का आधिकारिक निमंत्रण।"
       },
@@ -3809,7 +3809,7 @@ const pt: Translations = {
         desc: "Principal prêmio na categoria de Tecnologia da Informação pelo melhor sistema prático de cibersegurança."
       },
       {
-        val: "MSK // 2026",
+        val: "MOSCOU // 2026",
         label: "Final nacional",
         desc: "Convite oficial para a grande final russa de pesquisa em TI, em Moscou (setembro de 2026)."
       },
@@ -4329,7 +4329,7 @@ const fr: Translations = {
         desc: "Plus haute distinction de la section Technologies de l'Information pour le meilleur système pratique de cybersécurité."
       },
       {
-        val: "MSK // 2026",
+        val: "MOSCOU // 2026",
         label: "Finale nationale",
         desc: "Invitation officielle à la grande finale russe de recherche en informatique à Moscou (septembre 2026)."
       },
@@ -4849,7 +4849,7 @@ const de: Translations = {
         desc: "Höchste Auszeichnung im Bereich Informationstechnologie für das beste praktische Cybersicherheitssystem."
       },
       {
-        val: "MSK // 2026",
+        val: "MOSKAU // 2026",
         label: "Nationales Finale",
         desc: "Offizielle Einladung zum gesamtrussischen IT-Forschungsfinale in Moskau (September 2026)."
       },
