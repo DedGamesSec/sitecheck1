@@ -8,7 +8,6 @@ import * as originStory from './dicts/originStory';
 import * as appSecurity from './dicts/appSecurity';
 import * as kiraAssistant from './dicts/kiraAssistant';
 import * as explorePages from './dicts/explorePages';
-import * as waitlist from './dicts/waitlist';
 
 const languages = ['ru', 'en', 'es', 'zh', 'tr', 'hi', 'ar', 'pt', 'fr', 'de', 'ja'] as const;
 
@@ -56,10 +55,6 @@ for (const lang of languages) {
       features: kiraAssistant.features[lang],
     },
     explore: explorePages.explore[lang],
-    waitlist: {
-      ...orig.waitlist,
-      console: waitlist.console[lang],
-    }
   };
 }
 

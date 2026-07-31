@@ -111,12 +111,7 @@ const PAGE_DESCRIPTIONS: Record<PageId, Record<string, string>> = {
     de: "Laden Sie TrustNode herunter und erhalten Sie Beta-Zugriff",
     ja: "TrustNodeをダウンロードしてベータアクセスを入手",
   },
-  "early-access": {
-    ru: "Скачать TrustNode и получить доступ к бета-версии",
-    en: "Download TrustNode and get beta access",
-  },
   "not-found": {},
-  admin: {},
 };
 
 interface PageNavigationFooterProps {

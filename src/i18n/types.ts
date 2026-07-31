@@ -79,6 +79,15 @@ export interface Translations {
     tagline: string;
     footerTagline: string;
   };
+  header: {
+    rustore: string;
+    radar: string;
+    ecoOn: string;
+    ecoOff: string;
+    seniorOn: string;
+    seniorOff: string;
+    lang: string;
+  };
   hero: {
     badge: string;
     titleSub: string;
@@ -203,40 +212,12 @@ export interface Translations {
     subtitle: string;
     stats: StatItem[];
   };
-  waitlist: {
-    badge: string;
-    titleLine1: string;
-    titleHighlight: string;
-    pricingLabel: string;
-    pricingLine1: string;
-    pricingHighlight: string;
-    pricingLine2: string;
-    description: string;
-    socials: SocialItem[];
-    disclaimer1: string;
-    disclaimer2: string;
-    console: {
-      title: string;
-      subtitle: string;
-      inputLabel: string;
-      inputPlaceholder: string;
-      osLabel: string;
-      cpuLabel: string;
-      btnSubmit: string;
-      btnGenerating: string;
-      copyBtn: string;
-      copied: string;
-      ticketTitle: string;
-      ticketLabel: string;
-      envAnalysis: string;
-      errContactRequired: string;
-    };
-  };
   footer: {
     copyright: string;
     privacyLink: string;
     termsLink: string;
     version: string;
+    githubOrg: string;
   };
   cookie: {
     badgeLabel: string;
@@ -281,11 +262,16 @@ export interface Translations {
     title: string;
     subtitle: string;
     badge: string;
-    checkboxText: string;
-    btnGetTicket: string;
-    btnGenerating: string;
-    ticketReadyTitle: string;
-    ticketReadyInstruction: string;
+    back: string;
+    rustoreBtn: string;
+    githubBtn: string;
+    feature1Title: string;
+    feature1Desc: string;
+    feature2Title: string;
+    feature2Desc: string;
+    feature3Title: string;
+    feature3Desc: string;
+    note: string;
   };
   comparisonPage: {
     title: string;

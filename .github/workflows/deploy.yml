@@ -19,7 +19,7 @@ jobs:
       - run: npm ci
       - run: npm run build
         env:
-          VITE_BASE: ${{ vars.VITE_BASE || '/' }}
+          VITE_BASE: ${{ vars.VITE_BASE || '/sitecheck1/' }}
       - name: Deploy to gh-pages branch
         run: |
           cp -r dist ../dist-copy

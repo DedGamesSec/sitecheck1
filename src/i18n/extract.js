@@ -116,11 +116,6 @@ fs.writeFileSync(path.join(dictsDir, 'kiraAssistant.ts'), [
   extractVariable(kiraPath, 'FEATURES_BY_LANG', 'features')
 ].join('\n\n'));
 
-// 6. Waitlist
-const waitlistPath = 'src/components/WaitlistSection.tsx';
-fs.writeFileSync(path.join(dictsDir, 'waitlist.ts'), [
-  'import { LanguageCode } from "../languages";',
-  extractVariable(waitlistPath, 'CONSOLE_TEXT', 'console')
-].join('\n\n'));
+// 6. (removed) Waitlist ticket console no longer exists.
 
 console.log('Dictionaries extracted successfully!');

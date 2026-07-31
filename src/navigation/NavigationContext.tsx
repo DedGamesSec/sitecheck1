@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 
-export type PageId = "home" | "how-it-works" | "tech" | "about" | "download" | "comparison" | "not-found" | "roadmap" | "early-access";
+export type PageId = "home" | "how-it-works" | "tech" | "about" | "download" | "comparison" | "not-found" | "roadmap";
 
 interface NavigationContextValue {
   activePage: PageId;
@@ -18,7 +18,6 @@ function resolvePageFromPath(path: string): PageId {
   if (normalized === "/tech") return "tech";
   if (normalized === "/about") return "about";
   if (normalized === "/download") return "download";
-  if (normalized === "/early-access") return "early-access";
   if (normalized === "/comparison") return "comparison";
   if (normalized === "/roadmap") return "roadmap";
   return "not-found";

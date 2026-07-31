@@ -1,9 +1,11 @@
 import React from "react";
 import { SiTelegram, SiVk, SiTiktok, SiGithub } from "react-icons/si";
+import { Radar } from "lucide-react";
 import MiniLogo from "./MiniLogo";
 import { useTranslation } from "../i18n/LanguageContext";
 import { useNavigation } from "../navigation/NavigationContext";
 import { FOOTER_SITEMAP_PAGES } from "../navigation/pages.config";
+import { RUSTORE_URL, PRODUCT_RADAR_URL } from "./Header";
 
 const SiTelegramIcon = SiTelegram as React.ComponentType<any>;
 const SiVkIcon = SiVk as React.ComponentType<any>;
@@ -40,6 +42,11 @@ const Footer = React.memo(function Footer({ onOpenPrivacy, onOpenTerms }: Footer
     { href: "https://github.com/TrustNodeLab", label: "GitHub", Icon: SiGithubIcon },
     { href: "https://www.tiktok.com/@trusrnode?_r=1&_t=ZS-97fr5YVyPCs", label: "TikTok", Icon: SiTiktokIcon },
   ] as const;
+
+  const storeLinks = [
+    { href: RUSTORE_URL, label: t.header.rustore, Icon: null as React.ReactNode | null, external: true },
+    { href: PRODUCT_RADAR_URL, label: t.header.radar, Icon: <Radar className="w-4 h-4" />, external: true },
+  ];
 
   return (
     <footer 
@@ -112,8 +119,8 @@ const Footer = React.memo(function Footer({ onOpenPrivacy, onOpenTerms }: Footer
               rel="noopener noreferrer"
               className="mt-2 inline-flex items-center gap-1.5 font-mono text-[9px] text-gray-500 hover:text-[#2E7DFF] transition-colors"
             >
-              <SiGithub className="w-3 h-3" />
-              TrustNodeLab on GitHub
+              <SiGithubIcon className="w-3 h-3" />
+              {t.footer.githubOrg}
             </a>
             <p className="font-mono text-[9px] text-gray-600 mt-2">
               Mikhail Pitolin &lt;mikhailpitolin@gmail.com&gt;
@@ -122,7 +129,7 @@ const Footer = React.memo(function Footer({ onOpenPrivacy, onOpenTerms }: Footer
         </div>
 
         {/* Right: Social / Tech Links */}
-        <div className="flex flex-wrap items-center justify-center lg:justify-end gap-3">
+        <div className="flex flex-wrap items-center justify-center lg:justify-end gap-3 max-w-full">
           {socialLinks.map(({ href, label, Icon }) => (
             <a 
               key={label}
@@ -137,6 +144,31 @@ const Footer = React.memo(function Footer({ onOpenPrivacy, onOpenTerms }: Footer
                 <Icon className="w-4 h-4" />
               </span>
               <span>{label === "VK" ? "VKontakte" : label}</span>
+            </a>
+          ))}
+
+          <div className="w-full h-px bg-[#1F2937]/30 my-1" />
+
+          {storeLinks.map(({ href, label, Icon }) => (
+            <a 
+              key={href}
+              href={href}
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label={label}
+              title={label}
+              className="font-mono text-xs text-gray-400 hover:text-[#2E7DFF] hover:border-[#2E7DFF]/40 transition-all duration-300 flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[#0F0F12]/80 border border-[#1F2937]/50 min-h-11"
+            >
+              <span className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-[#0A162C]/60 border border-[#2E7DFF]/30 text-[#2E7DFF] shrink-0">
+                {Icon || (
+                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                  </svg>
+                )}
+              </span>
+              <span>{label}</span>
             </a>
           ))}
         </div>

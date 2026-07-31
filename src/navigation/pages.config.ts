@@ -59,13 +59,6 @@ export const PAGES_CONFIG: PageConfig[] = [
     showInHeader: true,
     showInFooterSitemap: true,
   },
-  {
-    id: "early-access",
-    labelKey: "download",
-    order: 8,
-    showInHeader: false,
-    showInFooterSitemap: false,
-  },
 ];
 
 export const ORDERED_PAGES = [...PAGES_CONFIG].sort((a, b) => a.order - b.order);

@@ -38,15 +38,37 @@
     -webkit-tap-highlight-color: transparent;
   }
 
+  /* Default text is 10% larger than the browser base of 16px */
+  html {
+    font-size: 110%;
+  }
+
   @media (max-width: 640px) {
     html {
-      font-size: 14px;
+      font-size: 96.25%;
     }
   }
 
   @media (max-width: 380px) {
     html {
-      font-size: 12px;
+      font-size: 82.5%;
+    }
+  }
+
+  /* Senior-friendly mode: noticeably larger text everywhere */
+  html.senior-mode {
+    font-size: 137.5%;
+  }
+
+  @media (max-width: 640px) {
+    html.senior-mode {
+      font-size: 125%;
+    }
+  }
+
+  @media (max-width: 380px) {
+    html.senior-mode {
+      font-size: 112.5%;
     }
   }
 }

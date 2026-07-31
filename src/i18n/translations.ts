@@ -179,60 +179,23 @@ const ru: Translations = {
       }
     ]
   },
-  waitlist: {
-    badge: "ПРЕМИУМ ЛОКАЛЬНАЯ ЗАЩИТА",
-    titleLine1: "Получить ранний",
-    titleHighlight: "платный доступ",
-    pricingLabel: "[ ТАРИФНЫЕ ПЛАНЫ ]",
-    pricingLine1: "Доступные тарифы локальной защиты.",
-    pricingHighlight: "Free / 299₽ / 599₽ в месяц",
-    pricingLine2: "Никаких скрытых облачных запросов, 100% приватность.",
-    description: "Выберите подходящий пакет ниже и сгенерируйте ваш уникальный лицензионный билет для подключения.",
-    socials: [
-      {
-        name: "Telegram Канал & Чат",
-        desc: "Получайте моментальные апдейты, задавайте вопросы команде разработчиков и пишите напрямую в ЛС для обсуждения условий.",
-        badge: "Команда в сети",
-        action: "Написать в Telegram"
-      },
-      {
-        name: "Сообщество ВКонтакте",
-        desc: "Официальное сообщество проекта. Пишите в сообщения сообщества для получения инструкций по оплате и установке.",
-        badge: "Быстрый ответ",
-        action: "Написать в VK"
-      },
-      {
-        name: "Профиль TikTok",
-        desc: "Короткие демонстрации работы купола безопасности, новости и разборы уязвимостей. Свяжитесь в Direct.",
-        badge: "Видео-обзоры",
-        action: "Открыть TikTok"
-      }
-    ],
-    disclaimer1: "БЕЗ СПАМА // БЕЗ ЛОГОВ ТРЕТЬИХ ЛИЦ // ЛОКАЛЬНОЕ ШИФРОВАНИЕ",
-    disclaimer2: "Лицензия предоставляется после верификации устройства",
-    console: {
-      title: "Оставить заявку на ранний доступ",
-      subtitle: "Сформируйте локальный цифровой отпечаток для вашей персональной сборки",
-      inputLabel: "Ваш Telegram @username или E-mail",
-      inputPlaceholder: "Например: @ivan_crypto или mail@example.com",
-      osLabel: "Мобильная платформа",
-      cpuLabel: "Микроархитектура ЦП",
-      btnSubmit: "Отправить заявку",
-      btnGenerating: "Генерация локального купола...",
-      copyBtn: "Копировать ID билета",
-      copied: "Скопировано в буфер обмена!",
-      ticketTitle: "ЛИЦЕНЗИОННЫЙ БИЛЕТ СФОРМИРОВАН",
-      ticketLabel: "СКОПИРУЙТЕ ЭТОТ ID И ОТПРАВЬТЕ ЕГО НАМ В TELEGRAM / VK ДЛЯ МОМЕНТАЛЬНОГО ПОДКЛЮЧЕНИЯ ВНЕ ОЧЕРЕДИ",
-      envAnalysis: "АНАЛИЗ ОКРУЖЕНИЯ УСТРОЙСТВА И СОЗДАНИЕ ВАЛЮТЫ БЕЗОПАСНОСТИ",
-      errContactRequired: "Пожалуйста, укажите ваши контактные данные"
-    }
+
+  header: {
+    rustore: "Скачать в RuStore",
+    radar: "Product Radar",
+    ecoOn: "Эко-режим включён",
+    ecoOff: "Эко-режим выключен",
+    seniorOn: "Режим для пожилых включён",
+    seniorOff: "Режим для пожилых (увеличенный текст)",
+    lang: "Сменить язык",
   },
   footer: {
     copyright: "© {year} TrustNode Protocol. Все права защищены.",
     privacyLink: "Политика конфиденциальности (ФЗ-152)",
     termsLink: "Пользовательское соглашение",
-    version: "On-Device ML Fraud Shield // v1.2.0 // соответствует ФЗ-152"
-  },
+    version: "On-Device ML Fraud Shield // v1.2.0 // соответствует ФЗ-152",
+      githubOrg: "Все проекты TrustNode на GitHub",
+},
   cookie: {
     badgeLabel: "[ ИНФОРМАЦИОННАЯ БЕЗОПАСНОСТЬ // ФЗ-152 ]",
     text: "Мы заботимся о вашей приватности. Сайт использует обезличенные файлы cookie и локальное хранилище для сохранения ваших настроек графики и эко-режима. Ознакомьтесь с нашей",
@@ -269,8 +232,8 @@ const ru: Translations = {
         ]
       },
       s4: {
-        heading: "[ РЕГИСТРАЦИЯ В ВЕЙТЛИСТЕ ЧЕРЕЗ VK РЕКЛАМУ ]",
-        body: "Кнопка «Зарегистрироваться» открывает лид-форму VK Рекламы в отдельном окне. Имя, номер телефона, e-mail и согласие на обработку персональных данных, указанные в этой форме, собирает, хранит и обрабатывает VK — сайт TrustNode эти данные не получает, не видит и не хранит на своей стороне. Отдельно от вейтлиста, ссылки на Telegram-канал, сообщество ВКонтакте и TikTok в этом разделе — это каналы для вопросов и новостей проекта, а не механизм сбора персональных данных."
+        heading: "[ СКАЧИВАНИЕ ПРИЛОЖЕНИЯ ]",
+        body: "Скачивание приложения TrustNode осуществляется через официальные площадки — магазин RuStore и GitHub. Сайт TrustNode не собирает и не обрабатывает персональные данные пользователей: все данные, анализируемые приложением, обрабатываются исключительно локально на устройстве пользователя."
       },
       s5: {
         heading: "[ ЛОКАЛИЗАЦИЯ И БЕЗОПАСНОСТЬ ХРАНЕНИЯ ]",
@@ -282,9 +245,9 @@ const ru: Translations = {
         bodySuffix: "."
       },
       s7: {
-        heading: "[ VK КАК ОПЕРАТОР ДАННЫХ ВЕЙТЛИСТА ]",
-        bodyPrefix: "В части регистрации в вейтлисте TrustNode не выступает оператором персональных данных — этим оператором является VK. Обработка данных, переданных через лид-форму, регулируется политикой конфиденциальности VK: ",
-        bodySuffix: " Актуальность и применимость данной ссылки к конкретной лид-форме VK Рекламы должны быть подтверждены владельцем сайта перед публикацией."
+        heading: "[ ВНЕШНИЕ ПЛОЩАДКИ РАСПРОСТРАНЕНИЯ ]",
+        bodyPrefix: "Загрузка и установка приложения из магазина RuStore или GitHub регулируются правилами соответствующих платформ. TrustNode не выступает оператором персональных данных при использовании внешних площадок: ",
+        bodySuffix: " Актуальность и применимость данных ссылок должны быть подтверждены владельцем сайта перед публикацией."
       }
     },
     terms: {
@@ -316,7 +279,7 @@ const ru: Translations = {
     "how-it-works": "Как это работает",
     tech: "Технологии",
     about: "О проекте",
-    "early-access": "Ранний доступ",
+    download: "Скачать",
     comparison: "Сравнение",
     roadmap: "Карта разработки",
     "not-found": "404"
@@ -450,10 +413,10 @@ const ru: Translations = {
     card2Badge: "ВАЛИДАЦИЯ И ПАТЕНТЫ",
     card2Desc: "Официальный патент ФИПС, золотая медаль на региональном НИР, участие во всероссийском финале в Москве и история создания проекта.",
     card2Btn: "О проекте и команде →",
-    card3Title: "Ранний доступ",
-    card3Badge: "ЛИЦЕНЗИИ // VIP",
-    card3Desc: "Выберите пакет раннего доступа, сгенерируйте уникальный билет и получите приоритетный Pro/VIP доступ до официального релиза.",
-    card3Btn: "Получить билет доступа →",
+    card3Title: "Скачать приложение",
+    card3Badge: "УСТАНОВКА // ANDROID",
+    card3Desc: "Скачайте TrustNode TN1 бесплатно — готовое приложение для локальной защиты от мошенников и спама. Доступно в RuStore.",
+    card3Btn: "Скачать приложение →",
     card4Title: "Честное сравнение",
     card4Badge: "ФАКТЫ И КОНКУРЕНТЫ",
     card4Desc: "Объективная сравнительная таблица функциональности TrustNode с существующими на рынке аналогами по ключевым параметрам.",
@@ -466,15 +429,21 @@ const ru: Translations = {
     rightSub: "// НИКАКОЙ ТЕЛЕМЕТРИИ"
   },
   earlyAccessPage: {
-    title: "Ранний доступ к TrustNode",
-    subtitle: "Скачайте TrustNode TN1 бесплатно — готовое приложение для защиты от телефонного мошенничества",
+    title: "Скачать TrustNode",
+    subtitle: "Скачайте приложение TrustNode TN1 бесплатно — локальная защита от телефонного мошенничества и спама прямо на вашем устройстве.",
     badge: "БЕСПЛАТНАЯ ЗАГРУЗКА",
-    checkboxText: "Я принимаю условия Пользовательского соглашения и Политики конфиденциальности",
-    btnGetTicket: "Получить билет",
-    btnGenerating: "Генерация защитного купола...",
-    ticketReadyTitle: "Ваш билет сгенерирован!",
-    ticketReadyInstruction: "Скопируйте ваш ID билета ниже и отправьте его нам в Telegram / VK для получения бесплатного установочного ключа.",
+    back: "Назад на Главную",
+    rustoreBtn: "Скачать в RuStore",
+    githubBtn: "Скачать APK с GitHub",
+    feature1Title: "100% Локальная защита",
+    feature1Desc: "Все проверки звонков и сообщений выполняются прямо на вашем устройстве — ваши данные никогда не покидают смартфон.",
+    feature2Title: "ИИ против мошенников",
+    feature2Desc: "Нейросетевая модель на базе rubert-tiny2 распознаёт сценарии социальной инженерии в реальном времени.",
+    feature3Title: "Бесплатно и безопасно",
+    feature3Desc: "Приложение доступно бесплатно в RuStore. Устанавливайте и защищайте своих близких от мошенников.",
+    note: "Приложение доступно для устройств Android. Требуется соединение с интернетом только при первом скачивании.",
   },
+
   comparisonPage: {
     title: "Честное сравнение",
     subtitle: "Объективный сравнительный анализ возможностей TrustNode и ведущих мировых решений",
@@ -691,60 +660,23 @@ const en: Translations = {
       }
     ]
   },
-  waitlist: {
-    badge: "PREMIUM LOCAL PROTECTION",
-    titleLine1: "Get early",
-    titleHighlight: "protection access",
-    pricingLabel: "[ PRICING TIERS ]",
-    pricingLine1: "Flexible local protection pricing tiers.",
-    pricingHighlight: "Free / 299₽ / 599₽ per month",
-    pricingLine2: "No hidden server charges, 100% private.",
-    description: "Choose your preferred tier below and generate your secure license ticket to instantly activate.",
-    socials: [
-      {
-        name: "Telegram channel & chat",
-        desc: "Get instant updates, ask the development team questions, and message us directly to discuss terms.",
-        badge: "Team online",
-        action: "Message on Telegram"
-      },
-      {
-        name: "VKontakte community",
-        desc: "The project's official community. Message the community page for payment and installation instructions.",
-        badge: "Fast reply",
-        action: "Message on VK"
-      },
-      {
-        name: "TikTok profile",
-        desc: "Short demos of the security dome in action, news, and vulnerability breakdowns. Reach us via Direct.",
-        badge: "Video reviews",
-        action: "Open TikTok"
-      }
-    ],
-    disclaimer1: "NO SPAM // NO THIRD-PARTY LOGS // ON-DEVICE LOCAL ENCRYPTION",
-    disclaimer2: "The license is issued after device verification",
-    console: {
-      title: "Request Early Access",
-      subtitle: "Formulate a local digital fingerprint for your customized build",
-      inputLabel: "Your Telegram @username or E-mail",
-      inputPlaceholder: "E.g., @jack_crypto or email@domain.com",
-      osLabel: "Mobile OS Platform",
-      cpuLabel: "CPU Microarchitecture",
-      btnSubmit: "Submit Application",
-      btnGenerating: "Generating Local Dome Keys...",
-      copyBtn: "Copy Ticket ID",
-      copied: "Copied to clipboard!",
-      ticketTitle: "LICENSE TICKET CONFIGURED",
-      ticketLabel: "COPY THIS TICKET ID AND SEND IT TO US IN TELEGRAM / VK FOR INSTANT PRIORITY VERIFICATION",
-      envAnalysis: "ANALYZING DEVICE ENVIRONMENT & ALLOCATING MEMORY ENVELOPE",
-      errContactRequired: "Please provide your contact handle"
-    }
+
+  header: {
+    rustore: "Download on RuStore",
+    radar: "Product Radar",
+    ecoOn: "Eco mode enabled",
+    ecoOff: "Eco mode disabled",
+    seniorOn: "Senior mode enabled",
+    seniorOff: "Senior mode (larger text)",
+    lang: "Change language",
   },
   footer: {
     copyright: "© {year} TrustNode Protocol. All rights reserved.",
     privacyLink: "Privacy Policy (Russian Federal Law 152-FZ)",
     termsLink: "Terms of Service",
-    version: "On-Device ML Fraud Shield // v1.2.0 // 152-FZ compliant"
-  },
+    version: "On-Device ML Fraud Shield // v1.2.0 // 152-FZ compliant",
+      githubOrg: "All TrustNode projects on GitHub",
+},
   cookie: {
     badgeLabel: "[ INFORMATION SECURITY // RUSSIAN LAW 152-FZ ]",
     text: "We care about your privacy. This site uses anonymized cookies and local storage to remember your graphics and eco-mode settings. Read our",
@@ -781,8 +713,8 @@ const en: Translations = {
         ]
       },
       s4: {
-        heading: "[ WAITLIST REGISTRATION VIA VK ADS ]",
-        body: "The \"Sign Up\" button opens a VK Ads lead form in a new window. The name, phone number, e-mail address, and personal-data consent entered in that form are collected, stored, and processed by VK — the TrustNode website never receives, sees, or stores this data on its own side. Separately from the waitlist, the Telegram channel, VK community, and TikTok links in this section are channels for questions and project updates, not a mechanism for collecting personal data."
+        heading: "[ APP DOWNLOAD ]",
+        body: "Downloading the TrustNode application is done through official platforms — the RuStore store and GitHub. The TrustNode website does not collect or process users' personal data: all data analyzed by the app is processed exclusively on the user's device."
       },
       s5: {
         heading: "[ DATA LOCALIZATION AND STORAGE SECURITY ]",
@@ -794,9 +726,9 @@ const en: Translations = {
         bodySuffix: "."
       },
       s7: {
-        heading: "[ VK AS THE OPERATOR OF WAITLIST DATA ]",
-        bodyPrefix: "For waitlist registration, TrustNode is not the operator of personal data — VK is. Processing of data submitted through the lead form is governed by VK's privacy policy: ",
-        bodySuffix: " The site owner must confirm this link is accurate and applicable to the specific VK Ads lead form before publishing."
+        heading: "[ EXTERNAL DISTRIBUTION PLATFORMS ]",
+        bodyPrefix: "Downloading and installing the app from the RuStore store or GitHub is governed by the rules of the respective platforms. TrustNode is not the operator of personal data when external platforms are used: ",
+        bodySuffix: " The accuracy and applicability of these links must be confirmed by the site owner before publication."
       }
     },
     terms: {
@@ -828,7 +760,7 @@ const en: Translations = {
     "how-it-works": "How It Works",
     tech: "Technology",
     about: "About Us",
-    "early-access": "Early Access",
+    download: "Download",
     comparison: "Comparison",
     "not-found": "404"
   },
@@ -961,10 +893,10 @@ const en: Translations = {
     card2Badge: "PATENT & AWARDS",
     card2Desc: "Official patent filings, first place in regional IT research, national finals invitation, and our project development journey.",
     card2Btn: "About Us & Team →",
-    card3Title: "Early Access",
-    card3Badge: "LICENSES // VIP",
-    card3Desc: "Select an early access package, generate your unique ticket, and secure priority Pro/VIP access before the official release.",
-    card3Btn: "Get Access Ticket →",
+    card3Title: "Download the App",
+    card3Badge: "INSTALL // ANDROID",
+    card3Desc: "Download TrustNode TN1 for free — the finished on-device app protecting you from fraud and spam. Available on RuStore.",
+    card3Btn: "Download App →",
     card4Title: "Honest Comparison",
     card4Badge: "FACTS & COMPETITORS",
     card4Desc: "An objective comparative analysis of TrustNode vs leading global security solutions across key parameters.",
@@ -977,15 +909,21 @@ const en: Translations = {
     rightSub: "// ZERO TELEMETRY COLLECTED"
   },
   earlyAccessPage: {
-    title: "Early Access to TrustNode",
-    subtitle: "Download TrustNode TN1 for free — the finished on-device fraud protection app",
+    title: "Download TrustNode",
+    subtitle: "Get the TrustNode TN1 app for free — on-device protection against phone scams and spam, right on your device.",
     badge: "FREE DOWNLOAD",
-    checkboxText: "I accept the terms of the User Agreement and Privacy Policy",
-    btnGetTicket: "Get Ticket",
-    btnGenerating: "Generating security dome...",
-    ticketReadyTitle: "Your Ticket is Generated!",
-    ticketReadyInstruction: "Copy your ticket ID below and send it to us on Telegram / VK to get your free installation key"
+    back: "Back to Main",
+    rustoreBtn: "Download on RuStore",
+    githubBtn: "Download APK from GitHub",
+    feature1Title: "100% On-Device Protection",
+    feature1Desc: "All call and message checks run right on your device — your data never leaves your smartphone.",
+    feature2Title: "AI Against Scammers",
+    feature2Desc: "The rubert-tiny2-based neural model detects social engineering scenarios in real time.",
+    feature3Title: "Free and Secure",
+    feature3Desc: "The app is available for free on RuStore. Install it and protect your loved ones from scammers.",
+    note: "Available for Android devices. Internet is only needed for the initial download.",
   },
+
   comparisonPage: {
     title: "Honest Comparison",
     subtitle: "An objective comparative analysis of TrustNode vs leading global security solutions",
@@ -1202,60 +1140,23 @@ const es: Translations = {
       }
     ]
   },
-  waitlist: {
-    badge: "PROTECCIÓN LOCAL PREMIUM",
-    titleLine1: "Consigue acceso anticipado",
-    titleHighlight: "de pago",
-    pricingLabel: "[ CONDICIONES INDIVIDUALES ]",
-    pricingLine1: "El acceso anticipado es de pago.",
-    pricingHighlight: "El precio se acuerda de forma individual",
-    pricingLine2: "Cada licencia se configura y optimiza según las particularidades de tu dispositivo y tus requisitos de privacidad.",
-    description: "Hemos dejado atrás los formularios anónimos de suscripción por correo. Para solicitar la instalación de la cúpula de seguridad local o hablar sobre una colaboración, escríbenos por cualquiera de los canales de abajo.",
-    socials: [
-      {
-        name: "Canal y chat de Telegram",
-        desc: "Recibe actualizaciones al instante, pregunta al equipo de desarrollo y escríbenos en privado para hablar de condiciones.",
-        badge: "Equipo en línea",
-        action: "Escribir en Telegram"
-      },
-      {
-        name: "Comunidad de VKontakte",
-        desc: "La comunidad oficial del proyecto. Escribe a la página de la comunidad para recibir instrucciones de pago e instalación.",
-        badge: "Respuesta rápida",
-        action: "Escribir en VK"
-      },
-      {
-        name: "Perfil de TikTok",
-        desc: "Demostraciones breves de la cúpula de seguridad en acción, novedades y análisis de vulnerabilidades. Contáctanos por Direct.",
-        badge: "Reseñas en video",
-        action: "Abrir TikTok"
-      }
-    ],
-    disclaimer1: "SIN SPAM // SIN REGISTROS DE TERCEROS // CIFRADO LOCAL EN EL DISPOSITIVO",
-    disclaimer2: "La licencia se emite tras verificar el dispositivo",
-    console: {
-      title: "Solicitar Acceso Anticipado",
-      subtitle: "Formule una huella digital local para su compilación personalizada",
-      inputLabel: "Su Telegram @usuario o Correo electrónico",
-      inputPlaceholder: "Ej: @pedro_crypto o correo@dominio.com",
-      osLabel: "Plataforma Móvil",
-      cpuLabel: "Microarquitectura de CPU",
-      btnSubmit: "Enviar Solicitud",
-      btnGenerating: "Generando Claves de Seguridad...",
-      copyBtn: "Copiar ID de Boleto",
-      copied: "¡Copiado al portapapeles!",
-      ticketTitle: "BOLETO DE LICENCIA CONFIGURADO",
-      ticketLabel: "COPIE ESTE ID Y ENVÍELO A TELEGRAM / VK PARA UNA VERIFICACIÓN PRIORITARIA INSTANTÁNEA",
-      envAnalysis: "ANALIZANDO EL ENTORNO DEL DISPOSITIVO Y RESERVANDO MEMORIA SECTOR",
-      errContactRequired: "Por favor, proporcione su contacto"
-    }
+
+  header: {
+    rustore: "Descargar en RuStore",
+    radar: "Product Radar",
+    ecoOn: "Modo ecológico activado",
+    ecoOff: "Modo ecológico desactivado",
+    seniorOn: "Modo para mayores activado",
+    seniorOff: "Modo para mayores (texto más grande)",
+    lang: "Cambiar idioma",
   },
   footer: {
     copyright: "© {year} TrustNode Protocol. Todos los derechos reservados.",
     privacyLink: "Política de privacidad (Ley Federal 152-FZ de Rusia)",
     termsLink: "Términos de uso",
-    version: "On-Device ML Fraud Shield // v1.2.0 // conforme a la Ley 152-FZ"
-  },
+    version: "On-Device ML Fraud Shield // v1.2.0 // conforme a la Ley 152-FZ",
+      githubOrg: "Todos los proyectos de TrustNode en GitHub",
+},
   cookie: {
     badgeLabel: "[ SEGURIDAD DE LA INFORMACIÓN // LEY RUSA 152-FZ ]",
     text: "Nos importa tu privacidad. Este sitio usa cookies anonimizadas y almacenamiento local para recordar tus preferencias de gráficos y el modo eco. Consulta nuestra",
@@ -1292,8 +1193,8 @@ const es: Translations = {
         ]
       },
       s4: {
-        heading: "[ REGISTRO EN LA LISTA DE ESPERA A TRAVÉS DE VK ADS ]",
-        body: "El botón «Registrarse» abre un formulario de clientes potenciales de VK Ads en una ventana nueva. El nombre, el número de teléfono, el correo electrónico y el consentimiento para el tratamiento de datos personales indicados en ese formulario son recopilados, almacenados y procesados por VK; el sitio web de TrustNode nunca recibe, ve ni almacena estos datos por su parte. Aparte de la lista de espera, los enlaces a Telegram, la comunidad de VKontakte y TikTok en esta sección son canales para preguntas y novedades del proyecto, no un mecanismo de recopilación de datos personales."
+        heading: "[ DESCARGA DE LA APLICACIÓN ]",
+        body: "La descarga de la aplicación TrustNode se realiza a través de plataformas oficiales: la tienda RuStore y GitHub. El sitio web de TrustNode no recopila ni procesa los datos personales de los usuarios: todos los datos analizados por la aplicación se procesan exclusivamente de forma local en el dispositivo del usuario."
       },
       s5: {
         heading: "[ LOCALIZACIÓN Y SEGURIDAD DEL ALMACENAMIENTO ]",
@@ -1305,9 +1206,9 @@ const es: Translations = {
         bodySuffix: "."
       },
       s7: {
-        heading: "[ VK COMO OPERADOR DE LOS DATOS DE LA LISTA DE ESPERA ]",
-        bodyPrefix: "En lo referente al registro en la lista de espera, TrustNode no es el operador de los datos personales; el operador es VK. El tratamiento de los datos enviados a través del formulario se rige por la política de privacidad de VK: ",
-        bodySuffix: " El propietario del sitio debe confirmar que este enlace es correcto y aplicable al formulario específico de VK Ads antes de su publicación."
+        heading: "[ PLATAFORMAS EXTERNAS DE DISTRIBUCIÓN ]",
+        bodyPrefix: "La descarga e instalación de la aplicación desde la tienda RuStore o GitHub se rige por las normas de las respectivas plataformas. TrustNode no actúa como operador de datos personales cuando se utilizan plataformas externas: ",
+        bodySuffix: " La exactitud y aplicabilidad de estos enlaces debe ser confirmada por el propietario del sitio antes de su publicación."
       }
     },
     terms: {
@@ -1339,7 +1240,7 @@ const es: Translations = {
     "how-it-works": "Cómo funciona",
     tech: "Tecnología",
     about: "Nosotros",
-    "early-access": "Acceso anticipado",
+    download: "Descargar",
     comparison: "Comparación",
     "not-found": "404"
   },
@@ -1472,10 +1373,10 @@ const es: Translations = {
     card2Badge: "VALIDACIÓN Y PATENTES",
     card2Desc: "Patente oficial, primer puesto en concurso regional de investigación, final nacional en Moscú e historia del proyecto.",
     card2Btn: "Sobre Nosotros →",
-    card3Title: "Acceso Anticipado",
-    card3Badge: "LICENCIAS // VIP",
-    card3Desc: "Seleccione un paquete de acceso anticipado, genere su bólido único y asegure el acceso prioritario Pro/VIP antes del lanzamiento oficial.",
-    card3Btn: "Obtener Boleto de Acceso →",
+    card3Title: "Descargar la aplicación",
+    card3Badge: "INSTALACIÓN // ANDROID",
+    card3Desc: "Descargue TrustNode TN1 gratis — la aplicación lista para la protección local contra fraudes y spam. Disponible en RuStore.",
+    card3Btn: "Descargar aplicación →",
     card4Title: "Comparación Honesta",
     card4Badge: "HECHOS Y COMPETIDORES",
     card4Desc: "Una tabla comparativa objetiva de la funcionalidad de TrustNode con los competidores del mercado en parámetros clave.",
@@ -1488,15 +1389,21 @@ const es: Translations = {
     rightSub: "// SIN TELEMETRÍA"
   },
   earlyAccessPage: {
-    title: "Acceso Anticipado a TrustNode",
-    subtitle: "Descargue TrustNode TN1 gratis — la aplicación de protección contra fraudes en el dispositivo",
+    title: "Descargar TrustNode",
+    subtitle: "Obtenga gratis la aplicación TrustNode TN1: protección local contra estafas telefónicas y spam en su dispositivo.",
     badge: "DESCARGA GRATUITA",
-    checkboxText: "Acepto los términos del Acuerdo de usuario y la Política de privacidad",
-    btnGetTicket: "Obtener Boleto",
-    btnGenerating: "Generando domo de seguridad...",
-    ticketReadyTitle: "¡Su boleto ha sido generado!",
-    ticketReadyInstruction: "Copie su ID de boleto abajo y envíenoslo por Telegram / VK para obtener su clave de instalación gratuita"
+    back: "Volver al inicio",
+    rustoreBtn: "Descargar en RuStore",
+    githubBtn: "Descargar APK desde GitHub",
+    feature1Title: "Protección 100% local",
+    feature1Desc: "Todas las verificaciones de llamadas y mensajes se realizan en su dispositivo: sus datos nunca salen del teléfono.",
+    feature2Title: "IA contra estafadores",
+    feature2Desc: "El modelo neuronal basado en rubert-tiny2 detecta escenarios de ingeniería social en tiempo real.",
+    feature3Title: "Gratis y seguro",
+    feature3Desc: "La aplicación está disponible gratis en RuStore. Instálela y proteja a sus seres queridos.",
+    note: "Disponible para dispositivos Android. Solo se necesita internet para la descarga inicial.",
   },
+
   comparisonPage: {
     title: "Honest Comparison",
     subtitle: "An objective comparative analysis of TrustNode vs leading global security solutions",
@@ -1713,60 +1620,23 @@ const zh: Translations = {
       }
     ]
   },
-  waitlist: {
-    badge: "高级本地防护",
-    titleLine1: "获取付费",
-    titleHighlight: "抢先体验资格",
-    pricingLabel: "[ 个性化条款 ]",
-    pricingLine1: "抢先体验为付费服务。",
-    pricingHighlight: "具体价格一对一商议",
-    pricingLine2: "每份许可证都会根据你的具体设备情况和个人隐私需求进行定制与优化。",
-    description: "我们没有采用匿名邮箱订阅表单。如需申请安装本地安全穹顶或洽谈合作细节，请通过以下任意渠道联系我们。",
-    socials: [
-      {
-        name: "Telegram 频道与聊天群",
-        desc: "获取即时更新，向开发团队提问，或直接私信洽谈合作条款。",
-        badge: "团队在线",
-        action: "在 Telegram 上留言"
-      },
-      {
-        name: "VKontakte 官方社区",
-        desc: "项目官方社区。请在社区消息中留言以获取付款和安装说明。",
-        badge: "回复迅速",
-        action: "在 VK 上留言"
-      },
-      {
-        name: "TikTok 主页",
-        desc: "查看安全穹顶实际运行的短视频演示、最新动态以及漏洞解析。可通过私信联系我们。",
-        badge: "视频解析",
-        action: "打开 TikTok"
-      }
-    ],
-    disclaimer1: "无垃圾信息 // 无第三方日志 // 设备本地加密",
-    disclaimer2: "许可证在设备验证通过后发放",
-    console: {
-      title: "申请早期访问权限",
-      subtitle: "为您的专属定制版本生成本地设备数字指纹",
-      inputLabel: "您的 Telegram 用户名 (@) 或 电子邮箱",
-      inputPlaceholder: "例如：@blockchain_expert 或 user@example.com",
-      osLabel: "移动操作系统平台",
-      cpuLabel: "处理器微架构",
-      btnSubmit: "提交申请",
-      btnGenerating: "正在隔离运行内存生成防护罩...",
-      copyBtn: "复制许可证 ID 兑换券",
-      copied: "已复制到剪贴板！",
-      ticketTitle: "专用许可证兑换券生成成功",
-      ticketLabel: "请复制下方许可证 ID，并通过 Telegram 或 VK 发送给官方客服，即可享受免排队快速人工通道激活",
-      envAnalysis: "正在分析移动设备底层芯片兼容性并生成高强度 AES 加密封包",
-      errContactRequired: "请填写您的联系方式"
-    }
+
+  header: {
+    rustore: "在 RuStore 下载",
+    radar: "Product Radar",
+    ecoOn: "省电模式已开启",
+    ecoOff: "省电模式已关闭",
+    seniorOn: "长者模式已开启",
+    seniorOff: "长者模式（大号字体）",
+    lang: "切换语言",
   },
   footer: {
     copyright: "© {year} TrustNode Protocol。保留所有权利。",
     privacyLink: "隐私政策（俄罗斯联邦第152-FZ号法律）",
     termsLink: "用户协议",
-    version: "本机机器学习反欺诈盾牌 // v1.2.0 // 符合第152-FZ号法律"
-  },
+    version: "本机机器学习反欺诈盾牌 // v1.2.0 // 符合第152-FZ号法律",
+      githubOrg: "TrustNode 的所有项目都在 GitHub 上",
+},
   cookie: {
     badgeLabel: "[ 信息安全 // 俄罗斯第152-FZ号法律 ]",
     text: "我们重视你的隐私。本网站使用匿名化的 Cookie 和本地存储，用于记住你的图形设置和节能模式偏好。请查看我们的",
@@ -1803,8 +1673,8 @@ const zh: Translations = {
         ]
       },
       s4: {
-        heading: "[ 通过 VK 广告表单登记等待名单 ]",
-        body: "点击“立即注册”按钮会在新窗口中打开 VK 广告的线索表单。表单中填写的姓名、电话号码、电子邮箱以及个人数据处理同意均由 VK 收集、存储和处理——TrustNode 网站不会接收、查看或在自己一方存储这些数据。除等待名单外，本区域中的 Telegram 频道、VK 社区和 TikTok 链接只是用于答疑和项目动态的渠道，并非收集个人数据的方式。"
+        heading: "[ 应用下载 ]",
+        body: "下载 TrustNode 应用需通过官方平台：RuStore 商店和 GitHub。TrustNode 网站不收集也不处理用户的个人数据：应用分析的所有数据仅存在用户设备本地处理。"
       },
       s5: {
         heading: "[ 数据本地化与存储安全 ]",
@@ -1816,9 +1686,9 @@ const zh: Translations = {
         bodySuffix: "。"
       },
       s7: {
-        heading: "[ VK 作为等待名单数据的运营方 ]",
-        bodyPrefix: "就等待名单登记而言，TrustNode 并非个人数据运营方——运营方是 VK。通过该表单提交的数据的处理受 VK 隐私政策约束：",
-        bodySuffix: " 网站所有者在发布前应确认此链接准确并适用于该具体的 VK 广告表单。"
+        heading: "[ 外部分发平台 ]",
+        bodyPrefix: "从 RuStore 商店或 GitHub 下载并安装应用须遵守相应平台的规则。使用外部平台时，TrustNode 不作为个人数据的运营方：",
+        bodySuffix: " 发布前，网站所有者必须确认这些链接的准确性和适用性。"
       }
     },
     terms: {
@@ -1850,7 +1720,7 @@ const zh: Translations = {
     "how-it-works": "工作原理",
     tech: "技术",
     about: "关于我们",
-    "early-access": "早期访问",
+    download: "下载",
     comparison: "对比",
     "not-found": "404"
   },
@@ -1983,10 +1853,10 @@ const zh: Translations = {
     card2Badge: "专利与学术认可",
     card2Desc: "国家专利局专利申请、区域 IT 科研一等奖、受邀参加莫斯科全国总决赛以及我们的研发历程。",
     card2Btn: "关于我们与团队 →",
-    card3Title: "早期访问权限",
-    card3Badge: "许可证 // VIP特权",
-    card3Desc: "选择早期访问数据包，生成专属许可证兑换券，在正式发布前锁定 Pro/VIP 优先访问通道。",
-    card3Btn: "获取访问兑换券 →",
+    card3Title: "下载应用程序",
+    card3Badge: "安装 // 安卓",
+    card3Desc: "免费下载 TrustNode TN1 — 成熟的本地防诈骗防垃圾信息应用。可在 RuStore 下载。",
+    card3Btn: "下载应用 →",
     card4Title: "诚实客观对比",
     card4Badge: "事实与竞品",
     card4Desc: "客观对比 TrustNode 与市场上现有安全解决方案的关键功能和核心参数。",
@@ -1999,15 +1869,21 @@ const zh: Translations = {
     rightSub: "// 没有任何遥测"
   },
   earlyAccessPage: {
-    title: "TrustNode 早期访问",
-    subtitle: "免费下载 TrustNode TN1 — 一款成熟的设备端防欺诈保护应用",
+    title: "下载 TrustNode",
+    subtitle: "免费获取 TrustNode TN1 应用——在您的设备上直接抵御电话诈骗和垃圾信息。",
     badge: "免费下载",
-    checkboxText: "我接受《用户协议》和《隐私政策》条款",
-    btnGetTicket: "获取门票",
-    btnGenerating: "正在生成安全防护罩...",
-    ticketReadyTitle: "门票已生成！",
-    ticketReadyInstruction: "复制下面的门票ID并通过Telegram / VK发送给我们，以获取您的免费安装密钥"
+    back: "返回首页",
+    rustoreBtn: "在 RuStore 下载",
+    githubBtn: "从 GitHub 下载 APK",
+    feature1Title: "100% 本地保护",
+    feature1Desc: "所有通话和消息检测均在设备上完成——您的数据绝不会离开手机。",
+    feature2Title: "AI 对抗诈骗",
+    feature2Desc: "基于 rubert-tiny2 的神经网络模型实时识别社会工程学骗局。",
+    feature3Title: "免费且安全",
+    feature3Desc: "应用在 RuStore 上免费提供。立即安装，保护您的家人免受诈骗。",
+    note: "适用于安卓设备。仅首次下载时需要联网。",
   },
+
   comparisonPage: {
     title: "Honest Comparison",
     subtitle: "An objective comparative analysis of TrustNode vs leading global security solutions",
@@ -2224,60 +2100,23 @@ const tr: Translations = {
       }
     ]
   },
-  waitlist: {
-    badge: "PREMİUM YEREL KORUMA",
-    titleLine1: "Erken ücretli",
-    titleHighlight: "erişim edinin",
-    pricingLabel: "[ BİREYSEL KOŞULLAR ]",
-    pricingLine1: "Erken erişim ücretlidir.",
-    pricingHighlight: "Fiyatlandırma bireysel olarak görüşülür",
-    pricingLine2: "Her lisans, belirli cihazınızın özelliklerine ve bireysel gizlilik gereksinimlerinize göre özel olarak yapılandırılır ve optimize edilir.",
-    description: "Kişiselleştirilmemiş e-posta giriş formlarını kullanmayı bıraktık. Yerel bir güvenlik kubbesi sipariş etmek veya ortaklık detaylarını görüşmek için aşağıdaki iletişim kanallarından bizimle doğrudan iletişime geçebilirsiniz.",
-    socials: [
-      {
-        name: "Telegram Kanalı & Sohbet",
-        desc: "Anlık güncellemeleri alın, geliştirici ekibine soru sorun ve koşulları görüşmek için doğrudan mesaj gönderin.",
-        badge: "Ekip çevrimiçi",
-        action: "Telegram'da Yazın"
-      },
-      {
-        name: "VKontakte Topluluğu",
-        desc: "Projenin resmi topluluğu. Ödeme ve kurulum yönergelerini almak için topluluk mesajlarından bize yazın.",
-        badge: "Hızlı yanıt",
-        action: "VK'da Yazın"
-      },
-      {
-        name: "TikTok Profili",
-        desc: "Güvenlik kubbesinin nasıl çalıştığına dair kısa gösterimler, haberler ve güvenlik açığı analizleri. Doğrudan mesaj gönderin.",
-        badge: "Video incelemeleri",
-        action: "TikTok'u Aç"
-      }
-    ],
-    disclaimer1: "SPAM YOK // ÜÇÜNCÜ TARAF GÜNLÜĞÜ YOK // YEREL ŞİFRELEME",
-    disclaimer2: "Lisans, cihaz doğrulamasından sonra sağlanır",
-    console: {
-      title: "Erken Erişim Başvurusu",
-      subtitle: "Özel derlemeniz için yerel dijital parmak izi oluşturun",
-      inputLabel: "Telegram @kullanıcıadınız veya E-postanız",
-      inputPlaceholder: "Örn: @can_crypto veya eposta@domain.com",
-      osLabel: "Mobil Platform OS",
-      cpuLabel: "İşlemci Mikro Mimarisi",
-      btnSubmit: "Başvuruyu Gönder",
-      btnGenerating: "Yerel Kubbe Anahtarları Üretiliyor...",
-      copyBtn: "Bilet ID'sini Kopyala",
-      copied: "Panoya kopyalandı!",
-      ticketTitle: "LİSANS BİLETİ YAPILANDIRILDI",
-      ticketLabel: "ANINDA ÖNCELİKLİ DOĞRULAMA İÇİN BU BİLET ID'SİNİ KOPYALAYIP TELEGRAM / VK ÜZERİNDEN BİZE GÖNDERİN",
-      envAnalysis: "CİHAZ ORTAMI ANALİZ EDİLİYOR & BELLEK ALANI TAHSİS EDİLİYOR",
-      errContactRequired: "Lütfen iletişim bilginizi belirtin"
-    }
+
+  header: {
+    rustore: "RuStore'dan İndir",
+    radar: "Product Radar",
+    ecoOn: "Eko mod açık",
+    ecoOff: "Eko mod kapalı",
+    seniorOn: "Büyükler modu açık",
+    seniorOff: "Büyükler modu (büyük yazı)",
+    lang: "Dili değiştir",
   },
   footer: {
     copyright: "© {year} TrustNode Protocol. Tüm hakları saklıdır.",
     privacyLink: "Gizlilik Politikası (FZ-152 uyumlu)",
     termsLink: "Kullanıcı Sözleşmesi",
-    version: "Cihaz Üstü ML Dolandırıcılık Kalkanı // v1.2.0 // FZ-152 ile uyumlu"
-  },
+    version: "Cihaz Üstü ML Dolandırıcılık Kalkanı // v1.2.0 // FZ-152 ile uyumlu",
+      githubOrg: "TrustNode'un tüm projeleri GitHub'da",
+},
   cookie: {
     badgeLabel: "[ BİLGİ GÜVENLİĞİ // FZ-152 ]",
     text: "Gizliliğinize önem veriyoruz. Bu web sitesi, grafik ve eko modu ayarlarınızı kaydetmek için anonimleştirilmiş çerezler ve yerel depolama kullanır. Daha fazla bilgi için",
@@ -2314,8 +2153,8 @@ const tr: Translations = {
         ]
       },
       s4: {
-        heading: "[ VK REKLAMLARI ÜZERİNDEN BEKLEME LİSTESİ KAYDI ]",
-        body: "\"Kayıt Ol\" düğmesi yeni bir pencerede VK Reklamları potansiyel müşteri formunu açar. Bu formda girilen ad, telefon numarası, e-posta ve kişisel veri işleme onayı VK tarafından toplanır, saklanır ve işlenir — TrustNode web sitesi bu verileri kendi tarafında hiçbir zaman almaz, görmez veya saklamaz. Bekleme listesinden ayrı olarak, bu bölümdeki Telegram kanalı, VKontakte topluluğu ve TikTok bağlantıları, kişisel veri toplama mekanizması değil, sorular ve proje güncellemeleri için birer kanaldır."
+        heading: "[ UYGULAMA İNDİRME ]",
+        body: "TrustNode uygulamasının indirilmesi resmi platformlar üzerinden yapılır — RuStore mağazası ve GitHub. TrustNode web sitesi kullanıcıların kişisel verilerini toplamaz veya işlemez: uygulamanın analiz ettiği tüm veriler yalnızca kullanıcının cihazında yerel olarak işlenir."
       },
       s5: {
         heading: "[ YERELLEŞTİRME VE DEPOLAMA GÜVENLİĞİ ]",
@@ -2327,9 +2166,9 @@ const tr: Translations = {
         bodySuffix: "."
       },
       s7: {
-        heading: "[ BEKLEME LİSTESİ VERİLERİNİN SORUMLUSU OLARAK VK ]",
-        bodyPrefix: "Bekleme listesi kaydı açısından TrustNode, kişisel verilerin sorumlusu değildir — sorumlu VK'dır. Form aracılığıyla gönderilen verilerin işlenmesi VK'nın gizlilik politikasına tabidir: ",
-        bodySuffix: " Site sahibi, yayınlamadan önce bu bağlantının doğru olduğunu ve ilgili VK Reklamları formuna uygulanabilir olduğunu teyit etmelidir."
+        heading: "[ HARİCİ DAĞITIM PLATFORMLARI ]",
+        bodyPrefix: "Uygulamanın RuStore mağazasından veya GitHub'dan indirilmesi ve kurulması, ilgili platformların kurallarına tabidir. Harici platformlar kullanıldığında TrustNode kişisel verilerin sorumlusu değildir: ",
+        bodySuffix: " Bu bağlantıların doğruluğu ve uygulanabilirliği yayınlanmadan önce site sahibi tarafından teyit edilmelidir."
       }
     },
     terms: {
@@ -2361,7 +2200,7 @@ const tr: Translations = {
     "how-it-works": "Nasıl Çalışır",
     tech: "Teknoloji",
     about: "Hakkımızda",
-    "early-access": "Erken Erişim",
+    download: "İndir",
     comparison: "Karşılaştırma",
     "not-found": "404"
   },
@@ -2494,10 +2333,10 @@ const tr: Translations = {
     card2Badge: "PATENT & ÖDÜLLER",
     card2Desc: "Resmi patentler, bölgesel araştırma birinciliği, Moskova ulusal finali ve projemizin gelişim serüveni.",
     card2Btn: "Ekip ve Hakkımızda →",
-    card3Title: "Erken Erişim",
-    card3Badge: "LİSANSLAR // VIP",
-    card3Desc: "Bir erken erişim paketi seçin, benzersiz biletinizi oluşturun ve resmi sürümden önce öncelikli Pro/VIP erişimi elde edin.",
-    card3Btn: "Erişim Biletini Al →",
+    card3Title: "Uygulamayı İndir",
+    card3Badge: "KURULUM // ANDROID",
+    card3Desc: "TrustNode TN1'i ücretsiz indirin — dolandırıcılık ve spam'e karşı hazır, yerel koruma uygulaması. RuStore'da mevcuttur.",
+    card3Btn: "Uygulamayı İndir →",
     card4Title: "Dürüst Karşılaştırma",
     card4Badge: "GERÇEKLER & RAKİPLER",
     card4Desc: "Önemli parametrelere göre TrustNode ile piyasadaki mevcut rakiplerin işlevselliğinin objektif karşılaştırma tablosu.",
@@ -2510,15 +2349,21 @@ const tr: Translations = {
     rightSub: "// TELEMETRİ TOPLANMAZ"
   },
   earlyAccessPage: {
-    title: "TrustNode'a Erken Erişim",
-    subtitle: "TrustNode TN1'i ücretsiz indirin — hazır, cihaz üzerinde dolandırıcılık koruma uygulaması",
+    title: "TrustNode'u İndir",
+    subtitle: "TrustNode TN1 uygulamasını ücretsiz edinin — telefon dolandırıcılığına ve spam'e karşı cihaz içi koruma.",
     badge: "ÜCRETSİZ İNDİRME",
-    checkboxText: "Kullanıcı Sözleşmesi ve Gizlilik Politikası şartlarını kabul ediyorum",
-    btnGetTicket: "Bilet Al",
-    btnGenerating: "Güvenlik kubbesi oluşturuluyor...",
-    ticketReadyTitle: "Biletiniz Oluşturuldu!",
-    ticketReadyInstruction: "Aşağıdaki bilet kimliğinizi kopyalayın ve ücretsiz kurulum anahtarınızı almak için Telegram / VK üzerinden bize gönderin"
+    back: "Ana Sayfaya Dön",
+    rustoreBtn: "RuStore'dan İndir",
+    githubBtn: "GitHub'dan APK İndir",
+    feature1Title: "%100 Cihaz İçi Koruma",
+    feature1Desc: "Tüm arama ve mesaj kontrolleri cihazınızda çalışır — verileriniz telefonunuzdan asla çıkmaz.",
+    feature2Title: "Dolandırıcılara Karşı Yapay Zeka",
+    feature2Desc: "rubert-tiny2 tabanlı sinir ağı modeli sosyal mühendislik senaryolarını gerçek zamanlı algılar.",
+    feature3Title: "Ücretsiz ve Güvenli",
+    feature3Desc: "Uygulama RuStore'da ücretsiz olarak mevcuttur. Kurun ve sevdiklerinizi dolandırıcılardan koruyun.",
+    note: "Android cihazlar için kullanılabilir. İnternet yalnızca ilk indirmede gereklidir.",
   },
+
   comparisonPage: {
     title: "Honest Comparison",
     subtitle: "An objective comparative analysis of TrustNode vs leading global security solutions",
@@ -2735,60 +2580,23 @@ const hi: Translations = {
       }
     ]
   },
-  waitlist: {
-    badge: "प्रीमियम लोकल सुरक्षा",
-    titleLine1: "पेड अर्ली एक्सेस",
-    titleHighlight: "पाएँ",
-    pricingLabel: "[ व्यक्तिगत शर्तें ]",
-    pricingLine1: "अर्ली एक्सेस भुगतान के आधार पर उपलब्ध है।",
-    pricingHighlight: "कीमत पर व्यक्तिगत रूप से चर्चा होती है",
-    pricingLine2: "हर लाइसेंस को आपके डिवाइस की विशेषताओं और आपकी निजी गोपनीयता ज़रूरतों के अनुसार कॉन्फ़िगर और ऑप्टिमाइज़ किया जाता है।",
-    description: "हमने साइट पर बेनाम ईमेल फ़ॉर्म का इस्तेमाल छोड़ दिया है। लोकल सिक्योरिटी डोम की इंस्टॉलेशन ऑर्डर करने या पार्टनरशिप की जानकारी के लिए, नीचे दिए किसी भी माध्यम से हमें लिखें।",
-    socials: [
-      {
-        name: "Telegram चैनल और चैट",
-        desc: "तुरंत अपडेट पाएँ, डेवलपमेंट टीम से सवाल पूछें और शर्तों पर चर्चा के लिए सीधे DM करें।",
-        badge: "टीम ऑनलाइन है",
-        action: "Telegram पर लिखें"
-      },
-      {
-        name: "VKontakte कम्युनिटी",
-        desc: "प्रोजेक्ट की आधिकारिक कम्युनिटी। भुगतान और इंस्टॉलेशन की जानकारी के लिए कम्युनिटी मैसेज पर लिखें।",
-        badge: "तेज़ जवाब",
-        action: "VK पर लिखें"
-      },
-      {
-        name: "TikTok प्रोफ़ाइल",
-        desc: "सिक्योरिटी डोम के काम करने के छोटे डेमो, ताज़ा ख़बरें और सुरक्षा-खामियों का विश्लेषण। Direct पर संपर्क करें।",
-        badge: "वीडियो रिव्यू",
-        action: "TikTok खोलें"
-      }
-    ],
-    disclaimer1: "कोई स्पैम नहीं // कोई थर्ड-पार्टी लॉग नहीं // ऑन-डिवाइस लोकल एन्क्रिप्शन",
-    disclaimer2: "डिवाइस वेरिफ़िकेशन के बाद लाइसेंस जारी किया जाता है",
-    console: {
-      title: "अर्ली एक्सेस के लिए आवेदन करें",
-      subtitle: "अपने कस्टम निर्माण के लिए स्थानीय डिजिटल फिंगгरप्रिंट तैयार करें",
-      inputLabel: "आपका टेलीग्राम @username या ई-मेल",
-      inputPlaceholder: "जैसे: @rahul_crypto या email@domain.com",
-      osLabel: "मोबाइल ओएस प्लेटफॉर्म",
-      cpuLabel: "सीपीयू माइक्रोआर्किटेक्चर",
-      btnSubmit: "आवेदन जमा करें",
-      btnGenerating: "सुरक्षित डोम उत्पन्न किया जा रहा है...",
-      copyBtn: "टिकट आईडी कॉपी करें",
-      copied: "क्लिपबोर्ड पर कॉपी किया गया!",
-      ticketTitle: "लाइसेंस टिकट कॉन्फ़िगर हो गया",
-      ticketLabel: "इस टिकट आईडी को कॉपी करें और तुरंत प्राथमिकता सत्यापन के लिए हमें टेलीग्राम / वीके पर भेजें",
-      envAnalysis: "डिवाइस वातावरण का विश्लेषण और मेमोरी लिफाफा आवंटन जारी",
-      errContactRequired: "कृपया अपना संपर्क हैंडल प्रदान करें"
-    }
+
+  header: {
+    rustore: "RuStore से डाउनलोड करें",
+    radar: "Product Radar",
+    ecoOn: "इको मोड चालू",
+    ecoOff: "इको मोड बंद",
+    seniorOn: "वरिष्ठ मोड चालू",
+    seniorOff: "वरिष्ठ मोड (बड़ा टेक्स्ट)",
+    lang: "भाषा बदलें",
   },
   footer: {
     copyright: "© {year} TrustNode Protocol. सर्वाधिकार सुरक्षित।",
     privacyLink: "गोपनीयता नीति (रूसी संघीय क़ानून 152-FZ)",
     termsLink: "उपयोग की शर्तें",
-    version: "ऑन-डिवाइस ML फ़्रॉड शील्ड // v1.2.0 // 152-FZ अनुरूप"
-  },
+    version: "ऑन-डिवाइस ML फ़्रॉड शील्ड // v1.2.0 // 152-FZ अनुरूप",
+      githubOrg: "GitHub पर TrustNode की सभी परियोजनाएँ",
+},
   cookie: {
     badgeLabel: "[ सूचना सुरक्षा // रूसी क़ानून 152-FZ ]",
     text: "हमें आपकी निजता की परवाह है। यह साइट आपकी ग्राफ़िक्स और इको-मोड सेटिंग्स याद रखने के लिए बेनाम कुकीज़ और लोकल स्टोरेज का उपयोग करती है। हमारी",
@@ -2825,8 +2633,8 @@ const hi: Translations = {
         ]
       },
       s4: {
-        heading: "[ VK विज्ञापन के ज़रिए वेटलिस्ट पंजीकरण ]",
-        body: "\"पंजीकरण करें\" बटन एक नई विंडो में VK विज्ञापन का लीड फ़ॉर्म खोलता है। उस फ़ॉर्म में दिए गए नाम, फ़ोन नंबर, ई-मेल और व्यक्तिगत डेटा प्रोसेसिंग की सहमति को VK एकत्र, संग्रहीत और प्रोसेस करता है — TrustNode वेबसाइट यह डेटा कभी प्राप्त नहीं करती, न देखती है, न ही अपनी ओर से संग्रहीत करती है। वेटलिस्ट से अलग, इस सेक्शन में Telegram चैनल, VKontakte समुदाय और TikTok के लिंक सवालों और प्रोजेक्ट अपडेट के लिए चैनल हैं, व्यक्तिगत डेटा एकत्र करने का तरीका नहीं।"
+        heading: "[ ऐप डाउनलोड ]",
+        body: "TrustNode ऐप डाउनलोड करना आधिकारिक प्लेटफ़ॉर्म के माध्यम से किया जाता है — RuStore स्टोर और GitHub। TrustNode वेबसाइट उपयोगकर्ताओं का व्यक्तिगत डेटा एकत्र या संसाधित नहीं करती है: ऐप द्वारा विश्लेषित सभी डेटा केवल उपयोगकर्ता के डिवाइस पर स्थानीय रूप से संसाधित होता है।"
       },
       s5: {
         heading: "[ डेटा लोकलाइज़ेशन और स्टोरेज सुरक्षा ]",
@@ -2838,9 +2646,9 @@ const hi: Translations = {
         bodySuffix: "।"
       },
       s7: {
-        heading: "[ वेटलिस्ट डेटा के ऑपरेटर के रूप में VK ]",
-        bodyPrefix: "वेटलिस्ट पंजीकरण के मामले में, TrustNode व्यक्तिगत डेटा का ऑपरेटर नहीं है — ऑपरेटर VK है। फ़ॉर्म के ज़रिए भेजे गए डेटा की प्रोसेसिंग VK की गोपनीयता नीति द्वारा नियंत्रित होती है: ",
-        bodySuffix: " प्रकाशन से पहले साइट के मालिक को इस लिंक की सटीकता और संबंधित VK विज्ञापन फ़ॉर्म पर इसकी प्रयोज्यता की पुष्टि करनी चाहिए।"
+        heading: "[ बाहरी वितरण प्लेटफ़ॉर्म ]",
+        bodyPrefix: "RuStore स्टोर या GitHub से ऐप डाउनलोड और इंस्टॉल करना संबंधित प्लेटफ़ॉर्म के नियमों द्वारा नियंत्रित होता है। बाहरी प्लेटफ़ॉर्म का उपयोग करते समय TrustNode व्यक्तिगत डेटा की संचालक नहीं है: ",
+        bodySuffix: " प्रकाशन से पहले इन लिंक की सटीकता और प्रयोज्यता की पुष्टि साइट स्वामी द्वारा की जानी चाहिए।"
       }
     },
     terms: {
@@ -2872,7 +2680,7 @@ const hi: Translations = {
     "how-it-works": "यह कैसे काम करता है",
     tech: "तकनीक",
     about: "हमारे बारे में",
-    "early-access": "प्रारंभिक पहुँच",
+    download: "डाउनलोड करें",
     comparison: "तुलना",
     "not-found": "404"
   },
@@ -3005,10 +2813,10 @@ const hi: Translations = {
     card2Badge: "पेटेंट और पुरस्कार",
     card2Desc: "आधिकारिक पेटेंट, क्षेत्रीय IT अनुसंधान में प्रथम स्थान, राष्ट्रीय फाइनल और हमारी परियोजना यात्रा।",
     card2Btn: "हमारे और टीम के बारे में →",
-    card3Title: "अर्ली एक्सेस",
-    card3Badge: "लाइसेंस // वीआईपी",
-    card3Desc: "एक अर्ली एक्सेस पैकेज चुनें, अपना अनूठा टिकट जनरेट करें और आधिकारिक रिलीज से पहले प्राथमिकता प्रो/वीआईपी एक्सेस सुरक्षित करें।",
-    card3Btn: "एक्सेस टिकट प्राप्त करें →",
+    card3Title: "ऐप डाउनलोड करें",
+    card3Badge: "इंस्टॉलेशन // एंड्रॉइड",
+    card3Desc: "TrustNode TN1 मुफ्त में डाउनलोड करें — धोखाधड़ी और स्पैम से स्थानीय सुरक्षा के लिए तैयार ऐप। RuStore पर उपलब्ध।",
+    card3Btn: "ऐप डाउनलोड करें →",
     card4Title: "ईमानदार तुलना",
     card4Badge: "तथ्य और प्रतियोगी",
     card4Desc: "प्रमुख मापदंडों में प्रमुख वैश्विक सुरक्षा समाधानों के साथ TrustNode की कार्यक्षमता का एक निष्पक्ष तुलनात्मक विश्लेषण।",
@@ -3021,15 +2829,21 @@ const hi: Translations = {
     rightSub: "// कोई टेलीमेट्री नहीं"
   },
   earlyAccessPage: {
-    title: "TrustNode प्रारंभिक पहुँच",
-    subtitle: "TrustNode TN1 मुफ्त में डाउनलोड करें — तैयार ऑन-डिवाइस धोखाधड़ी सुरक्षा ऐप",
+    title: "TrustNode डाउनलोड करें",
+    subtitle: "TrustNode TN1 ऐप मुफ्त में पाएं — आपके डिवाइस पर ही फोन घोटाले और स्पैम से सुरक्षा।",
     badge: "मुफ्त डाउनलोड",
-    checkboxText: "मैं उपयोगकर्ता समझौते और गोपनीयता नीति की शर्तों को स्वीकार करता हूँ",
-    btnGetTicket: "टिकट प्राप्त करें",
-    btnGenerating: "सुरक्षा डोम तैयार किया जा रहा है...",
-    ticketReadyTitle: "आपका टिकट तैयार है!",
-    ticketReadyInstruction: "नीचे अपना टिकट आईडी कॉपी करें और मुफ्त इंस्टॉलेशन कुंजी प्राप्त करने के लिए इसे हमें Telegram / VK पर भेजें"
+    back: "मुख्य पृष्ठ पर वापस",
+    rustoreBtn: "RuStore से डाउनलोड करें",
+    githubBtn: "GitHub से APK डाउनलोड करें",
+    feature1Title: "100% ऑन-डिवाइस सुरक्षा",
+    feature1Desc: "कॉल और संदेशों की सभी जाँचें आपके डिवाइस पर ही चलती हैं — आपका डेटा कभी स्मार्टफोन से बाहर नहीं जाता।",
+    feature2Title: "स्कैमर्स के खिलाफ AI",
+    feature2Desc: "rubert-tiny2-आधारित न्यूरल मॉडल सोशल इंजीनियरिंग परिदृश्यों को रीयल टाइम में पहचानता है।",
+    feature3Title: "मुफ्त और सुरक्षित",
+    feature3Desc: "ऐप RuStore पर मुफ्त उपलब्ध है। इसे इंस्टॉल करें और अपने प्रियजनों को स्कैमर्स से बचाएं।",
+    note: "Android डिवाइस के लिए उपलब्ध। इंटरनेट केवल प्रारंभिक डाउनलोड के लिए आवश्यक है।",
   },
+
   comparisonPage: {
     title: "Honest Comparison",
     subtitle: "An objective comparative analysis of TrustNode vs leading global security solutions",
@@ -3246,60 +3060,23 @@ const ar: Translations = {
       }
     ]
   },
-  waitlist: {
-    badge: "حماية محلية متميزة",
-    titleLine1: "احصل على وصول مبكر",
-    titleHighlight: "مدفوع",
-    pricingLabel: "[ شروط فردية ]",
-    pricingLine1: "الوصول المبكر خدمة مدفوعة.",
-    pricingHighlight: "يتم تحديد السعر بشكل فردي",
-    pricingLine2: "يتم إعداد كل ترخيص وضبطه وفقًا لخصائص جهازك ومتطلبات الخصوصية الخاصة بك.",
-    description: "لقد استغنينا عن نماذج الاشتراك المجهولة عبر البريد الإلكتروني. لطلب تركيب قبة الأمان المحلية أو مناقشة تفاصيل الشراكة، راسلنا عبر أي من القنوات أدناه.",
-    socials: [
-      {
-        name: "قناة ودردشة تيليجرام",
-        desc: "احصل على تحديثات فورية، واطرح أسئلتك على فريق التطوير، وراسلنا مباشرة لمناقشة الشروط.",
-        badge: "الفريق متصل",
-        action: "مراسلتنا على تيليجرام"
-      },
-      {
-        name: "مجتمع VKontakte",
-        desc: "المجتمع الرسمي للمشروع. راسل صفحة المجتمع للحصول على تعليمات الدفع والتركيب.",
-        badge: "رد سريع",
-        action: "مراسلتنا على VK"
-      },
-      {
-        name: "حساب TikTok",
-        desc: "عروض قصيرة لعمل قبة الأمان، وأخبار، وتحليلات للثغرات الأمنية. تواصل معنا عبر الرسائل المباشرة.",
-        badge: "مراجعات فيديو",
-        action: "فتح TikTok"
-      }
-    ],
-    disclaimer1: "بلا رسائل مزعجة // بلا سجلات لطرف ثالث // تشفير محلي على الجهاز",
-    disclaimer2: "يُصدر الترخيص بعد التحقق من الجهاز",
-    console: {
-      title: "طلب الوصول المبكر",
-      subtitle: "قم بصياغة بصمة رقمية محلية لإصدارك المخصص",
-      inputLabel: "حساب تيليجرام الخاص بك أو البريد الإلكتروني",
-      inputPlaceholder: "مثال: @ahmed_crypto أو email@domain.com",
-      osLabel: "منصة نظام تشغيل الجوال",
-      cpuLabel: "بنية المعالج الدقيقة",
-      btnSubmit: "إرسال الطلب",
-      btnGenerating: "جاري إنشاء قبة الحماية المحلية...",
-      copyBtn: "نسخ معرف التذكرة",
-      copied: "تم النسخ إلى الحافظة!",
-      ticketTitle: "تم إعداد تذكرة الترخيص",
-      ticketLabel: "انسخ معرف التذكرة هذا وأرسله إلينا على تيليجرام / VK للحصول على تفعيل فوري وذو أولوية",
-      envAnalysis: "جاري تحليل بيئة الجهاز وتخصيص مساحة الذاكرة الآمنة",
-      errContactRequired: "يرجى تقديم وسيلة الاتصال الخاصة بك"
-    }
+
+  header: {
+    rustore: "تنزيل من RuStore",
+    radar: "Product Radar",
+    ecoOn: "الوضع البيئي مفعّل",
+    ecoOff: "الوضع البيئي معطّل",
+    seniorOn: "وضع كبار السن مفعّل",
+    seniorOff: "وضع كبار السن (نص أكبر)",
+    lang: "تغيير اللغة",
   },
   footer: {
     copyright: "© {year} TrustNode Protocol. جميع الحقوق محفوظة.",
     privacyLink: "سياسة الخصوصية (القانون الفيدرالي الروسي 152-FZ)",
     termsLink: "شروط الاستخدام",
-    version: "درع مكافحة الاحتيال بالتعلم الآلي على الجهاز // v1.2.0 // متوافق مع القانون 152-FZ"
-  },
+    version: "درع مكافحة الاحتيال بالتعلم الآلي على الجهاز // v1.2.0 // متوافق مع القانون 152-FZ",
+      githubOrg: "جميع مشاريع TrustNode على GitHub",
+},
   cookie: {
     badgeLabel: "[ أمن المعلومات // القانون الروسي 152-FZ ]",
     text: "نهتم بخصوصيتك. يستخدم هذا الموقع ملفات تعريف ارتباط مجهولة وتخزينًا محليًا لحفظ إعدادات الرسومات ووضع توفير الطاقة الخاصة بك. اطّلع على",
@@ -3336,8 +3113,8 @@ const ar: Translations = {
         ]
       },
       s4: {
-        heading: "[ التسجيل في قائمة الانتظار عبر إعلانات VK ]",
-        body: "يفتح زر «سجل الآن» نموذج عملاء محتملين تابع لإعلانات VK في نافذة جديدة. يقوم VK بجمع وتخزين ومعالجة الاسم ورقم الهاتف والبريد الإلكتروني وموافقة معالجة البيانات الشخصية المُدخلة في ذلك النموذج — ولا يستقبل موقع TrustNode هذه البيانات أو يراها أو يخزّنها على جانبه أبدًا. وبمعزل عن قائمة الانتظار، تُعد روابط قناة تيليجرام ومجتمع VKontakte وTikTok في هذا القسم قنوات للأسئلة وتحديثات المشروع، وليست آلية لجمع البيانات الشخصية."
+        heading: "[ تحميل التطبيق ]",
+        body: "يتم تحميل تطبيق TrustNode عبر المنصات الرسمية — متجر RuStore وGitHub. لا يجمع موقع TrustNode بيانات المستخدمين الشخصية أو يعالجها: فجميع البيانات التي يحللها التطبيق تُعالج حصريًا محليًا على جهاز المستخدم."
       },
       s5: {
         heading: "[ توطين البيانات وأمن التخزين ]",
@@ -3349,9 +3126,9 @@ const ar: Translations = {
         bodySuffix: "."
       },
       s7: {
-        heading: "[ VK بصفته المشغّل لبيانات قائمة الانتظار ]",
-        bodyPrefix: "فيما يتعلق بالتسجيل في قائمة الانتظار، لا تُعد TrustNode مشغّل البيانات الشخصية — بل VK هو المشغّل. تخضع معالجة البيانات المُرسلة عبر النموذج لسياسة خصوصية VK: ",
-        bodySuffix: " يجب على مالك الموقع التأكد من صحة هذا الرابط وانطباقه على نموذج إعلانات VK المحدد قبل النشر."
+        heading: "[ منصات التوزيع الخارجية ]",
+        bodyPrefix: "يخضع تحميل التطبيق وتثبيته من متجر RuStore أو GitHub لقواعد المنصات المعنية. لا تُعد TrustNode مشغّلة للبيانات الشخصية عند استخدام منصات خارجية: ",
+        bodySuffix: " يجب على مالك الموقع تأكيد دقة هذه الروابط وإمكانية تطبيقها قبل النشر."
       }
     },
     terms: {
@@ -3383,7 +3160,7 @@ const ar: Translations = {
     "how-it-works": "كيف يعمل",
     tech: "التكنولوجيا",
     about: "من نحن",
-    "early-access": "الوصول المبكر",
+    download: "تنزيل",
     comparison: "مقارنة",
     "not-found": "404"
   },
@@ -3516,10 +3293,10 @@ const ar: Translations = {
     card2Badge: "براءات الاختراع والجوائز",
     card2Desc: "براءات الاختراع الرسمية، المركز الأول في الأبحاث الإقليمية، وتاريخ تطوير المشروع.",
     card2Btn: "عنا وعن الفريق →",
-    card3Title: "الوصول المبكر",
-    card3Badge: "التراخيص // VIP",
-    card3Desc: "اختر حزمة وصول مبكر، وأنشئ تذكرتك الفريدة، واحصل على وصول ذي أولوية Pro/VIP قبل الإصدار الرسمي.",
-    card3Btn: "احصل على تذكرة الدخول →",
+    card3Title: "تنزيل التطبيق",
+    card3Badge: "التثبيت // أندرويد",
+    card3Desc: "قم بتنزيل TrustNode TN1 مجانًا — التطبيق الجاهز للحماية المحلية من الاحتيال والرسائل المزعجة. متوفر على RuStore.",
+    card3Btn: "تنزيل التطبيق →",
     card4Title: "مقارنة منصفة",
     card4Badge: "حقائق ومنافسون",
     card4Desc: "جدول مقارنة موضوعي لميزات TrustNode مع الحلول المنافسة المتاحة في السوق عبر المعلمات الرئيسية.",
@@ -3532,15 +3309,21 @@ const ar: Translations = {
     rightSub: "// لا توجد قياسات عن بعد"
   },
   earlyAccessPage: {
-    title: "الوصول المبكر إلى TrustNode",
-    subtitle: "قم بتنزيل TrustNode TN1 مجانًا — تطبيق الحماية من الاحتيال على الجهاز",
+    title: "تنزيل TrustNode",
+    subtitle: "احصل على تطبيق TrustNode TN1 مجاناً — حماية محلية ضد احتيال الهاتف والرسائل المزعجة مباشرة على جهازك.",
     badge: "تنزيل مجاني",
-    checkboxText: "أوافق على شروط اتفاقية المستخدم وسياسة الخصوصية",
-    btnGetTicket: "احصل على التذكرة",
-    btnGenerating: "جاري إنشاء قبة الحماية...",
-    ticketReadyTitle: "تم إنشاء تذكرتك!",
-    ticketReadyInstruction: "انسخ معرف تذكرتك أدناه وأرسله إلينا على Telegram / VK للحصول على مفتاح التثبيت المجاني الخاص بك"
+    back: "العودة للرئيسية",
+    rustoreBtn: "تنزيل من RuStore",
+    githubBtn: "تنزيل APK من GitHub",
+    feature1Title: "حماية محلية 100%",
+    feature1Desc: "تتم جميع فحوصات المكالمات والرسائل على جهازك مباشرة — بياناتك لا تغادر هاتفك أبداً.",
+    feature2Title: "ذكاء اصطناعي ضد المحتالين",
+    feature2Desc: "النموذج العصبي المبني على rubert-tiny2 يكتشف سيناريوهات الهندسة الاجتماعية في الوقت الفعلي.",
+    feature3Title: "مجاني وآمن",
+    feature3Desc: "التطبيق متاح مجاناً على RuStore. ثبّته واحمِ أحباءك من المحتالين.",
+    note: "متوفر لأجهزة أندرويد. الإنترنت مطلوب فقط للتنزيل الأولي.",
   },
+
   comparisonPage: {
     title: "Honest Comparison",
     subtitle: "An objective comparative analysis of TrustNode vs leading global security solutions",
@@ -3757,60 +3540,23 @@ const pt: Translations = {
       }
     ]
   },
-  waitlist: {
-    badge: "PROTEÇÃO LOCAL PREMIUM",
-    titleLine1: "Obtenha acesso antecipado",
-    titleHighlight: "pago",
-    pricingLabel: "[ CONDIÇÕES INDIVIDUAIS ]",
-    pricingLine1: "O acesso antecipado é pago.",
-    pricingHighlight: "O preço é negociado individualmente",
-    pricingLine2: "Cada licença é configurada e otimizada de acordo com as particularidades do seu dispositivo e seus requisitos de privacidade.",
-    description: "Deixamos de lado os formulários anônimos de inscrição por e-mail. Para solicitar a instalação da cúpula de segurança local ou discutir detalhes de parceria, escreva para nós em qualquer um dos canais abaixo.",
-    socials: [
-      {
-        name: "Canal e chat do Telegram",
-        desc: "Receba atualizações instantâneas, tire dúvidas com a equipe de desenvolvimento e fale diretamente conosco para negociar condições.",
-        badge: "Equipe on-line",
-        action: "Falar no Telegram"
-      },
-      {
-        name: "Comunidade no VKontakte",
-        desc: "A comunidade oficial do projeto. Envie mensagem para a página da comunidade para obter instruções de pagamento e instalação.",
-        badge: "Resposta rápida",
-        action: "Falar no VK"
-      },
-      {
-        name: "Perfil no TikTok",
-        desc: "Demonstrações curtas da cúpula de segurança em ação, novidades e análises de vulnerabilidades. Fale conosco pelo Direct.",
-        badge: "Vídeos de análise",
-        action: "Abrir TikTok"
-      }
-    ],
-    disclaimer1: "SEM SPAM // SEM REGISTROS DE TERCEIROS // CRIPTOGRAFIA LOCAL NO DISPOSITIVO",
-    disclaimer2: "A licença é emitida após a verificação do dispositivo",
-    console: {
-      title: "Solicitar Acesso Antecipado",
-      subtitle: "Formule uma assinatura digital local para sua compilação personalizada",
-      inputLabel: "Seu Telegram @usuario ou E-mail",
-      inputPlaceholder: "Ex: @lucas_crypto ou email@dominio.com",
-      osLabel: "Plataforma Móvel OS",
-      cpuLabel: "Microarquitetura de CPU",
-      btnSubmit: "Enviar Solicitação",
-      btnGenerating: "Gerando Chaves do Domo...",
-      copyBtn: "Copiar ID do Ticket",
-      copied: "Copiado para a área de transferência!",
-      ticketTitle: "TICKET DE LICENÇA CONFIGURADO",
-      ticketLabel: "COPIE ESTE ID DO TICKET E ENVIE PARA NÓS NO TELEGRAM / VK PARA ATIVAÇÃO COM PRIORIDADE MÁXIMA",
-      envAnalysis: "ANALISANDO O AMBIENTE DO DISPOSITIVO E ALOCANDO MEMÓRIA SECURE RAM",
-      errContactRequired: "Por favor, informe suas informações de contato"
-    }
+
+  header: {
+    rustore: "Baixar na RuStore",
+    radar: "Product Radar",
+    ecoOn: "Modo ecológico ativado",
+    ecoOff: "Modo ecológico desativado",
+    seniorOn: "Modo sênior ativado",
+    seniorOff: "Modo sênior (texto maior)",
+    lang: "Mudar idioma",
   },
   footer: {
     copyright: "© {year} TrustNode Protocol. Todos os direitos reservados.",
     privacyLink: "Política de Privacidade (Lei Federal Russa 152-FZ)",
     termsLink: "Termos de Uso",
-    version: "On-Device ML Fraud Shield // v1.2.0 // em conformidade com a Lei 152-FZ"
-  },
+    version: "On-Device ML Fraud Shield // v1.2.0 // em conformidade com a Lei 152-FZ",
+      githubOrg: "Todos os projetos do TrustNode no GitHub",
+},
   cookie: {
     badgeLabel: "[ SEGURANÇA DA INFORMAÇÃO // LEI RUSSA 152-FZ ]",
     text: "Nos importamos com sua privacidade. Este site usa cookies anonimizados e armazenamento local para lembrar suas preferências de gráficos e o modo eco. Confira nossa",
@@ -3847,8 +3593,8 @@ const pt: Translations = {
         ]
       },
       s4: {
-        heading: "[ CADASTRO NA LISTA DE ESPERA VIA VK ADS ]",
-        body: "O botão «Registrar-se» abre um formulário de leads do VK Ads em uma nova janela. O nome, número de telefone, e-mail e o consentimento para o tratamento de dados pessoais informados nesse formulário são coletados, armazenados e processados pela VK — o site da TrustNode nunca recebe, vê ou armazena esses dados por conta própria. Separadamente da lista de espera, os links do canal do Telegram, da comunidade do VKontakte e do TikTok nesta seção são canais para dúvidas e novidades do projeto, não um mecanismo de coleta de dados pessoais."
+        heading: "[ BAIXAR O APLICATIVO ]",
+        body: "O download do aplicativo TrustNode é feito por meio de plataformas oficiais — a loja RuStore e o GitHub. O site da TrustNode não coleta nem processa os dados pessoais dos usuários: todos os dados analisados pelo aplicativo são processados exclusivamente no dispositivo do usuário."
       },
       s5: {
         heading: "[ LOCALIZAÇÃO E SEGURANÇA DO ARMAZENAMENTO ]",
@@ -3860,9 +3606,9 @@ const pt: Translations = {
         bodySuffix: "."
       },
       s7: {
-        heading: "[ A VK COMO OPERADORA DOS DADOS DA LISTA DE ESPERA ]",
-        bodyPrefix: "No que se refere ao cadastro na lista de espera, a TrustNode não é a operadora dos dados pessoais — a operadora é a VK. O tratamento dos dados enviados pelo formulário é regido pela política de privacidade da VK: ",
-        bodySuffix: " O proprietário do site deve confirmar que este link está correto e é aplicável ao formulário específico do VK Ads antes da publicação."
+        heading: "[ PLATAFORMAS EXTERNAS DE DISTRIBUIÇÃO ]",
+        bodyPrefix: "O download e a instalação do aplicativo pela loja RuStore ou pelo GitHub são regidos pelas regras das respectivas plataformas. A TrustNode não é operadora de dados pessoais quando plataformas externas são usadas: ",
+        bodySuffix: " A exatidão e a aplicabilidade desses links devem ser confirmadas pelo proprietário do site antes da publicação."
       }
     },
     terms: {
@@ -3894,7 +3640,7 @@ const pt: Translations = {
     "how-it-works": "Como Funciona",
     tech: "Tecnologia",
     about: "Sobre Nós",
-    "early-access": "Acesso Antecipado",
+    download: "Baixar",
     comparison: "Comparação",
     "not-found": "404"
   },
@@ -4027,10 +3773,10 @@ const pt: Translations = {
     card2Badge: "PATENTES E PRÊMIOS",
     card2Desc: "Patentes oficiais, primeiro lugar em pesquisa regional de TI e nossa jornada de desenvolvimento.",
     card2Btn: "Sobre Nós e Equipe →",
-    card3Title: "Acesso Antecipado",
-    card3Badge: "LICENÇAS // VIP",
-    card3Desc: "Selecione um pacote de acesso antecipado, gere o seu tíquete exclusivo e garanta acesso priorizado Pro/VIP antes do lançamento oficial.",
-    card3Btn: "Obter Tíquete de Acesso →",
+    card3Title: "Baixar o aplicativo",
+    card3Badge: "INSTALAÇÃO // ANDROID",
+    card3Desc: "Baixe o TrustNode TN1 gratuitamente — o aplicativo pronto para proteção local contra fraudes e spam. Disponível na RuStore.",
+    card3Btn: "Baixar aplicativo →",
     card4Title: "Comparação Justa",
     card4Badge: "FATOS & CONCORRENTES",
     card4Desc: "Uma tabela de comparação objetiva da funcionalidade do TrustNode com as soluções existentes no mercado por parâmetros fundamentais.",
@@ -4043,15 +3789,21 @@ const pt: Translations = {
     rightSub: "// SEM TELEMETRIA"
   },
   earlyAccessPage: {
-    title: "Acesso Antecipado ao TrustNode",
-    subtitle: "Baixe o TrustNode TN1 gratuitamente — o aplicativo de proteção contra fraudes no dispositivo",
-    badge: "DOWNLOAD GRÁTIS",
-    checkboxText: "Aceito os termos do Contrato do Usuário e da Política de Privacidade",
-    btnGetTicket: "Obter Bilhete",
-    btnGenerating: "Gerando cúpula de segurança...",
-    ticketReadyTitle: "Seu bilhete foi gerado!",
-    ticketReadyInstruction: "Copie seu ID de bilhete abaixo e envie para nós no Telegram / VK para obter sua chave de instalação gratuita"
+    title: "Baixar TrustNode",
+    subtitle: "Obtenha o app TrustNode TN1 gratuitamente — proteção local contra golpes e spam direto no seu dispositivo.",
+    badge: "DOWNLOAD GRATUITO",
+    back: "Voltar ao início",
+    rustoreBtn: "Baixar na RuStore",
+    githubBtn: "Baixar APK do GitHub",
+    feature1Title: "Proteção 100% local",
+    feature1Desc: "Todas as verificações de chamadas e mensagens acontecem no seu dispositivo — seus dados nunca saem do smartphone.",
+    feature2Title: "IA contra golpistas",
+    feature2Desc: "O modelo neural baseado em rubert-tiny2 detecta cenários de engenharia social em tempo real.",
+    feature3Title: "Grátis e seguro",
+    feature3Desc: "O aplicativo está disponível gratuitamente na RuStore. Instale e proteja seus entes queridos.",
+    note: "Disponível para dispositivos Android. A internet é necessária apenas para o download inicial.",
   },
+
   comparisonPage: {
     title: "Honest Comparison",
     subtitle: "An objective comparative analysis of TrustNode vs leading global security solutions",
@@ -4268,60 +4020,23 @@ const fr: Translations = {
       }
     ]
   },
-  waitlist: {
-    badge: "PROTECTION LOCALE PREMIUM",
-    titleLine1: "Obtenez un accès anticipé",
-    titleHighlight: "payant",
-    pricingLabel: "[ CONDITIONS INDIVIDUELLES ]",
-    pricingLine1: "L'accès anticipé est payant.",
-    pricingHighlight: "Le prix se discute individuellement",
-    pricingLine2: "Chaque licence est configurée et optimisée selon les spécificités de votre appareil et vos exigences de confidentialité.",
-    description: "Nous avons abandonné les formulaires d'inscription par e-mail anonymes. Pour commander l'installation du dôme de sécurité local ou discuter d'un partenariat, écrivez-nous via l'un des canaux ci-dessous.",
-    socials: [
-      {
-        name: "Chaîne et chat Telegram",
-        desc: "Recevez des mises à jour instantanées, posez vos questions à l'équipe de développement et écrivez-nous directement pour discuter des conditions.",
-        badge: "Équipe en ligne",
-        action: "Écrire sur Telegram"
-      },
-      {
-        name: "Communauté VKontakte",
-        desc: "La communauté officielle du projet. Écrivez à la page de la communauté pour obtenir les instructions de paiement et d'installation.",
-        badge: "Réponse rapide",
-        action: "Écrire sur VK"
-      },
-      {
-        name: "Profil TikTok",
-        desc: "Courtes démonstrations du dôme de sécurité en action, actualités et analyses de vulnérabilités. Contactez-nous en Direct.",
-        badge: "Vidéos d'analyse",
-        action: "Ouvrir TikTok"
-      }
-    ],
-    disclaimer1: "SANS SPAM // AUCUN JOURNAL TIERS // CHIFFREMENT LOCAL SUR L'APPAREIL",
-    disclaimer2: "La licence est délivrée après vérification de l'appareil",
-    console: {
-      title: "Demander un Accès Anticipé",
-      subtitle: "Formulez une empreinte numérique locale pour votre build sur-mesure",
-      inputLabel: "Votre Telegram @nom_utilisateur ou E-mail",
-      inputPlaceholder: "Ex : @jean_crypto ou email@domaine.com",
-      osLabel: "Plateforme Mobile",
-      cpuLabel: "Microarchitecture du Processeur",
-      btnSubmit: "Envoyer la Demande",
-      btnGenerating: "Génération du dôme de sécurité...",
-      copyBtn: "Copier l'ID du Ticket",
-      copied: "Copié dans le presse-papiers !",
-      ticketTitle: "TICKET DE LICENCE CONFIGURÉ",
-      ticketLabel: "COPIEZ CET ID DE TICKET ET ENVOYEZ-LE NOUS SUR TELEGRAM / VK POUR UNE ACTIVATION PRIORITAIRE SANS ATTENTE",
-      envAnalysis: "ANALYSE DE L'ENVIRONNEMENT DE L'APPAREIL ET ALLOCATION DE LA CAPSULE DE SÉCURITÉ",
-      errContactRequired: "Veuillez fournir un moyen de contact valide"
-    }
+
+  header: {
+    rustore: "Télécharger sur RuStore",
+    radar: "Product Radar",
+    ecoOn: "Mode éco activé",
+    ecoOff: "Mode éco désactivé",
+    seniorOn: "Mode seniors activé",
+    seniorOff: "Mode seniors (texte plus grand)",
+    lang: "Changer de langue",
   },
   footer: {
     copyright: "© {year} TrustNode Protocol. Tous droits réservés.",
     privacyLink: "Politique de confidentialité (loi fédérale russe 152-FZ)",
     termsLink: "Conditions d'utilisation",
-    version: "On-Device ML Fraud Shield // v1.2.0 // conforme à la loi 152-FZ"
-  },
+    version: "On-Device ML Fraud Shield // v1.2.0 // conforme à la loi 152-FZ",
+      githubOrg: "Tous les projets TrustNode sur GitHub",
+},
   cookie: {
     badgeLabel: "[ SÉCURITÉ DE L'INFORMATION // LOI RUSSE 152-FZ ]",
     text: "Nous accordons de l'importance à votre vie privée. Ce site utilise des cookies anonymisés et un stockage local pour mémoriser vos préférences graphiques et le mode éco. Consultez notre",
@@ -4358,8 +4073,8 @@ const fr: Translations = {
         ]
       },
       s4: {
-        heading: "[ INSCRIPTION À LA LISTE D'ATTENTE VIA VK ADS ]",
-        body: "Le bouton « S'inscrire » ouvre un formulaire de prospects VK Ads dans une nouvelle fenêtre. Le nom, le numéro de téléphone, l'e-mail et le consentement au traitement des données personnelles saisis dans ce formulaire sont collectés, stockés et traités par VK — le site TrustNode ne reçoit, ne voit ni ne stocke jamais ces données de son côté. Indépendamment de la liste d'attente, les liens vers le canal Telegram, la communauté VKontakte et TikTok dans cette section sont des canaux pour les questions et les actualités du projet, et non un mécanisme de collecte de données personnelles."
+        heading: "[ TÉLÉCHARGEMENT DE L'APPLICATION ]",
+        body: "Le téléchargement de l'application TrustNode s'effectue via les plateformes officielles — la boutique RuStore et GitHub. Le site TrustNode ne collecte ni ne traite les données personnelles des utilisateurs : toutes les données analysées par l'application sont traitées exclusivement en local sur l'appareil de l'utilisateur."
       },
       s5: {
         heading: "[ LOCALISATION ET SÉCURITÉ DU STOCKAGE ]",
@@ -4371,9 +4086,9 @@ const fr: Translations = {
         bodySuffix: "."
       },
       s7: {
-        heading: "[ VK EN TANT QU'OPÉRATEUR DES DONNÉES DE LA LISTE D'ATTENTE ]",
-        bodyPrefix: "En ce qui concerne l'inscription à la liste d'attente, TrustNode n'est pas l'opérateur des données personnelles — c'est VK. Le traitement des données transmises via le formulaire est régi par la politique de confidentialité de VK : ",
-        bodySuffix: " Le propriétaire du site doit confirmer que ce lien est exact et applicable au formulaire VK Ads concerné avant sa publication."
+        heading: "[ PLATEFORMES EXTERNES DE DISTRIBUTION ]",
+        bodyPrefix: "Le téléchargement et l'installation de l'application depuis la boutique RuStore ou GitHub sont régis par les règles des plateformes concernées. TrustNode n'est pas opérateur de données personnelles lorsque des plateformes externes sont utilisées : ",
+        bodySuffix: " L'exactitude et l'applicabilité de ces liens doivent être confirmées par le propriétaire du site avant publication."
       }
     },
     terms: {
@@ -4405,7 +4120,7 @@ const fr: Translations = {
     "how-it-works": "Comment ça marche",
     tech: "Technologie",
     about: "À Propos",
-    "early-access": "Accès Anticipé",
+    download: "Télécharger",
     comparison: "Comparaison",
     "not-found": "404"
   },
@@ -4538,10 +4253,10 @@ const fr: Translations = {
     card2Badge: "BREVETS ET PRIX",
     card2Desc: "Brevets officiels, première place en recherche régionale et histoire du projet.",
     card2Btn: "À Propos & Équipe →",
-    card3Title: "Accès Anticipé",
-    card3Badge: "LICENCES // VIP",
-    card3Desc: "Sélectionnez un pack d'accès anticipé, générez votre ticket unique et obtenez un accès prioritaire Pro/VIP avant la sortie officielle.",
-    card3Btn: "Obtenir un Ticket d'Accès →",
+    card3Title: "Télécharger l'application",
+    card3Badge: "INSTALLATION // ANDROID",
+    card3Desc: "Téléchargez TrustNode TN1 gratuitement — l'application prête pour une protection locale contre les fraudes et le spam. Disponible sur RuStore.",
+    card3Btn: "Télécharger l'application →",
     card4Title: "Comparatif Honnête",
     card4Badge: "FAITS ET CONCURRENTS",
     card4Desc: "Un tableau comparatif objectif des fonctionnalités de TrustNode par rapport aux solutions existantes sur le marché selon des critères clés.",
@@ -4554,15 +4269,21 @@ const fr: Translations = {
     rightSub: "// ZÉRO TÉLÉMÉTRIE"
   },
   earlyAccessPage: {
-    title: "Accès Anticipé à TrustNode",
-    subtitle: "Téléchargez TrustNode TN1 gratuitement — l'application de protection anti-fraude sur l'appareil",
+    title: "Télécharger TrustNode",
+    subtitle: "Obtenez gratuitement l'application TrustNode TN1 — une protection locale contre les arnaques téléphoniques et le spam, directement sur votre appareil.",
     badge: "TÉLÉCHARGEMENT GRATUIT",
-    checkboxText: "J'accepte les conditions du Contrat d'Utilisation et de la Politique de Confidentialité",
-    btnGetTicket: "Obtenir un Billet",
-    btnGenerating: "Génération du dôme de sécurité...",
-    ticketReadyTitle: "Votre billet est généré !",
-    ticketReadyInstruction: "Copiez votre ID de billet ci-dessous et envoyez-le nous sur Telegram / VK pour obtenir votre clé d'installation gratuite"
+    back: "Retour à l'accueil",
+    rustoreBtn: "Télécharger sur RuStore",
+    githubBtn: "Télécharger l'APK depuis GitHub",
+    feature1Title: "Protection 100% locale",
+    feature1Desc: "Toutes les vérifications d'appels et de messages se font sur votre appareil — vos données ne quittent jamais votre smartphone.",
+    feature2Title: "IA contre les arnaqueurs",
+    feature2Desc: "Le modèle neuronal basé sur rubert-tiny2 détecte les scénarios d'ingénierie sociale en temps réel.",
+    feature3Title: "Gratuit et sécurisé",
+    feature3Desc: "L'application est disponible gratuitement sur RuStore. Installez-la et protégez vos proches.",
+    note: "Disponible pour les appareils Android. Internet n'est nécessaire que pour le premier téléchargement.",
   },
+
   comparisonPage: {
     title: "Honest Comparison",
     subtitle: "An objective comparative analysis of TrustNode vs leading global security solutions",
@@ -4779,60 +4500,23 @@ const de: Translations = {
       }
     ]
   },
-  waitlist: {
-    badge: "PREMIUM-SCHUTZ VOR ORT",
-    titleLine1: "Kostenpflichtigen",
-    titleHighlight: "Frühzugang sichern",
-    pricingLabel: "[ INDIVIDUELLE KONDITIONEN ]",
-    pricingLine1: "Der Frühzugang ist kostenpflichtig.",
-    pricingHighlight: "Der Preis wird individuell vereinbart",
-    pricingLine2: "Jede Lizenz wird speziell auf Ihr Gerät und Ihre individuellen Datenschutzanforderungen zugeschnitten und optimiert.",
-    description: "Wir haben auf anonyme E-Mail-Anmeldeformulare verzichtet. Um die Installation der lokalen Sicherheitskuppel zu bestellen oder Partnerschaftsdetails zu besprechen, schreiben Sie uns über einen der folgenden Kanäle.",
-    socials: [
-      {
-        name: "Telegram-Kanal & Chat",
-        desc: "Erhalten Sie sofortige Updates, stellen Sie dem Entwicklungsteam Fragen und schreiben Sie uns direkt, um Konditionen zu besprechen.",
-        badge: "Team online",
-        action: "Auf Telegram schreiben"
-      },
-      {
-        name: "VKontakte-Community",
-        desc: "Die offizielle Community des Projekts. Schreiben Sie an die Community-Seite für Zahlungs- und Installationsanweisungen.",
-        badge: "Schnelle Antwort",
-        action: "Auf VK schreiben"
-      },
-      {
-        name: "TikTok-Profil",
-        desc: "Kurze Demos der Sicherheitskuppel in Aktion, Neuigkeiten und Schwachstellenanalysen. Kontaktieren Sie uns per Direct.",
-        badge: "Video-Reviews",
-        action: "TikTok öffnen"
-      }
-    ],
-    disclaimer1: "KEIN SPAM // KEINE DRITTANBIETER-PROTOKOLLE // LOKALE VERSCHLÜSSELUNG AUF DEM GERÄT",
-    disclaimer2: "Die Lizenz wird nach Geräteverifizierung ausgestellt",
-    console: {
-      title: "Vorabzugang beantragen",
-      subtitle: "Formulieren Sie einen lokalen digitalen Fingerabdruck für Ihren maßgeschneiderten Build",
-      inputLabel: "Ihr Telegram @benutzername oder E-Mail",
-      inputPlaceholder: "Z.B. @max_crypto oder email@domain.com",
-      osLabel: "Mobile Betriebssystem-Plattform",
-      cpuLabel: "CPU-Mikroarchitektur",
-      btnSubmit: "Bewerbung abschicken",
-      btnGenerating: "Generiere Sicherheits-Schutzkuppel...",
-      copyBtn: "Ticket-ID kopieren",
-      copied: "In die Zwischenablage kopiert!",
-      ticketTitle: "LIZENZ-TICKET KONFIGURIERT",
-      ticketLabel: "KOPIEREN SIE DIESE TICKET-ID UND SENDEN SIE SIE UNS AUF TELEGRAM / VK FÜR EINE SOFORTIGE PRIORISIERTE FREISCHALTUNG",
-      envAnalysis: "GERÄTEUMGEBUNG WIRD ANALYSIERT UND SICHERER SPEICHERUMSCHLAG ZUGEWIESEN",
-      errContactRequired: "Bitte geben Sie einen Kontaktnamen an"
-    }
+
+  header: {
+    rustore: "Bei RuStore herunterladen",
+    radar: "Product Radar",
+    ecoOn: "Öko-Modus aktiviert",
+    ecoOff: "Öko-Modus deaktiviert",
+    seniorOn: "Seniorenmodus aktiviert",
+    seniorOff: "Seniorenmodus (größere Schrift)",
+    lang: "Sprache ändern",
   },
   footer: {
     copyright: "© {year} TrustNode Protocol. Alle Rechte vorbehalten.",
     privacyLink: "Datenschutzerklärung (russisches Bundesgesetz 152-FZ)",
     termsLink: "Nutzungsbedingungen",
-    version: "On-Device ML Fraud Shield // v1.2.0 // konform mit Gesetz 152-FZ"
-  },
+    version: "On-Device ML Fraud Shield // v1.2.0 // konform mit Gesetz 152-FZ",
+      githubOrg: "Alle TrustNode-Projekte auf GitHub",
+},
   cookie: {
     badgeLabel: "[ INFORMATIONSSICHERHEIT // RUSSISCHES GESETZ 152-FZ ]",
     text: "Uns ist Ihre Privatsphäre wichtig. Diese Website verwendet anonymisierte Cookies und lokalen Speicher, um Ihre Grafik- und Öko-Modus-Einstellungen zu merken. Lesen Sie unsere",
@@ -4869,8 +4553,8 @@ const de: Translations = {
         ]
       },
       s4: {
-        heading: "[ WARTELISTEN-ANMELDUNG ÜBER VK ADS ]",
-        body: "Die Schaltfläche „Registrieren\" öffnet in einem neuen Fenster ein Lead-Formular von VK Ads. Name, Telefonnummer, E-Mail-Adresse und die Einwilligung zur Verarbeitung personenbezogener Daten, die in diesem Formular angegeben werden, werden von VK erfasst, gespeichert und verarbeitet — die TrustNode-Website erhält, sieht oder speichert diese Daten zu keinem Zeitpunkt selbst. Unabhängig von der Warteliste sind der Telegram-Kanal, die VKontakte-Community und der TikTok-Link in diesem Abschnitt lediglich Kanäle für Fragen und Projekt-Updates, kein Mechanismus zur Erhebung personenbezogener Daten."
+        heading: "[ APP-DOWNLOAD ]",
+        body: "Der Download der TrustNode-App erfolgt über offizielle Plattformen — den RuStore-Store und GitHub. Die TrustNode-Website erhebt und verarbeitet keine personenbezogenen Daten der Nutzer: Alle von der App analysierten Daten werden ausschließlich lokal auf dem Gerät des Nutzers verarbeitet."
       },
       s5: {
         heading: "[ DATENLOKALISIERUNG UND SPEICHERSICHERHEIT ]",
@@ -4882,9 +4566,9 @@ const de: Translations = {
         bodySuffix: "."
       },
       s7: {
-        heading: "[ VK ALS VERANTWORTLICHER FÜR DIE WARTELISTENDATEN ]",
-        bodyPrefix: "Im Hinblick auf die Wartelisten-Anmeldung ist TrustNode nicht der Verantwortliche für personenbezogene Daten — verantwortlich ist VK. Die Verarbeitung der über das Formular übermittelten Daten unterliegt der Datenschutzerklärung von VK: ",
-        bodySuffix: " Der Website-Betreiber muss vor der Veröffentlichung bestätigen, dass dieser Link korrekt ist und für das jeweilige VK-Ads-Formular gilt."
+        heading: "[ EXTERNE VERTRIEBSPLATTFORMEN ]",
+        bodyPrefix: "Der Download und die Installation der App aus dem RuStore-Store oder von GitHub unterliegen den Regeln der jeweiligen Plattformen. TrustNode ist bei der Nutzung externer Plattformen nicht Verantwortlicher für personenbezogene Daten: ",
+        bodySuffix: " Die Richtigkeit und Anwendbarkeit dieser Links muss vom Website-Betreiber vor der Veröffentlichung bestätigt werden."
       }
     },
     terms: {
@@ -4916,7 +4600,7 @@ const de: Translations = {
     "how-it-works": "Wie es funktioniert",
     tech: "Technologie",
     about: "Über Uns",
-    "early-access": "Vorabzugang",
+    download: "Herunterladen",
     comparison: "Vergleich",
     "not-found": "404"
   },
@@ -5049,10 +4733,10 @@ const de: Translations = {
     card2Badge: "PATENTE & AUSZEICHNUNGEN",
     card2Desc: "Offizielle Patente, erster Platz in der regionalen IT-Forschung und unsere Entwicklungsgeschichte.",
     card2Btn: "Über Uns & Team →",
-    card3Title: "Vorabzugang",
-    card3Badge: "LIZENZEN // VIP",
-    card3Desc: "Wählen Sie ein Vorabzugangspaket, generieren Sie Ihr individuelles Ticket und sichern Sie sich vor der offiziellen Veröffentlichung prioritären Pro/VIP-Zugang.",
-    card3Btn: "Zugangsticket anfordern →",
+    card3Title: "App herunterladen",
+    card3Badge: "INSTALLATION // ANDROID",
+    card3Desc: "Laden Sie TrustNode TN1 kostenlos herunter — die fertige App für lokalen Schutz vor Betrug und Spam. Erhältlich bei RuStore.",
+    card3Btn: "App herunterladen →",
     card4Title: "Ehrlicher Vergleich",
     card4Badge: "FAKTEN & KONKURRENZ",
     card4Desc: "Ein objektiver Vergleich der Funktionalität von TrustNode mit den auf dem Markt befindlichen Alternativen anhand von Schlüsselparametern.",
@@ -5065,15 +4749,21 @@ const de: Translations = {
     rightSub: "// KEINE TELEMETRIE"
   },
   earlyAccessPage: {
-    title: "Frühzeitiger Zugriff auf TrustNode",
-    subtitle: "Laden Sie TrustNode TN1 kostenlos herunter — die fertige On-Device-Betrugsschutz-App",
+    title: "TrustNode herunterladen",
+    subtitle: "Holen Sie sich die TrustNode TN1 App kostenlos — lokaler Schutz vor Telefonbetrug und Spam direkt auf Ihrem Gerät.",
     badge: "KOSTENLOSER DOWNLOAD",
-    checkboxText: "Ich akzeptiere die Bedingungen der Nutzungsvereinbarung und der Datenschutzrichtlinie",
-    btnGetTicket: "Ticket anfordern",
-    btnGenerating: "Sicherheitskuppel wird generiert...",
-    ticketReadyTitle: "Ihr Ticket wurde generiert!",
-    ticketReadyInstruction: "Kopieren Sie Ihre Ticket-ID unten und senden Sie sie uns über Telegram / VK, um Ihren kostenlosen Installationsschlüssel zu erhalten"
+    back: "Zurück zur Startseite",
+    rustoreBtn: "Bei RuStore herunterladen",
+    githubBtn: "APK von GitHub herunterladen",
+    feature1Title: "100% lokaler Schutz",
+    feature1Desc: "Alle Anruf- und Nachrichtenprüfungen laufen direkt auf Ihrem Gerät — Ihre Daten verlassen nie Ihr Smartphone.",
+    feature2Title: "KI gegen Betrüger",
+    feature2Desc: "Das auf rubert-tiny2 basierende neuronale Modell erkennt Social-Engineering-Szenarien in Echtzeit.",
+    feature3Title: "Kostenlos und sicher",
+    feature3Desc: "Die App ist kostenlos bei RuStore erhältlich. Installieren Sie sie und schützen Sie Ihre Liebsten.",
+    note: "Verfügbar für Android-Geräte. Internet wird nur für den ersten Download benötigt.",
   },
+
   comparisonPage: {
     title: "Honest Comparison",
     subtitle: "An objective comparative analysis of TrustNode vs leading global security solutions",
@@ -5290,60 +4980,23 @@ const ja: Translations = {
       }
     ]
   },
-  waitlist: {
-    badge: "プレミアム・ローカル保護",
-    titleLine1: "有料の早期アクセスを",
-    titleHighlight: "取得する",
-    pricingLabel: "[ 個別条件 ]",
-    pricingLine1: "早期アクセスは有料です。",
-    pricingHighlight: "価格は個別に相談の上で決定します",
-    pricingLine2: "各ライセンスは、お使いのデバイスの仕様と個々のプライバシー要件に合わせて設定・最適化されます。",
-    description: "当サイトでは匿名のメール登録フォームを廃止しました。ローカル・セキュリティ・ドームの導入をご希望の場合や提携についてのご相談は、下記いずれかのチャンネルからご連絡ください。",
-    socials: [
-      {
-        name: "Telegramチャンネル＆チャット",
-        desc: "最新情報をリアルタイムで受け取り、開発チームに質問し、条件についての相談は直接メッセージでどうぞ。",
-        badge: "チーム対応中",
-        action: "Telegramでメッセージ"
-      },
-      {
-        name: "VKontakteコミュニティ",
-        desc: "プロジェクト公式コミュニティ。お支払いや導入方法については、コミュニティのメッセージ宛にご連絡ください。",
-        badge: "迅速な返信",
-        action: "VKでメッセージ"
-      },
-      {
-        name: "TikTokプロフィール",
-        desc: "セキュリティドームの動作を紹介する短い動画、最新ニュース、脆弱性の解説を発信中。ダイレクトメッセージでご連絡ください。",
-        badge: "動画レビュー",
-        action: "TikTokを開く"
-      }
-    ],
-    disclaimer1: "スパムなし // 第三者ログなし // デバイス内ローカル暗号化",
-    disclaimer2: "ライセンスはデバイス確認後に発行されます",
-    console: {
-      title: "早期アクセスを申請する",
-      subtitle: "パーソナライズされたビルドを作成するためのデバイス固有 of デジタルフットプリントを生成します",
-      inputLabel: "お客様の Telegram @ユーザー名、または Eメール",
-      inputPlaceholder: "例: @taro_crypto、または email@domain.com",
-      osLabel: "モバイルOSプラットフォーム",
-      cpuLabel: "CPUマイクロアーキテクチャ",
-      btnSubmit: "申請を送信する",
-      btnGenerating: "ローカルセキュリティドームをRAM上に生成中...",
-      copyBtn: "チケットIDをコピー",
-      copied: "クリップボードにコピーしました！",
-      ticketTitle: "ライセンスチケットの設定が完了しました",
-      ticketLabel: "このチケットIDをコピーし、TelegramまたはVKの公式チャットに送信してください。優先レーンにて即座にインストール鍵を発行いたします。",
-      envAnalysis: "デバイスの動作環境をエミュレートし、高強度なハードウェア暗号エンベロープをバインド中",
-      errContactRequired: "ご連絡先の入力をお願いいたします"
-    }
+
+  header: {
+    rustore: "RuStore からダウンロード",
+    radar: "Product Radar",
+    ecoOn: "エコモード有効",
+    ecoOff: "エコモード無効",
+    seniorOn: "シニアモード有効",
+    seniorOff: "シニアモード（大きな文字）",
+    lang: "言語を変更",
   },
   footer: {
     copyright: "© {year} TrustNode Protocol. All rights reserved.",
     privacyLink: "プライバシーポリシー（ロシア連邦法152-FZ）",
     termsLink: "利用規約",
-    version: "オンデバイスML不正検知シールド // v1.2.0 // 152-FZ準拠"
-  },
+    version: "オンデバイスML不正検知シールド // v1.2.0 // 152-FZ準拠",
+      githubOrg: "GitHub 上のすべての TrustNode プロジェクト",
+},
   cookie: {
     badgeLabel: "[ 情報セキュリティ // ロシア法152-FZ ]",
     text: "私たちはあなたのプライバシーを大切にしています。当サイトでは、グラフィック設定やエコモードの設定を記憶するために、匿名化されたCookieとローカルストレージを使用しています。詳しくは",
@@ -5380,8 +5033,8 @@ const ja: Translations = {
         ]
       },
       s4: {
-        heading: "[ VK広告経由のウェイトリスト登録 ]",
-        body: "「登録する」ボタンをクリックすると、新しいウィンドウでVK広告のリードフォームが開きます。そのフォームに入力された氏名、電話番号、メールアドレス、個人データ処理への同意はVKが収集・保存・処理し、TrustNodeのウェブサイトはこれらのデータを一切受け取らず、閲覧せず、自社側で保存することもありません。ウェイトリストとは別に、このセクションにあるTelegramチャンネル、VKontakteコミュニティ、TikTokへのリンクは、質問やプロジェクトの最新情報のためのチャンネルであり、個人データ収集の仕組みではありません。"
+        heading: "[ アプリのダウンロード ]",
+        body: "TrustNodeアプリのダウンロードは、公式プラットフォームであるRuStoreストアとGitHubを通じて行われます。TrustNodeのウェブサイトはユーザーの個人データを収集・処理しません。アプリが分析するすべてのデータは、ユーザーのデバイス上でのみローカル処理されます。"
       },
       s5: {
         heading: "[ データのローカライゼーションと保管の安全性 ]",
@@ -5393,9 +5046,9 @@ const ja: Translations = {
         bodySuffix: "。"
       },
       s7: {
-        heading: "[ ウェイトリストデータの運営者としてのVK ]",
-        bodyPrefix: "ウェイトリスト登録に関して、TrustNodeは個人データの運営者ではなく、運営者はVKです。フォームを通じて送信されたデータの取扱いはVKのプライバシーポリシーに準拠します： ",
-        bodySuffix: " 公開前に、このリンクが正確であり、該当するVK広告のフォームに適用されることをサイト運営者が確認する必要があります。"
+        heading: "[ 外部配信プラットフォーム ]",
+        bodyPrefix: "RuStoreストアまたはGitHubからのアプリのダウンロードとインストールは、それぞれのプラットフォームの規則に従います。外部プラットフォームを利用する場合、TrustNodeは個人データの運営者ではありません：",
+        bodySuffix: " 公開前に、これらのリンクの正確性と適用可能性をサイト運営者が確認する必要があります。"
       }
     },
     terms: {
@@ -5427,7 +5080,7 @@ const ja: Translations = {
     "how-it-works": "仕組み",
     tech: "テクノロジー",
     about: "私たちについて",
-    "early-access": "早期アクセス",
+    download: "ダウンロード",
     comparison: "比較",
     "not-found": "404"
   },
@@ -5560,10 +5213,10 @@ const ja: Translations = {
     card2Badge: "特許と受賞歴",
     card2Desc: "公式特許出願、地域IT研究コンテスト最優秀賞、モスクワ全国決勝大会への進出実績と歩み。",
     card2Btn: "チームと概要 →",
-    card3Title: "早期アクセス",
-    card3Badge: "ライセンス // VIP特典",
-    card3Desc: "先行パッケージを選択し、独自のセキュリティチケットを生成して製品のPro/VIPアクセス権を確保します。",
-    card3Btn: "チケットを発行する →",
+    card3Title: "アプリをダウンロード",
+    card3Badge: "インストール // Android",
+    card3Desc: "TrustNode TN1 を無料でダウンロード — 詐欺やスパムから守る完成済みオンデバイスアプリ。RuStore で入手可能。",
+    card3Btn: "アプリをダウンロード →",
     card4Title: "誠実な比較",
     card4Badge: "客観的データ・競合比較",
     card4Desc: "業界の競合製品（Kaspersky、Nortonなど）とTrustNodeの主要機能を客観的に比較。",
@@ -5576,15 +5229,21 @@ const ja: Translations = {
     rightSub: "// テレメトリの収集は一切ありません"
   },
   earlyAccessPage: {
-    title: "TrustNodeへの早期アクセス",
-    subtitle: "TrustNode TN1を無料でダウンロード — 完成したオンデバイス詐欺防止アプリ",
+    title: "TrustNode をダウンロード",
+    subtitle: "TrustNode TN1 アプリを無料で入手 — 電話詐欺やスパムからデバイス上で直接保護します。",
     badge: "無料ダウンロード",
-    checkboxText: "利用規約とプライバシーポリシーに同意します",
-    btnGetTicket: "チケットを取得",
-    btnGenerating: "セキュリティドームを構築中...",
-    ticketReadyTitle: "チケットが生成されました！",
-    ticketReadyInstruction: "以下のチケットIDをコピーして、Telegram / VKで送信すると、無料のインストールキーを入手できます"
+    back: "ホームに戻る",
+    rustoreBtn: "RuStore からダウンロード",
+    githubBtn: "GitHub から APK をダウンロード",
+    feature1Title: "100% オンデバイス保護",
+    feature1Desc: "通話とメッセージのすべてのチェックはデバイス上で実行され、データがスマートフォンの外に出ることはありません。",
+    feature2Title: "詐欺師に対抗するAI",
+    feature2Desc: "rubert-tiny2 ベースのニューラルモデルがソーシャルエンジニアリング手法をリアルタイムで検知します。",
+    feature3Title: "無料で安全",
+    feature3Desc: "アプリは RuStore で無料提供されています。インストールして、大切な人を詐欺師から守りましょう。",
+    note: "Android デバイスに対応。インターネットは初回ダウンロード時のみ必要です。",
   },
+
   comparisonPage: {
     title: "Honest Comparison",
     subtitle: "An objective comparative analysis of TrustNode vs leading global security solutions",
