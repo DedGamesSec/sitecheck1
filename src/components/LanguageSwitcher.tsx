@@ -19,7 +19,6 @@ export default function LanguageSwitcher({ variant = "desktop" }: LanguageSwitch
   const [position, setPosition] = useState<{ top: number; left: number } | null>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const current = LANGUAGES.find((l) => l.code === language) ?? LANGUAGES[0];
 
   const close = useCallback(() => setIsOpen(false), []);
 
@@ -33,10 +32,15 @@ export default function LanguageSwitcher({ variant = "desktop" }: LanguageSwitch
         const panelWidth = Math.min(vw - 16, isNarrow ? 320 : 224);
         const rows = isNarrow ? Math.ceil(LANGUAGES.length / 2) : LANGUAGES.length;
         const menuHeight = rows * OPTION_HEIGHT + MENU_VERTICAL_PADDING;
+        const gap = 8;
 
         let left = rect.right - panelWidth;
-        left = Math.max(8, Math.min(left, vw - panelWidth - 8));
-        const top = Math.min(rect.bottom + 8, Math.max(8, vh - menuHeight - 8));
+        left = Math.max(gap, Math.min(left, vw - panelWidth - gap));
+
+        // Open upward: menu bottom edge aligns with the button top edge.
+        // Clamp so the menu never leaves the viewport (top limit + bottom limit).
+        let top = rect.top - menuHeight - gap;
+        top = Math.max(gap, Math.min(top, vh - menuHeight - gap));
 
         setPosition({ top, left });
       }
@@ -70,9 +74,7 @@ export default function LanguageSwitcher({ variant = "desktop" }: LanguageSwitch
   }, [isOpen, close]);
 
   const buttonClass =
-    variant === "desktop"
-      ? "inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#0A162C]/60 hover:bg-[#2E7DFF]/20 border border-[#2E7DFF]/30 text-xs font-mono font-medium text-[#2E7DFF] hover:text-white transition-all duration-300 hover:shadow-[0_0_12px_rgba(46,125,255,0.25)] cursor-pointer"
-      : "flex items-center justify-center w-11 h-11 rounded-xl bg-[#0F0F12] border border-[#1F2937] text-gray-300 hover:border-[#2E7DFF]/35 hover:bg-[#2E7DFF]/10 hover:text-white transition-all duration-300 cursor-pointer";
+    "inline-flex items-center justify-center w-11 h-11 rounded-xl bg-[#0A162C]/60 border border-[#2E7DFF]/30 text-[#2E7DFF] hover:text-white hover:bg-[#2E7DFF]/20 transition-all duration-300 cursor-pointer";
 
   return (
     <div className="relative" ref={containerRef} id={`language-switcher-${variant}`}>
@@ -84,10 +86,7 @@ export default function LanguageSwitcher({ variant = "desktop" }: LanguageSwitch
         aria-haspopup="listbox"
         aria-expanded={isOpen}
       >
-        <span className="flex items-center gap-1.5">
-          <Globe className="w-3.5 h-3.5 shrink-0" />
-          <span className="uppercase">{current.code}</span>
-        </span>
+        <Globe className="w-4 h-4" />
       </button>
 
       {isOpen &&

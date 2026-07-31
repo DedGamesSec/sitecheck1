@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X, Leaf, Radar, ALargeSmall } from "lucide-react";
+import { Menu, X, Radar } from "lucide-react";
 import { SiTelegram, SiVk, SiTiktok, SiGithub } from "react-icons/si";
 import MiniLogo from "./MiniLogo";
-import LanguageSwitcher from "./LanguageSwitcher";
 import { useTranslation } from "../i18n/LanguageContext";
 import { useNavigation, PageId } from "../navigation/NavigationContext";
-import { useSeniorMode } from "../context/SeniorModeContext";
 import { HEADER_PAGES } from "../navigation/pages.config";
 
 export const RUSTORE_URL = "https://www.rustore.ru/catalog/app/com.frauddetector.app";
@@ -17,16 +15,9 @@ const SiVkIcon = SiVk as React.ComponentType<any>;
 const SiTiktokIcon = SiTiktok as React.ComponentType<any>;
 const SiGithubIcon = SiGithub as React.ComponentType<any>;
 
-// Verified signature for use in App.tsx
-interface HeaderProps {
-  isEcoMode: boolean;
-  onToggleEcoMode: () => void;
-}
-
-export default function Header({ isEcoMode, onToggleEcoMode }: HeaderProps) {
+export default function Header() {
   const { t } = useTranslation();
   const { activePage, navigateTo } = useNavigation();
-  const { seniorMode, toggleSeniorMode } = useSeniorMode();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -152,39 +143,6 @@ export default function Header({ isEcoMode, onToggleEcoMode }: HeaderProps) {
     );
   };
 
-  const ecoButtonClass =
-    "inline-flex items-center justify-center w-11 h-11 rounded-xl border transition-all duration-300 cursor-pointer";
-
-  const renderEcoButton = () => (
-    <button
-      onClick={onToggleEcoMode}
-      aria-label={isEcoMode ? t.header.ecoOn : t.header.ecoOff}
-      title={isEcoMode ? t.header.ecoOn : t.header.ecoOff}
-      className={`${ecoButtonClass} ${
-        isEcoMode
-          ? "bg-emerald-500/15 border-emerald-500/40 text-emerald-400 shadow-[0_0_12px_rgba(16,185,129,0.22)]"
-          : "bg-[#0A162C]/60 border-[#2E7DFF]/30 text-[#2E7DFF] hover:text-white hover:bg-[#2E7DFF]/20"
-      }`}
-    >
-      <Leaf className="w-4 h-4" />
-    </button>
-  );
-
-  const renderSeniorButton = () => (
-    <button
-      onClick={toggleSeniorMode}
-      aria-label={seniorMode ? t.header.seniorOn : t.header.seniorOff}
-      title={seniorMode ? t.header.seniorOn : t.header.seniorOff}
-      className={`${ecoButtonClass} ${
-        seniorMode
-          ? "bg-amber-500/15 border-amber-500/40 text-amber-400 shadow-[0_0_12px_rgba(245,158,11,0.22)]"
-          : "bg-[#0A162C]/60 border-[#2E7DFF]/30 text-[#2E7DFF] hover:text-white hover:bg-[#2E7DFF]/20"
-      }`}
-    >
-      <ALargeSmall className="w-4 h-4" />
-    </button>
-  );
-
   const currentPageLabel = getPageLabel(activePage);
 
   return (
@@ -254,18 +212,9 @@ export default function Header({ isEcoMode, onToggleEcoMode }: HeaderProps) {
 
             <div className="h-px bg-[#1F2937]/30 my-1" />
 
-            <div className="flex flex-col gap-3">
-              <div className="flex gap-2">
-                {socialLinks.map((link) => renderSocialButton(link))}
-                {renderSocialButton(productRadarLink)}
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="shrink-0">{renderEcoButton()}</div>
-                <div className="shrink-0">{renderSeniorButton()}</div>
-                <div className="ml-auto shrink-0">
-                  <LanguageSwitcher variant="mobile" />
-                </div>
-              </div>
+            <div className="flex gap-2">
+              {socialLinks.map((link) => renderSocialButton(link))}
+              {renderSocialButton(productRadarLink)}
             </div>
           </div>
         </div>

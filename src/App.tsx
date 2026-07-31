@@ -334,7 +334,7 @@ export default function App() {
           pointerEvents: "auto" 
         }}
       >
-        <Header isEcoMode={ecoMode} onToggleEcoMode={toggleEcoMode} />
+        <Header />
       </div>
 
       {/* DYNAMIC PAGE ROUTER */}
