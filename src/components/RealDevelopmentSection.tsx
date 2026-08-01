@@ -1165,6 +1165,53 @@ const ONNX_PRESETS: Record<LanguageCode, OnnxPreset[]> = {
   ],
 };
 
+const ONNX_TRIGGERS: Record<LanguageCode, string[]> = {
+  ru: [
+    "центробанк", "безопасн", "ячейк", "переведи", "перевод", "счет", "кредит", "спас", "карту", "код", "смс", "пароль",
+    "доставк", "пошлин", "посылк", "оплат", "tracking", "сбил", "дтп", "авари", "полици", "деньги", "рубл", "выигра",
+    "сейфовы", "следствен",
+  ],
+  en: [
+    "treasury", "escrow", "vault", "package", "fee", "accident", "lawyer", "card", "bank", "tracking",
+  ],
+  tr: [
+    "merkez", "banka", "para", "transfer", "dolandırıcılık", "kargo", "ödeme", "gümrük",
+    "çarptım", "avukat", "kart", "tutuklan", "gönder", "tracking",
+  ],
+  es: [
+    "banco", "bóveda", "robo", "saldo", "tarifa", "pagar", "retrasado",
+    "accidente", "herí", "tarjeta", "abogado", "envía", "tracking",
+  ],
+  zh: [
+    "银行", "余额", "转移到", "金库", "被盗", "包裹", "延迟", "支付", "手续费",
+    "车祸", "撞伤", "汇款", "律师", "tracking",
+  ],
+  hi: [
+    "बैंक", "चोरी", "राशि", "तिजोरी", "स्थानांतरित", "डिलीवरी", "देरी",
+    "प्रसंस्करण", "शुल्क", "भुगतान", "दुर्घटना", "चोट", "वकील", "कार्ड", "भेजें", "tracking",
+  ],
+  ar: [
+    "البنك", "رصيدك", "الخزنة", "السرقة", "حوّل", "تأخر", "طردك", "دفع", "رسوم",
+    "المعالجة", "حادث", "أصبت", "البطاقة", "المحامي", "أرسل", "tracking",
+  ],
+  pt: [
+    "banco", "transfira", "saldo", "cofre", "roubo", "atrasada", "pagar", "taxa",
+    "processamento", "acidente", "machuquei", "cartão", "advogado", "envie", "tracking",
+  ],
+  fr: [
+    "banque", "transférez", "solde", "coffre", "vol", "livraison", "retardée", "payer",
+    "frais", "traitement", "accident", "blessé", "carte", "avocat", "envoyez", "tracking",
+  ],
+  de: [
+    "bank", "überweisen", "guthaben", "tresorfach", "diebstahl", "lieferung", "verzögert",
+    "bearbeitungsgebühr", "zahlen", "autounfall", "verletzt", "karte", "anwalt", "schicken", "tracking",
+  ],
+  ja: [
+    "銀行", "盗難", "残高", "金庫", "送金", "配達", "遅れ", "処理手数料",
+    "支払い", "ログイン", "交通事故", "傷つけ", "弁護士", "カード", "tracking",
+  ],
+};
+
 const ONNX_STEPS: Record<LanguageCode, string[]> = {
   ru: [
     "Инициализация токенизатора BERT...",
@@ -1405,12 +1452,7 @@ export function OnnxInteractiveTester({ language }: { language: string }) {
   const [ticketId, setTicketId] = useState("");
   const [copied, setCopied] = useState(false);
 
-  const triggerWords = [
-    "центробанк", "безопасн", "ячейк", "переведи", "перевод", "счет", "кредит", "спас", "карту", "код", "смс", "пароль", 
-    "доставк", "пошлин", "посылк", "оплат", "tracking", "сбил", "дтп", "авари", "полици", "деньги", "рубл", "выигра", 
-    "treasury", "escrow", "vault", "package", "fee", "accident", "lawyer", "card", "bank", "merkez", "güvenli", 
-    "kasa", "transfer", "kargo", "odeme", "kaza", "avukat", "para", "shir", "sözleşme", "сейфовы", "следствен"
-  ];
+  const triggers = ONNX_TRIGGERS[language as LanguageCode] || ONNX_TRIGGERS.en;
 
   const handlePresetSelect = (preset: OnnxPreset) => {
     setInputText(preset.text);
@@ -1445,9 +1487,9 @@ export function OnnxInteractiveTester({ language }: { language: string }) {
         let matchCount = 0;
         const foundFlags: string[] = [];
         
-        const textTokens = inputText.split(/[\s,.:;!?"'-]+/);
+        const textTokens = inputText.split(/[\s,.:;!?"'\-，。！、：；（）]+/);
         textTokens.forEach(token => {
-          const isFlagged = triggerWords.some(trigger => token.toLowerCase().includes(trigger));
+          const isFlagged = triggers.some(trigger => token.toLowerCase().includes(trigger));
           if (isFlagged && token.length > 2) {
             matchCount++;
             foundFlags.push(token);
