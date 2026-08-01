@@ -1543,7 +1543,7 @@ ${tkt.inventory}`;
   const handleOpenTelegram = () => {
     const text = encodeURIComponent(generateTicketText());
     // Direct link to community chat @TrustNode_team
-    window.open(`https://t.me/TrustNode_team?text=${text}`, "_blank");
+    window.open(`https://t.me/TrustNode_team?text=${text}`, "_blank", "noopener,noreferrer");
   };
 
   return (

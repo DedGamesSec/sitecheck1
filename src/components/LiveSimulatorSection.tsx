@@ -1096,11 +1096,16 @@ export const LiveSimulatorSection = React.memo(function LiveSimulatorSection() {
     }, 20);
   };
 
-  // Helper to color triggers in transcription
+  // Helper to color triggers in transcription (XSS-safe: text is HTML-escaped, triggers are regex-escaped)
+  const escapeHtml = (value: string) =>
+    value.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+  const escapeRegex = (value: string) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
   const highlightTriggers = (text: string) => {
-    let highlighted = text;
+    const safeText = escapeHtml(text);
+    let highlighted = safeText;
     currentScenario.triggers.forEach(trigger => {
-      const regex = new RegExp(`(${trigger})`, "gi");
+      const regex = new RegExp(`(${escapeRegex(trigger)})`, "gi");
       highlighted = highlighted.replace(regex, `<span class="text-[#EF4444] font-bold border-b border-[#EF4444]/40">$1</span>`);
     });
     return <span dangerouslySetInnerHTML={{ __html: highlighted }} />;
