@@ -241,7 +241,7 @@ export default function App() {
     const descriptions: Record<string, Record<string, string>> = {
       ru: {
         home: "TrustNode — первое в мире полностью локальное мобильное приложение на базе ИИ для защиты от телефонных мошенников, спама и утечек данных.",
-        "how-it-works": "Узнайте, как семислойный ИБ-купол TrustNode обнаруживает мошенничество и психологическое давление без передачи данных в интернет.",
+        "how-it-works": "Узнайте, как купол TrustNode защищает без передачи данных в интернет: акустический анализ и ML-классификация rubert-tiny2 работают на устройстве, остальные слои — в разработке (Roadmap).",
         tech: "Технические подробности и замеры скорости работы TrustNode: локальные ONNX-модели с INT8-квантованием прямо на вашем процессоре.",
         about: "История создания TrustNode, наша миссия против мошеннических сетей и команда разработчиков систем ИБ.",
         "not-found": "Страница не найдена. Вернитесь в защищённый периметр TrustNode.",
@@ -251,7 +251,7 @@ export default function App() {
       },
       en: {
         home: "TrustNode — the world's first fully offline AI-powered security shield protecting your Android device from calls/SMS scam, phish links, and leaks.",
-        "how-it-works": "Explore how TrustNode's 7-layer security dome detects fraud tactics, robotic speech, and intimidation offline.",
+        "how-it-works": "Explore how TrustNode's security dome protects without sending data online: acoustic analysis and rubert-tiny2 ML classification run on-device, while the remaining layers are in development (Roadmap).",
         tech: "Explore the technical stack: secure sandboxed execution, quantized INT8 local ONNX models, and real latency metrics.",
         about: "The story behind TrustNode, our battle against organized fraud networks, and our core open-source team.",
         "not-found": "Page not found. Return to the secure TrustNode perimeter.",
@@ -261,7 +261,7 @@ export default function App() {
       },
       es: {
         home: "TrustNode — el primer escudo de seguridad impulsado por IA 100% offline que protege su dispositivo contra llamadas fraudulentas y spam.",
-        "how-it-works": "Descubra cómo el domo de seguridad de 7 capas de TrustNode detecta tácticas de fraude sin conexión.",
+        "how-it-works": "Descubra cómo el domo de seguridad de TrustNode protege sin conexión: el análisis acústico y la clasificación ML rubert-tiny2 funcionan en el dispositivo, y las capas restantes están en desarrollo (Roadmap).",
         tech: "Detalles técnicos y métricas de latencia de TrustNode: modelos ONNX locales con cuantización INT8.",
         about: "La historia de TrustNode, nuestra lucha contra las redes delictivas organizadas y el equipo de desarrollo.",
         "not-found": "Página no encontrada. Regrese al perímetro seguro de TrustNode.",
@@ -271,7 +271,7 @@ export default function App() {
       },
       zh: {
         home: "TrustNode — 全球首款完全离线运行的 AI 移动安全防护盾，全面防御电话诈骗、垃圾短信和数据泄露。",
-        "how-it-works": "探索 TrustNode 的 7 重防御防护罩如何在无需联网的情况下实时检测诈骗和心理压迫手段。",
+        "how-it-works": "了解 TrustNode 防护穹顶如何在无需联网的情况下保护您：声学分析与 rubert-tiny2 ML 分类在设备端运行，其余层处于开发阶段（Roadmap）。",
         tech: "技术细节与性能表现：直接在移动处理器上运行的 INT8 量化本地 ONNX 引擎。",
         about: "TrustNode 的创立历程、我们与网络诈骗集团的对抗以及核心开源技术团队。",
         "not-found": "未找到页面，请返回 TrustNode 安全区域。",
@@ -281,7 +281,7 @@ export default function App() {
       },
       tr: {
         home: "TrustNode — Telefon dolandırıcılığı ve spama karşı %100 çevrimdışı çalışan yapay zeka destekli mobil güvenlik kalkanı.",
-        "how-it-works": "TrustNode 7 katmanlı güvenlik kubbesinin dolandırıcılık taktiklerini ve robotik konuşmaları nasıl engellediğini öğrenin.",
+        "how-it-works": "TrustNode güvenlik kubbesinin internet olmadan nasıl koruduğunu öğrenin: akustik analiz ve rubert-tiny2 ML sınıflandırma cihazda çalışır, kalan katmanlar geliştirme aşamasındadır (Roadmap).",
         tech: "Teknik detaylar ve hız ölçümleri: Doğrudan cihazınızda çalışan INT8 nicemlemeli yerel ONNX modelleri.",
         about: "TrustNode'un kuruluş hikayesi, organize dolandırıcılık ağlarına karşı mücadelemiz ve geliştirici ekibimiz.",
         "not-found": "Sayfa bulunamadı. Güvenli TrustNode alanına geri dönün.",
@@ -291,7 +291,7 @@ export default function App() {
       },
       hi: {
         home: "TrustNode — दुनिया का पहला पूरी तरह से ऑफलाइन AI-संचालित मोबाइल सुरक्षा कवच जो आपको स्पैम और धोखाधड़ी से बचाता है।",
-        "how-it-works": "जानें कि TrustNode का 7-स्तरीय सुरक्षा डोम बिना इंटरनेट के धोखाधड़ी और मानसिक दबाव का कैसे पता लगाता है।",
+        "how-it-works": "जानें कि TrustNode का सुरक्षा डोम इंटरनेट के बिना कैसे सुरक्षा करता है: ध्वनिक विश्लेषण और rubert-tiny2 ML वर्गीकरण डिवाइस पर चलते हैं, शेष परतें विकास में हैं (Roadmap)।",
         tech: "तकनीकी विवरण और गति माप: सीधे आपके प्रोसेसर पर चलने वाले INT8 स्थानीय ONNX मॉडल।",
         about: "TrustNode की कहानी, संगठित धोखाधड़ी नेटवर्क के खिलाफ हमारी लड़ाई और हमारी टीम।",
         "not-found": "पृष्ठ नहीं मिला। सुरक्षित TrustNode सीमा पर लौटें।",
@@ -301,7 +301,7 @@ export default function App() {
       },
       ar: {
         home: "TrustNode — أول درع أمني بالذكاء الاصطناعي يعمل محلياً 100% لحماية هاتفك من المكالمات الاحتيالية والرسائل المزعجة.",
-        "how-it-works": "اكتشف كيف تكتشف قبة الحماية السباعية لـ TrustNode تكتيكات الاحتيال والضغط النفسي دون اتصال بالإنترنت.",
+        "how-it-works": "اكتشف كيف يحمي قبة TrustNode دون اتصال بالإنترنت: التحليل الصوتي وتصنيف التعلم الآلي rubert-tiny2 يعملان على الجهاز، بينما الطبقات المتبقية قيد التطوير (Roadmap).",
         tech: "التفاصيل التقنية ومقاييس الأداء: نماذج ONNX المحلية بدقة INT8 تعمل مباشرة على معالج هاتفك.",
         about: "قصة إنشاء TrustNode ومهمتنا ضد شبكات الاحتيال المنظمة وفريق المطورين.",
         "not-found": "الصفحة غير موجودة. عد إلى محيط TrustNode الآمن.",
@@ -311,7 +311,7 @@ export default function App() {
       },
       pt: {
         home: "TrustNode — o primeiro escudo de segurança 100% offline com IA para proteger seu celular contra fraudes e spam.",
-        "how-it-works": "Veja como o domo de segurança de 7 camadas do TrustNode detecta fraudes e coerção verbal sem internet.",
+        "how-it-works": "Veja como o domo de segurança do TrustNode protege sem internet: a análise acústica e a classificação ML rubert-tiny2 rodam no dispositivo, e as demais camadas estão em desenvolvimento (Roadmap).",
         tech: "Detalhes técnicos e métricas de velocidade: modelos ONNX locais INT8 rodando diretamente no processador.",
         about: "A história do TrustNode, nossa luta contra redes de fraude organizadas e nossa equipe de engenharia.",
         "not-found": "Página não encontrada. Retorne ao perímetro seguro do TrustNode.",
@@ -321,7 +321,7 @@ export default function App() {
       },
       fr: {
         home: "TrustNode — le premier bouclier de sécurité mobile 100% hors ligne propulsé par l'IA contre les fraudes et le spam.",
-        "how-it-works": "Découvrez comment le dôme de 7 couches de TrustNode détecte les tactiques de fraude sans connexion Internet.",
+        "how-it-works": "Découvrez comment le dôme de sécurité TrustNode protège sans connexion : l'analyse acoustique et la classification ML rubert-tiny2 fonctionnent sur l'appareil, tandis que les autres couches sont en cours de développement (Roadmap).",
         tech: "Détails techniques et performances : modèles ONNX locaux quantifiés en INT8 fonctionnant sur votre processeur.",
         about: "L'histoire de TrustNode, notre combat contre les réseaux de fraude organisés et notre équipe d'ingénieurs.",
         "not-found": "Page introuvable. Retournez dans le périmètre sécurisé TrustNode.",
@@ -331,7 +331,7 @@ export default function App() {
       },
       de: {
         home: "TrustNode — der weltweit erste vollständig offline funktionierende KI-Schutzschild gegen Telefonbetrug und Spam.",
-        "how-it-works": "Erfahren Sie, wie die 7-schichtige Sicherheitskuppel von TrustNode Betrugstaktiken lokal und ohne Internet erkennt.",
+        "how-it-works": "Erfahren Sie, wie die Sicherheitskuppel von TrustNode ohne Internet schützt: Akustikanalyse und ML-Klassifikation rubert-tiny2 laufen auf dem Gerät, die übrigen Ebenen befinden sich in Entwicklung (Roadmap).",
         tech: "Technische Details und Latenzmetriken: INT8-quantisierte lokale ONNX-Modelle direkt auf Ihrem Prozessor.",
         about: "Die Geschichte von TrustNode, unser Kampf gegen organisierte Betrugsnetzwerke und unser Kernteam.",
         "not-found": "Seite nicht gefunden. Kehren Sie zum sicheren TrustNode-Bereich zurück.",
@@ -341,7 +341,7 @@ export default function App() {
       },
       ja: {
         home: "TrustNode — 世界初の完全オフライン動作AI搭載モバイルセキュリティシールド。特殊詐欺やスパム通話を防ぎます。",
-        "how-it-works": "TrustNodeの7層セキュリティドームが、インターネットに接続せず詐欺の手口をどう検知するかご覧ください。",
+        "how-it-works": "TrustNodeのセキュリティドームがインターネットなしでどう守るかご覧ください：音響解析と rubert-tiny2 のML分類は端末上で稼働し、その他のレイヤーは開発中（Roadmap）です。",
         tech: "技術仕様と遅延メトリクス：プロセッサ上で直接動作するINT8量子化ローカルONNXモデル。",
         about: "TrustNode誕生のストーリー、組織的詐欺ネットワークとの戦い、そして開発チームのご紹介。",
         "not-found": "ページが見つかりません。安全なTrustNodeエリアへお戻りください。",

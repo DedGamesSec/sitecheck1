@@ -75,31 +75,34 @@ const ru: Translations = {
     subtitle: "Многоуровневый купол, развёрнутый локально на вашем смартфоне. Ни байта персональных данных не покидает устройство.",
     layersHeading: "Слои защиты устройства",
     layers: [
-      {
-        name: "Быстрые эвристики (Heuristics — Эвристика)",
-        tech: "Regex & Signature Maps",
-        desc: "Первичный мгновенный фильтр входящих потоков. Блокирует известные паттерны спам-сетей, подозрительные ссылки и известные сигнатуры скриптов мошенников без нагрузки на батарею."
-      },
-      {
-        name: "ML-Классификация (rubert-tiny2)",
-        tech: "ONNX Runtime / 28.4 MB Local Model",
-        desc: "Сжатая нейросетевая модель анализирует семантику разговора или текста сообщений в реальном времени. Обнаруживает скрытые манипуляции, ролевые сценарии («безопасный счёт», «родственник в беде») и психологическое давление."
-      },
-      {
-        name: "Поведенческий анализ",
-        tech: "Context-Aware State Machine",
-        desc: "Следит за динамикой взаимодействия: скорость ввода, частота переключений между экранами банковских приложений во время звонка, аномальные задержки и паттерны удержания внимания."
-      },
-      {
-        name: "Консенсус PHANTOM",
-        tech: "Consensus Voting Engine",
-        desc: "Принимает окончательное взвешенное решение на основе выходов всех трёх уровней. При подозрении на атаку блокирует интерфейс, предупреждает пользователя и отправляет моментальный пуш доверенному контакту."
-      }
+    {
+      name: "Акустический анализ",
+      tech: "RMS / Zero-Crossing / Energy",
+      desc: "Акустический анализ звонка в реальном времени на устройстве: анализ голоса и интонаций, темпа речи, пауз и энергетических паттернов разговора. Без передачи данных на сервер."
+    }
+    ,
+    {
+      name: "ML-Классификация (rubert-tiny2)",
+      tech: "ONNX Runtime / INT8 / ~29 MB",
+      desc: "Используется облегчённая нейросеть rubert-tiny2 (ONNX INT8, ~29 МБ) для анализа текста и метаданных на устройстве. Обновления моделей и баз данных поставляются вместе с обновлением приложения — интернет не требуется для повседневной работы, только для установки новых версий."
+    }
+    ,
+    {
+      name: "Распознавание речи и семантика (ASR) — В разработке (Roadmap)",
+      tech: "ASR — Roadmap",
+      desc: "Распознавание речи (ASR) и семантический анализ содержания разговора: детекция ключевых фраз-триггеров, признаков психологического давления и требований срочных действий. Следующий этап эволюции PHANTOM."
+    }
+    ,
+    {
+      name: "Консенсус PHANTOM",
+      tech: "Consensus Voting Engine",
+      desc: "Принимает окончательное взвешенное решение на основе выходов слоёв анализа. При подозрении на атаку блокирует интерфейс, предупреждает пользователя и отправляет моментальный пуш доверенному контакту."
+    }
     ],
     usp: [
       {
         title: "Локальный AI (на устройстве)",
-        desc: "Нейросеть rubert-tiny2 квантована и оптимизирована под мобильные процессоры. Размер в 28.4 МБ позволяет ей хранить все веса в ОЗУ смартфона, обеспечивая инференс за микросекунды."
+        desc: "Облегчённая нейросеть rubert-tiny2 (ONNX INT8, ~29 МБ) анализирует текст и метаданные прямо на устройстве. Модели и базы данных обновляются вместе с приложением — интернет нужен только для установки новых версий."
       },
       {
         title: "Система маяков",
@@ -112,39 +115,39 @@ const ru: Translations = {
     ],
     sevenLayers: [
       {
-        name: "Быстрые эвристики (HeuristicsLayer — Слой эвристик)",
-        tech: "Regex & Signature Maps",
-        desc: "Первичный мгновенный фильтр входящих потоков. Блокирует известные паттерны спам-сетей, подозрительные ссылки и сигнатуры мошеннических скриптов без нагрузки на батарею."
+        name: "Акустический анализ (Сейчас работает)",
+        tech: "RMS / Zero-Crossing / Silence / Energy",
+        desc: "Акустический анализ звонка в реальном времени на устройстве: анализ голоса и интонаций, темпа речи, пауз и энергетических паттернов разговора. Без передачи данных на сервер."
       },
       {
-        name: "Нейросетевой классификатор (BertPhantomClassifier — Классификатор BertPhantom)",
-        tech: "ONNX Runtime / 28.4 MB Local Model",
-        desc: "Локальный мультимодальный анализ (анализ текста, голоса, поведения на экране, сетевого трафика). Нейросеть rubert-tiny2 обрабатывает данные строго на устройстве, отдельно от алгоритмов консенсуса."
+        name: "ML-классификация (rubert-tiny2)",
+        tech: "ONNX Runtime / INT8 / ~29 MB",
+        desc: "Используется облегчённая нейросеть rubert-tiny2 (ONNX INT8, ~29 МБ) для анализа текста и метаданных на устройстве. Обновления моделей и баз данных поставляются вместе с обновлением приложения — интернет не требуется для повседневной работы, только для установки новых версий."
       },
       {
-        name: "Сценарии социнженерии (Social Eng. Layer — Слой социнженерии)",
-        tech: "DeGenome (18 примитивов)",
-        desc: "Выявляет таксономию манипуляций по 18 примитивам DeGenome: искусственная спешка, запугивание, требования конфиденциальности и эмоциональный прессинг."
+        name: "Распознавание речи (ASR) — В разработке (Roadmap)",
+        tech: "ASR — Roadmap",
+        desc: "Распознавание речи (ASR) входящего звонка. Следующий этап эволюции PHANTOM."
       },
       {
-        name: "Поведенческий анализ (Behavioral Layer — Слой поведенческого анализа)",
-        tech: "Context-Aware State Machine",
-        desc: "Следит за динамикой взаимодействия в реальном времени: скорость набора текста, задержки ответов во время разговора, частота переходов между экранами мобильного банка."
+        name: "Семантический анализ содержания — В разработке (Roadmap)",
+        tech: "DeGenome (18 примитивов) — Roadmap",
+        desc: "Семантический анализ содержания разговора: детекция ключевых фраз-триггеров, признаков психологического давления и требований срочных действий. Следующий этап эволюции PHANTOM."
       },
       {
-        name: "Репутационный контур (Reputation Layer — Контур репутации)",
-        tech: "PCD Identity Profiles",
-        desc: "Сверяет манеру общения звонящего с профилями поведенческой идентичности организаций (кто, когда и в каком тоне действительно имеет право звонить от лица банка или ведомства)."
+        name: "Репутационный контур (PCD) — В разработке (Roadmap)",
+        tech: "PCD Identity Profiles — Roadmap",
+        desc: "Сверяет манеру общения звонящего с профилями поведенческой идентичности организаций. В разработке (Roadmap)."
       },
       {
-        name: "Консенсус и принятие решений (Consensus Agent — Агент консенсуса)",
+        name: "Сверка с базой номеров — В разработке (Roadmap)",
+        tech: "Local Blacklist DB — Roadmap",
+        desc: "Быстрая локальная проверка номера по базе подозрительных номеров и чёрным спискам. В разработке (Roadmap)."
+      },
+      {
+        name: "Консенсус и итоговый вердикт (Consensus Agent — Агент консенсуса)",
         tech: "Consensus Voting Engine",
         desc: "Алгоритм консенсуса JudgeAgent, независимый от нейросетей. Взвешивает оценки со всех уровней системы, при угрозе блокирует действия и оповещает доверенные контакты."
-      },
-      {
-        name: "Иммунная память (Immune Memory — Иммунная память)",
-        tech: "Adaptive Incident Shield",
-        desc: "Долгосрочная изолированная память об атаках. Локально адаптирует и дообучает профили защиты на основе предотвращённых инцидентов для защиты от будущих разновидностей угроз."
       }
     ],
     btnSimplified: "Упрощенная структура",
@@ -408,7 +411,7 @@ const ru: Translations = {
     subtitle: "Узнайте больше о локальных AI-технологиях и научной базе TrustNode",
     card1Title: "Технологии купола",
     card1Badge: "СИСТЕМА PHANTOM",
-    card1Desc: "Техническая детализация семислойного защитного купола PHANTOM 2.0 и интеллектуальный голосовой ассистент KIRA, работающий локально на устройстве.",
+    card1Desc: "Техническая детализация защитного купола PHANTOM 2.0: акустический анализ и ML-классификация rubert-tiny2 работают на устройстве, остальные слои — в разработке (Roadmap).",
     card1Btn: "Изучить технологии →",
     card2Title: "Доказанная база",
     card2Badge: "ВАЛИДАЦИЯ И ПАТЕНТЫ",
@@ -439,7 +442,7 @@ const ru: Translations = {
     feature1Title: "100% Локальная защита",
     feature1Desc: "Все проверки звонков и сообщений выполняются прямо на вашем устройстве — ваши данные никогда не покидают смартфон.",
     feature2Title: "ИИ против мошенников",
-    feature2Desc: "Нейросетевая модель на базе rubert-tiny2 распознаёт сценарии социальной инженерии в реальном времени.",
+    feature2Desc: "Облегчённая нейросеть rubert-tiny2 (ONNX INT8, ~29 МБ) анализирует текст и метаданные на устройстве без подключения к интернету.",
     feature3Title: "Бесплатно и безопасно",
     feature3Desc: "Приложение доступно бесплатно в RuStore. Устанавливайте и защищайте своих близких от мошенников.",
     note: "Приложение доступно для устройств Android. Требуется соединение с интернетом только при первом скачивании.",
@@ -597,31 +600,34 @@ const en: Translations = {
     subtitle: "A multi-layer dome deployed locally on your smartphone. Not a single byte of personal data ever leaves the device.",
     layersHeading: "Device protection layers",
     layers: [
-      {
-        name: "Fast heuristics",
-        tech: "Regex & Signature Maps",
-        desc: "The first instant filter for incoming streams. Blocks known spam-network patterns, suspicious links, and known scam-script signatures without draining the battery."
-      },
-      {
-        name: "ML classification (rubert-tiny2)",
-        tech: "ONNX Runtime / 28.4 MB Local Model",
-        desc: "A compressed neural network analyzes the semantics of a call or message text in real time. Detects hidden manipulation, role-play scenarios (\"safe account\", \"relative in trouble\") and psychological pressure."
-      },
-      {
-        name: "Behavioral analysis",
-        tech: "Context-Aware State Machine",
-        desc: "Tracks interaction dynamics: typing speed, how often the screen switches to banking apps during a call, anomalous delays, and attention-holding patterns."
-      },
-      {
-        name: "PHANTOM consensus",
-        tech: "Consensus Voting Engine",
-        desc: "Makes the final weighted decision based on the outputs of all three layers. If an attack is suspected, it locks the interface, warns the user, and sends an instant push to a trusted contact."
-      }
+    {
+      name: "Acoustic Analysis",
+      tech: "RMS / Zero-Crossing / Energy",
+      desc: "Real-time on-device acoustic analysis of the call: voice and intonations, speech tempo, pauses, and energy patterns of the conversation. No data is sent to any server."
+    }
+    ,
+    {
+      name: "ML Classification (rubert-tiny2)",
+      tech: "ONNX Runtime / INT8 / ~29 MB",
+      desc: "Uses the lightweight rubert-tiny2 neural network (ONNX INT8, ~29 MB) to analyze text and metadata on-device. Model and database updates ship with app updates — no internet is required for daily use, only to install new versions."
+    }
+    ,
+    {
+      name: "Speech Recognition & Semantics (ASR) — Roadmap",
+      tech: "ASR — Roadmap",
+      desc: "Speech recognition (ASR) and semantic analysis of the conversation's content: detection of key trigger phrases, signs of psychological pressure, and demands for urgent action. The next stage of PHANTOM's evolution."
+    }
+    ,
+    {
+      name: "PHANTOM Consensus",
+      tech: "Consensus Voting Engine",
+      desc: "Makes the final weighted decision based on the outputs of the analysis layers. If an attack is suspected, it locks the interface, warns the user, and sends an instant push to a trusted contact."
+    }
     ],
     usp: [
       {
         title: "Local AI (on-device)",
-        desc: "The rubert-tiny2 neural network is quantized and optimized for mobile processors. At 28.4 MB, it can keep all its weights in the phone's RAM, delivering inference in microseconds."
+        desc: "The lightweight rubert-tiny2 neural network (ONNX INT8, ~29 MB) analyzes text and metadata directly on-device. Models and databases update with the app — internet is only needed to install new versions."
       },
       {
         title: "Beacon Alerting System",
@@ -634,39 +640,39 @@ const en: Translations = {
     ],
     sevenLayers: [
       {
-        name: "Fast Heuristics (HeuristicsLayer)",
-        tech: "Regex & Signature Maps",
-        desc: "An instant, lightweight filter for incoming data streams. Blocks known spam-networks, phishing links, and malicious automation patterns without draining battery power."
+        name: "Acoustic Analysis (Live)",
+        tech: "RMS / Zero-Crossing / Silence / Energy",
+        desc: "Real-time on-device acoustic analysis of the call: voice and intonations, speech tempo, pauses, and energy patterns of the conversation. No data is sent to any server."
       },
       {
-        name: "Neural Classification (BertPhantomClassifier)",
-        tech: "ONNX Runtime / 28.4 MB Local Model",
-        desc: "Local real-time multimodal analysis (text, voice, screen behavior, and network traffic). The rubert-tiny2 on-device neural network operates strictly offline, separate from consensus voting algorithms."
+        name: "ML Classification (rubert-tiny2)",
+        tech: "ONNX Runtime / INT8 / ~29 MB",
+        desc: "Uses the lightweight rubert-tiny2 neural network (ONNX INT8, ~29 MB) to analyze text and metadata on-device. Model and database updates ship with app updates — no internet is required for daily use, only to install new versions."
       },
       {
-        name: "Social Engineering (Social Eng. Layer)",
-        tech: "DeGenome (18 Primitives)",
-        desc: "Identifies manipulation tactics using the DeGenome taxonomy of 18 primitives, uncovering artificial urgency, pressure speech, fear triggers, and isolation requests."
+        name: "Speech Recognition (ASR) — Roadmap",
+        tech: "ASR — Roadmap",
+        desc: "Speech recognition (ASR) of the incoming call. The next stage of PHANTOM's evolution."
       },
       {
-        name: "Behavioral Auditing (Behavioral Layer)",
-        tech: "Context-Aware State Machine",
-        desc: "Continuously tracks live user interactions: typing cadence, cognitive processing delays, and switching frequencies between financial and calling apps during a live call."
+        name: "Semantic Content Analysis — Roadmap",
+        tech: "DeGenome (18 Primitives) — Roadmap",
+        desc: "Semantic analysis of the conversation's content: detection of key trigger phrases, signs of psychological pressure, and demands for urgent action. The next stage of PHANTOM's evolution."
       },
       {
-        name: "Reputation Verification (Reputation Layer)",
-        tech: "PCD Identity Profiles",
-        desc: "Cross-checks caller traits with Corporate identity profiles (PCD), identifying when speech patterns and caller actions mismatch official protocols."
+        name: "Reputation Verification (PCD) — Roadmap",
+        tech: "PCD Identity Profiles — Roadmap",
+        desc: "Cross-checks the caller's manner of speech against corporate identity profiles (PCD). In development (Roadmap)."
       },
       {
-        name: "Consensus Resolution (Consensus Agent)",
+        name: "Number Blacklist Check — Roadmap",
+        tech: "Local Blacklist DB — Roadmap",
+        desc: "A fast local check of the number against a database of suspicious numbers and blacklists. In development (Roadmap)."
+      },
+      {
+        name: "Consensus & Final Verdict (Consensus Agent)",
         tech: "Consensus Voting Engine",
-        desc: "A dedicated consensus voting algorithm (JudgeAgent), independent of the neural networks. It aggregates risk markers from all levels to lock executions and send alerts."
-      },
-      {
-        name: "Immune Memory",
-        tech: "Adaptive Incident Shield",
-        desc: "Localized secure attack repository. Enables on-device, zero-leakage fine-tuning of security filters based on recently mitigated threats to handle upcoming attack variations."
+        desc: "A dedicated consensus voting algorithm (JudgeAgent), independent of the neural networks. It aggregates risk markers from all levels to lock dangerous actions and alert trusted contacts."
       }
     ],
     btnSimplified: "Simplified View",
@@ -929,7 +935,7 @@ const en: Translations = {
     subtitle: "Learn more about local AI technologies and the scientific foundation of TrustNode",
     card1Title: "Dome Technology",
     card1Badge: "PHANTOM SYSTEM",
-    card1Desc: "Technical breakdown of the 7-layer PHANTOM 2.0 security dome and the intelligent voice assistant KIRA running fully on-device.",
+    card1Desc: "Technical breakdown of the PHANTOM 2.0 security dome: acoustic analysis and rubert-tiny2 ML classification run on-device, while the remaining layers are in development (Roadmap).",
     card1Btn: "Explore Technology →",
     card2Title: "Proven Validation",
     card2Badge: "PATENT & AWARDS",
@@ -960,7 +966,7 @@ const en: Translations = {
     feature1Title: "100% On-Device Protection",
     feature1Desc: "All call and message checks run right on your device — your data never leaves your smartphone.",
     feature2Title: "AI Against Scammers",
-    feature2Desc: "The rubert-tiny2-based neural model detects social engineering scenarios in real time.",
+    feature2Desc: "The lightweight rubert-tiny2 neural network (ONNX INT8, ~29 MB) analyzes text and metadata on-device with no internet connection required.",
     feature3Title: "Free and Secure",
     feature3Desc: "The app is available for free on RuStore. Install it and protect your loved ones from scammers.",
     note: "Available for Android devices. Internet is only needed for the initial download.",
@@ -1118,31 +1124,34 @@ const es: Translations = {
     subtitle: "Una cúpula multicapa desplegada localmente en tu smartphone. Ni un solo byte de datos personales sale del dispositivo.",
     layersHeading: "Capas de protección del dispositivo",
     layers: [
-      {
-        name: "Heurísticas rápidas",
-        tech: "Regex y mapas de firmas",
-        desc: "El primer filtro instantáneo de los flujos entrantes. Bloquea patrones conocidos de redes de spam, enlaces sospechosos y firmas de scripts fraudulentos sin consumir batería."
-      },
-      {
-        name: "Clasificación por ML (rubert-tiny2)",
-        tech: "ONNX Runtime / Modelo local de 28.4 MB",
-        desc: "Una red neuronal comprimida analiza en tiempo real la semántica de la llamada o del texto del mensaje. Detecta manipulaciones ocultas, guiones de rol (\"cuenta segura\", \"familiar en apuros\") y presión psicológica."
-      },
-      {
-        name: "Análisis de comportamiento",
-        tech: "Máquina de estados sensible al contexto",
-        desc: "Monitorea la dinámica de la interacción: velocidad de escritura, frecuencia de cambio a apps bancarias durante una llamada, retrasos anómalos y patrones de retención de atención."
-      },
-      {
-        name: "Consenso PHANTOM",
-        tech: "Motor de votación por consenso",
-        desc: "Toma la decisión final ponderada a partir de las salidas de las tres capas. Ante una posible ataque, bloquea la interfaz, avisa al usuario y envía una notificación instantánea a un contacto de confianza."
-      }
+    {
+      name: "Análisis acústico",
+      tech: "RMS / Zero-Crossing / Energy",
+      desc: "Análisis acústico de la llamada en tiempo real en el dispositivo: análisis de la voz y las entonaciones, el ritmo del habla, las pausas y los patrones energéticos de la conversación. Sin envío de datos al servidor."
+    }
+    ,
+    {
+      name: "Clasificación ML (rubert-tiny2)",
+      tech: "ONNX Runtime / INT8 / ~29 MB",
+      desc: "Se utiliza una red neuronal ligera rubert-tiny2 (ONNX INT8, ~29 MB) para analizar texto y metadatos en el dispositivo. Las actualizaciones de modelos y bases de datos llegan con la actualización de la app; no se requiere internet para el uso diario, solo para instalar nuevas versiones."
+    }
+    ,
+    {
+      name: "Reconocimiento de voz y semántica (ASR) — En desarrollo (Roadmap)",
+      tech: "ASR — Roadmap",
+      desc: "Reconocimiento de voz (ASR) y análisis semántico del contenido de la conversación: detección de frases clave, indicios de presión psicológica y exigencias de acciones urgentes. La siguiente etapa de la evolución de PHANTOM."
+    }
+    ,
+    {
+      name: "Consenso PHANTOM",
+      tech: "Consensus Voting Engine",
+      desc: "Toma la decisión final ponderada a partir de las salidas de las capas de análisis. Si se sospecha un ataque, bloquea la interfaz, avisa al usuario y envía una notificación instantánea a un contacto de confianza."
+    }
     ],
     usp: [
       {
         title: "IA local (en el dispositivo)",
-        desc: "La red neuronal rubert-tiny2 está cuantizada y optimizada para procesadores móviles. Con 28.4 MB, puede mantener todos sus pesos en la RAM del teléfono, logrando inferencia en microsegundos."
+        desc: "La red neuronal ligera rubert-tiny2 (ONNX INT8, ~29 MB) analiza texto y metadatos directamente en el dispositivo. Los modelos y las bases de datos se actualizan con la app; internet solo se necesita para instalar nuevas versiones."
       },
       {
         title: "Autonomía total",
@@ -1155,39 +1164,39 @@ const es: Translations = {
     ],
     sevenLayers: [
       {
-        name: "Heurística rápida (HeuristicsLayer — Capa de heurísticas)",
-        tech: "Regex & Signature Maps",
-        desc: "Un filtro instantáneo y ligero para flujos de datos entrantes. Bloquea redes de spam conocidas, enlaces de phishing y patrones de automatización maliciosos sin agotar la batería."
+        name: "Análisis acústico (Activo)",
+        tech: "RMS / Zero-Crossing / Silence / Energy",
+        desc: "Análisis acústico de la llamada en tiempo real en el dispositivo: análisis de la voz y las entonaciones, el ritmo del habla, las pausas y los patrones energéticos de la conversación. Sin envío de datos al servidor."
       },
       {
-        name: "Clasificación neuronal (BertPhantomClassifier — Clasificador BertPhantom)",
-        tech: "ONNX Runtime / 28.4 MB Local Model",
-        desc: "Una red neuronal rubert-tiny2 comprimida que analiza transcripciones de llamadas y textos en tiempo real. Detecta guiones conversacionales ocultos, manipulación y roles como 'cuenta segura'."
+        name: "Clasificación ML (rubert-tiny2)",
+        tech: "ONNX Runtime / INT8 / ~29 MB",
+        desc: "Se utiliza una red neuronal ligera rubert-tiny2 (ONNX INT8, ~29 MB) para analizar texto y metadatos en el dispositivo. Las actualizaciones de modelos y bases de datos llegan con la actualización de la app; no se requiere internet para el uso diario, solo para instalar nuevas versiones."
       },
       {
-        name: "Ingeniería social (Social Eng. Layer — Capa de ingeniería social)",
-        tech: "DeGenome (18 Primitives)",
-        desc: "Identifica tácticas de manipulación utilizando la taxonomía DeGenome de 18 primitivas, descubriendo urgencia artificial, discursos de presión, desencadenantes de miedo y solicitudes de aislamiento."
+        name: "Reconocimiento de voz (ASR) — En desarrollo (Roadmap)",
+        tech: "ASR — Roadmap",
+        desc: "Reconocimiento de voz (ASR) de la llamada entrante. La siguiente etapa de la evolución de PHANTOM."
       },
       {
-        name: "Auditoría de comportamiento (Behavioral Layer — Capa de comportamiento)",
-        tech: "Context-Aware State Machine",
-        desc: "Realiza un seguimiento continuo de las interacciones del usuario en vivo: cadencia de escritura, retrasos en el procesamiento cognitivo y frecuencias de cambio entre aplicaciones financieras y de llamadas."
+        name: "Análisis semántico del contenido — En desarrollo (Roadmap)",
+        tech: "DeGenome (18 Primitives) — Roadmap",
+        desc: "Análisis semántico del contenido de la conversación: detección de frases clave, indicios de presión psicológica y exigencias de acciones urgentes. La siguiente etapa de la evolución de PHANTOM."
       },
       {
-        name: "Verificación de reputación (Reputation Layer — Capa de reputación)",
-        tech: "PCD Identity Profiles",
-        desc: "Verifica las características del llamador con perfiles de identidad corporativa (PCD), identificando cuando los patrones de habla y las acciones no coinciden con los protocolos oficiales."
+        name: "Verificación de reputación (PCD) — En desarrollo (Roadmap)",
+        tech: "PCD Identity Profiles — Roadmap",
+        desc: "Compara la forma de hablar del interlocutor con los perfiles de identidad corporativa (PCD). En desarrollo (Roadmap)."
+      },
+      {
+        name: "Comprobación de números en lista negra — En desarrollo (Roadmap)",
+        tech: "Local Blacklist DB — Roadmap",
+        desc: "Verificación local rápida del número contra una base de números sospechosos y listas negras. En desarrollo (Roadmap)."
       },
       {
         name: "Resolución de consenso (Consensus Agent — Agente de consenso)",
         tech: "Consensus Voting Engine",
         desc: "Un motor de consenso JudgeAgent que agrega marcadores de riesgo de todos los niveles. Al identificar umbrales de amenaza, bloquea la ejecución, alerta al usuario y activa contactos de confianza."
-      },
-      {
-        name: "Memoria inmune (Immune Memory — Memoria inmune)",
-        tech: "Adaptive Incident Shield",
-        desc: "Repositorio local seguro de ataques. Permite el ajuste fino en el dispositivo sin fugas basado en amenazas mitigadas recientemente para manejar futuras variaciones de ataques."
       }
     ],
     btnSimplified: "Vista simplificada",
@@ -1450,7 +1459,7 @@ const es: Translations = {
     subtitle: "Obtenga más información sobre la IA local y la base científica de TrustNode",
     card1Title: "Tecnología de cúpula",
     card1Badge: "SISTEMA PHANTOM",
-    card1Desc: "Desglose técnico del domo de seguridad de 7 capas PHANTOM 2.0 y el asistente de voz inteligente KIRA que se ejecuta completamente en el dispositivo.",
+    card1Desc: "Desglose técnico del domo de seguridad PHANTOM 2.0: el análisis acústico y la clasificación ML rubert-tiny2 funcionan en el dispositivo, y las capas restantes están en desarrollo (Roadmap).",
     card1Btn: "Ver Tecnología →",
     card2Title: "Eficacia Demostrada",
     card2Badge: "VALIDACIÓN Y PATENTES",
@@ -1481,7 +1490,7 @@ const es: Translations = {
     feature1Title: "Protección 100% local",
     feature1Desc: "Todas las verificaciones de llamadas y mensajes se realizan en su dispositivo: sus datos nunca salen del teléfono.",
     feature2Title: "IA contra estafadores",
-    feature2Desc: "El modelo neuronal basado en rubert-tiny2 detecta escenarios de ingeniería social en tiempo real.",
+    feature2Desc: "La red neuronal ligera rubert-tiny2 (ONNX INT8, ~29 MB) analiza texto y metadatos en el dispositivo sin conexión a internet.",
     feature3Title: "Gratis y seguro",
     feature3Desc: "La aplicación está disponible gratis en RuStore. Instálela y proteja a sus seres queridos.",
     note: "Disponible para dispositivos Android. Solo se necesita internet para la descarga inicial.",
@@ -1639,31 +1648,34 @@ const zh: Translations = {
     subtitle: "多层安全穹顶完全部署在你的手机本地。个人数据不会有一个字节离开设备。",
     layersHeading: "设备防护层级",
     layers: [
-      {
-        name: "快速启发式检测",
-        tech: "正则表达式与特征库",
-        desc: "对传入数据流的首道即时过滤。可拦截已知垃圾信息网络的模式、可疑链接和已知诈骗脚本特征，且不会消耗额外电量。"
-      },
-      {
-        name: "机器学习分类（rubert-tiny2）",
-        tech: "ONNX Runtime / 28.4 MB 本地模型",
-        desc: "一个经过压缩的神经网络实时分析通话或消息文本的语义，可识别隐藏的操纵手法、角色扮演话术（如“安全账户”“亲人遇险”）以及心理施压。"
-      },
-      {
-        name: "行为分析",
-        tech: "情境感知状态机",
-        desc: "追踪交互动态：打字速度、通话过程中切换到银行应用的频率、异常延迟以及注意力控制模式。"
-      },
-      {
-        name: "PHANTOM 共识引擎",
-        tech: "共识投票引擎",
-        desc: "根据三个层级的输出结果做出最终的加权判断。一旦怀疑存在攻击，即锁定界面、警示用户，并向可信联系人发送即时推送通知。"
-      }
+    {
+      name: "声学分析",
+      tech: "RMS / Zero-Crossing / Energy",
+      desc: "在设备端实时进行通话声学分析：分析声音与语调、语速、停顿以及对话的能量模式。数据绝不发送至服务器。"
+    }
+    ,
+    {
+      name: "ML 分类 (rubert-tiny2)",
+      tech: "ONNX Runtime / INT8 / ~29 MB",
+      desc: "使用轻量级神经网络 rubert-tiny2（ONNX INT8，约 29 MB）在设备端分析文本和元数据。模型与数据库随应用更新一起发布——日常使用无需联网，仅在安装新版本时需要。"
+    }
+    ,
+    {
+      name: "语音识别与语义分析 (ASR) — 开发中 (Roadmap)",
+      tech: "ASR — Roadmap",
+      desc: "语音识别（ASR）与对话内容语义分析：检测关键触发短语、心理施压迹象以及要求紧急操作的指令。PHANTOM 进化的下一阶段。"
+    }
+    ,
+    {
+      name: "PHANTOM 共识",
+      tech: "Consensus Voting Engine",
+      desc: "综合各分析层的输出做出最终加权决策。一旦怀疑遭到攻击，即锁定界面、警示用户，并向可信联系人发送即时推送通知。"
+    }
     ],
     usp: [
       {
         title: "本地 AI（设备端运行）",
-        desc: "rubert-tiny2 神经网络经过量化并针对移动处理器优化，体积仅 28.4 MB，可将全部权重保留在手机内存中，实现微秒级推理速度。"
+        desc: "轻量级神经网络 rubert-tiny2（ONNX INT8，约 29 MB）直接在设备端分析文本和元数据。模型与数据库随应用更新，仅在安装新版本时需要联网。"
       },
       {
         title: "完全自主运行",
@@ -1676,39 +1688,39 @@ const zh: Translations = {
     ],
     sevenLayers: [
       {
-        name: "快速启发式分析 (HeuristicsLayer — 启发式层)",
-        tech: "Regex & Signature Maps",
-        desc: "对输入数据流进行即时、轻量级的过滤。在不消耗电池电量的情况下，阻止已知的垃圾邮件网络、钓鱼链接和恶意自动化模式。"
+        name: "声学分析（已上线）",
+        tech: "RMS / Zero-Crossing / Silence / Energy",
+        desc: "在设备端实时进行通话声学分析：分析声音与语调、语速、停顿以及对话的能量模式。数据绝不发送至服务器。"
       },
       {
-        name: "神经网络分类 (BertPhantomClassifier — BertPhantom 分类器)",
-        tech: "ONNX Runtime / 28.4 MB Local Model",
-        desc: "一个压缩的 rubert-tiny2 神经网络，实时分析通话记录和文本。检测隐藏的对话脚本、操纵行为和诸如“安全账户”之类扮演的角色。"
+        name: "ML 分类 (rubert-tiny2)",
+        tech: "ONNX Runtime / INT8 / ~29 MB",
+        desc: "使用轻量级神经网络 rubert-tiny2（ONNX INT8，约 29 MB）在设备端分析文本和元数据。模型与数据库随应用更新一起发布——日常使用无需联网，仅在安装新版本时需要。"
       },
       {
-        name: "社会工程学分析 (Social Eng. Layer — 社会工程层)",
-        tech: "DeGenome (18基元)",
-        desc: "使用包含18个基元的 DeGenome 分类法识别操纵策略，揭示人为制造的紧迫感、施压言论、恐惧触发因素和孤立请求。"
+        name: "语音识别 (ASR) — 开发中 (Roadmap)",
+        tech: "ASR — Roadmap",
+        desc: "对来电进行语音识别（ASR）。PHANTOM 进化的下一阶段。"
       },
       {
-        name: "行为审计 (Behavioral Layer — 行为层)",
-        tech: "Context-Aware State Machine",
-        desc: "持续跟踪用户的实时交互：打字节奏、认知处理延迟以及通话期间在金融应用和通话应用之间的切换频率。"
+        name: "对话内容语义分析 — 开发中 (Roadmap)",
+        tech: "DeGenome (18基元) — Roadmap",
+        desc: "对话内容语义分析：检测关键触发短语、心理施压迹象以及要求紧急操作的指令。PHANTOM 进化的下一阶段。"
       },
       {
-        name: "信誉验证 (Reputation Layer — 信誉层)",
-        tech: "PCD Identity Profiles",
-        desc: "将呼叫者特征与企业身份配置文件 (PCD) 进行交叉比对，识别言语模式和呼叫者行为与官方协议不匹配的情况。"
+        name: "信誉验证 (PCD) — 开发中 (Roadmap)",
+        tech: "PCD Identity Profiles — Roadmap",
+        desc: "将对方说话方式与企业身份配置文件 (PCD) 进行比对。开发中（Roadmap）。"
+      },
+      {
+        name: "号码黑名单核验 — 开发中 (Roadmap)",
+        tech: "Local Blacklist DB — Roadmap",
+        desc: "在设备端快速将号码与可疑号码库及黑名单进行比对。开发中（Roadmap）。"
       },
       {
         name: "共识决策 (Consensus Agent — 共识代理)",
         tech: "Consensus Voting Engine",
         desc: "一个 JudgeAgent 共识引擎，汇总来自所有层级的风险标记。一旦确定达到威胁阈值，它将锁定执行，警告用户并触发受信联系人。"
-      },
-      {
-        name: "免疫记忆 (Immune Memory — 免疫记忆)",
-        tech: "Adaptive Incident Shield",
-        desc: "本地安全的攻击存储库。允许基于最近缓解的威胁进行设备端零泄露安全微调，以应对未来的攻击变体。"
       }
     ],
     btnSimplified: "简化视图",
@@ -1971,7 +1983,7 @@ const zh: Translations = {
     subtitle: "深入了解 TrustNode 的本地人工智能技术与科研基础",
     card1Title: "穹顶防护技术",
     card1Badge: "PHANTOM 防护体系",
-    card1Desc: "PHANTOM 2.0 七层防护罩的技术细节以及完全在设备端运行的 KIRA 智能语音助手。",
+    card1Desc: "PHANTOM 2.0 防护穹顶的技术解析：声学分析与 rubert-tiny2 ML 分类在设备端运行，其余层处于开发阶段（Roadmap）。",
     card1Btn: "技术细节 →",
     card2Title: "科研验证实力",
     card2Badge: "专利与学术认可",
@@ -2002,7 +2014,7 @@ const zh: Translations = {
     feature1Title: "100% 本地保护",
     feature1Desc: "所有通话和消息检测均在设备上完成——您的数据绝不会离开手机。",
     feature2Title: "AI 对抗诈骗",
-    feature2Desc: "基于 rubert-tiny2 的神经网络模型实时识别社会工程学骗局。",
+    feature2Desc: "轻量级神经网络 rubert-tiny2（ONNX INT8，约 29 MB）在设备端离线分析文本和元数据。",
     feature3Title: "免费且安全",
     feature3Desc: "应用在 RuStore 上免费提供。立即安装，保护您的家人免受诈骗。",
     note: "适用于安卓设备。仅首次下载时需要联网。",
@@ -2160,31 +2172,34 @@ const tr: Translations = {
     subtitle: "Akıllı telefonunuzda yerel olarak konuşlandırılmış çok katmanlı bir kubbe. Tek bir bayt kişisel veri bile cihazınızdan ayrılmaz.",
     layersHeading: "Cihaz koruma katmanları",
     layers: [
-      {
-        name: "Hızlı sezgisel analiz (Heuristics — Sezgisel analiz)",
-        tech: "Regex & İmza Haritaları",
-        desc: "Gelen akışlar için ilk anlık filtre. Pil ömrünü tüketmeden bilinen spam ağı kalıplarını, şüpheli bağlantıları ve bilinen dolandırıcılık senaryosu imzalarını engeller."
-      },
-      {
-        name: "ML Sınıflandırma (rubert-tiny2)",
-        tech: "ONNX Çalışma Zamanı / 28.4 MB Yerel Model",
-        desc: "Sıkıştırılmış bir yapay sinir ağı, bir arama veya mesaj metninin semantiğini gerçek zamanlı analiz eder. Gizli manipülasyonları, rol yapma senaryolarını (\"güvenli hesap\", \"zor durumdaki akraba\") ve psikolojik baskıyı algılar."
-      },
-      {
-        name: "Davranışsal analiz",
-        tech: "Bağlama Duyarlı Durum Makinesi",
-        desc: "Etkileşim dinamiklerini izler: yazma hızı, arama sırasında ekranın bankacılık uygulamalarına ne sıklıkta geçiş yaptığı, anormal gecikmeler ve dikkat tutma kalıpları."
-      },
-      {
-        name: "PHANTOM konsensüsü",
-        tech: "Konsensüs Oylama Motoru",
-        desc: "Her üç katmanın çıktılarına göre nihai ağırlıklı kararı verir. Bir saldırıdan şüphelenilirse arayüzü kilitler, kullanıcıyı uyarır ve güvenilen bir kişiye anlık bildirim gönderir."
-      }
+    {
+      name: "Akustik Analiz",
+      tech: "RMS / Zero-Crossing / Energy",
+      desc: "Aramanın cihaz üzerinde gerçek zamanlı akustik analizi: ses ve tonlama, konuşma temposu, duraklamalar ve konuşmanın enerji kalıpları. Sunucuya hiçbir veri gönderilmez."
+    }
+    ,
+    {
+      name: "ML Sınıflandırma (rubert-tiny2)",
+      tech: "ONNX Runtime / INT8 / ~29 MB",
+      desc: "Metin ve meta verileri cihaz üzerinde analiz etmek için hafif bir rubert-tiny2 sinir ağı (ONNX INT8, ~29 MB) kullanılır. Model ve veritabanı güncellemeleri uygulama güncellemesiyle gelir; günlük kullanımda internet gerekmez, yalnızca yeni sürüm kurulumunda gerekir."
+    }
+    ,
+    {
+      name: "Konuşma Tanıma ve Semantik (ASR) — Geliştiriliyor (Roadmap)",
+      tech: "ASR — Roadmap",
+      desc: "Konuşma tanıma (ASR) ve konuşma içeriğinin semantik analizi: anahtar tetikleyici ifadelerin, psikolojik baskı belirtilerinin ve acil eylem taleplerinin tespiti. PHANTOM evriminin bir sonraki aşaması."
+    }
+    ,
+    {
+      name: "PHANTOM Konsensüsü",
+      tech: "Consensus Voting Engine",
+      desc: "Analiz katmanlarının çıktılarına göre nihai ağırlıklı kararı verir. Saldırıdan şüphelenilirse arayüzü kilitler, kullanıcıyı uyarır ve güvenilir bir kişiye anlık bildirim gönderir."
+    }
     ],
     usp: [
       {
         title: "Yerel Yapay Zeka (cihazda)",
-        desc: "rubert-tiny2 yapay sinir ağı, mobil işlemciler için kuantize edilmiş ve optimize edilmiştir. 28.4 MB boyutu sayesinde tüm ağırlıklarını akıllı telefonunuzun RAM'inde saklayarak mikrosaniyeler içinde çıkarım sağlar."
+        desc: "Hafif rubert-tiny2 sinir ağı (ONNX INT8, ~29 MB) metin ve meta verileri doğrudan cihaz üzerinde analiz eder. Modeller ve veritabanları uygulamayla birlikte güncellenir; internet yalnızca yeni sürüm kurulumunda gerekir."
       },
       {
         title: "Tamamen otonom",
@@ -2197,39 +2212,39 @@ const tr: Translations = {
     ],
     sevenLayers: [
       {
-        name: "Hızlı Sezgisel Analiz (HeuristicsLayer — Sezgisel Katman)",
-        tech: "Regex & Signature Maps",
-        desc: "Gelen veri akışları için anında, hafif bir filtre. Pil gücünü tüketmeden bilinen spam ağlarını, kimlik avı bağlantılarını ve kötü amaçlı otomasyon kalıplarını engeller."
+        name: "Akustik Analiz (Aktif)",
+        tech: "RMS / Zero-Crossing / Silence / Energy",
+        desc: "Aramanın cihaz üzerinde gerçek zamanlı akustik analizi: ses ve tonlama, konuşma temposu, duraklamalar ve konuşmanın enerji kalıpları. Sunucuya hiçbir veri gönderilmez."
       },
       {
-        name: "Sinirsel Sınıflandırma (BertPhantomClassifier — BertPhantom Sınıflandırıcı)",
-        tech: "ONNX Runtime / 28.4 MB Local Model",
-        desc: "Yerel gerçek zamanlı multimodal analiz (metin, ses, ekran davranışı ve ağ trafiği). Cihaz içi rubert-tiny2 sinir ağı, mutabakat oylama algoritmalarından ayrı olarak kesinlikle çevrimdışı çalışır."
+        name: "ML Sınıflandırma (rubert-tiny2)",
+        tech: "ONNX Runtime / INT8 / ~29 MB",
+        desc: "Metin ve meta verileri cihaz üzerinde analiz etmek için hafif bir rubert-tiny2 sinir ağı (ONNX INT8, ~29 MB) kullanılır. Model ve veritabanı güncellemeleri uygulama güncellemesiyle gelir; günlük kullanımda internet gerekmez, yalnızca yeni sürüm kurulumunda gerekir."
       },
       {
-        name: "Sosyal Mühendislik (Social Eng. Layer — Sosyal Mühendislik Katmanı)",
-        tech: "DeGenome (18 Primitives)",
-        desc: "18 ilkel öğeden oluşan DeGenome taksonomisini kullanarak manipülasyon taktiklerini tanımlar; yapay aciliyet, baskılı konuşma, korku tetikleyicileri ve izole etme taleplerini açığa çıkarır."
+        name: "Konuşma Tanıma (ASR) — Geliştiriliyor (Roadmap)",
+        tech: "ASR — Roadmap",
+        desc: "Gelen aramanın konuşma tanıması (ASR). PHANTOM evriminin bir sonraki aşaması."
       },
       {
-        name: "Davranışsal Denetim (Behavioral Layer — Davranış Katmanı)",
-        tech: "Context-Aware State Machine",
-        desc: "Canlı kullanıcı etkileşimlerini sürekli olarak izler: yazma ritmi, bilişsel işlem gecikmeleri ve canlı bir arama sırasında finansal uygulamalar ile arama uygulamaları arasındaki geçiş sıklıkları."
+        name: "İçerik Semantik Analizi — Geliştiriliyor (Roadmap)",
+        tech: "DeGenome (18 Primitives) — Roadmap",
+        desc: "Konuşma içeriğinin semantik analizi: anahtar tetikleyici ifadelerin, psikolojik baskı belirtilerinin ve acil eylem taleplerinin tespiti. PHANTOM evriminin bir sonraki aşaması."
       },
       {
-        name: "İtibar Doğrulama (Reputation Layer — İtibar Katmanı)",
-        tech: "PCD Identity Profiles",
-        desc: "Arayan kişinin özelliklerini Kurumsal kimlik profilleriyle (PCD) çapraz kontrol ederek konuşma kalıplarının ve arayan eylemlerinin resmi protokollerle eşleşmediği durumları belirler."
+        name: "İtibar Doğrulama (PCD) — Geliştiriliyor (Roadmap)",
+        tech: "PCD Identity Profiles — Roadmap",
+        desc: "Arayanın konuşma tarzını kurumsal kimlik profilleriyle (PCD) karşılaştırır. Geliştiriliyor (Roadmap)."
+      },
+      {
+        name: "Numara Kara Liste Kontrolü — Geliştiriliyor (Roadmap)",
+        tech: "Local Blacklist DB — Roadmap",
+        desc: "Numaranın şüpheli numaralar veritabanına ve kara listelere karşı hızlı yerel kontrolü. Geliştiriliyor (Roadmap)."
       },
       {
         name: "Mutabakat Kararı (Consensus Agent — Mutabakat Aracısı)",
         tech: "Consensus Voting Engine",
         desc: "Sinir ağlarından bağımsız, özel bir mutabakat oylama algoritması (JudgeAgent). Yürütmeleri kilitlemek ve uyarılar göndermek için tüm seviyelerden gelen risk belirteçlerini toplar."
-      },
-      {
-        name: "Bağışıklık Belleği (Immune Memory — Bağışıklık Belleği)",
-        tech: "Adaptive Incident Shield",
-        desc: "Yerelleştirilmiş güvenli saldırı deposu. Gelecekteki saldırı varyasyonlarıyla başa çıkmak için son zamanlarda azaltılan tehditlere dayanarak güvenlik filtrelerinin cihaz içi, sıfır sızıntılı hassas ayarlanmasını sağlar."
       }
     ],
     btnSimplified: "Basitleştirilmiş Görünüm",
@@ -2492,7 +2507,7 @@ const tr: Translations = {
     subtitle: "TrustNode yerel yapay zeka teknolojileri ve bilimsel temelleri hakkında daha fazla bilgi edinin",
     card1Title: "Kubbe Teknolojisi",
     card1Badge: "PHANTOM SİSTEMİ",
-    card1Desc: "7 katmanlı PHANTOM 2.0 güvenlik kubbesinin teknik detayları ve tamamen cihaz üzerinde çalışan akıllı sesli asistan KIRA.",
+    card1Desc: "PHANTOM 2.0 güvenlik kubbesinin teknik analizi: akustik analiz ve rubert-tiny2 ML sınıflandırma cihazda çalışır, kalan katmanlar geliştirme aşamasındadır (Roadmap).",
     card1Btn: "Teknolojiyi İncele →",
     card2Title: "Kanıtlanmış Başarı",
     card2Badge: "PATENT & ÖDÜLLER",
@@ -2523,7 +2538,7 @@ const tr: Translations = {
     feature1Title: "%100 Cihaz İçi Koruma",
     feature1Desc: "Tüm arama ve mesaj kontrolleri cihazınızda çalışır — verileriniz telefonunuzdan asla çıkmaz.",
     feature2Title: "Dolandırıcılara Karşı Yapay Zeka",
-    feature2Desc: "rubert-tiny2 tabanlı sinir ağı modeli sosyal mühendislik senaryolarını gerçek zamanlı algılar.",
+    feature2Desc: "Hafif rubert-tiny2 sinir ağı (ONNX INT8, ~29 MB) internet bağlantısı olmadan metin ve meta verileri cihaz üzerinde analiz eder.",
     feature3Title: "Ücretsiz ve Güvenli",
     feature3Desc: "Uygulama RuStore'da ücretsiz olarak mevcuttur. Kurun ve sevdiklerinizi dolandırıcılardan koruyun.",
     note: "Android cihazlar için kullanılabilir. İnternet yalnızca ilk indirmede gereklidir.",
@@ -2681,31 +2696,34 @@ const hi: Translations = {
     subtitle: "आपके स्मार्टफ़ोन पर लोकली तैनात एक मल्टी-लेयर डोम। निजी डेटा का एक भी बाइट डिवाइस से बाहर नहीं जाता।",
     layersHeading: "डिवाइस सुरक्षा की परतें",
     layers: [
-      {
-        name: "तेज़ हेयुरिस्टिक्स",
-        tech: "रेजेक्स और सिग्नेचर मैप्स",
-        desc: "इनकमिंग स्ट्रीम्स के लिए पहला तुरंत फ़िल्टर। बैटरी खर्च किए बिना जाने-पहचाने स्पैम नेटवर्क पैटर्न, संदिग्ध लिंक और घोटाले वाली स्क्रिप्ट की सिग्नेचर को ब्लॉक करता है।"
-      },
-      {
-        name: "ML वर्गीकरण (rubert-tiny2)",
-        tech: "ONNX Runtime / 28.4 MB लोकल मॉडल",
-        desc: "एक कंप्रेस्ड न्यूरल नेटवर्क कॉल या मैसेज टेक्स्ट के अर्थ का रीयल-टाइम विश्लेषण करता है। यह छिपी हुई हेरफेर, भूमिका-आधारित परिदृश्य (\"सेफ़ अकाउंट\", \"रिश्तेदार मुसीबत में\") और मनोवैज्ञानिक दबाव को पहचानता है।"
-      },
-      {
-        name: "व्यवहार विश्लेषण",
-        tech: "कॉन्टेक्स्ट-अवेयर स्टेट मशीन",
-        desc: "इंटरैक्शन की गतिशीलता को ट्रैक करता है: टाइपिंग स्पीड, कॉल के दौरान बैंकिंग ऐप्स पर स्विच करने की आवृत्ति, असामान्य देरी और ध्यान बनाए रखने के पैटर्न।"
-      },
-      {
-        name: "PHANTOM कंसेंसस",
-        tech: "कंसेंसस वोटिंग इंजन",
-        desc: "तीनों परतों के परिणामों के आधार पर अंतिम भारांकित निर्णय लेता है। हमले की आशंका होने पर इंटरफ़ेस को लॉक करता है, यूज़र को चेतावनी देता है और किसी विश्वसनीय संपर्क को तुरंत पुश नोटिफ़िकेशन भेजता है।"
-      }
+    {
+      name: "ध्वनिक विश्लेषण",
+      tech: "RMS / Zero-Crossing / Energy",
+      desc: "कॉल का डिवाइस पर रीयल-टाइम ध्वनिक विश्लेषण: आवाज़ और स्वर-उतार-चढ़ाव, भाषण की गति, ठहराव और बातचीत के ऊर्जा पैटर्न का विश्लेषण। सर्वर पर कोई डेटा नहीं भेजा जाता।"
+    }
+    ,
+    {
+      name: "ML वर्गीकरण (rubert-tiny2)",
+      tech: "ONNX Runtime / INT8 / ~29 MB",
+      desc: "डिवाइस पर टेक्स्ट और मेटाडेटा का विश्लेषण करने के लिए हल्के rubert-tiny2 न्यूरल नेटवर्क (ONNX INT8, ~29 MB) का उपयोग किया जाता है। मॉडल और डेटाबेस अपडेट ऐप अपडेट के साथ आते हैं; दैनिक उपयोग के लिए इंटरनेट की आवश्यकता नहीं होती, केवल नए संस्करण स्थापित करने के लिए होती है।"
+    }
+    ,
+    {
+      name: "वाक् पहचान और सिमेंटिक (ASR) — विकासाधीन (Roadmap)",
+      tech: "ASR — Roadmap",
+      desc: "वाक् पहचान (ASR) और बातचीत की सामग्री का सिमेंटिक विश्लेषण: मुख्य ट्रिगर वाक्यांशों, मनोवैज्ञानिक दबाव के संकेतों और तत्काल कार्रवाई की मांगों का पता लगाना। PHANTOM विकास का अगला चरण।"
+    }
+    ,
+    {
+      name: "PHANTOM सर्वसम्मति",
+      tech: "Consensus Voting Engine",
+      desc: "विश्लेषण परतों के आउटपुट के आधार पर अंतिम भारित निर्णय लेता है। हमले का संदेह होने पर, यह इंटरफ़ेस को लॉक करता है, उपयोगकर्ता को चेतावनी देता है, और विश्वसनीय संपर्क को तुरंत पुश भेजता है।"
+    }
     ],
     usp: [
       {
         title: "लोकल AI (ऑन-डिवाइस)",
-        desc: "rubert-tiny2 न्यूरल नेटवर्क को क्वांटाइज़ करके मोबाइल प्रोसेसर के लिए ऑप्टिमाइज़ किया गया है। सिर्फ़ 28.4 MB का यह मॉडल अपने सभी वेट्स फ़ोन की RAM में रख सकता है, जिससे माइक्रोसेकंड में इनफ़रेंस मिलता है।"
+        desc: "हल्का rubert-tiny2 न्यूरल नेटवर्क (ONNX INT8, ~29 MB) टेक्स्ट और मेटाडेटा का सीधे डिवाइस पर विश्लेषण करता है। मॉडल और डेटाबेस ऐप के साथ अपडेट होते हैं; इंटरनेट केवल नए संस्करण स्थापित करने के लिए आवश्यक है।"
       },
       {
         title: "पूर्ण स्वायत्तता",
@@ -2718,39 +2736,39 @@ const hi: Translations = {
     ],
     sevenLayers: [
       {
-        name: "त्वरित हेयुरिस्टिक्स (HeuristicsLayer — हेयुरिस्टिक्स परत)",
-        tech: "Regex & Signature Maps",
-        desc: "आने वाले डेटा स्ट्रीम के लिए एक त्वरित, हल्का फ़िल्टर। बिना बैटरी खर्च किए ज्ञात स्पैम-नेटवर्क, फ़िशिंग लिंक और दुर्भावनापूर्ण ऑटोमेशन पैटर्न को रोकता है।"
+        name: "ध्वनिक विश्लेषण (लाइव)",
+        tech: "RMS / Zero-Crossing / Silence / Energy",
+        desc: "कॉल का डिवाइस पर रीयल-टाइम ध्वनिक विश्लेषण: आवाज़ और स्वर-उतार-चढ़ाव, भाषण की गति, ठहराव और बातचीत के ऊर्जा पैटर्न का विश्लेषण। सर्वर पर कोई डेटा नहीं भेजा जाता।"
       },
       {
-        name: "न्यूरल वर्गीकरण (BertPhantomClassifier — BertPhantom वर्गीकरणकर्ता)",
-        tech: "ONNX Runtime / 28.4 MB Local Model",
-        desc: "एक संपीड़ित rubert-tiny2 न्यूरल नेटवर्क जो वास्तविक समय में कॉल ट्रांसक्रिप्ट और टेक्स्ट का विश्लेषण करता है। छिपी हुई बातचीत की स्क्रिप्ट, हेरफेर और 'सुरक्षित खाता' जैसी भूमिकाओं का पता लगाता है।"
+        name: "ML वर्गीकरण (rubert-tiny2)",
+        tech: "ONNX Runtime / INT8 / ~29 MB",
+        desc: "डिवाइस पर टेक्स्ट और मेटाडेटा का विश्लेषण करने के लिए हल्के rubert-tiny2 न्यूरल नेटवर्क (ONNX INT8, ~29 MB) का उपयोग किया जाता है। मॉडल और डेटाबेस अपडेट ऐप अपडेट के साथ आते हैं; दैनिक उपयोग के लिए इंटरनेट की आवश्यकता नहीं होती, केवल नए संस्करण स्थापित करने के लिए होती है।"
       },
       {
-        name: "सोशल इंजीनियरिंग (Social Eng. Layer — सोशल इंजीनियरिंग परत)",
-        tech: "DeGenome (18 प्रिमिटिव्स)",
-        desc: "18 प्रिमिटिव्स के DeGenome वर्गीकरण का उपयोग करके हेरफेर की रणनीति की पहचान करता है, कृत्रिम तात्कालिकता, दबाव वाले भाषण, डर के ट्रिगर्स और अलगाव के अनुरोधों को उजागर करता है।"
+        name: "वाक् पहचान (ASR) — विकासाधीन (Roadmap)",
+        tech: "ASR — Roadmap",
+        desc: "आने वाली कॉल की वाक् पहचान (ASR)। PHANTOM विकास का अगला चरण।"
       },
       {
-        name: "व्यवहार ऑडिटिंग (Behavioral Layer — व्यवहार परत)",
-        tech: "Context-Aware State Machine",
-        desc: "लाइव उपयोगकर्ता इंटरैक्शन को लगातार ट्रैक करता है: टाइपिंग की गति, संज्ञानात्मक प्रसंस्करण में देरी, और लाइव कॉल के दौरान वित्तीय और कॉलिंग ऐप के बीच स्विच करने की आवृत्ति।"
+        name: "सामग्री का सिमेंटिक विश्लेषण — विकासाधीन (Roadmap)",
+        tech: "DeGenome (18 प्रिमिटिव्स) — Roadmap",
+        desc: "बातचीत की सामग्री का सिमेंटिक विश्लेषण: मुख्य ट्रिगर वाक्यांशों, मनोवैज्ञानिक दबाव के संकेतों और तत्काल कार्रवाई की मांगों का पता लगाना। PHANTOM विकास का अगला चरण।"
       },
       {
-        name: "प्रतिष्ठा सत्यापन (Reputation Layer — प्रतिष्ठा परत)",
-        tech: "PCD Identity Profiles",
-        desc: "कॉलर के लक्षणों को कॉर्पोरेट पहचान प्रोफाइल (PCD) के साथ क्रॉस-चेक करता है, यह पहचानता है कि भाषण पैटर्न और कॉलर की कार्रवाई आधिकारिक प्रोटोकॉल से कब मेल नहीं खाती है।"
+        name: "प्रतिष्ठा सत्यापन (PCD) — विकासाधीन (Roadmap)",
+        tech: "PCD Identity Profiles — Roadmap",
+        desc: "कॉलर के बोलने के तरीके की तुलना कॉर्पोरेट पहचान प्रोफाइल (PCD) से करता है। विकासाधीन (Roadmap)।"
       },
       {
-        name: "सर्वसम्मতি समाधान (Consensus Agent — सर्वसम्मति एजेंट)",
+        name: "नंबर ब्लैकलिस्ट जाँच — विकासाधीन (Roadmap)",
+        tech: "Local Blacklist DB — Roadmap",
+        desc: "संदिग्ध नंबरों के डेटाबेस और ब्लैकलिस्ट के विरुद्ध नंबर की त्वरित स्थानीय जाँच। विकासाधीन (Roadmap)।"
+      },
+      {
+        name: "सर्वसम्मति समाधान (Consensus Agent — सर्वसम्मति एजेंट)",
         tech: "Consensus Voting Engine",
         desc: "एक JudgeAgent सर्वसम्मति इंजन जो सभी स्तरों से जोखिम मार्करों को एकत्रित करता है। खतरे की सीमा की पहचान होने पर, यह निष्पादन को लॉक करता, उपयोगकर्ता को सचेत करता है, और विश्वसनीय संपर्कों को ट्रिगर करता है।"
-      },
-      {
-        name: "प्रतिरक्षा मेमोरी (Immune Memory — प्रतिरक्षा मेमोरी)",
-        tech: "Adaptive Incident Shield",
-        desc: "स्थानीय सुरक्षित हमला रिपॉजिटरी। आगामी हमले के रूपों को संभालने के लिए हाल ही में कम किए गए खतरों के आधार पर ऑन-डिवाइस, शून्य-लीकेज सुरक्षा फ़िल्टर के फाइन-ट्यूनिंग को सक्षम बनाता है।"
       }
     ],
     btnSimplified: "सरलीकृत दृश्य",
@@ -3013,7 +3031,7 @@ const hi: Translations = {
     subtitle: "TrustNode की स्थानीय AI तकनीकों and वैज्ञानिक आधार के बारे में अधिक जानें",
     card1Title: "डोम तकनीक",
     card1Badge: "PHANTOM प्रणाली",
-    card1Desc: "7-स्तरीय PHANTOM 2.0 सुरक्षा डोम का तकनीकी विवरण और पूरी तरह से ऑन-डिवाइस चलने वाला इंटेलिजেন্ট वॉयс असिस्टेंट KIRA।",
+    card1Desc: "PHANTOM 2.0 सुरक्षा डोम का तकनीकी विवरण: ध्वनिक विश्लेषण और rubert-tiny2 ML वर्गीकरण डिवाइस पर चलते हैं, शेष परतें विकास में हैं (Roadmap)।",
     card1Btn: "तकनीक जानें →",
     card2Title: "प्रमाणित मान्यता",
     card2Badge: "पेटेंट और पुरस्कार",
@@ -3044,7 +3062,7 @@ const hi: Translations = {
     feature1Title: "100% ऑन-डिवाइस सुरक्षा",
     feature1Desc: "कॉल और संदेशों की सभी जाँचें आपके डिवाइस पर ही चलती हैं — आपका डेटा कभी स्मार्टफोन से बाहर नहीं जाता।",
     feature2Title: "स्कैमर्स के खिलाफ AI",
-    feature2Desc: "rubert-tiny2-आधारित न्यूरल मॉडल सोशल इंजीनियरिंग परिदृश्यों को रीयल टाइम में पहचानता है।",
+    feature2Desc: "हल्का rubert-tiny2 न्यूरल नेटवर्क (ONNX INT8, ~29 MB) इंटरनेट कनेक्शन के बिना टेक्स्ट और मेटाडेटा का डिवाइस पर विश्लेषण करता है।",
     feature3Title: "मुफ्त और सुरक्षित",
     feature3Desc: "ऐप RuStore पर मुफ्त उपलब्ध है। इसे इंस्टॉल करें और अपने प्रियजनों को स्कैमर्स से बचाएं।",
     note: "Android डिवाइस के लिए उपलब्ध। इंटरनेट केवल प्रारंभिक डाउनलोड के लिए आवश्यक है।",
@@ -3202,31 +3220,34 @@ const ar: Translations = {
     subtitle: "قبة متعددة الطبقات تعمل محليًا بالكامل على هاتفك الذكي. لا تغادر أي بايت واحد من بياناتك الشخصية الجهاز.",
     layersHeading: "طبقات حماية الجهاز",
     layers: [
-      {
-        name: "فحص إرشادي سريع",
-        tech: "Regex وخرائط التوقيعات",
-        desc: "المرشح الفوري الأول للتدفقات الواردة. يحظر أنماط شبكات البريد العشوائي المعروفة، والروابط المشبوهة، وتوقيعات نصوص الاحتيال المعروفة دون استهلاك البطارية."
-      },
-      {
-        name: "تصنيف بالتعلم الآلي (rubert-tiny2)",
-        tech: "ONNX Runtime / نموذج محلي 28.4 ميغابايت",
-        desc: "شبكة عصبية مضغوطة تحلل دلالات المكالمة أو نص الرسالة في الوقت الفعلي. تكتشف التلاعب الخفي، وسيناريوهات تمثيل الأدوار (\"حساب آمن\"، \"قريب في ورطة\")، والضغط النفسي."
-      },
-      {
-        name: "تحليل السلوك",
-        tech: "آلة حالة واعية بالسياق",
-        desc: "تتابع ديناميكية التفاعل: سرعة الكتابة، وتكرار التبديل إلى تطبيقات البنوك أثناء المكالمة، والتأخيرات غير الطبيعية، وأنماط شدّ الانتباه."
-      },
-      {
-        name: "إجماع PHANTOM",
-        tech: "محرك التصويت بالإجماع",
-        desc: "يتخذ القرار النهائي الموزون بناءً على مخرجات الطبقات الثلاث. عند الاشتباه بهجوم، يقفل الواجهة، وينبّه المستخدم، ويرسل إشعارًا فوريًا إلى جهة اتصال موثوقة."
-      }
+    {
+      name: "التحليل الصوتي",
+      tech: "RMS / Zero-Crossing / Energy",
+      desc: "تحليل صوتي للمكالمة في الوقت الفعلي على الجهاز: تحليل الصوت ونبراته وإيقاع الكلام والتوقفات وأنماط الطاقة في المحادثة. دون إرسال أي بيانات إلى الخادم."
+    }
+    ,
+    {
+      name: "تصنيف التعلم الآلي (rubert-tiny2)",
+      tech: "ONNX Runtime / INT8 / ~29 MB",
+      desc: "تُستخدم شبكة عصبية خفيفة rubert-tiny2 (ONNX INT8، ~29 م.ب) لتحليل النصوص والبيانات الوصفية على الجهاز. تُنشر تحديثات النماذج وقواعد البيانات مع تحديث التطبيق؛ ولا يلزم الإنترنت للاستخدام اليومي، بل فقط لتثبيت إصدارات جديدة."
+    }
+    ,
+    {
+      name: "التعرف على الكلام والدلالة (ASR) — قيد التطوير (Roadmap)",
+      tech: "ASR — Roadmap",
+      desc: "التعرف على الكلام (ASR) والتحليل الدلالي لمحتوى المحادثة: كشف العبارات المفتاحية المحفزة ومؤشرات الضغط النفسي ومطالب التصرف العاجل. المرحلة التالية من تطور PHANTOM."
+    }
+    ,
+    {
+      name: "إجماع PHANTOM",
+      tech: "Consensus Voting Engine",
+      desc: "يتخذ القرار النهائي المرجّح بناءً على مخرجات طبقات التحليل. عند الاشتباه في هجوم، يقفل الواجهة، وينبه المستخدم، ويرسل إشعارًا فوريًا إلى جهة اتصال موثوقة."
+    }
     ],
     usp: [
       {
         title: "ذكاء اصطناعي محلي (على الجهاز)",
-        desc: "شبكة rubert-tiny2 العصبية مُكمَّمة ومُحسَّنة لمعالجات الهواتف. بحجم 28.4 ميغابايت فقط، يمكنها الاحتفاظ بجميع أوزانها في ذاكرة الهاتف، ما يتيح استدلالاً في أجزاء من الثانية."
+        desc: "الشبكة العصبية الخفيفة rubert-tiny2 (ONNX INT8، ~29 م.ب) تحلل النصوص والبيانات الوصفية مباشرة على الجهاز. تتحدث النماذج وقواعد البيانات مع التطبيق؛ ولا يلزم الإنترنت إلا لتثبيت إصدارات جديدة."
       },
       {
         title: "استقلالية تامة",
@@ -3239,39 +3260,39 @@ const ar: Translations = {
     ],
     sevenLayers: [
       {
-        name: "الاستدلال السريع (HeuristicsLayer — طبقة الاستدلال)",
-        tech: "Regex & Signature Maps",
-        desc: "فلتر فوري وخفيف لتدفقات البيانات الواردة. يحظر شبكات البريد العشوائي المعروفة، وروابط التصيد الاحتيالي، وأنماط الأتمتة الخبيثة دون استهلاك البطارية."
+        name: "التحليل الصوتي (مفعّل)",
+        tech: "RMS / Zero-Crossing / Silence / Energy",
+        desc: "تحليل صوتي للمكالمة في الوقت الفعلي على الجهاز: تحليل الصوت ونبراته وإيقاع الكلام والتوقفات وأنماط الطاقة في المحادثة. دون إرسال أي بيانات إلى الخادم."
       },
       {
-        name: "التصنيف العصبي (BertPhantomClassifier — مصنف BertPhantom)",
-        tech: "ONNX Runtime / 28.4 MB Local Model",
-        desc: "شبكة عصبية مضغوطة من طراز rubert-tiny2 تحلل النصوص والمكالمات في الوقت الفعلي. تكتشف سيناريوهات الحوار المخفية، والتلاعب، وأدوار مثل 'الحساب الآمن'."
+        name: "تصنيف التعلم الآلي (rubert-tiny2)",
+        tech: "ONNX Runtime / INT8 / ~29 MB",
+        desc: "تُستخدم شبكة عصبية خفيفة rubert-tiny2 (ONNX INT8، ~29 م.ب) لتحليل النصوص والبيانات الوصفية على الجهاز. تُنشر تحديثات النماذج وقواعد البيانات مع تحديث التطبيق؛ ولا يلزم الإنترنت للاستخدام اليومي، بل فقط لتثبيت إصدارات جديدة."
       },
       {
-        name: "الهندسة الاجتماعية (Social Eng. Layer — طبقة الهندسة الاجتماعية)",
-        tech: "DeGenome (18 عنصرًا أساسيًا)",
-        desc: "تحدد تكتيكات التلاعب باستخدام تصنيف DeGenome المكون من 18 عنصرًا أساسيًا، وتكشف عن الاستعجال المصطنع، وخطاب الضغط، ومثيرات الخوف، وطلبات العزل."
+        name: "التعرف على الكلام (ASR) — قيد التطوير (Roadmap)",
+        tech: "ASR — Roadmap",
+        desc: "التعرف على الكلام (ASR) للمكالمة الواردة. المرحلة التالية من تطور PHANTOM."
       },
       {
-        name: "التدقيق السلوكي (Behavioral Layer — الطبقة السلوكية)",
-        tech: "Context-Aware State Machine",
-        desc: "يتتبع تفاعلات المستخدم المباشرة باستمرار: سرعة الكتابة، والتأخير المعرفي، وتكرار التنقل بين التطبيقات المصرفية وتطبيقات الاتصال أثناء المكالمة المباشرة."
+        name: "التحليل الدلالي للمحتوى — قيد التطوير (Roadmap)",
+        tech: "DeGenome (18 عنصرًا أساسيًا) — Roadmap",
+        desc: "التحليل الدلالي لمحتوى المحادثة: كشف العبارات المفتاحية المحفزة ومؤشرات الضغط النفسي ومطالب التصرف العاجل. المرحلة التالية من تطور PHANTOM."
       },
       {
-        name: "التحقق من السمعة (Reputation Layer — طبقة السمعة)",
-        tech: "PCD Identity Profiles",
-        desc: "يطابق سمات المتصل مع ملفات الهوية المؤسسية (PCD)، ويكتشف عدم تطابق أنماط التحدث وإجراءات المتصل مع البروتوكولات الرسمية."
+        name: "التحقق من السمعة (PCD) — قيد التطوير (Roadmap)",
+        tech: "PCD Identity Profiles — Roadmap",
+        desc: "يطابق أسلوب حديث المتصل مع ملفات الهوية المؤسسية (PCD). قيد التطوير (Roadmap)."
+      },
+      {
+        name: "فحص قائمة الأرقام السوداء — قيد التطوير (Roadmap)",
+        tech: "Local Blacklist DB — Roadmap",
+        desc: "فحص محلي سريع للرقم مقابل قاعدة أرقام مشبوهة وقوائم سوداء. قيد التطوير (Roadmap)."
       },
       {
         name: "حل التوافق (Consensus Agent — وكيل الإجماع)",
         tech: "Consensus Voting Engine",
         desc: "محرك توافق JudgeAgent يجمع مؤشرات الخطر من جميع المستويات. عند تحديد عتبات التهديد، فإنه يقفل الواجهة، وينبه المستخدم، وينبه جهات الاتصال الموثوقة."
-      },
-      {
-        name: "الذاكرة المناعية (Immune Memory — الذاكرة المناعية)",
-        tech: "Adaptive Incident Shield",
-        desc: "مستودع محلي آمن للهجمات. يتيح ضبط فلاتر الأمان محليًا على الجهاز دون أي تسريب وبناءً على التهديدات التي تم تقليلها مؤخرًا للتعامل مع أنواع الهجمات المستقبلية."
       }
     ],
     btnSimplified: "عرض مبسط",
@@ -3534,7 +3555,7 @@ const ar: Translations = {
     subtitle: "تعرف على المزيد حول تقنيات الذكاء الاصطناعي المحلية والأساس العلمي لـ TrustNode",
     card1Title: "تكنولوجيا القبة",
     card1Badge: "نظام PHANTOM",
-    card1Desc: "التفاصيل التقنية لقبة الحماية السباعية PHANTOM 2.0 والمساعد الصوتي الذكي KIRA الذي يعمل بالكامل على الجهاز.",
+    card1Desc: "تفاصيل تقنية لقبة الحماية PHANTOM 2.0: التحليل الصوتي وتصنيف التعلم الآلي rubert-tiny2 يعملان على الجهاز، بينما الطبقات المتبقية قيد التطوير (Roadmap).",
     card1Btn: "استكشف التكنولوجيا →",
     card2Title: "كفاءة مثبتة",
     card2Badge: "براءات الاختراع والجوائز",
@@ -3565,7 +3586,7 @@ const ar: Translations = {
     feature1Title: "حماية محلية 100%",
     feature1Desc: "تتم جميع فحوصات المكالمات والرسائل على جهازك مباشرة — بياناتك لا تغادر هاتفك أبداً.",
     feature2Title: "ذكاء اصطناعي ضد المحتالين",
-    feature2Desc: "النموذج العصبي المبني على rubert-tiny2 يكتشف سيناريوهات الهندسة الاجتماعية في الوقت الفعلي.",
+    feature2Desc: "الشبكة العصبية الخفيفة rubert-tiny2 (ONNX INT8، ~29 م.ب) تحلل النصوص والبيانات الوصفية على الجهاز دون اتصال بالإنترنت.",
     feature3Title: "مجاني وآمن",
     feature3Desc: "التطبيق متاح مجاناً على RuStore. ثبّته واحمِ أحباءك من المحتالين.",
     note: "متوفر لأجهزة أندرويد. الإنترنت مطلوب فقط للتنزيل الأولي.",
@@ -3723,31 +3744,34 @@ const pt: Translations = {
     subtitle: "Uma cúpula de múltiplas camadas implantada localmente no seu smartphone. Nem um único byte de dados pessoais sai do dispositivo.",
     layersHeading: "Camadas de proteção do dispositivo",
     layers: [
-      {
-        name: "Heurísticas rápidas",
-        tech: "Regex e mapas de assinaturas",
-        desc: "O primeiro filtro instantâneo para os fluxos recebidos. Bloqueia padrões conhecidos de redes de spam, links suspeitos e assinaturas de scripts fraudulentos conhecidos, sem consumir bateria."
-      },
-      {
-        name: "Classificação por ML (rubert-tiny2)",
-        tech: "ONNX Runtime / Modelo local de 28,4 MB",
-        desc: "Uma rede neural comprimida analisa em tempo real a semântica da chamada ou do texto da mensagem. Detecta manipulação oculta, cenários de encenação (\"conta segura\", \"parente em apuros\") e pressão psicológica."
-      },
-      {
-        name: "Análise comportamental",
-        tech: "Máquina de estados sensível ao contexto",
-        desc: "Monitora a dinâmica da interação: velocidade de digitação, frequência de troca para apps bancários durante uma chamada, atrasos anômalos e padrões de retenção de atenção."
-      },
-      {
-        name: "Consenso PHANTOM",
-        tech: "Motor de votação por consenso",
-        desc: "Toma a decisão final ponderada com base nas saídas das três camadas. Ao suspeitar de um ataque, bloqueia a interface, avisa o usuário e envia uma notificação instantânea a um contato de confiança."
-      }
+    {
+      name: "Análise acústica",
+      tech: "RMS / Zero-Crossing / Energy",
+      desc: "Análise acústica da chamada em tempo real no dispositivo: análise da voz e entonações, ritmo da fala, pausas e padrões de energia da conversa. Sem envio de dados ao servidor."
+    }
+    ,
+    {
+      name: "Classificação ML (rubert-tiny2)",
+      tech: "ONNX Runtime / INT8 / ~29 MB",
+      desc: "Usa-se a rede neural leve rubert-tiny2 (ONNX INT8, ~29 MB) para analisar texto e metadados no dispositivo. As atualizações de modelos e bancos de dados chegam com a atualização do app; não é preciso internet no uso diário, apenas para instalar novas versões."
+    }
+    ,
+    {
+      name: "Reconhecimento de fala e semântica (ASR) — Em desenvolvimento (Roadmap)",
+      tech: "ASR — Roadmap",
+      desc: "Reconhecimento de fala (ASR) e análise semântica do conteúdo da conversa: detecção de frases-chave disparadoras, sinais de pressão psicológica e exigências de ações urgentes. A próxima etapa da evolução do PHANTOM."
+    }
+    ,
+    {
+      name: "Consenso PHANTOM",
+      tech: "Consensus Voting Engine",
+      desc: "Toma a decisão final ponderada com base nas saídas das camadas de análise. Ao suspeitar de um ataque, bloqueia a interface, avisa o usuário e envia um push instantâneo a um contato de confiança."
+    }
     ],
     usp: [
       {
         title: "IA local (no dispositivo)",
-        desc: "A rede neural rubert-tiny2 é quantizada e otimizada para processadores móveis. Com 28,4 MB, consegue manter todos os seus pesos na RAM do telefone, entregando inferência em microssegundos."
+        desc: "A rede neural leve rubert-tiny2 (ONNX INT8, ~29 MB) analisa texto e metadados diretamente no dispositivo. Modelos e bancos de dados são atualizados com o app; internet só é necessária para instalar novas versões."
       },
       {
         title: "Autonomia total",
@@ -3760,39 +3784,39 @@ const pt: Translations = {
     ],
     sevenLayers: [
       {
-        name: "Heurísticas rápidas (HeuristicsLayer — Camada de heurísticas)",
-        tech: "Regex & Signature Maps",
-        desc: "Um filtro instantâneo e leve para fluxos de dados recebidos. Bloqueia redes de spam conhecidas, links suspeitos e assinaturas de scripts fraudulentos sem consumir bateria."
+        name: "Análise acústica (Ativo)",
+        tech: "RMS / Zero-Crossing / Silence / Energy",
+        desc: "Análise acústica da chamada em tempo real no dispositivo: análise da voz e entonações, ritmo da fala, pausas e padrões de energia da conversa. Sem envio de dados ao servidor."
       },
       {
-        name: "Classificação neuronal (BertPhantomClassifier — Classificador BertPhantom)",
-        tech: "ONNX Runtime / 28.4 MB Local Model",
-        desc: "Uma rede neural rubert-tiny2 compactada que analisa a semântica da chamada ou texto da mensagem em tempo real. Detecta manipulação oculta, cenários de encenação ('conta segura', 'parente em apuros')."
+        name: "Classificação ML (rubert-tiny2)",
+        tech: "ONNX Runtime / INT8 / ~29 MB",
+        desc: "Usa-se a rede neural leve rubert-tiny2 (ONNX INT8, ~29 MB) para analisar texto e metadados no dispositivo. As atualizações de modelos e bancos de dados chegam com a atualização do app; não é preciso internet no uso diário, apenas para instalar novas versões."
       },
       {
-        name: "Engenharia social (Social Eng. Layer — Camada de engenharia social)",
-        tech: "DeGenome (18 primitivas)",
-        desc: "Identifica táticas de manipulação usando a taxonomia DeGenome de 18 primitivas: pressa artificial, intimidação, exigências de confidencialidade e pressão emocional."
+        name: "Reconhecimento de fala (ASR) — Em desenvolvimento (Roadmap)",
+        tech: "ASR — Roadmap",
+        desc: "Reconhecimento de fala (ASR) da chamada recebida. A próxima etapa da evolução do PHANTOM."
       },
       {
-        name: "Análise comportamental (Behavioral Layer — Camada comportamental)",
-        tech: "Context-Aware State Machine",
-        desc: "Monitora a dinâmica da interação em tempo real: velocidade de digitação, atrasos de resposta e frequência de troca para aplicativos bancários durante uma chamada ativa."
+        name: "Análise semântica do conteúdo — Em desenvolvimento (Roadmap)",
+        tech: "DeGenome (18 primitivas) — Roadmap",
+        desc: "Análise semântica do conteúdo da conversa: detecção de frases-chave disparadoras, sinais de pressão psicológica e exigências de ações urgentes. A próxima etapa da evolução do PHANTOM."
       },
       {
-        name: "Verificação de reputação (Reputation Layer — Camada de reputação)",
-        tech: "PCD Identity Profiles",
-        desc: "Compara as características do chamador com perfis de identidade corporativa (PCD), identificando quando os padrões de fala e as ações não condizem com os oficiais."
+        name: "Verificação de reputação (PCD) — Em desenvolvimento (Roadmap)",
+        tech: "PCD Identity Profiles — Roadmap",
+        desc: "Compara o estilo de fala do interlocutor com perfis de identidade corporativa (PCD). Em desenvolvimento (Roadmap)."
+      },
+      {
+        name: "Checagem de números em lista negra — Em desenvolvimento (Roadmap)",
+        tech: "Local Blacklist DB — Roadmap",
+        desc: "Verificação local rápida do número contra um banco de números suspeitos e listas negras. Em desenvolvimento (Roadmap)."
       },
       {
         name: "Consenso PHANTOM (Consensus Agent — Agente de consenso)",
         tech: "Consensus Voting Engine",
         desc: "O mecanismo de votação JudgeAgent pondera as avaliações de todos os níveis. Ao suspeitar de uma ameaça, bloqueia a ação perigosa, avisa o usuário e notifica os contatos de confiança."
-      },
-      {
-        name: "Memoria imune (Immune Memory — Memória imune)",
-        tech: "Adaptive Incident Shield",
-        desc: "Memória isolada de longo prazo de ataques. Adapta e refina localmente os perfis de proteção com base em incidentes evitados para proteger contra futuras variações de ameaças."
       }
     ],
     btnSimplified: "Estrutura simplificada",
@@ -4055,7 +4079,7 @@ const pt: Translations = {
     subtitle: "Saiba mais sobre as tecnologias de IA local e a base científica do TrustNode",
     card1Title: "Tecnologia do Domo",
     card1Badge: "SISTEMA PHANTOM",
-    card1Desc: "Detalhamento técnico do domo de segurança de 7 camadas PHANTOM 2.0 e o assistente de voz inteligente KIRA rodando localmente no dispositivo.",
+    card1Desc: "Detalhamento técnico do domo de segurança PHANTOM 2.0: a análise acústica e a classificação ML rubert-tiny2 rodam no dispositivo, e as demais camadas estão em desenvolvimento (Roadmap).",
     card1Btn: "Ver Tecnologia →",
     card2Title: "Validação Comprovada",
     card2Badge: "PATENTES E PRÊMIOS",
@@ -4086,7 +4110,7 @@ const pt: Translations = {
     feature1Title: "Proteção 100% local",
     feature1Desc: "Todas as verificações de chamadas e mensagens acontecem no seu dispositivo — seus dados nunca saem do smartphone.",
     feature2Title: "IA contra golpistas",
-    feature2Desc: "O modelo neural baseado em rubert-tiny2 detecta cenários de engenharia social em tempo real.",
+    feature2Desc: "A rede neural leve rubert-tiny2 (ONNX INT8, ~29 MB) analisa texto e metadados no dispositivo sem conexão com a internet.",
     feature3Title: "Grátis e seguro",
     feature3Desc: "O aplicativo está disponível gratuitamente na RuStore. Instale e proteja seus entes queridos.",
     note: "Disponível para dispositivos Android. A internet é necessária apenas para o download inicial.",
@@ -4244,31 +4268,34 @@ const fr: Translations = {
     subtitle: "Un dôme multicouche déployé localement sur votre smartphone. Pas un seul octet de données personnelles ne quitte l'appareil.",
     layersHeading: "Couches de protection de l'appareil",
     layers: [
-      {
-        name: "Heuristiques rapides",
-        tech: "Regex et cartes de signatures",
-        desc: "Le premier filtre instantané des flux entrants. Bloque les schémas connus de réseaux de spam, les liens suspects et les signatures de scripts frauduleux connus, sans consommer de batterie."
-      },
-      {
-        name: "Classification par ML (rubert-tiny2)",
-        tech: "ONNX Runtime / Modèle local de 28,4 Mo",
-        desc: "Un réseau de neurones compressé analyse en temps réel la sémantique de l'appel ou du texte du message. Il détecte les manipulations cachées, les scénarios de rôle (« compte sécurisé », « proche en difficulté ») et la pression psychologique."
-      },
-      {
-        name: "Analyse comportementale",
-        tech: "Machine à états sensible au contexte",
-        desc: "Suit la dynamique de l'interaction : vitesse de frappe, fréquence de bascule vers les applications bancaires pendant un appel, délais anormaux et schémas de rétention d'attention."
-      },
-      {
-        name: "Consensus PHANTOM",
-        tech: "Moteur de vote par consensus",
-        desc: "Prend la décision finale pondérée à partir des résultats des trois couches. En cas de suspicion d'attaque, verrouille l'interface, alerte l'utilisateur et envoie une notification instantanée à un contact de confiance."
-      }
+    {
+      name: "Analyse acoustique",
+      tech: "RMS / Zero-Crossing / Energy",
+      desc: "Analyse acoustique de l'appel en temps réel sur l'appareil : voix et intonations, rythme de parole, pauses et profils énergétiques de la conversation. Aucune donnée n'est envoyée au serveur."
+    }
+    ,
+    {
+      name: "Classification ML (rubert-tiny2)",
+      tech: "ONNX Runtime / INT8 / ~29 MB",
+      desc: "Un réseau neuronal léger rubert-tiny2 (ONNX INT8, ~29 Mo) analyse texte et métadonnées sur l'appareil. Les mises à jour de modèles et de bases sont livrées avec l'application ; internet n'est pas requis au quotidien, seulement pour installer de nouvelles versions."
+    }
+    ,
+    {
+      name: "Reconnaissance vocale et sémantique (ASR) — En développement (Roadmap)",
+      tech: "ASR — Roadmap",
+      desc: "Reconnaissance vocale (ASR) et analyse sémantique du contenu de la conversation : détection de phrases-clés déclencheurs, signes de pression psychologique et exigences d'actions urgentes. Prochaine étape de l'évolution de PHANTOM."
+    }
+    ,
+    {
+      name: "Consensus PHANTOM",
+      tech: "Consensus Voting Engine",
+      desc: "Prend la décision finale pondérée à partir des sorties des couches d'analyse. En cas de suspicion d'attaque, il verrouille l'interface, alerte l'utilisateur et envoie une notification push instantanée à un contact de confiance."
+    }
     ],
     usp: [
       {
         title: "IA locale (sur l'appareil)",
-        desc: "Le réseau de neurones rubert-tiny2 est quantifié et optimisé pour les processeurs mobiles. Avec seulement 28,4 Mo, il peut conserver tous ses poids dans la RAM du téléphone, offrant une inférence en microsecondes."
+        desc: "Le réseau neuronal léger rubert-tiny2 (ONNX INT8, ~29 Mo) analyse texte et métadonnées directement sur l'appareil. Modèles et bases sont mis à jour avec l'application ; internet n'est nécessaire que pour installer de nouvelles versions."
       },
       {
         title: "Autonomie totale",
@@ -4281,39 +4308,39 @@ const fr: Translations = {
     ],
     sevenLayers: [
       {
-        name: "Heuristiques rapides (HeuristicsLayer — Couche d'heuristiques)",
-        tech: "Regex & Signature Maps",
-        desc: "Un filtre instantané et léger pour les flux de données entrants. Bloque les réseaux de spam connus, les liens suspects et les scripts frauduleux sans consommer de bourse."
+        name: "Analyse acoustique (Active)",
+        tech: "RMS / Zero-Crossing / Silence / Energy",
+        desc: "Analyse acoustique de l'appel en temps réel sur l'appareil : voix et intonations, rythme de parole, pauses et profils énergétiques de la conversation. Aucune donnée n'est envoyée au serveur."
       },
       {
-        name: "Classification neuronale (BertPhantomClassifier — Classifieur BertPhantom)",
-        tech: "ONNX Runtime / 28.4 MB Local Model",
-        desc: "Un réseau de neurones compressé rubert-tiny2 analysant la sémantique de l'appel ou du message en temps réel. Détecte les manipulations cachées et scénarios de rôles (« compte sécurisé »)."
+        name: "Classification ML (rubert-tiny2)",
+        tech: "ONNX Runtime / INT8 / ~29 MB",
+        desc: "Un réseau neuronal léger rubert-tiny2 (ONNX INT8, ~29 Mo) analyse texte et métadonnées sur l'appareil. Les mises à jour de modèles et de bases sont livrées avec l'application ; internet n'est pas requis au quotidien, seulement pour installer de nouvelles versions."
       },
       {
-        name: "Ingénierie sociale (Social Eng. Layer — Couche d'ingénierie sociale)",
-        tech: "DeGenome (18 primitives)",
-        desc: "Identifie les tactiques de manipulation via la taxonomie DeGenome de 18 primitives : urgence artificielle, discours de pression, déclencheurs de peur et demandes d'isolement."
+        name: "Reconnaissance vocale (ASR) — En développement (Roadmap)",
+        tech: "ASR — Roadmap",
+        desc: "Reconnaissance vocale (ASR) de l'appel entrant. Prochaine étape de l'évolution de PHANTOM."
       },
       {
-        name: "Analyse comportementale (Behavioral Layer — Couche comportementale)",
-        tech: "Context-Aware State Machine",
-        desc: "Suit la dynamique des interactions en direct : vitesse de frappe, délais de traitement cognitif et bascules vers les applications bancaires pendant un appel."
+        name: "Analyse sémantique du contenu — En développement (Roadmap)",
+        tech: "DeGenome (18 primitives) — Roadmap",
+        desc: "Analyse sémantique du contenu de la conversation : détection de phrases-clés déclencheurs, signes de pression psychologique et exigences d'actions urgentes. Prochaine étape de l'évolution de PHANTOM."
       },
       {
-        name: "Vérification de réputation (Reputation Layer — Couche de réputation)",
-        tech: "PCD Identity Profiles",
-        desc: "Vérifie les traits de l'appelant par rapport aux profils d'identité d'entreprise (PCD), détectant les écarts entre les schémas de parole et les protocoles officiels."
+        name: "Vérification de réputation (PCD) — En développement (Roadmap)",
+        tech: "PCD Identity Profiles — Roadmap",
+        desc: "Compare la façon de parler de l'appelant aux profils d'identité d'entreprise (PCD). En développement (Roadmap)."
+      },
+      {
+        name: "Contrôle de numéros en liste noire — En développement (Roadmap)",
+        tech: "Local Blacklist DB — Roadmap",
+        desc: "Vérification locale rapide du numéro contre une base de numéros suspects et des listes noires. En développement (Roadmap)."
       },
       {
         name: "Résolution par consensus (Consensus Agent — Agent de consensus)",
         tech: "Consensus Voting Engine",
         desc: "Un moteur de consensus JudgeAgent agrégeant les marqueurs de risque de tous niveaux. En cas de menace avérée, il verrouille l'interface, alerte l'utilisateur et prévient les contacts de confiance."
-      },
-      {
-        name: "Mémoire immunitaire (Immune Memory — Mémoire immunitaire)",
-        tech: "Adaptive Incident Shield",
-        desc: "Répertoire local sécurisé des attaques. Permet un ajustement fin sans fuite sur l'appareil à partir des menaces récemment atténuées pour parer aux futures variantes d'attaques."
       }
     ],
     btnSimplified: "Structure simplifiée",
@@ -4576,7 +4603,7 @@ const fr: Translations = {
     subtitle: "En savoir plus sur les technologies d'IA locales et les fondements scientifiques de TrustNode",
     card1Title: "Technologie du Dôme",
     card1Badge: "SYSTÈME PHANTOM",
-    card1Desc: "Détails techniques du dôme de sécurité à 7 couches PHANTOM 2.0 et l'assistant vocal intelligent KIRA fonctionnant entièrement sur l'appareil.",
+    card1Desc: "Analyse technique du dôme de sécurité PHANTOM 2.0 : l'analyse acoustique et la classification ML rubert-tiny2 fonctionnent sur l'appareil, tandis que les autres couches sont en cours de développement (Roadmap).",
     card1Btn: "Découvrir la Tech →",
     card2Title: "Efficacité Prouvée",
     card2Badge: "BREVETS ET PRIX",
@@ -4607,7 +4634,7 @@ const fr: Translations = {
     feature1Title: "Protection 100% locale",
     feature1Desc: "Toutes les vérifications d'appels et de messages se font sur votre appareil — vos données ne quittent jamais votre smartphone.",
     feature2Title: "IA contre les arnaqueurs",
-    feature2Desc: "Le modèle neuronal basé sur rubert-tiny2 détecte les scénarios d'ingénierie sociale en temps réel.",
+    feature2Desc: "Le réseau neuronal léger rubert-tiny2 (ONNX INT8, ~29 Mo) analyse texte et métadonnées sur l'appareil sans connexion internet.",
     feature3Title: "Gratuit et sécurisé",
     feature3Desc: "L'application est disponible gratuitement sur RuStore. Installez-la et protégez vos proches.",
     note: "Disponible pour les appareils Android. Internet n'est nécessaire que pour le premier téléchargement.",
@@ -4765,31 +4792,34 @@ const de: Translations = {
     subtitle: "Eine mehrschichtige Kuppel, die lokal auf Ihrem Smartphone läuft. Kein einziges Byte persönlicher Daten verlässt jemals das Gerät.",
     layersHeading: "Schutzebenen des Geräts",
     layers: [
-      {
-        name: "Schnelle Heuristiken",
-        tech: "Regex & Signaturkarten",
-        desc: "Der erste sofortige Filter für eingehende Datenströme. Blockiert bekannte Muster von Spam-Netzwerken, verdächtige Links und bekannte Betrugsskript-Signaturen, ohne den Akku zu belasten."
-      },
-      {
-        name: "ML-Klassifikation (rubert-tiny2)",
-        tech: "ONNX Runtime / 28,4-MB-Lokalmodell",
-        desc: "Ein komprimiertes neuronales Netz analysiert in Echtzeit die Semantik eines Anrufs oder Nachrichtentexts. Erkennt versteckte Manipulation, Rollenspiel-Szenarien („sicheres Konto“, „Angehöriger in Not“) und psychologischen Druck."
-      },
-      {
-        name: "Verhaltensanalyse",
-        tech: "Kontextbewusste Zustandsmaschine",
-        desc: "Verfolgt die Interaktionsdynamik: Tippgeschwindigkeit, Häufigkeit des Wechsels zu Banking-Apps während eines Anrufs, ungewöhnliche Verzögerungen und Muster der Aufmerksamkeitsbindung."
-      },
-      {
-        name: "PHANTOM-Konsens",
-        tech: "Konsens-Abstimmungs-Engine",
-        desc: "Trifft die endgültige gewichtete Entscheidung auf Basis der Ergebnisse aller drei Ebenen. Bei Angriffsverdacht sperrt es die Oberfläche, warnt den Nutzer und sendet eine sofortige Push-Benachrichtigung an eine vertrauenswürdige Kontaktperson."
-      }
+    {
+      name: "Akustische Analyse",
+      tech: "RMS / Zero-Crossing / Energy",
+      desc: "Echtzeit-Akustikanalyse des Anrufs auf dem Gerät: Stimme und Intonation, Sprechtempo, Pausen und Energieprofile des Gesprächs. Keine Datenübertragung an Server."
+    }
+    ,
+    {
+      name: "ML-Klassifikation (rubert-tiny2)",
+      tech: "ONNX Runtime / INT8 / ~29 MB",
+      desc: "Ein leichtgewichtiges neuronales Netz rubert-tiny2 (ONNX INT8, ~29 MB) analysiert Text und Metadaten auf dem Gerät. Modell- und Datenbank-Updates kommen mit dem App-Update; Internet ist im Alltag nicht nötig, nur zum Installieren neuer Versionen."
+    }
+    ,
+    {
+      name: "Spracherkennung und Semantik (ASR) — In Entwicklung (Roadmap)",
+      tech: "ASR — Roadmap",
+      desc: "Spracherkennung (ASR) und semantische Analyse des Gesprächsinhalts: Erkennung von Schlüssel-Triggerphrasen, Anzeichen psychologischen Drucks und Forderungen nach sofortigem Handeln. Die nächste Stufe der PHANTOM-Evolution."
+    }
+    ,
+    {
+      name: "PHANTOM-Konsens",
+      tech: "Consensus Voting Engine",
+      desc: "Trifft die endgültige gewichtete Entscheidung auf Basis der Ausgaben der Analyseebenen. Bei Angriffsverdacht sperrt er die Oberfläche, warnt den Nutzer und sendet einen sofortigen Push an einen Vertrauenskontakt."
+    }
     ],
     usp: [
       {
         title: "Lokale KI (auf dem Gerät)",
-        desc: "Das neuronale Netz rubert-tiny2 ist quantisiert und für mobile Prozessoren optimiert. Mit nur 28,4 MB kann es alle Gewichte im RAM des Telefons halten und liefert Inferenz im Mikrosekundenbereich."
+        desc: "Das leichtgewichtige neuronale Netz rubert-tiny2 (ONNX INT8, ~29 MB) analysiert Text und Metadaten direkt auf dem Gerät. Modelle und Datenbanken werden mit der App aktualisiert; Internet ist nur für die Installation neuer Versionen nötig."
       },
       {
         title: "Vollständige Autonomie",
@@ -4802,39 +4832,39 @@ const de: Translations = {
     ],
     sevenLayers: [
       {
-        name: "Schnelle Heuristiken (HeuristicsLayer — Heuristik-Ebene)",
-        tech: "Regex & Signature Maps",
-        desc: "Ein sofortiger, leichtgewichtiger Filter für eingehende Datenströme. Blockiert bekannte Spam-Netzwerke, Phishing-Links und bösartige Automatisierungsmuster ohne Akkubelastung."
+        name: "Akustische Analyse (Live)",
+        tech: "RMS / Zero-Crossing / Silence / Energy",
+        desc: "Echtzeit-Akustikanalyse des Anrufs auf dem Gerät: Stimme und Intonation, Sprechtempo, Pausen und Energieprofile des Gesprächs. Keine Datenübertragung an Server."
       },
       {
-        name: "Neuronale Klassifikation (BertPhantomClassifier — BertPhantom-Klassifikator)",
-        tech: "ONNX Runtime / 28.4 MB Local Model",
-        desc: "Ein komprimiertes rubert-tiny2 neuronales Netz, das Anrufe und Texte in Echtzeit analysiert. Erkennt versteckte Gesprächsskripte, Manipulationen und Rollen wie „sicheres Konto“."
+        name: "ML-Klassifikation (rubert-tiny2)",
+        tech: "ONNX Runtime / INT8 / ~29 MB",
+        desc: "Ein leichtgewichtiges neuronales Netz rubert-tiny2 (ONNX INT8, ~29 MB) analysiert Text und Metadaten auf dem Gerät. Modell- und Datenbank-Updates kommen mit dem App-Update; Internet ist im Alltag nicht nötig, nur zum Installieren neuer Versionen."
       },
       {
-        name: "Soziale Manipulation (Social Engineering Layer — Social-Engineering-Ebene)",
-        tech: "DeGenome (18 Primitive)",
-        desc: "Identifiziert Manipulationstaktiken mithilfe der DeGenome-Taxonomie von 18 Primitiven: künstliche Dringlichkeit, Druckreden, Angstauslöser und Isolationsaufforderungen."
+        name: "Spracherkennung (ASR) — In Entwicklung (Roadmap)",
+        tech: "ASR — Roadmap",
+        desc: "Spracherkennung (ASR) des eingehenden Anrufs. Die nächste Stufe der PHANTOM-Evolution."
       },
       {
-        name: "Verhaltensanalyse (Behavioral Layer — Verhaltensebene)",
-        tech: "Context-Aware State Machine",
-        desc: "Verfolgt kontinuierlich Live-Nutzerinteraktionen: Tippgeschwindigkeit, verhaltensorientierte Verarbeitungsverzögerungen und die Häufigkeit des Wechsels zu Banking-Apps während eines Anrufs."
+        name: "Semantische Inhaltsanalyse — In Entwicklung (Roadmap)",
+        tech: "DeGenome (18 Primitive) — Roadmap",
+        desc: "Semantische Analyse des Gesprächsinhalts: Erkennung von Schlüssel-Triggerphrasen, Anzeichen psychologischen Drucks und Forderungen nach sofortigem Handeln. Die nächste Stufe der PHANTOM-Evolution."
       },
       {
-        name: "Reputationsüberprüfung (Reputation Layer — Reputationsebene)",
-        tech: "PCD Identity Profiles",
-        desc: "Gleicht Anrufermerkmale mit Unternehmensidentitätsprofilen (PCD) ab und erkennt Abweichungen zwischen Sprechmustern und offiziellen Protokollen."
+        name: "Reputationsprüfung (PCD) — In Entwicklung (Roadmap)",
+        tech: "PCD Identity Profiles — Roadmap",
+        desc: "Gleicht den Sprechstil des Anrufers mit Unternehmensidentitätsprofilen (PCD) ab. In Entwicklung (Roadmap)."
+      },
+      {
+        name: "Nummern-Blacklist-Abgleich — In Entwicklung (Roadmap)",
+        tech: "Local Blacklist DB — Roadmap",
+        desc: "Schneller lokaler Abgleich der Nummer gegen eine Datenbank verdächtiger Nummern und Blacklists. In Entwicklung (Roadmap)."
       },
       {
         name: "Konsens-Entscheidung (Consensus Agent — Konsens-Agent)",
         tech: "Consensus Voting Engine",
         desc: "Eine JudgeAgent-Konsens-Engine, die Risikomarker aus allen Ebenen aggregiert. Bei Angriffsverdacht sperrt sie die Ausführung, warnt den Nutzer und benachrichtigt Vertrauenskontakte."
-      },
-      {
-        name: "Immungedächtnis (Immune Memory — Immungedächtnis)",
-        tech: "Adaptive Incident Shield",
-        desc: "Lokaler sicherer Angriffsspeicher. Ermöglicht die geräteinterne, leckagefreie Feinabstimmung von Sicherheitsfiltern basierend auf kürzlich abgewehrten Bedrohungen."
       }
     ],
     btnSimplified: "Vereinfachte Struktur",
@@ -5097,7 +5127,7 @@ const de: Translations = {
     subtitle: "Erfahren Sie mehr über die lokalen KI-Technologien und die wissenschaftliche Basis von TrustNode",
     card1Title: "Kuppel-Technologie",
     card1Badge: "PHANTOM-SYSTEM",
-    card1Desc: "Technische Details der 7-schichtigen PHANTOM 2.0 Sicherheitskuppel und der intelligente Sprachassistent KIRA, der vollständig auf dem Gerät läuft.",
+    card1Desc: "Technische Aufschlüsselung der PHANTOM-2.0-Sicherheitskuppel: Akustikanalyse und ML-Klassifikation rubert-tiny2 laufen auf dem Gerät, die übrigen Ebenen befinden sich in Entwicklung (Roadmap).",
     card1Btn: "Technologie erkunden →",
     card2Title: "Bewährte Validierung",
     card2Badge: "PATENTE & AUSZEICHNUNGEN",
@@ -5128,7 +5158,7 @@ const de: Translations = {
     feature1Title: "100% lokaler Schutz",
     feature1Desc: "Alle Anruf- und Nachrichtenprüfungen laufen direkt auf Ihrem Gerät — Ihre Daten verlassen nie Ihr Smartphone.",
     feature2Title: "KI gegen Betrüger",
-    feature2Desc: "Das auf rubert-tiny2 basierende neuronale Modell erkennt Social-Engineering-Szenarien in Echtzeit.",
+    feature2Desc: "Das leichtgewichtige neuronale Netz rubert-tiny2 (ONNX INT8, ~29 MB) analysiert Text und Metadaten ohne Internetverbindung auf dem Gerät.",
     feature3Title: "Kostenlos und sicher",
     feature3Desc: "Die App ist kostenlos bei RuStore erhältlich. Installieren Sie sie und schützen Sie Ihre Liebsten.",
     note: "Verfügbar für Android-Geräte. Internet wird nur für den ersten Download benötigt.",
@@ -5286,31 +5316,34 @@ const ja: Translations = {
     subtitle: "スマートフォン上でローカルに動作する多層構造のドームです。個人データは1バイトたりともデバイスの外に出ません。",
     layersHeading: "デバイス保護のレイヤー",
     layers: [
-      {
-        name: "高速ヒューリスティック検知",
-        tech: "正規表現＆シグネチャマップ",
-        desc: "受信データストリームに対する最初の即時フィルター。バッテリーを消費することなく、既知のスパムネットワークのパターン、不審なリンク、既知の詐欺スクリプトの特徴を遮断します。"
-      },
-      {
-        name: "ML分類（rubert-tiny2）",
-        tech: "ONNX Runtime / 28.4 MBのローカルモデル",
-        desc: "圧縮されたニューラルネットワークが、通話やメッセージ本文の意味をリアルタイムで解析します。隠された誘導手口、ロールプレイ的シナリオ（「安全な口座」「トラブルに遭った親族」など）、心理的圧力を検出します。"
-      },
-      {
-        name: "行動分析",
-        tech: "文脈認識ステートマシン",
-        desc: "入力速度、通話中に銀行アプリへ切り替える頻度、異常な遅延、注意を引きつけるパターンなど、やり取りの動態を追跡します。"
-      },
-      {
-        name: "PHANTOMコンセンサス",
-        tech: "合意形成投票エンジン",
-        desc: "3つの層の出力に基づいて最終的な重み付き判断を下します。攻撃の疑いがある場合、画面をロックし、ユーザーに警告し、信頼できる連絡先に即座にプッシュ通知を送ります。"
-      }
+    {
+      name: "音響解析",
+      tech: "RMS / Zero-Crossing / Energy",
+      desc: "端末上で通話をリアルタイムに音響解析：声とイントネーション、話す速さ、間、会話のエネルギー・パターンを分析。サーバーへのデータ送信は一切ありません。"
+    }
+    ,
+    {
+      name: "ML分類（rubert-tiny2）",
+      tech: "ONNX Runtime / INT8 / ~29 MB",
+      desc: "軽量ニューラルネットワーク rubert-tiny2（ONNX INT8、約29MB）を端末上でテキスト・メタデータ分析に使用します。モデルとデータベースの更新はアプリ更新に同梱され、日常利用にインターネットは不要です（新バージョンのインストール時のみ必要）。"
+    }
+    ,
+    {
+      name: "音声認識と意味解析（ASR）— 開発中（Roadmap）",
+      tech: "ASR — Roadmap",
+      desc: "音声認識（ASR）と会話内容の意味解析：重要なトリガーフレーズ、心理的圧迫の兆候、緊急対応の要求を検出します。PHANTOM進化の次のステージ。"
+    }
+    ,
+    {
+      name: "PHANTOM 合意形成",
+      tech: "Consensus Voting Engine",
+      desc: "分析レイヤーの出力に基づいて最終的な重み付け判断を行います。攻撃の疑いがある場合、インターフェースをロックし、ユーザーに警告し、信頼できる連絡先に即時プッシュを送信します。"
+    }
     ],
     usp: [
       {
         title: "ローカルAI（オンデバイス）",
-        desc: "rubert-tiny2ニューラルネットワークはモバイル向けに量子化・最適化されています。わずか28.4 MBで全ての重みをスマートフォンのメモリ上に保持でき、マイクロ秒単位で推論が可能です。"
+        desc: "軽量ニューラルネットワーク rubert-tiny2（ONNX INT8、約29MB）が端末上でテキスト・メタデータを直接分析します。モデルとデータベースはアプリと共に更新され、インターネットは新バージョンのインストール時のみ必要です。"
       },
       {
         title: "完全なオフライン動作",
@@ -5323,39 +5356,39 @@ const ja: Translations = {
     ],
     sevenLayers: [
       {
-        name: "高速ヒューリスティック (HeuristicsLayer — ヒューリスティック層)",
-        tech: "Regex & Signature Maps",
-        desc: "受信データストリームに対する即時・軽量フィルター。バッテリーを消費せず、既知のスパムネットワーク、フィッシングリンク、悪意ある自動化パターンを遮断します。"
+        name: "音響解析（稼働中）",
+        tech: "RMS / Zero-Crossing / Silence / Energy",
+        desc: "端末上で通話をリアルタイムに音響解析：声とイントネーション、話す速さ、間、会話のエネルギー・パターンを分析。サーバーへのデータ送信は一切ありません。"
       },
       {
-        name: "ニューラル分類 (BertPhantomClassifier — BertPhantom分類器)",
-        tech: "ONNX Runtime / 28.4 MB Local Model",
-        desc: "リアルタイムで通話音声やテキストを解析する圧縮版 rubert-tiny2 ニューラルネットワーク。隠された誘導手口や、「安全な口座」といった役割を検出します。"
+        name: "ML分類（rubert-tiny2）",
+        tech: "ONNX Runtime / INT8 / ~29 MB",
+        desc: "軽量ニューラルネットワーク rubert-tiny2（ONNX INT8、約29MB）を端末上でテキスト・メタデータ分析に使用します。モデルとデータベースの更新はアプリ更新に同梱され、日常利用にインターネットは不要です（新バージョンのインストール時のみ必要）。"
       },
       {
-        name: "ソーシャルエンジニアリング (Social Eng. Layer — ソーシャルエンジニアリング層)",
-        tech: "DeGenome (18プリミティブ)",
-        desc: "18のプリミティブからなる DeGenome 分類法を用いて操作手口を特定し、人工的な緊急性、強迫言動、恐怖トリガー、孤立要請を暴きます。"
+        name: "音声認識（ASR）— 開発中（Roadmap）",
+        tech: "ASR — Roadmap",
+        desc: "着信通話の音声認識（ASR）。PHANTOM進化の次のステージ。"
       },
       {
-        name: "行動監査 (Behavioral Layer — 行動層)",
-        tech: "Context-Aware State Machine",
-        desc: "リアルタイムのユーザー操作（タイピングリズム、認知処理の遅延、通話中の金融アプリと通話アプリ間の切り替え頻度）を継続的に追跡します。"
+        name: "会話内容の意味解析 — 開発中（Roadmap）",
+        tech: "DeGenome (18プリミティブ) — Roadmap",
+        desc: "会話内容の意味解析：重要なトリガーフレーズ、心理的圧迫の兆候、緊急対応の要求を検出します。PHANTOM進化の次のステージ。"
       },
       {
-        name: "評判検証 (Reputation Layer — 評判層)",
-        tech: "PCD Identity Profiles",
-        desc: "発信者の特徴を企業アイデンティティプロファイル（PCD）と照合し、話し方のパターンや発信者の行動が公式プロトコルと一致しないケースを特定します。"
+        name: "評判検証（PCD）— 開発中（Roadmap）",
+        tech: "PCD Identity Profiles — Roadmap",
+        desc: "発信者の話し方を企業アイデンティティプロファイル（PCD）と照合します。開発中（Roadmap）。"
+      },
+      {
+        name: "番号ブラックリスト照合 — 開発中（Roadmap）",
+        tech: "Local Blacklist DB — Roadmap",
+        desc: "番号を疑わしい番号データベースやブラックリストと高速に照合します。開発中（Roadmap）。"
       },
       {
         name: "合意形成 (Consensus Agent — 合意エージェント)",
         tech: "Consensus Voting Engine",
         desc: "すべての階層からのリスクマーカーを集計する JudgeAgent 合意形成エンジン。脅威しきい値を特定すると、実行をロックし、ユーザーに警告し、信頼できる連絡先をトリガーします。"
-      },
-      {
-        name: "免疫記憶 (Immune Memory — 免疫記憶)",
-        tech: "Adaptive Incident Shield",
-        desc: "ローカライズされた安全な攻撃リポジトリ。最近緩和された脅威に基づいて、デバイス上のゼロリークのセキュリティフィルターの微調整を可能にし、今後の攻撃バリエーションに対処します。"
       }
     ],
     btnSimplified: "簡易構造表示",
@@ -5618,7 +5651,7 @@ const ja: Translations = {
     subtitle: "TrustNodeのローカルAI技術と科学的基盤について詳細を見る",
     card1Title: "ドームテクノロジー",
     card1Badge: "PHANTOMシステム",
-    card1Desc: "7層のPHANTOM 2.0セキュリティドームの技術仕様と、完全にオンデバイスで動作するKIRAインテリジェント音声アシスタントの解説。",
+    card1Desc: "PHANTOM 2.0 セキュリティドームの技術解説：音響解析と rubert-tiny2 のML分類は端末上で稼働し、その他のレイヤーは開発中（Roadmap）です。",
     card1Btn: "技術仕様を見る →",
     card2Title: "確かな実績と検証",
     card2Badge: "特許と受賞歴",
@@ -5649,7 +5682,7 @@ const ja: Translations = {
     feature1Title: "100% オンデバイス保護",
     feature1Desc: "通話とメッセージのすべてのチェックはデバイス上で実行され、データがスマートフォンの外に出ることはありません。",
     feature2Title: "詐欺師に対抗するAI",
-    feature2Desc: "rubert-tiny2 ベースのニューラルモデルがソーシャルエンジニアリング手法をリアルタイムで検知します。",
+    feature2Desc: "軽量ニューラルネットワーク rubert-tiny2（ONNX INT8、約29MB）がインターネット接続なしで端末上でテキスト・メタデータを分析します。",
     feature3Title: "無料で安全",
     feature3Desc: "アプリは RuStore で無料提供されています。インストールして、大切な人を詐欺師から守りましょう。",
     note: "Android デバイスに対応。インターネットは初回ダウンロード時のみ必要です。",

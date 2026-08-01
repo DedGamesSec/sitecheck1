@@ -17,7 +17,7 @@ const DICT: Record<string, { badge: string; title: string; subtitle: string; ste
       {
         tag: "КАК РАБОТАЕТ?",
         title: "Локальный разум",
-        desc: "Встроенная микро-нейросеть анализирует входящие звонки и сообщения в реальном времени. Она распознает манипуляции на лету прямо на устройстве — без отправки ваших данных в интернет."
+        desc: "Приложение анализирует звонки прямо на устройстве: акустические характеристики речи и текстовые данные оценивает нейросеть rubert-tiny2. Ни байта данных не покидает смартфон — интернет не нужен."
       },
       {
         tag: "ЧТО ВЫ ПОЛУЧИТЕ?",
@@ -39,7 +39,7 @@ const DICT: Record<string, { badge: string; title: string; subtitle: string; ste
       {
         tag: "HOW IT WORKS?",
         title: "On-Device Intelligence",
-        desc: "An embedded micro-AI analyzes incoming interactions in real time. It detects psychological pressure and manipulation on the fly — keeping all your personal data offline."
+        desc: "The app analyzes calls directly on your device: acoustic speech characteristics and text data are assessed by the rubert-tiny2 neural network. Not a single byte leaves your phone — no internet required."
       },
       {
         tag: "WHAT YOU GET?",
@@ -61,7 +61,7 @@ const DICT: Record<string, { badge: string; title: string; subtitle: string; ste
       {
         tag: "¿CÓMO FUNCIONA?",
         title: "Inteligencia en el Dispositivo",
-        desc: "Una micro IA integrada analiza las interacciones entrantes en tiempo real. Detecta la presión psicológica y la manipulación al instante, manteniendo todos sus datos personales fuera de línea."
+        desc: "La aplicación analiza las llamadas directamente en el dispositivo: las características acústicas del habla y los datos de texto son evaluados por la red neuronal rubert-tiny2. Ni un solo byte sale de su teléfono: no se necesita internet."
       },
       {
         tag: "¿QUÉ OBTIENE?",
@@ -83,7 +83,7 @@ const DICT: Record<string, { badge: string; title: string; subtitle: string; ste
       {
         tag: "如何工作？",
         title: "本地离线智能",
-        desc: "内置的微型神经网络可实时分析所有来电和短信。它在设备端即时识别操纵行为与心理施压，无需向互联网上传您的任何隐私数据。"
+        desc: "应用直接在设备端分析通话：语音的声学特征与文本数据由 rubert-tiny2 神经网络评估。不发送任何数据到云端，完全无需联网。"
       },
       {
         tag: "您将获得什么？",
@@ -105,7 +105,7 @@ const DICT: Record<string, { badge: string; title: string; subtitle: string; ste
       {
         tag: "NASIL ÇALIŞIR?",
         title: "Cihaz İçi Yapay Zeka",
-        desc: "Gömülü bir mikro yapay zeka, gelen etkileşimleri gerçek zamanlı olarak analiz eder. Psikolojik baskı ve manipülasyonu anında algılar ve tüm kişisel verilerinizi çevrimdışı tutar."
+        desc: "Uygulama aramaları doğrudan cihazınızda analiz eder: konuşmanın akustik özellikleri ve metin verileri rubert-tiny2 sinir ağı tarafından değerlendirilir. Telefonunuzdan tek bir bayt bile çıkmaz — internet gerekmez."
       },
       {
         tag: "NE ELDE EDERSİNİZ?",
@@ -127,7 +127,7 @@ const DICT: Record<string, { badge: string; title: string; subtitle: string; ste
       {
         tag: "यह कैसे काम करता है?",
         title: "ऑन-डिवाइस इंटेलिजेंस",
-        desc: "एक एम्बेडेड माइक्रो-एआई वास्तविक समय में आने वाले संवादों का विश्लेषण करता है। यह मनोवैज्ञानिक दबाव और हेरफेर का तुरंत पता लगाता है - आपके सभी व्यक्तिगत डेटा को ऑफ़लाइन रखता है।"
+        desc: "ऐप कॉल का सीधे आपके डिवाइस पर विश्लेषण करता है: भाषण की ध्वनिक विशेषताओं और टेक्स्ट डेटा का मूल्यांकन rubert-tiny2 न्यूरल नेटवर्क करता है। आपके फोन से एक भी बाइट बाहर नहीं जाती — इंटरनेट की आवश्यकता नहीं है।"
       },
       {
         tag: "आपको क्या मिलता है?",
@@ -149,7 +149,7 @@ const DICT: Record<string, { badge: string; title: string; subtitle: string; ste
       {
         tag: "كيف يعمل؟",
         title: "الذكاء المحلي على الجهاز",
-        desc: "يقوم ذكاء اصطناعي ميكرو مدمج بتحليل التفاعلات الواردة في الوقت الفعلي. يكتشف الضغط النفسي والتلاعب فورًا مع الحفاظ على خصوصية جميع بياناتك بالكامل أوفلاين."
+        desc: "يحلل التطبيق المكالمات مباشرة على جهازك: تُقيَّم الخصائص الصوتية للكلام والبيانات النصية بواسطة الشبكة العصبية rubert-tiny2. لا تغادر أي بيانات جهازك — فلا حاجة إلى الإنترنت."
       },
       {
         tag: "ماذا ستحصل؟",
@@ -171,7 +171,7 @@ const DICT: Record<string, { badge: string; title: string; subtitle: string; ste
       {
         tag: "COMO FUNCIONA?",
         title: "Inteligência Local",
-        desc: "Uma micro IA integrada analisa as interações em tempo real. Ela detecta pressão psicológica e manipulações no ato — mantendo todos os seus dados pessoais offline."
+        desc: "O app analisa as chamadas diretamente no dispositivo: as características acústicas da fala e os dados de texto são avaliados pela rede neural rubert-tiny2. Nenhum byte sai do seu celular — não é preciso internet."
       },
       {
         tag: "O QUE VOCÊ GANHA?",
@@ -193,7 +193,7 @@ const DICT: Record<string, { badge: string; title: string; subtitle: string; ste
       {
         tag: "COMMENT ÇA MARCHE ?",
         title: "Intelligence Locale",
-        desc: "Une micro-IA intégrée analyse les interactions entrantes en temps réel. Elle détecte immédiatement les pressions psychologiques et les manipulations sur l'appareil, sans envoyer vos données sur internet."
+        desc: "L'application analyse les appels directement sur l'appareil : les caractéristiques acoustiques de la parole et les données textuelles sont évaluées par le réseau neuronal rubert-tiny2. Aucune donnée ne quitte votre téléphone — internet n'est pas nécessaire."
       },
       {
         tag: "QU'Y GAGNEZ-VOUS ?",
@@ -215,7 +215,7 @@ const DICT: Record<string, { badge: string; title: string; subtitle: string; ste
       {
         tag: "WIE FUNKTIONIERT ES?",
         title: "Lokale Intelligenz",
-        desc: "Eine integrierte Mikro-KI analysiert eingehende Interaktionen in Echtzeit. Sie erkennt psychologischen Druck und Kombinationen sofort und hält alle Ihre persönlichen Daten offline."
+        desc: "Die App analysiert Anrufe direkt auf Ihrem Gerät: akustische Merkmale der Sprache und Textdaten werden vom neuronalen Netz rubert-tiny2 ausgewertet. Kein einziges Byte verlässt Ihr Telefon — Internet ist nicht erforderlich."
       },
       {
         tag: "WAS ERHALTEN SIE?",
@@ -237,7 +237,7 @@ const DICT: Record<string, { badge: string; title: string; subtitle: string; ste
       {
         tag: "どう動く？",
         title: "端末内のローカル頭脳",
-        desc: "組み込まれたマイクロAIが着信やメッセージをリアルタイムで解析。心理的な誘導や詐欺の兆候をその場で検知し、すべてのデータをオフラインで安全に保ちます。"
+        desc: "アプリは通話を端末上で直接分析します：音声の音響的特徴とテキストデータは rubert-tiny2 ニューラルネットワークが評価します。データは端末から一切出ません——インターネットは不要です。"
       },
       {
         tag: "何が得られる？",

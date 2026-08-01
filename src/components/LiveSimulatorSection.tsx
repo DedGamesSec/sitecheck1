@@ -27,16 +27,16 @@ const SIMULATOR_TITLE: Partial<Record<LanguageCode, string>> = {
 };
 
 const SIMULATOR_SUBTITLE: Partial<Record<LanguageCode, string>> = {
-  ru: "Запустите один из сценариев угроз и посмотрите, как 7 оборонных слоев TrustNode анализируют семантику диалога в реальном времени прямо в ОЗУ устройства.",
-  en: "Trigger a social engineering attack scenario and observe how TrustNode's 7 security layers parse call semantics in real-time, 100% on-device.",
-  es: "Inicie uno de los escenarios de amenazas y observe cómo las 7 capas de seguridad de TrustNode analizan la semántica del diálogo en tiempo real directamente en la RAM.",
-  zh: "启动以下社交工程威胁场景，亲眼见证 TrustNode 的 7 重防御层如何在设备运行内存（RAM）中实时解析对话语义并拦截攻击。",
-  hi: "एक सामाजिक इंजीनियरिंग हमले के परिदृश्य को शुरू करें और देखें कि कैसे TrustNode के 7 सुरक्षा परतें वास्तविक समय में कॉल सिमेंटिक्स का विश्लेषण करती हैं, 100% ऑन-डिवाइस।",
-  ar: "قم بتشغيل أحد سيناريوهات التهديد وشاهد كيف تقوم طبقات الدفاع السبع لـ TrustNode بتحليل دلالات الحوار في الوقت الفعلي مباشرة في ذاكرة الوصول العشوائي للجهاز.",
-  pt: "Inicie um dos cenários de ameaça e veja como as 7 camadas de segurança do TrustNode analisam a semântica do diálogo em tempo real diretamente na RAM do aparelho.",
-  fr: "Lancez un scénario d'attaque et observez comment les 7 couches de sécurité de TrustNode analysent la sémantique de l'appel en temps réel, entièrement sur l'appareil.",
-  de: "Starten Sie eines der Bedrohungsszenarien und beobachten Sie, wie die 7 Schutzebenen von TrustNode die Gesprächssemantik in Echtzeit lokal im RAM analysieren.",
-  ja: "ソーシャルエンジニアリング攻撃のシナリオを実行し、TrustNodeの7つの防御レイヤーがスマートフォンのRAM上で、どのようにリアルタイムにダイアログのセマンティクスを解析・遮断するかをご覧ください。"
+  ru: "Запустите один из сценариев угроз и посмотрите, как TrustNode защищает в реальном времени: акустический анализ и ML-классификация rubert-tiny2 работают на устройстве, а слои распознавания речи, семантики и репутации показаны как концепция (Roadmap).",
+  en: "Trigger a social engineering attack scenario and watch TrustNode defend in real time: acoustic analysis and rubert-tiny2 ML classification run on-device, while the speech recognition, semantics, and reputation layers are shown as a Roadmap concept.",
+  es: "Inicie uno de los escenarios de amenazas y vea cómo TrustNode defiende en tiempo real: el análisis acústico y la clasificación ML rubert-tiny2 funcionan en el dispositivo, y las capas de reconocimiento de voz, semántica y reputación se muestran como concepto (Roadmap).",
+  zh: "启动以下社交工程威胁场景，看看 TrustNode 如何实时防御：声学分析与 rubert-tiny2 ML 分类在设备端运行，而语音识别、语义与声誉层作为 Roadmap 概念展示。",
+  hi: "एक सामाजिक इंजीनियरिंग हमले का परिदृश्य शुरू करें और देखें कि TrustNode वास्तविक समय में कैसे बचाव करता है: ध्वनिक विश्लेषण और rubert-tiny2 ML वर्गीकरण डिवाइस पर चलते हैं, जबकि वाक् पहचान, सिमेंटिक और प्रतिष्ठा परतें Roadmap अवधारणा के रूप में दिखाई जाती हैं।",
+  ar: "قم بتشغيل أحد سيناريوهات التهديد وشاهد كيف يدافع TrustNode في الوقت الفعلي: التحليل الصوتي وتصنيف التعلم الآلي rubert-tiny2 يعملان على الجهاز، بينما تُعرض طبقات التعرف على الكلام والدلالة والسمعة كمفهوم (Roadmap).",
+  pt: "Inicie um dos cenários de ameaça e veja como o TrustNode defende em tempo real: a análise acústica e a classificação ML rubert-tiny2 rodam no dispositivo, enquanto as camadas de reconhecimento de fala, semântica e reputação são mostradas como conceito (Roadmap).",
+  fr: "Lancez un scénario d'attaque et observez comment TrustNode défend en temps réel : l'analyse acoustique et la classification ML rubert-tiny2 fonctionnent sur l'appareil, tandis que les couches de reconnaissance vocale, de sémantique et de réputation sont montrées comme concept (Roadmap).",
+  de: "Starten Sie eines der Bedrohungsszenarien und sehen Sie, wie TrustNode in Echtzeit schützt: Akustikanalyse und ML-Klassifikation rubert-tiny2 laufen auf dem Gerät, während Spracherkennungs-, Semantik- und Reputationsebenen als Roadmap-Konzept gezeigt werden.",
+  ja: "ソーシャルエンジニアリング攻撃のシナリオを実行して、TrustNodeがリアルタイムにどう守るかご覧ください：音響解析と rubert-tiny2 のML分類は端末上で稼働し、音声認識・意味解析・評判のレイヤーは Roadmap 構想として表示されます。"
 };
 
 const SCENARIOS_BY_LANG: Partial<Record<LanguageCode, Scenario[]>> = {
@@ -695,94 +695,103 @@ const getScenarios = (lang: LanguageCode): Scenario[] => {
 
 const LAYER_LABELS_BY_LANG: Partial<Record<LanguageCode, string[]>> = {
   ru: [
-    "Слой 1: Анализ голоса и интонаций (распознавание волнения и стресса)",
-    "Слой 2: Проверка темпа речи (выявление чтения мошеннического текста)",
-    "Слой 3: Анализ ключевых слов (поиск фраз-триггеров мошенников)",
-    "Слой 4: Оценка давления на жертву (обнаружение психологического контроля)",
-    "Слой 5: Контроль срочности (анализ требований немедленного перевода денег)",
-    "Слой 6: Быстрая локальная сверка (проверка по известным номерам и базам)",
-    "Слой 7: Итоговый вердикт купола (принятие решения о блокировке звонка)"
+    "Слой 1: Акустический анализ (голос, интонации, темп речи) — работает",
+    "Слой 2: ML-классификация rubert-tiny2 (текст и метаданные) — работает",
+    "Слой 3: Распознавание речи (ASR) — Roadmap",
+    "Слой 4: Семантический анализ содержания — Roadmap",
+    "Слой 5: Репутационный контур (PCD) — Roadmap",
+    "Слой 6: Сверка с базой номеров — Roadmap",
+    "Слой 7: Консенсус и итоговый вердикт — работает"
   ],
   en: [
-    "Layer 1: Voice & Vocal Stress (detecting background stress & nervous tension)",
-    "Layer 2: Speech Rate & Pacing (identifying robotic script reading)",
-    "Layer 3: Word & Phrase Analysis (searching for known manipulative keywords)",
-    "Layer 4: Psychological Pressure (modeling tactics of verbal intimidation)",
-    "Layer 5: Forced Urgency Control (evaluating claims of fake emergency)",
-    "Layer 6: Local Safe Database Match (hashing against local offline threat lists)",
-    "Layer 7: Smart Decision Engine (compiling final security score & quick alerts)"
+    "Layer 1: Acoustic Analysis (voice, intonation, speech rate) — live",
+    "Layer 2: ML Classification rubert-tiny2 (text & metadata) — live",
+    "Layer 3: Speech Recognition (ASR) — Roadmap",
+    "Layer 4: Semantic Content Analysis — Roadmap",
+    "Layer 5: Reputation Loop (PCD) — Roadmap",
+    "Layer 6: Local Number Database Check — Roadmap",
+    "Layer 7: Consensus & Final Verdict — live"
   ],
   es: [
-    "Capa 1: Acústico-Prosódico (ruido de fondo y estrés de voz)",
-    "Capa 2: Fonético-Intonativo (pausas anormales y lectura de guion)",
-    "Capa 3: Léxico-Semántico (búsqueda de frases clave de estafa)",
-    "Capa 4: Sintáctico-Discursivo (estructura de manipulación psicológica)",
-    "Capa 5: Pragmático-Contextual (evaluación de urgencia falsa)",
-    "Capa 6: Coincidencia de registro local (cotejo de hashes de amenazas)",
-    "Capa 7: Matriz de decisión heurística (cálculo de puntuación final)"
+    "Capa 1: Análisis acústico (voz, entonación, ritmo del habla) — activo",
+    "Capa 2: Clasificación ML rubert-tiny2 (texto y metadatos) — activa",
+    "Capa 3: Reconocimiento de voz (ASR) — Roadmap",
+    "Capa 4: Análisis semántico del contenido — Roadmap",
+    "Capa 5: Contorno de reputación (PCD) — Roadmap",
+    "Capa 6: Verificación contra la base de números — Roadmap",
+    "Capa 7: Consenso y veredicto final — activo"
   ],
   zh: [
-    "第 1 层：声学与韵律分析（分析背景噪音、语调和情绪压力）",
-    "第 2 层：语音与语调分析（检测不自然停顿和脚本读音模式）",
-    "第 3 层：词汇与语义分析（提取欺诈和诱导性敏感词组）",
-    "第 4 层：句法与话语分析（识别心理控制和诱导施压框架）",
-    "第 5 层：语用与语境分析（评估假冒权威与人为紧急情绪）",
-    "第 6 层：本地威胁库碰撞（在本地安全数据库中高速碰撞特征）",
-    "第 7 层：启发式决策矩阵（加权计算综合威胁度并触发报警拦截）"
+    "第 1 层：声学分析（语音、语调、语速）— 已运行",
+    "第 2 层：ML 分类 rubert-tiny2（文本与元数据）— 已运行",
+    "第 3 层：语音识别（ASR）— Roadmap",
+    "第 4 层：语义内容分析 — Roadmap",
+    "第 5 层：声誉评估环（PCD）— Roadmap",
+    "第 6 层：号码库比对 — Roadmap",
+    "第 7 层：共识与最终裁决 — 已运行"
+  ],
+  tr: [
+    "Katman 1: Akustik Analiz (ses, tonlama, konuşma hızı) — aktif",
+    "Katman 2: ML Sınıflandırma rubert-tiny2 (metin ve meta veriler) — aktif",
+    "Katman 3: Konuşma Tanıma (ASR) — Roadmap",
+    "Katman 4: İçeriğin Semantik Analizi — Roadmap",
+    "Katman 5: İtibar Döngüsü (PCD) — Roadmap",
+    "Katman 6: Numara Veritabanı Kontrolü — Roadmap",
+    "Katman 7: Konsensüs ve Nihai Karar — aktif"
   ],
   hi: [
-    "परत 1: ध्वनिक-प्रोसॉडिक (पृष्ठभूमि शोर और मुखर तनाव का विश्लेषण)",
-    "परत 2: ध्वन्यात्मक-intonational (असामान्य ठहराव और स्क्रिप्ट पढ़ने का पता लगाना)",
-    "परत 3: लेक्सिको-सिमेंटिक (हेरफेर वाले घोटाले के शब्दों को खोजना)",
-    "परत 4: सिंटैक्टिक-प्रवचन (मनोवैज्ञानिक नियंत्रण का संरचनात्मक मॉडलिंग)",
-    "परत 5: व्यावहारिक-प्रासंगिक (जबरन तात्कालिकता और अधिकार का मूल्यांकन)",
-    "परत 6: स्थानीय रजिस्ट्री क्रॉस-मैच (स्थानीय खतरे के खिलाफ मिलान)",
-    "परt 7: हेयुरिस्टिक डिसीजन मैट्रिक्स (अंतिम खतरे के स्कोर संकलन)"
+    "परत 1: ध्वनिक विश्लेषण (आवाज़, स्वर, भाषण गति) — सक्रिय",
+    "परत 2: ML वर्गीकरण rubert-tiny2 (टेक्स्ट और मेटाडेटा) — सक्रिय",
+    "परत 3: वाक् पहचान (ASR) — Roadmap",
+    "परत 4: सामग्री का सिमेंटिक विश्लेषण — Roadmap",
+    "परत 5: प्रतिष्ठा लूप (PCD) — Roadmap",
+    "परत 6: नंबर डेटाबेस से जाँच — Roadmap",
+    "परत 7: सर्वसम्मति और अंतिम निर्णय — सक्रिय"
   ],
   ar: [
-    "الطبقة 1: الصوتية العروضية (تحليل ضوضاء الخلفية والتوتر الصوتي)",
-    "الطبقة 2: الفونيمية التنغيمية (كشف السكتات غير الطبيعية وقراءة النصوص)",
-    "الطبقة 3: المعجمية الدلالية (رصد الكلمات المفتاحية الاحتيالية والمضللة)",
-    "الطبقة 4: النحوية الخطابية (نمذجة هيكل الضغط النفسي والسيطرة)",
-    "الطبقة 5: التداولية السياقية (تقييم دوافع الاستعجال والضغط الوهمي)",
-    "الطبقة 6: مقارنة السجلات المحلية (مطابقة البصمات مع قواعد التهديد المحلية)",
-    "الطبقة 7: مصفوفة القرار الاستدلالي (تجميع الدرجات النهائية وإطلاق التحذير)"
+    "الطبقة 1: التحليل الصوتي (الصوت، التنغيم، سرعة الكلام) — نشط",
+    "الطبقة 2: تصنيف التعلم الآلي rubert-tiny2 (النص والبيانات الوصفية) — نشط",
+    "الطبقة 3: التعرف على الكلام (ASR) — Roadmap",
+    "الطبقة 4: التحليل الدلالي للمحتوى — Roadmap",
+    "الطبقة 5: حلقة السمعة (PCD) — Roadmap",
+    "الطبقة 6: التحقق من قاعدة الأرقام — Roadmap",
+    "الطبقة 7: الإجماع والحكم النهائي — نشط"
   ],
   pt: [
-    "Camada 1: Acústico-Prosódico (ruído de fundo e estresse vocal)",
-    "Camada 2: Fonético-Entonacional (pausas anômalas e leitura de roteiro)",
-    "Camada 3: Léxico-Semântico (palavras-chave e frases de engenharia social)",
-    "Camada 4: Sintático-Discursivo (estrutura de manipulação psicológica)",
-    "Camada 5: Pragmático-Contextual (análise de falsa urgência e autoridade)",
-    "Camada 6: Comparação de Registro Local (verificação contra banco de ameaças local)",
-    "Camada 7: Matriz de Decisão Heurística (cálculo de risco final e alertas)"
+    "Camada 1: Análise acústica (voz, entonação, ritmo da fala) — ativa",
+    "Camada 2: Classificação ML rubert-tiny2 (texto e metadados) — ativa",
+    "Camada 3: Reconhecimento de fala (ASR) — Roadmap",
+    "Camada 4: Análise semântica do conteúdo — Roadmap",
+    "Camada 5: Circuito de reputação (PCD) — Roadmap",
+    "Camada 6: Verificação na base de números — Roadmap",
+    "Camada 7: Consenso e veredito final — ativo"
   ],
   fr: [
-    "Couche 1 : Acoustico-prosodique (analyse du bruit de fond et du stress vocal)",
-    "Couche 2 : Phonético-intonative (détection des pauses anormales et lecture de script)",
-    "Couche 3 : Lexico-sémantique (identification des phrases clés de manipulation)",
-    "Couche 4 : Syntactico-discursive (modélisation de l'emprise psychologique)",
-    "Couche 5 : Pragmatico-contextuelle (évaluation de l'urgence forcée et de l'autorité)",
-    "Couche 6 : Concordance locale (hachage et comparaison avec la base locale de menaces)",
-    "Couche 7 : Matrice de décision heuristique (compilation du score de menace final)"
+    "Couche 1 : Analyse acoustique (voix, intonation, rythme de parole) — active",
+    "Couche 2 : Classification ML rubert-tiny2 (texte et métadonnées) — active",
+    "Couche 3 : Reconnaissance vocale (ASR) — Roadmap",
+    "Couche 4 : Analyse sémantique du contenu — Roadmap",
+    "Couche 5 : Boucle de réputation (PCD) — Roadmap",
+    "Couche 6 : Vérification dans la base de numéros — Roadmap",
+    "Couche 7 : Consensus et verdict final — actif"
   ],
   de: [
-    "Ebene 1: Akustisch-Prosodisch (Hintergrundgeräusche und Stimmenstress)",
-    "Ebene 2: Phonemisch-Intonatorisch (anormale Pausen und Skriptlesen)",
-    "Ebene 3: Lexikalisch-Semantisch (manipulative Betrugs-Schlüsselwörter)",
-    "Ebene 4: Syntaktisch-Diskursiv (Modellierung psychologischer Kontrolle)",
-    "Ebene 5: Pragmatisch-Kontextuell (Dringlichkeitsprüfung & Autoritätstrigger)",
-    "Ebene 6: Lokaler Signatur-Abgleich (Abgleich mit der lokalen Bedrohungsdatenbank)",
-    "Ebene 7: Heuristische Entscheidungsmatrix (Berechnung des finalen Bedrohungsscores)"
+    "Ebene 1: Akustische Analyse (Stimme, Intonation, Sprechtempo) — aktiv",
+    "Ebene 2: ML-Klassifikation rubert-tiny2 (Text & Metadaten) — aktiv",
+    "Ebene 3: Spracherkennung (ASR) — Roadmap",
+    "Ebene 4: Semantische Inhaltsanalyse — Roadmap",
+    "Ebene 5: Reputationsschleife (PCD) — Roadmap",
+    "Ebene 6: Abgleich mit der Nummerndatenbank — Roadmap",
+    "Ebene 7: Konsens und endgültiges Urteil — aktiv"
   ],
   ja: [
-    "第1レイヤー：音響・プロソディ解析（背景ノイズ・感情ストレスの検知）",
-    "第2レイヤー：音韻・イントネーション解析（不自然なポーズや読み上げ検出）",
-    "第3レイヤー：語彙・セマンティック解析（詐欺的な誘導・キーワードの抽出）",
-    "第4レイヤー：構文・ディスコース解析（心理的コントロールや圧力パターンの構造化）",
-    "第5レイヤー：プラグマティック・コンテキスト解析（偽りの緊急性や権威の利用判定）",
-    "第6レイヤー：ローカルデータベース照合（ローカル脅威情報の高速シグネチャ検索）",
-    "第7レイヤー：ヒューリスティック意思決定マトリクス（加权による統合的な脅威度判定と警告）"
+    "第1レイヤー：音響解析（声・イントネーション・話す速さ）— 稼働中",
+    "第2レイヤー：ML分類 rubert-tiny2（テキストとメタデータ）— 稼働中",
+    "第3レイヤー：音声認識（ASR）— Roadmap",
+    "第4レイヤー：内容の意味解析 — Roadmap",
+    "第5レイヤー：評判ループ（PCD）— Roadmap",
+    "第6レイヤー：番号データベース照合 — Roadmap",
+    "第7レイヤー：コンセンサスと最終判定 — 稼働中"
   ]
 };
 
@@ -795,9 +804,9 @@ const CONSOLE_LOGS_BY_LANG: Partial<Record<LanguageCode, Record<string, string[]
       "[INFO] Сканирование спектра голоса на признаки синтеза..."
     ],
     done: [
-      "[ALERT] Слои 3, 4 и 5 зафиксировали критические семантические аномалии.",
+      "[ALERT] Слои анализа зафиксировали критические аномалии угрозы.",
       "[SUCCESS] Локальная база SQLCipher заблокирована на запись во избежание сброса.",
-      "[BLOCKED] KIRA: Семантическая блокировка входящего воздействия.",
+      "[BLOCKED] KIRA: Итоговый вердикт: блокировка входящего воздействия.",
       "[DOME HARDENED] Угроза нейтрализована. Лог стерт из ОЗУ. Устройство в безопасности."
     ]
   },
@@ -809,9 +818,9 @@ const CONSOLE_LOGS_BY_LANG: Partial<Record<LanguageCode, Record<string, string[]
       "[INFO] Scanning frequency spectrum for AI voice cloning signatures..."
     ],
     done: [
-      "[ALERT] Layers 3, 4, and 5 compiled critical semantic anomalies.",
+      "[ALERT] Analysis layers detected critical threat anomalies.",
       "[SUCCESS] Core SQLCipher user state secured to prevent tampering.",
-      "[BLOCKED] KIRA: Real-time semantic active countermeasure deployed.",
+      "[BLOCKED] KIRA: Final verdict: block the incoming interaction.",
       "[DOME HARDENED] Threat neutralized. Call memory flushed. Core systems secure."
     ]
   },
@@ -823,9 +832,9 @@ const CONSOLE_LOGS_BY_LANG: Partial<Record<LanguageCode, Record<string, string[]
       "[INFO] Escaneando el espectro de frecuencias en busca de señales de clonación de voz con IA...",
     ],
     done: [
-      "[ALERT] Las capas 3, 4 y 5 detectaron anomalías semánticas críticas.",
+      "[ALERT] Las capas de análisis detectaron anomalías de amenaza críticas.",
       "[SUCCESS] El estado protegido de SQLCipher fue asegurado para evitar manipulaciones.",
-      "[BLOCKED] KIRA: Contramedida semántica activa desplegada en tiempo real.",
+      "[BLOCKED] KIRA: Veredicto final: bloquear la interacción entrante.",
       "[DOME HARDENED] Amenaza neutralizada. Memoria de la llamada purgada. Sistemas principales seguros.",
     ],
   },
@@ -837,9 +846,9 @@ const CONSOLE_LOGS_BY_LANG: Partial<Record<LanguageCode, Record<string, string[]
       "[INFO] 正在扫描频谱，检测 AI 语音克隆特征...",
     ],
     done: [
-      "[ALERT] 第 3、4、5 层检测到严重语义异常。",
+      "[ALERT] 分析层检测到严重威胁异常。",
       "[SUCCESS] 核心 SQLCipher 用户状态已锁定，防止被篡改。",
-      "[BLOCKED] KIRA：已部署实时语义主动拦截。",
+      "[BLOCKED] KIRA：最终裁决：拦截本次交互。",
       "[DOME HARDENED] 威胁已消除。通话内存已清除。核心系统安全。",
     ],
   },
@@ -851,9 +860,9 @@ const CONSOLE_LOGS_BY_LANG: Partial<Record<LanguageCode, Record<string, string[]
       "[INFO] Yapay zeka ses klonlama imzaları için frekans spektrumu taranıyor...",
     ],
     done: [
-      "[ALERT] 3, 4 ve 5. katmanlar kritik anlamsal anormallikler tespit etti.",
+      "[ALERT] Analiz katmanları kritik tehdit anormallikleri tespit etti.",
       "[SUCCESS] Kurcalamayı önlemek için temel SQLCipher kullanıcı durumu güvence altına alındı.",
-      "[BLOCKED] KIRA: Gerçek zamanlı anlamsal aktif önlem devreye alındı.",
+      "[BLOCKED] KIRA: Nihai karar: gelen etkileşimi engelle.",
       "[DOME HARDENED] Tehdit etkisiz hale getirildi. Arama belleği temizlendi. Çekirdek sistemler güvende.",
     ],
   },
@@ -865,9 +874,9 @@ const CONSOLE_LOGS_BY_LANG: Partial<Record<LanguageCode, Record<string, string[]
       "[INFO] AI आवाज़ क्लोनिंग संकेतों के लिए आवृत्ति स्पेक्ट्रम स्कैन हो रहा है...",
     ],
     done: [
-      "[ALERT] परत 3, 4 और 5 ने गंभीर शब्दार्थ असामान्यताएँ पाईं।",
+      "[ALERT] विश्लेषण परतों ने गंभीर खतरे की असामान्यताएँ पाईं।",
       "[SUCCESS] छेड़छाड़ रोकने के लिए मुख्य SQLCipher उपयोगकर्ता स्थिति सुरक्षित कर दी गई।",
-      "[BLOCKED] KIRA: रीयल-टाइम सिमेंटिक सक्रिय प्रतिकार तैनात किया गया।",
+      "[BLOCKED] KIRA: अंतिम निर्णय: आने वाले संवाद को ब्लॉक करें।",
       "[DOME HARDENED] खतरा निष्प्रभावी। कॉल मेमोरी साफ़ की गई। मुख्य सिस्टम सुरक्षित।",
     ],
   },
@@ -879,9 +888,9 @@ const CONSOLE_LOGS_BY_LANG: Partial<Record<LanguageCode, Record<string, string[]
       "[INFO] فحص طيف الترددات بحثاً عن بصمات استنساخ الصوت بالذكاء الاصطناعي...",
     ],
     done: [
-      "[ALERT] رصدت الطبقات 3 و4 و5 شذوذاً دلالياً حرجاً.",
+      "[ALERT] رصدت طبقات التحليل شذوذاً حرجاً في التهديد.",
       "[SUCCESS] تم تأمين حالة مستخدم SQLCipher الأساسية لمنع العبث.",
-      "[BLOCKED] KIRA: تم نشر إجراء مضاد دلالي نشط في الوقت الفعلي.",
+      "[BLOCKED] KIRA: الحكم النهائي: حظر التفاعل الوارد.",
       "[DOME HARDENED] تم تحييد التهديد. تم مسح ذاكرة المكالمة. الأنظمة الأساسية آمنة.",
     ],
   },
@@ -893,9 +902,9 @@ const CONSOLE_LOGS_BY_LANG: Partial<Record<LanguageCode, Record<string, string[]
       "[INFO] Escaneando o espectro de frequências em busca de assinaturas de clonagem de voz por IA...",
     ],
     done: [
-      "[ALERT] As camadas 3, 4 e 5 detectaram anomalias semânticas críticas.",
+      "[ALERT] As camadas de análise detectaram anomalias críticas de ameaça.",
       "[SUCCESS] O estado protegido do SQLCipher foi garantido para evitar adulterações.",
-      "[BLOCKED] KIRA: Contramedida semântica ativa implantada em tempo real.",
+      "[BLOCKED] KIRA: Veredito final: bloquear a interação recebida.",
       "[DOME HARDENED] Ameaça neutralizada. Memória da chamada limpa. Sistemas principais seguros.",
     ],
   },
@@ -907,9 +916,9 @@ const CONSOLE_LOGS_BY_LANG: Partial<Record<LanguageCode, Record<string, string[]
       "[INFO] Analyse du spectre de fréquences à la recherche de signatures de clonage vocal par IA...",
     ],
     done: [
-      "[ALERT] Les couches 3, 4 et 5 ont détecté des anomalies sémantiques critiques.",
+      "[ALERT] Les couches d'analyse ont détecté des anomalies de menace critiques.",
       "[SUCCESS] L'état protégé SQLCipher a été sécurisé pour empêcher toute altération.",
-      "[BLOCKED] KIRA : Contre-mesure sémantique active déployée en temps réel.",
+      "[BLOCKED] KIRA : Verdict final : bloquer l'interaction entrante.",
       "[DOME HARDENED] Menace neutralisée. Mémoire de l'appel purgée. Systèmes principaux sécurisés.",
     ],
   },
@@ -921,9 +930,9 @@ const CONSOLE_LOGS_BY_LANG: Partial<Record<LanguageCode, Record<string, string[]
       "[INFO] Frequenzspektrum wird auf KI-Stimmklon-Signaturen gescannt...",
     ],
     done: [
-      "[ALERT] Die Schichten 3, 4 und 5 haben kritische semantische Anomalien festgestellt.",
+      "[ALERT] Die Analyseeinstanzen haben kritische Bedrohungsanomalien festgestellt.",
       "[SUCCESS] Der geschützte SQLCipher-Benutzerstatus wurde gegen Manipulation gesichert.",
-      "[BLOCKED] KIRA: Echtzeit-Gegenmaßnahme auf semantischer Ebene aktiviert.",
+      "[BLOCKED] KIRA: Endgültiges Urteil: eingehende Interaktion blockieren.",
       "[DOME HARDENED] Bedrohung neutralisiert. Anrufspeicher geleert. Kernsysteme sicher.",
     ],
   },
@@ -935,9 +944,9 @@ const CONSOLE_LOGS_BY_LANG: Partial<Record<LanguageCode, Record<string, string[]
       "[INFO] AI 音声クローン署名を検出するため周波数スペクトルをスキャンしています...",
     ],
     done: [
-      "[ALERT] レイヤー3、4、5 が重大な意味的異常を検出しました。",
+      "[ALERT] 分析レイヤーが重大な脅威の異常を検出しました。",
       "[SUCCESS] 改ざん防止のため、コア SQLCipher ユーザー状態を保護しました。",
-      "[BLOCKED] KIRA: リアルタイム意味論的能動対抗策を展開しました。",
+      "[BLOCKED] KIRA: 最終判定：着信インタラクションをブロック。",
       "[DOME HARDENED] 脅威を中和しました。通話メモリを消去。コアシステムは安全です。",
     ],
   },
@@ -964,17 +973,17 @@ export const LiveSimulatorSection = React.memo(function LiveSimulatorSection() {
 
   // UI labels based on language
   const SIM_UI: Record<string, Record<string, string>> = {
-    ru: { start: "Запустить симуляцию", reset: "Сбросить", caller: "Собеседник", incoming: "Входящий вызов...", secure: "СЕССИЯ ЗАЩИЩЕНА", threat: "Шкала угрозы социального инжиниринга", logs: "ЛОГ СИСТЕМЫ ОБОРОНЫ PHANTOM", finished: "СИМУЛЯЦИЯ ЗАВЕРШЕНА // УГРОЗА БЛОКИРОВАНА", warning: "KIRA: ОБНАРУЖЕНА УГРОЗА! ПОВЕСЬТЕ ТРУБКУ!", clickStart: "Нажмите кнопку ниже, чтобы запустить симуляцию голосового потока", statusHeader: "СТАТУС СЛОЕВ ФИЛЬТРАЦИИ PHANTOM 2.0", consoleBadge: "ИНТЕРАКТИВНАЯ ТЕСТОВАЯ КОНСОЛЬ // PHANTOM 2.0", secureLine: "GSM // ЗАЩИЩЕННАЯ ЛИНИЯ", activeStream: "АКТИВНЫЙ ЗВУКОВОЙ ПОТОК", secRamLabel: "ЗАЩИЩЕННАЯ РАМ ТРАНСКРИПЦИЯ", liveParsing: "ЖИВОЙ АНАЛИЗ...", threatFmt: "УРОВЕНЬ УГРОЗЫ", layersActiveFmt: "АКТИВНО", badgeVerified: "ПРОВЕРЕНО", badgeAlert: "ТРЕВОГА", badgeScanning: "СКАНИРОВАНИЕ", badgeStandby: "ОЖИДАНИЕ", interceptPrefix: "Обнаружено фраз угрозы: ", interceptSuffix: ". Запущен процесс экстренного глушения семантики.", logScan3: "[SCAN] СЛОЙ_3: Лексическое совпадение: \"{t}\"", logWarn4: "[WARN] СЛОЙ_4: Обнаружена схема манипуляции. Вес семантической аномалии: 0.72.", logScan3b: "[SCAN] СЛОЙ_3: Найдено совпадение: \"{t}\"", logCritical5: "[CRITICAL] СЛОЙ_5: Обнаружено давление авторитетом. Враждебные паттерны совпали с вероятностью 94%.", logScan6: "[SCAN] СЛОЙ_6: Фраза \"{t}\" совпадает с сигнатурами из чёрного списка." },
-    en: { start: "Start Simulation", reset: "Reset", caller: "Caller", incoming: "Incoming call...", secure: "SESSION SECURED", threat: "Social Engineering Threat Level", logs: "PHANTOM DEFENSE LOG", finished: "SIMULATION COMPLETE // ATTACK BLOCKED", warning: "KIRA: ATTEMPTED FRAUD DETECTED! HANG UP!", clickStart: "Click 'Start Simulation' below to stream voice data packets", statusHeader: "PHANTOM 2.0 DEFENSE LAYER STATUS", consoleBadge: "INTERACTIVE TEST CONSOLE // PHANTOM 2.0", secureLine: "GSM // SECURE LINE", activeStream: "ACTIVE AUDIO WAVE STREAM", secRamLabel: "SECURE_RAM_TRANSCRIPTION", liveParsing: "LIVE PARSING...", threatFmt: "THREAT_LEVEL", layersActiveFmt: "ACTIVE", badgeVerified: "VERIFIED", badgeAlert: "ALERT", badgeScanning: "SCANNING", badgeStandby: "STANDBY", interceptPrefix: "Threat triggers matching: ", interceptSuffix: ". Active intercept loop deployed.", logScan3: "[SCAN] LAYER_3: Lexical match detected phrase: \"{t}\"", logWarn4: "[WARN] LAYER_4: Manipulation scheme detected. Semantic anomaly weight: 0.72.", logScan3b: "[SCAN] LAYER_3: Match found: \"{t}\"", logCritical5: "[CRITICAL] LAYER_5: Authority coercion detected. Hostile dialog patterns matched with 94% probability.", logScan6: "[SCAN] LAYER_6: Phrase \"{t}\" matches blacklisted signatures." },
-    es: { start: "Iniciar Simulación", reset: "Reiniciar", caller: "Interlocutor", incoming: "Llamada entrante...", secure: "SESIÓN PROTEGIDA", threat: "Nivel de Amenaza de Ingeniería Social", logs: "REGISTRO DE DEFENSA PHANTOM", finished: "SIMULACIÓN COMPLETADA // ATAQUE BLOQUEADO", warning: "KIRA: ¡FRAUDE DETECTADO! ¡CUELGUE!", clickStart: "Haga clic en 'Iniciar simulación' abajo para transmitir datos de voz", statusHeader: "ESTADO DE CAPAS PHANTOM 2.0", consoleBadge: "CONSOLA DE PRUEBA INTERACTIVA // PHANTOM 2.0", secureLine: "GSM // LÍNEA SEGURA", activeStream: "FLUJO DE AUDIO ACTIVO", secRamLabel: "TRANSCRIPCIÓN EN RAM SEGURA", liveParsing: "ANÁLISIS EN VIVO...", threatFmt: "NIVEL DE AMENAZA", layersActiveFmt: "ACTIVAS", badgeVerified: "VERIFICADO", badgeAlert: "ALERTA", badgeScanning: "ESCANEANDO", badgeStandby: "EN ESPERA", interceptPrefix: "Frases coincidentes: ", interceptSuffix: ". Bucle de intercepción activa desplegado.", logScan3: "[SCAN] CAPA_3: Coincidencia léxica detectada en la frase: \"{t}\"", logWarn4: "[WARN] CAPA_4: Esquema de manipulación detectado. Peso de anomalía semántica: 0.72.", logScan3b: "[SCAN] CAPA_3: Coincidencia encontrada: \"{t}\"", logCritical5: "[CRITICAL] CAPA_5: Coerción de autoridad detectada. Patrones hostiles coinciden con un 94 % de probabilidad.", logScan6: "[SCAN] CAPA_6: La frase \"{t}\" coincide con firmas en lista negra." },
-    zh: { start: "开始模拟", reset: "重置", caller: "对方", incoming: "来电中...", secure: "会话已加密保护", threat: "社交工程威胁级别", logs: "PHANTOM 防御日志", finished: "模拟完成 // 攻击已被拦截", warning: "KIRA：检测到诈骗危险！请立即挂机！", clickStart: "点击下方按钮启动语音流模拟", statusHeader: "PHANTOM 2.0 防御层状态", consoleBadge: "交互式测试终端 // PHANTOM 2.0", secureLine: "GSM // 安全线路", activeStream: "活动音频流", secRamLabel: "安全内存实时转写", liveParsing: "实时解析中...", threatFmt: "威胁等级", layersActiveFmt: "已激活", badgeVerified: "已验证", badgeAlert: "警报", badgeScanning: "扫描中", badgeStandby: "待命", interceptPrefix: "匹配到的威胁短语：", interceptSuffix: "。已启动主动拦截循环。", logScan3: "[SCAN] 第3层：检测到词汇匹配短语：\"{t}\"", logWarn4: "[WARN] 第4层：检测到操纵手法。语义异常权重：0.72。", logScan3b: "[SCAN] 第3层：发现匹配：\"{t}\"", logCritical5: "[CRITICAL] 第5层：检测到权威胁迫。敌对对话模式匹配概率为 94%。", logScan6: "[SCAN] 第6层：短语\"{t}\"与黑名单特征匹配。" },
-    tr: { start: "Simülasyonu Başlat", reset: "Sıfırla", caller: "Arayan", incoming: "Gelen arama...", secure: "OTURUM GÜVENLİ", threat: "Sosyal Mühendislik Tehdit Seviyesi", logs: "PHANTOM SAVUNMA GÜNLÜĞÜ", finished: "SİMÜLASYON TAMAMLANDI // SALDIRI ENGELLENDİ", warning: "KIRA: DOLANDIRICILIK ALGILANDI! TELEFONU KAPATIN!", clickStart: "Ses veri paketlerini akıtmak için 'Simülasyonu Başlat'a tıklayın", statusHeader: "PHANTOM 2.0 SAVUNMA KATMANI DURUMU", consoleBadge: "ETKİLEŞİMLİ TEST KONSOLU // PHANTOM 2.0", secureLine: "GSM // GÜVENLİ HAT", activeStream: "AKTİF SES AKIŞI", secRamLabel: "GÜVENLİ RAM TRANSKRİPSİ", liveParsing: "CANLI AYRIŞTIRMA...", threatFmt: "TEHDİT SEVİYESİ", layersActiveFmt: "AKTİF", badgeVerified: "DOĞRULANDI", badgeAlert: "ALARM", badgeScanning: "TARANIYOR", badgeStandby: "BEKLEMEDE", interceptPrefix: "Eşleşen tehdit ifadeleri: ", interceptSuffix: ". Aktif müdahale döngüsü devreye alındı.", logScan3: "[SCAN] KATMAN_3: Sözcüksel eşleşme tespit edildi: \"{t}\"", logWarn4: "[WARN] KATMAN_4: Manipülasyon şeması tespit edildi. Anlamsal anormallik ağırlığı: 0.72.", logScan3b: "[SCAN] KATMAN_3: Eşleşme bulundu: \"{t}\"", logCritical5: "[CRITICAL] KATMAN_5: Otorite baskısı tespit edildi. Düşmanca diyalog kalıpları %94 olasılıkla eşleşti.", logScan6: "[SCAN] KATMAN_6: \"{t}\" ifadesi kara listedeki imzalarla eşleşiyor." },
-    hi: { start: "सिमुलेशन शुरू करें", reset: "रीसेट करें", caller: "कैलर", incoming: "आने वाली कॉल...", secure: "सत्र सुरक्षित", threat: "सामाजिक इंजीनियरिंग खतरा स्तर", logs: "PHANTOM रक्षा लॉग", finished: "सिमुलेशन पूरा // हमला अवरुद्ध", warning: "KIRA: धोखाधड़ी का पता चला! फोन काटें!", clickStart: "वॉइस स्ट्रीम सिमुलेशन शुरू करने के लिए नीचे क्लिक करें", statusHeader: "PHANTOM 2.0 रक्षा स्तर स्थिति", consoleBadge: "इंटरैक्टिव टेस्ट कंसोल // PHANTOM 2.0", secureLine: "GSM // सुरक्षित लाइन", activeStream: "सक्रिय ऑडियो स्ट्रीम", secRamLabel: "सुरक्षित RAM ट्रांसक्रिप्शन", liveParsing: "लाइव पार्सिंग...", threatFmt: "खतरा स्तर", layersActiveFmt: "सक्रिय", badgeVerified: "सत्यापित", badgeAlert: "चेतावनी", badgeScanning: "स्कैन हो रहा", badgeStandby: "स्टैंडबाय", interceptPrefix: "मिलान वाले खतरे: ", interceptSuffix: "। सक्रिय रोकथाम लूप तैनात किया गया।", logScan3: "[SCAN] परत_3: शाब्दिक मिलान वाक्यांश मिला: \"{t}\"", logWarn4: "[WARN] परत_4: हेरफेर योजना मिली। शब्दार्थ असामान्यता भार: 0.72।", logScan3b: "[SCAN] परत_3: मिलान मिला: \"{t}\"", logCritical5: "[CRITICAL] परत_5: अधिकार बल प्रयोग मिला। शत्रुतापूर्ण डायलॉग पैटर्न 94% संभावना से मेल खाते हैं।", logScan6: "[SCAN] परत_6: वाक्यांश \"{t}\" ब्लैकलिस्टेड हस्ताक्षरों से मेल खाता है।" },
-    ar: { start: "بدء المحاكاة", reset: "إعادة ضبط", caller: "المتصل", incoming: "مكالمة واردة...", secure: "جلسة آمنة", threat: "مستوى تهديد الهندسة الاجتماعية", logs: "سجل دفاع PHANTOM", finished: "اكتملت المحاكاة // تم حظر الهجوم", warning: "KIRA: تم اكتشاف محاولة احتيال! أغلِق الخط!", clickStart: "انقر على زر البدء أدناه لبدء محاكاة تدفق الصوت", statusHeader: "حالة طبقات الحماية PHANTOM 2.0", consoleBadge: "وحدة الاختبار التفاعلية // PHANTOM 2.0", secureLine: "GSM // خط آمن", activeStream: "تدفق صوتي نشط", secRamLabel: "نسخ في الذاكرة الآمنة", liveParsing: "تحليل مباشر...", threatFmt: "مستوى التهديد", layersActiveFmt: "نشطة", badgeVerified: "موثق", badgeAlert: "إنذار", badgeScanning: "فحص", badgeStandby: "استعداد", interceptPrefix: "العبارات المطابقة للتهديد: ", interceptSuffix: ". تم نشر حلقة اعتراض نشطة.", logScan3: "[SCAN] الطبقة_3: تطابق معجمي في العبارة: \"{t}\"", logWarn4: "[WARN] الطبقة_4: تم رصد مخطط تلاعب. وزن الشذوذ الدلالي: 0.72.", logScan3b: "[SCAN] الطبقة_3: تم العثور على تطابق: \"{t}\"", logCritical5: "[CRITICAL] الطبقة_5: تم رصد إكراه بالسلطة. أنماط الحوار العدائية تطابقت بنسبة 94%.", logScan6: "[SCAN] الطبقة_6: العبارة \"{t}\" تطابق بصمات القائمة السوداء." },
-    pt: { start: "Iniciar Simulação", reset: "Reiniciar", caller: "Chamador", incoming: "Chamada recebida...", secure: "SESSÃO PROTEGIDA", threat: "Nível de Ameaça de Engenharia Social", logs: "REGISTRO DE DEFESA PHANTOM", finished: "SIMULAÇÃO CONCLUÍDA // ATAQUE BLOQUEADO", warning: "KIRA: FRAUDE DETECTADA! DESLIGUE O TELEFONE!", clickStart: "Clique no botão abaixo para iniciar a simulação de voz", statusHeader: "STATUS DA CAMADA DE DEFESA PHANTOM 2.0", consoleBadge: "CONSOLE DE TESTE INTERATIVO // PHANTOM 2.0", secureLine: "GSM // LINHA SEGURA", activeStream: "FLUXO DE ÁUDIO ATIVO", secRamLabel: "TRANSCRIÇÃO NA RAM SEGURA", liveParsing: "ANÁLISE AO VIVO...", threatFmt: "NÍVEL DE AMEAÇA", layersActiveFmt: "ATIVAS", badgeVerified: "VERIFICADO", badgeAlert: "ALERTA", badgeScanning: "ESCANEANDO", badgeStandby: "EM ESPERA", interceptPrefix: "Frases de ameaça correspondentes: ", interceptSuffix: ". Loop de interceptação ativa implantado.", logScan3: "[SCAN] CAMADA_3: Correspondência lexical detectada na frase: \"{t}\"", logWarn4: "[WARN] CAMADA_4: Esquema de manipulação detectado. Peso de anomalia semântica: 0.72.", logScan3b: "[SCAN] CAMADA_3: Correspondência encontrada: \"{t}\"", logCritical5: "[CRITICAL] CAMADA_5: Coerção de autoridade detectada. Padrões hostis correspondem com 94% de probabilidade.", logScan6: "[SCAN] CAMADA_6: A frase \"{t}\" corresponde a assinaturas na lista negra." },
-    fr: { start: "Lancer la simulation", reset: "Réinitialiser", caller: "Appelant", incoming: "Appel entrant...", secure: "SÉANCE SÉCURISÉE", threat: "Niveau de Menace d'Ingénierie Sociale", logs: "JOURNAL DE DÉFENSE PHANTOM", finished: "SIMULATION TERMINÉE // ATTAQUE BLOQUÉE", warning: "KIRA : FRAUDE DÉTECTÉE ! RACCROCHEZ !", clickStart: "Cliquez sur le bouton ci-dessous pour démarrer la simulation", statusHeader: "ÉTAT DES COUCHES PHANTOM 2.0", consoleBadge: "CONSOLE DE TEST INTERACTIVE // PHANTOM 2.0", secureLine: "GSM // LIGNE SÉCURISÉE", activeStream: "FLUX AUDIO ACTIF", secRamLabel: "TRANSCRIPTION RAM SÉCURISÉE", liveParsing: "ANALYSE EN DIRECT...", threatFmt: "NIVEAU DE MENACE", layersActiveFmt: "ACTIVES", badgeVerified: "VÉRIFIÉ", badgeAlert: "ALERTE", badgeScanning: "ANALYSE", badgeStandby: "EN VEILLE", interceptPrefix: "Phrases de menace correspondantes : ", interceptSuffix: ". Boucle d'interception active déployée.", logScan3: "[SCAN] COUCHE_3 : Correspondance lexicale détectée dans la phrase : \"{t}\"", logWarn4: "[WARN] COUCHE_4 : Schéma de manipulation détecté. Poids d'anomalie sémantique : 0.72.", logScan3b: "[SCAN] COUCHE_3 : Correspondance trouvée : \"{t}\"", logCritical5: "[CRITICAL] COUCHE_5 : Coercition d'autorité détectée. Les schémas hostiles correspondent à 94 % de probabilité.", logScan6: "[SCAN] COUCHE_6 : La phrase \"{t}\" correspond à des signatures en liste noire." },
-    de: { start: "Simulation starten", reset: "Zurücksetzen", caller: "Anrufer", incoming: "Eingehender Anruf...", secure: "SITZUNG GESICHERT", threat: "Bedrohungsstufe für Social Engineering", logs: "PHANTOM-ABWEHRLOGBUCH", finished: "SIMULATION ABGESCHLOSSEN // ANGRIFF BLOCKIERT", warning: "KIRA: BETRUGSVERSUCH ERKANNT! AUFLEGEN!", clickStart: "Klicken Sie unten, um die Sprachdatensimulation zu starten", statusHeader: "PHANTOM 2.0 SCHUTZSCHICHT-STATUS", consoleBadge: "INTERAKTIVE TESTKONSOLE // PHANTOM 2.0", secureLine: "GSM // SICHERE LEITUNG", activeStream: "AKTIVER AUDIO-STREAM", secRamLabel: "TRANSCRIPTION IM SICHEREN RAM", liveParsing: "LIVE-ANALYSE...", threatFmt: "BEDROHUNGSSTUFE", layersActiveFmt: "AKTIV", badgeVerified: "GEPRÜFT", badgeAlert: "ALARM", badgeScanning: "SCANNT", badgeStandby: "BEREITSCHAFT", interceptPrefix: "Übereinstimmende Bedrohungsphrasen: ", interceptSuffix: ". Aktive Abfangschleife aktiviert.", logScan3: "[SCAN] EBENE_3: Lexikalische Übereinstimmung erkannt in: \"{t}\"", logWarn4: "[WARN] EBENE_4: Manipulationsschema erkannt. Semantisches Anomaliegewicht: 0.72.", logScan3b: "[SCAN] EBENE_3: Übereinstimmung gefunden: \"{t}\"", logCritical5: "[CRITICAL] EBENE_5: Autoritätsdruck erkannt. Feindliche Dialogmuster mit 94 % Wahrscheinlichkeit.", logScan6: "[SCAN] EBENE_6: Phrase \"{t}\" stimmt mit gelisteten Signaturen überein." },
-    ja: { start: "シミュレーション開始", reset: "リセット", caller: "発信者", incoming: "着信中...", secure: "セッション保護中", threat: "ソーシャルエンジニアリング脅威レベル", logs: "PHANTOM防御ログ", finished: "シミュレーション完了 // 攻撃ブロック", warning: "KIRA: 詐欺攻撃を検知！すぐに切断してください！", clickStart: "下のボタンをクリックして音声ストリームを開始してください", statusHeader: "PHANTOM 2.0 防御レイヤーステータス", consoleBadge: "インタラクティブテストコンソール // PHANTOM 2.0", secureLine: "GSM // セキュア回線", activeStream: "アクティブ音声ストリーム", secRamLabel: "セキュアRAM転写", liveParsing: "ライブ解析中...", threatFmt: "脅威レベル", layersActiveFmt: "アクティブ", badgeVerified: "検証済み", badgeAlert: "警告", badgeScanning: "スキャン中", badgeStandby: "待機中", interceptPrefix: "一致する脅威フレーズ: ", interceptSuffix: "。能動的インターセプトループを展開しました。", logScan3: "[SCAN] レイヤー_3: 語彙一致フレーズを検出: \"{t}\"", logWarn4: "[WARN] レイヤー_4: 操作スキームを検出。意味的異常ウェイト: 0.72。", logScan3b: "[SCAN] レイヤー_3: 一致を発見: \"{t}\"", logCritical5: "[CRITICAL] レイヤー_5: 権威による強制を検出。敵対的ダイアログパターンが 94% の確率で一致。", logScan6: "[SCAN] レイヤー_6: フレーズ \"{t}\" がブラックリスト署名と一致。" }
+    ru: { start: "Запустить симуляцию", reset: "Сбросить", caller: "Собеседник", incoming: "Входящий вызов...", secure: "СЕССИЯ ЗАЩИЩЕНА", threat: "Шкала угрозы социального инжиниринга", logs: "ЛОГ СИСТЕМЫ ОБОРОНЫ PHANTOM", finished: "СИМУЛЯЦИЯ ЗАВЕРШЕНА // УГРОЗА БЛОКИРОВАНА", warning: "KIRA: ОБНАРУЖЕНА УГРОЗА! ПОВЕСЬТЕ ТРУБКУ!", clickStart: "Нажмите кнопку ниже, чтобы запустить симуляцию голосового потока", statusHeader: "СТАТУС СЛОЕВ ФИЛЬТРАЦИИ PHANTOM 2.0", consoleBadge: "ИНТЕРАКТИВНАЯ ТЕСТОВАЯ КОНСОЛЬ // PHANTOM 2.0", secureLine: "GSM // ЗАЩИЩЕННАЯ ЛИНИЯ", activeStream: "АКТИВНЫЙ ЗВУКОВОЙ ПОТОК", secRamLabel: "ЗАЩИЩЕННАЯ РАМ ТРАНСКРИПЦИЯ", liveParsing: "ЖИВОЙ АНАЛИЗ...", threatFmt: "УРОВЕНЬ УГРОЗЫ", layersActiveFmt: "АКТИВНО", badgeVerified: "ПРОВЕРЕНО", badgeAlert: "ТРЕВОГА", badgeScanning: "СКАНИРОВАНИЕ", badgeStandby: "ОЖИДАНИЕ", interceptPrefix: "Обнаружено фраз угрозы: ", interceptSuffix: ". Consensus вынес решение о блокировке входящего воздействия.", logScan3: "[SCAN] СЛОЙ_3: Лексическое совпадение: \"{t}\"", logWarn4: "[WARN] СЛОЙ_4: Обнаружена схема манипуляции. Вес семантической аномалии: 0.72.", logScan3b: "[SCAN] СЛОЙ_3: Найдено совпадение: \"{t}\"", logCritical5: "[CRITICAL] СЛОЙ_5: Обнаружено давление авторитетом. Враждебные паттерны совпали с вероятностью 94%.", logScan6: "[SCAN] СЛОЙ_6: Фраза \"{t}\" совпадает с сигнатурами из чёрного списка." },
+    en: { start: "Start Simulation", reset: "Reset", caller: "Caller", incoming: "Incoming call...", secure: "SESSION SECURED", threat: "Social Engineering Threat Level", logs: "PHANTOM DEFENSE LOG", finished: "SIMULATION COMPLETE // ATTACK BLOCKED", warning: "KIRA: ATTEMPTED FRAUD DETECTED! HANG UP!", clickStart: "Click 'Start Simulation' below to stream voice data packets", statusHeader: "PHANTOM 2.0 DEFENSE LAYER STATUS", consoleBadge: "INTERACTIVE TEST CONSOLE // PHANTOM 2.0", secureLine: "GSM // SECURE LINE", activeStream: "ACTIVE AUDIO WAVE STREAM", secRamLabel: "SECURE_RAM_TRANSCRIPTION", liveParsing: "LIVE PARSING...", threatFmt: "THREAT_LEVEL", layersActiveFmt: "ACTIVE", badgeVerified: "VERIFIED", badgeAlert: "ALERT", badgeScanning: "SCANNING", badgeStandby: "STANDBY", interceptPrefix: "Threat triggers matching: ", interceptSuffix: ". Consensus issued a verdict to block the incoming interaction.", logScan3: "[SCAN] LAYER_3: Lexical match detected phrase: \"{t}\"", logWarn4: "[WARN] LAYER_4: Manipulation scheme detected. Semantic anomaly weight: 0.72.", logScan3b: "[SCAN] LAYER_3: Match found: \"{t}\"", logCritical5: "[CRITICAL] LAYER_5: Authority coercion detected. Hostile dialog patterns matched with 94% probability.", logScan6: "[SCAN] LAYER_6: Phrase \"{t}\" matches blacklisted signatures." },
+    es: { start: "Iniciar Simulación", reset: "Reiniciar", caller: "Interlocutor", incoming: "Llamada entrante...", secure: "SESIÓN PROTEGIDA", threat: "Nivel de Amenaza de Ingeniería Social", logs: "REGISTRO DE DEFENSA PHANTOM", finished: "SIMULACIÓN COMPLETADA // ATAQUE BLOQUEADO", warning: "KIRA: ¡FRAUDE DETECTADO! ¡CUELGUE!", clickStart: "Haga clic en 'Iniciar simulación' abajo para transmitir datos de voz", statusHeader: "ESTADO DE CAPAS PHANTOM 2.0", consoleBadge: "CONSOLA DE PRUEBA INTERACTIVA // PHANTOM 2.0", secureLine: "GSM // LÍNEA SEGURA", activeStream: "FLUJO DE AUDIO ACTIVO", secRamLabel: "TRANSCRIPCIÓN EN RAM SEGURA", liveParsing: "ANÁLISIS EN VIVO...", threatFmt: "NIVEL DE AMENAZA", layersActiveFmt: "ACTIVAS", badgeVerified: "VERIFICADO", badgeAlert: "ALERTA", badgeScanning: "ESCANEANDO", badgeStandby: "EN ESPERA", interceptPrefix: "Frases coincidentes: ", interceptSuffix: ". El consenso emitió un veredicto para bloquear la interacción entrante.", logScan3: "[SCAN] CAPA_3: Coincidencia léxica detectada en la frase: \"{t}\"", logWarn4: "[WARN] CAPA_4: Esquema de manipulación detectado. Peso de anomalía semántica: 0.72.", logScan3b: "[SCAN] CAPA_3: Coincidencia encontrada: \"{t}\"", logCritical5: "[CRITICAL] CAPA_5: Coerción de autoridad detectada. Patrones hostiles coinciden con un 94 % de probabilidad.", logScan6: "[SCAN] CAPA_6: La frase \"{t}\" coincide con firmas en lista negra." },
+    zh: { start: "开始模拟", reset: "重置", caller: "对方", incoming: "来电中...", secure: "会话已加密保护", threat: "社交工程威胁级别", logs: "PHANTOM 防御日志", finished: "模拟完成 // 攻击已被拦截", warning: "KIRA：检测到诈骗危险！请立即挂机！", clickStart: "点击下方按钮启动语音流模拟", statusHeader: "PHANTOM 2.0 防御层状态", consoleBadge: "交互式测试终端 // PHANTOM 2.0", secureLine: "GSM // 安全线路", activeStream: "活动音频流", secRamLabel: "安全内存实时转写", liveParsing: "实时解析中...", threatFmt: "威胁等级", layersActiveFmt: "已激活", badgeVerified: "已验证", badgeAlert: "警报", badgeScanning: "扫描中", badgeStandby: "待命", interceptPrefix: "匹配到的威胁短语：", interceptSuffix: "。共识机制已作出拦截本次交互的裁决。", logScan3: "[SCAN] 第3层：检测到词汇匹配短语：\"{t}\"", logWarn4: "[WARN] 第4层：检测到操纵手法。语义异常权重：0.72。", logScan3b: "[SCAN] 第3层：发现匹配：\"{t}\"", logCritical5: "[CRITICAL] 第5层：检测到权威胁迫。敌对对话模式匹配概率为 94%。", logScan6: "[SCAN] 第6层：短语\"{t}\"与黑名单特征匹配。" },
+    tr: { start: "Simülasyonu Başlat", reset: "Sıfırla", caller: "Arayan", incoming: "Gelen arama...", secure: "OTURUM GÜVENLİ", threat: "Sosyal Mühendislik Tehdit Seviyesi", logs: "PHANTOM SAVUNMA GÜNLÜĞÜ", finished: "SİMÜLASYON TAMAMLANDI // SALDIRI ENGELLENDİ", warning: "KIRA: DOLANDIRICILIK ALGILANDI! TELEFONU KAPATIN!", clickStart: "Ses veri paketlerini akıtmak için 'Simülasyonu Başlat'a tıklayın", statusHeader: "PHANTOM 2.0 SAVUNMA KATMANI DURUMU", consoleBadge: "ETKİLEŞİMLİ TEST KONSOLU // PHANTOM 2.0", secureLine: "GSM // GÜVENLİ HAT", activeStream: "AKTİF SES AKIŞI", secRamLabel: "GÜVENLİ RAM TRANSKRİPSİ", liveParsing: "CANLI AYRIŞTIRMA...", threatFmt: "TEHDİT SEVİYESİ", layersActiveFmt: "AKTİF", badgeVerified: "DOĞRULANDI", badgeAlert: "ALARM", badgeScanning: "TARANIYOR", badgeStandby: "BEKLEMEDE", interceptPrefix: "Eşleşen tehdit ifadeleri: ", interceptSuffix: ". Konsensüs gelen etkileşimi engelleme kararı verdi.", logScan3: "[SCAN] KATMAN_3: Sözcüksel eşleşme tespit edildi: \"{t}\"", logWarn4: "[WARN] KATMAN_4: Manipülasyon şeması tespit edildi. Anlamsal anormallik ağırlığı: 0.72.", logScan3b: "[SCAN] KATMAN_3: Eşleşme bulundu: \"{t}\"", logCritical5: "[CRITICAL] KATMAN_5: Otorite baskısı tespit edildi. Düşmanca diyalog kalıpları %94 olasılıkla eşleşti.", logScan6: "[SCAN] KATMAN_6: \"{t}\" ifadesi kara listedeki imzalarla eşleşiyor." },
+    hi: { start: "सिमुलेशन शुरू करें", reset: "रीसेट करें", caller: "कैलर", incoming: "आने वाली कॉल...", secure: "सत्र सुरक्षित", threat: "सामाजिक इंजीनियरिंग खतरा स्तर", logs: "PHANTOM रक्षा लॉग", finished: "सिमुलेशन पूरा // हमला अवरुद्ध", warning: "KIRA: धोखाधड़ी का पता चला! फोन काटें!", clickStart: "वॉइस स्ट्रीम सिमुलेशन शुरू करने के लिए नीचे क्लिक करें", statusHeader: "PHANTOM 2.0 रक्षा स्तर स्थिति", consoleBadge: "इंटरैक्टिव टेस्ट कंसोल // PHANTOM 2.0", secureLine: "GSM // सुरक्षित लाइन", activeStream: "सक्रिय ऑडियो स्ट्रीम", secRamLabel: "सुरक्षित RAM ट्रांसक्रिप्शन", liveParsing: "लाइव पार्सिंग...", threatFmt: "खतरा स्तर", layersActiveFmt: "सक्रिय", badgeVerified: "सत्यापित", badgeAlert: "चेतावनी", badgeScanning: "स्कैन हो रहा", badgeStandby: "स्टैंडबाय", interceptPrefix: "मिलान वाले खतरे: ", interceptSuffix: "। सर्वसम्मति ने आने वाले संवाद को ब्लॉक करने का निर्णय दिया।", logScan3: "[SCAN] परत_3: शाब्दिक मिलान वाक्यांश मिला: \"{t}\"", logWarn4: "[WARN] परत_4: हेरफेर योजना मिली। शब्दार्थ असामान्यता भार: 0.72।", logScan3b: "[SCAN] परत_3: मिलान मिला: \"{t}\"", logCritical5: "[CRITICAL] परत_5: अधिकार बल प्रयोग मिला। शत्रुतापूर्ण डायलॉग पैटर्न 94% संभावना से मेल खाते हैं।", logScan6: "[SCAN] परत_6: वाक्यांश \"{t}\" ब्लैकलिस्टेड हस्ताक्षरों से मेल खाता है।" },
+    ar: { start: "بدء المحاكاة", reset: "إعادة ضبط", caller: "المتصل", incoming: "مكالمة واردة...", secure: "جلسة آمنة", threat: "مستوى تهديد الهندسة الاجتماعية", logs: "سجل دفاع PHANTOM", finished: "اكتملت المحاكاة // تم حظر الهجوم", warning: "KIRA: تم اكتشاف محاولة احتيال! أغلِق الخط!", clickStart: "انقر على زر البدء أدناه لبدء محاكاة تدفق الصوت", statusHeader: "حالة طبقات الحماية PHANTOM 2.0", consoleBadge: "وحدة الاختبار التفاعلية // PHANTOM 2.0", secureLine: "GSM // خط آمن", activeStream: "تدفق صوتي نشط", secRamLabel: "نسخ في الذاكرة الآمنة", liveParsing: "تحليل مباشر...", threatFmt: "مستوى التهديد", layersActiveFmt: "نشطة", badgeVerified: "موثق", badgeAlert: "إنذار", badgeScanning: "فحص", badgeStandby: "استعداد", interceptPrefix: "العبارات المطابقة للتهديد: ", interceptSuffix: ". أصدر الإجماع حكمًا بحظر التفاعل الوارد.", logScan3: "[SCAN] الطبقة_3: تطابق معجمي في العبارة: \"{t}\"", logWarn4: "[WARN] الطبقة_4: تم رصد مخطط تلاعب. وزن الشذوذ الدلالي: 0.72.", logScan3b: "[SCAN] الطبقة_3: تم العثور على تطابق: \"{t}\"", logCritical5: "[CRITICAL] الطبقة_5: تم رصد إكراه بالسلطة. أنماط الحوار العدائية تطابقت بنسبة 94%.", logScan6: "[SCAN] الطبقة_6: العبارة \"{t}\" تطابق بصمات القائمة السوداء." },
+    pt: { start: "Iniciar Simulação", reset: "Reiniciar", caller: "Chamador", incoming: "Chamada recebida...", secure: "SESSÃO PROTEGIDA", threat: "Nível de Ameaça de Engenharia Social", logs: "REGISTRO DE DEFESA PHANTOM", finished: "SIMULAÇÃO CONCLUÍDA // ATAQUE BLOQUEADO", warning: "KIRA: FRAUDE DETECTADA! DESLIGUE O TELEFONE!", clickStart: "Clique no botão abaixo para iniciar a simulação de voz", statusHeader: "STATUS DA CAMADA DE DEFESA PHANTOM 2.0", consoleBadge: "CONSOLE DE TESTE INTERATIVO // PHANTOM 2.0", secureLine: "GSM // LINHA SEGURA", activeStream: "FLUXO DE ÁUDIO ATIVO", secRamLabel: "TRANSCRIÇÃO NA RAM SEGURA", liveParsing: "ANÁLISE AO VIVO...", threatFmt: "NÍVEL DE AMEAÇA", layersActiveFmt: "ATIVAS", badgeVerified: "VERIFICADO", badgeAlert: "ALERTA", badgeScanning: "ESCANEANDO", badgeStandby: "EM ESPERA", interceptPrefix: "Frases de ameaça correspondentes: ", interceptSuffix: ". O consenso emitiu um veredito para bloquear a interação recebida.", logScan3: "[SCAN] CAMADA_3: Correspondência lexical detectada na frase: \"{t}\"", logWarn4: "[WARN] CAMADA_4: Esquema de manipulação detectado. Peso de anomalia semântica: 0.72.", logScan3b: "[SCAN] CAMADA_3: Correspondência encontrada: \"{t}\"", logCritical5: "[CRITICAL] CAMADA_5: Coerção de autoridade detectada. Padrões hostis correspondem com 94% de probabilidade.", logScan6: "[SCAN] CAMADA_6: A frase \"{t}\" corresponde a assinaturas na lista negra." },
+    fr: { start: "Lancer la simulation", reset: "Réinitialiser", caller: "Appelant", incoming: "Appel entrant...", secure: "SÉANCE SÉCURISÉE", threat: "Niveau de Menace d'Ingénierie Sociale", logs: "JOURNAL DE DÉFENSE PHANTOM", finished: "SIMULATION TERMINÉE // ATTAQUE BLOQUÉE", warning: "KIRA : FRAUDE DÉTECTÉE ! RACCROCHEZ !", clickStart: "Cliquez sur le bouton ci-dessous pour démarrer la simulation", statusHeader: "ÉTAT DES COUCHES PHANTOM 2.0", consoleBadge: "CONSOLE DE TEST INTERACTIVE // PHANTOM 2.0", secureLine: "GSM // LIGNE SÉCURISÉE", activeStream: "FLUX AUDIO ACTIF", secRamLabel: "TRANSCRIPTION RAM SÉCURISÉE", liveParsing: "ANALYSE EN DIRECT...", threatFmt: "NIVEAU DE MENACE", layersActiveFmt: "ACTIVES", badgeVerified: "VÉRIFIÉ", badgeAlert: "ALERTE", badgeScanning: "ANALYSE", badgeStandby: "EN VEILLE", interceptPrefix: "Phrases de menace correspondantes : ", interceptSuffix: ". Le consensus a émis un verdict de blocage de l'interaction entrante.", logScan3: "[SCAN] COUCHE_3 : Correspondance lexicale détectée dans la phrase : \"{t}\"", logWarn4: "[WARN] COUCHE_4 : Schéma de manipulation détecté. Poids d'anomalie sémantique : 0.72.", logScan3b: "[SCAN] COUCHE_3 : Correspondance trouvée : \"{t}\"", logCritical5: "[CRITICAL] COUCHE_5 : Coercition d'autorité détectée. Les schémas hostiles correspondent à 94 % de probabilité.", logScan6: "[SCAN] COUCHE_6 : La phrase \"{t}\" correspond à des signatures en liste noire." },
+    de: { start: "Simulation starten", reset: "Zurücksetzen", caller: "Anrufer", incoming: "Eingehender Anruf...", secure: "SITZUNG GESICHERT", threat: "Bedrohungsstufe für Social Engineering", logs: "PHANTOM-ABWEHRLOGBUCH", finished: "SIMULATION ABGESCHLOSSEN // ANGRIFF BLOCKIERT", warning: "KIRA: BETRUGSVERSUCH ERKANNT! AUFLEGEN!", clickStart: "Klicken Sie unten, um die Sprachdatensimulation zu starten", statusHeader: "PHANTOM 2.0 SCHUTZSCHICHT-STATUS", consoleBadge: "INTERAKTIVE TESTKONSOLE // PHANTOM 2.0", secureLine: "GSM // SICHERE LEITUNG", activeStream: "AKTIVER AUDIO-STREAM", secRamLabel: "TRANSCRIPTION IM SICHEREN RAM", liveParsing: "LIVE-ANALYSE...", threatFmt: "BEDROHUNGSSTUFE", layersActiveFmt: "AKTIV", badgeVerified: "GEPRÜFT", badgeAlert: "ALARM", badgeScanning: "SCANNT", badgeStandby: "BEREITSCHAFT", interceptPrefix: "Übereinstimmende Bedrohungsphrasen: ", interceptSuffix: ". Der Konsens fällte das Urteil, die eingehende Interaktion zu blockieren.", logScan3: "[SCAN] EBENE_3: Lexikalische Übereinstimmung erkannt in: \"{t}\"", logWarn4: "[WARN] EBENE_4: Manipulationsschema erkannt. Semantisches Anomaliegewicht: 0.72.", logScan3b: "[SCAN] EBENE_3: Übereinstimmung gefunden: \"{t}\"", logCritical5: "[CRITICAL] EBENE_5: Autoritätsdruck erkannt. Feindliche Dialogmuster mit 94 % Wahrscheinlichkeit.", logScan6: "[SCAN] EBENE_6: Phrase \"{t}\" stimmt mit gelisteten Signaturen überein." },
+    ja: { start: "シミュレーション開始", reset: "リセット", caller: "発信者", incoming: "着信中...", secure: "セッション保護中", threat: "ソーシャルエンジニアリング脅威レベル", logs: "PHANTOM防御ログ", finished: "シミュレーション完了 // 攻撃ブロック", warning: "KIRA: 詐欺攻撃を検知！すぐに切断してください！", clickStart: "下のボタンをクリックして音声ストリームを開始してください", statusHeader: "PHANTOM 2.0 防御レイヤーステータス", consoleBadge: "インタラクティブテストコンソール // PHANTOM 2.0", secureLine: "GSM // セキュア回線", activeStream: "アクティブ音声ストリーム", secRamLabel: "セキュアRAM転写", liveParsing: "ライブ解析中...", threatFmt: "脅威レベル", layersActiveFmt: "アクティブ", badgeVerified: "検証済み", badgeAlert: "警告", badgeScanning: "スキャン中", badgeStandby: "待機中", interceptPrefix: "一致する脅威フレーズ: ", interceptSuffix: "。コンセンサスが着信インタラクションをブロックする判定を下しました。", logScan3: "[SCAN] レイヤー_3: 語彙一致フレーズを検出: \"{t}\"", logWarn4: "[WARN] レイヤー_4: 操作スキームを検出。意味的異常ウェイト: 0.72。", logScan3b: "[SCAN] レイヤー_3: 一致を発見: \"{t}\"", logCritical5: "[CRITICAL] レイヤー_5: 権威による強制を検出。敵対的ダイアログパターンが 94% の確率で一致。", logScan6: "[SCAN] レイヤー_6: フレーズ \"{t}\" がブラックリスト署名と一致。" }
   };
   const sui = SIM_UI[language] || SIM_UI.en;
   const btnStart = sui.start;

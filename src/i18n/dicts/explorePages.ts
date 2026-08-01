@@ -6,7 +6,7 @@ export const explore = {
     subtitle: "Узнайте больше о локальных AI-технологиях и научной базе TrustNode",
     card1Title: "Технологии купола",
     card1Badge: "СИСТЕМА PHANTOM",
-    card1Desc: "Техническая детализация семислойного защитного купола PHANTOM 2.0 и интеллектуальный голосовой ассистент KIRA, работающий локально на устройстве.",
+    card1Desc: "Technical breakdown of the PHANTOM 2.0 security dome: acoustic analysis and rubert-tiny2 ML classification run on-device, while the remaining layers are in development (Roadmap).",
     card1Btn: "Изучить технологии →",
     card2Title: "Доказанная база",
     card2Badge: "ВАЛИДАЦИЯ И ПАТЕНТЫ",
