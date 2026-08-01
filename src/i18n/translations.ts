@@ -208,27 +208,27 @@ const ru: Translations = {
   legal: {
     privacyTitle: "Политика конфиденциальности",
     termsTitle: "Пользовательское соглашение",
-    tabPrivacy: "ПОЛИТИКА ОБРАБОТКИ ПД (ФЗ-152)",
+    tabPrivacy: "ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ",
     tabTerms: "ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ",
     closeAria: "Закрыть",
     acknowledge: "Ознакомлен",
     privacy: {
       s1: {
         heading: "[ ОБЩИЕ ПОЛОЖЕНИЯ ]",
-        body: "Настоящая Политика в отношении обработки персональных данных составлена в соответствии с требованиями Федерального закона РФ № 152-ФЗ «О персональных данных» от 27.07.2006 года. Она определяет порядок обработки персональных данных пользователей и меры по обеспечению безопасности этих данных, принимаемые командой проекта TrustNode Protocol (далее — Оператор). Наименование и реквизиты юридического лица или ИП, от имени которого действует Оператор: [TODO: уточнить]."
+        body: "Настоящая Политика конфиденциальности описывает, какие данные обрабатываются при использовании официального промо-сайта проекта TrustNode. В текущей версии сайт не осуществляет сбор, обработку и хранение персональных данных пользователей, в связи с чем отдельный оператор персональных данных не назначается. Функционал сайта ограничен предоставлением информации о продуктах TrustNode и ссылок на скачивание приложения с официальных площадок (GitHub, RuStore). Настоящая Политика подготовлена с учётом требований Федерального закона РФ № 152-ФЗ «О персональных данных» от 27.07.2006 года. При появлении в будущем форм сбора данных (например, лист ожидания, обратная связь, регистрация) Политика будет актуализирована с указанием оператора персональных данных, целей обработки, сроков хранения, правовых оснований и прав субъекта персональных данных."
       },
       s2: {
-        heading: "[ ПРИНЦИП КУПОЛА: 100% БЕЗОПАСНО ДЛЯ ПРИВАТНОСТИ ]",
+        heading: "[ ВАЖНО: САЙТ НЕ СОБИРАЕТ ВАШИ ДАННЫЕ ]",
         noticeLabel: "Критически важное уведомление:",
-        noticeBody: "Веб-сайт проекта TrustNode НЕ собирает, НЕ обрабатывает, НЕ хранит и НЕ передаёт ваши личные данные, адреса электронной почты, пароли или конфиденциальные файлы напрямую. Все защитные механизмы приложения PHANTOM функционируют исключительно локально (On-Device) на процессоре вашего смартфона."
+        noticeBody: "Веб-сайт проекта TrustNode НЕ собирает, НЕ обрабатывает и НЕ хранит ваши персональные данные — адреса электронной почты, имена, пароли и конфиденциальные файлы. Функционал сайта ограничен информацией о продуктах и ссылками на скачивание приложения. Само приложение PHANTOM обрабатывает все данные исключительно локально (On-Device) на устройстве пользователя и не передаёт их на серверы проекта."
       },
       s3: {
-        heading: "[ ОБРАБАТЫВАЕМЫЕ ДАННЫЕ НА САЙТЕ ]",
-        intro: "Посещение данного информационного ресурса может сопровождаться автоматической обработкой исключительно обезличенных технических данных:",
+        heading: "[ ДАННЫЕ, ОБРАБАТЫВАЕМЫЕ ПРИ ПОСЕЩЕНИИ САЙТА ]",
+        intro: "Персональные данные при посещении сайта не собираются. Автоматически могут обрабатываться только обезличенные технические данные:",
         items: [
-          "Файлы cookie (необходимы для кэширования параметров производительности и режима энергосбережения сайта);",
-          "Анонимные технические заголовки, IP-адрес без привязки к ФИО или конкретной личности;",
-          "Параметры пользовательского интерфейса (выбранные режимы графики)."
+          "Файлы cookie, необходимые для корректной работы сайта (например, сохранение выбранного языка и настроек интерфейса);",
+          "Анонимные технические заголовки и IP-адрес, не позволяющие установить личность пользователя;",
+          "Параметры пользовательского интерфейса (выбранные режимы отображения)."
         ]
       },
       s4: {
@@ -236,19 +236,20 @@ const ru: Translations = {
         body: "Скачивание приложения TrustNode осуществляется через официальные площадки — магазин RuStore и GitHub. Сайт TrustNode не собирает и не обрабатывает персональные данные пользователей: все данные, анализируемые приложением, обрабатываются исключительно локально на устройстве пользователя."
       },
       s5: {
-        heading: "[ ЛОКАЛИЗАЦИЯ И БЕЗОПАСНОСТЬ ХРАНЕНИЯ ]",
-        body: "В соответствии с законодательством РФ, если в процессе индивидуальной переписки в мессенджерах будут зафиксированы персональные данные граждан РФ, Оператор обязуется хранить, систематизировать и обрабатывать их с использованием баз данных, расположенных исключительно на территории Российской Федерации."
+        heading: "[ ТРАНСГРАНИЧНАЯ ПЕРЕДАЧА ДАННЫХ ]",
+        body: "В текущей версии сайт не осуществляет сбор, обработку и хранение персональных данных, поэтому трансграничная передача персональных данных также не осуществляется. В случае появления в будущем форм сбора данных настоящая Политика будет актуализирована в соответствии с требованиями статьи 18 Федерального закона РФ № 152-ФЗ, включая использование баз данных, расположенных на территории Российской Федерации."
       },
       s6: {
         heading: "[ КОНТАКТНАЯ ИНФОРМАЦИЯ ]",
-        bodyPrefix: "По любым вопросам, касающимся обработки технической информации или соблюдения требований ФЗ-152, вы можете обратиться напрямую к разработчикам через официальный Telegram-канал проекта: ",
+        bodyPrefix: "По любым вопросам, касающимся работы сайта, скачивания приложения или настоящей Политики, вы можете обратиться к разработчикам через официальный Telegram-канал проекта: ",
         bodySuffix: "."
       },
       s7: {
         heading: "[ ВНЕШНИЕ ПЛОЩАДКИ РАСПРОСТРАНЕНИЯ ]",
-        bodyPrefix: "Загрузка и установка приложения из магазина RuStore или GitHub регулируются правилами соответствующих платформ. TrustNode не выступает оператором персональных данных при использовании внешних площадок: ",
-        bodySuffix: " Актуальность и применимость данных ссылок должны быть подтверждены владельцем сайта перед публикацией."
-      }
+        bodyPrefix: "Загрузка и установка приложения из магазина RuStore или GitHub регулируются правилами соответствующих платформ. При использовании внешних площадок TrustNode не выступает оператором персональных данных: ",
+        bodySuffix: " Актуальность данных ссылок должна быть подтверждена владельцем сайта перед публикацией."
+      },
+      date: "Дата публикации: 01.08.2026"
     },
     terms: {
       s1: {
@@ -729,47 +730,48 @@ const en: Translations = {
   legal: {
     privacyTitle: "Privacy Policy",
     termsTitle: "Terms of Service",
-    tabPrivacy: "PRIVACY POLICY (RU LAW 152-FZ)",
+    tabPrivacy: "PRIVACY POLICY",
     tabTerms: "TERMS OF SERVICE",
     closeAria: "Close",
     acknowledge: "Got it",
     privacy: {
       s1: {
         heading: "[ GENERAL PROVISIONS ]",
-        body: "This Privacy Policy is drafted in accordance with Russian Federal Law No. 152-FZ \"On Personal Data\" of 27 July 2006. It defines how the TrustNode Protocol project team (the \"Operator\") processes user personal data and the safeguards applied to it. Full legal name and registration details of the legal entity or sole proprietor acting as the Operator: [TODO: to be confirmed]."
+        body: "This Privacy Policy describes what data is processed when you use the official promotional website of the TrustNode project. In its current version, the website does not collect, process, or store users' personal data, and therefore no separate personal data operator is designated. The website's functionality is limited to providing information about TrustNode products and links for downloading the app from official platforms (GitHub, RuStore). This Policy has been prepared with due regard to the requirements of Russian Federal Law No. 152-FZ \"On Personal Data\" of 27 July 2006. Should data collection forms (e.g., waitlist, feedback, registration) be introduced in the future, this Policy will be updated to specify the personal data operator, the purposes of processing, retention periods, legal grounds, and the rights of data subjects."
       },
       s2: {
-        heading: "[ THE DOME PRINCIPLE: 100% SAFE FOR YOUR PRIVACY ]",
+        heading: "[ IMPORTANT: THE WEBSITE DOES NOT COLLECT YOUR DATA ]",
         noticeLabel: "Critical notice:",
-        noticeBody: "The TrustNode website does NOT collect, process, store, or transmit your personal data, e-mail address, passwords, or private files directly. All protective mechanisms of the PHANTOM app run exclusively locally (on-device) on your smartphone's processor."
+        noticeBody: "The TrustNode website does NOT collect, process, or store your personal data — e-mail addresses, names, passwords, or confidential files. The website's functionality is limited to product information and app download links. The PHANTOM app itself processes all data exclusively on-device (locally) on your device and does not transmit it to the project's servers."
       },
       s3: {
-        heading: "[ DATA PROCESSED BY THE WEBSITE ]",
-        intro: "Visiting this informational website may involve automatic processing of anonymized technical data only, such as:",
+        heading: "[ DATA PROCESSED WHEN VISITING THE WEBSITE ]",
+        intro: "No personal data is collected when you visit the website. Only anonymized technical data may be processed automatically, such as:",
         items: [
-          "Cookies (needed to cache performance and eco-mode settings);",
-          "Anonymous technical headers and IP address, not linked to a name or specific individual;",
-          "Interface settings (selected graphics modes)."
+          "Cookies required for the website to function correctly (for example, remembering the selected language and interface settings);",
+          "Anonymous technical headers and IP address that do not allow identifying a specific user;",
+          "Interface settings (selected display modes)."
         ]
       },
       s4: {
         heading: "[ APP DOWNLOAD ]",
-        body: "Downloading the TrustNode application is done through official platforms — the RuStore store and GitHub. The TrustNode website does not collect or process users' personal data: all data analyzed by the app is processed exclusively on the user's device."
+        body: "Downloading the TrustNode app is done through official platforms — the RuStore store and GitHub. The TrustNode website does not collect or process users' personal data: all data analyzed by the app is processed exclusively on the user's device."
       },
       s5: {
-        heading: "[ DATA LOCALIZATION AND STORAGE SECURITY ]",
-        body: "In accordance with Russian law, if personal data of Russian citizens is recorded during individual messenger correspondence, the Operator commits to storing, organizing, and processing it exclusively using databases located within the Russian Federation."
+        heading: "[ CROSS-BORDER DATA TRANSFER ]",
+        body: "In its current version, the website does not collect, process, or store personal data, and therefore no cross-border transfer of personal data takes place either. Should data collection forms be introduced in the future, this Policy will be updated in accordance with Article 18 of Russian Federal Law No. 152-FZ, including the use of databases located within the territory of the Russian Federation."
       },
       s6: {
         heading: "[ CONTACT INFORMATION ]",
-        bodyPrefix: "For any questions about technical data processing or compliance with Law 152-FZ, you can contact the developers directly via the project's official Telegram channel: ",
+        bodyPrefix: "For any questions about the website, downloading the app, or this Policy, you can contact the developers via the project's official Telegram channel: ",
         bodySuffix: "."
       },
       s7: {
         heading: "[ EXTERNAL DISTRIBUTION PLATFORMS ]",
-        bodyPrefix: "Downloading and installing the app from the RuStore store or GitHub is governed by the rules of the respective platforms. TrustNode is not the operator of personal data when external platforms are used: ",
+        bodyPrefix: "Downloading and installing the app from the RuStore store or GitHub is governed by the rules of the respective platforms. When external platforms are used, TrustNode is not the operator of personal data: ",
         bodySuffix: " The accuracy and applicability of these links must be confirmed by the site owner before publication."
-      }
+      },
+      date: "Date of publication: 01.08.2026"
     },
     terms: {
       s1: {
@@ -1249,27 +1251,27 @@ const es: Translations = {
   legal: {
     privacyTitle: "Política de privacidad",
     termsTitle: "Términos de uso",
-    tabPrivacy: "POLÍTICA DE PRIVACIDAD (LEY RUSA 152-FZ)",
+    tabPrivacy: "POLÍTICA DE PRIVACIDAD",
     tabTerms: "TÉRMINOS DE USO",
     closeAria: "Cerrar",
     acknowledge: "Entendido",
     privacy: {
       s1: {
         heading: "[ DISPOSICIONES GENERALES ]",
-        body: "Esta Política de Privacidad se redacta conforme a la Ley Federal de Rusia N.º 152-FZ «Sobre Datos Personales» del 27 de julio de 2006. Define cómo el equipo del proyecto TrustNode Protocol (el «Operador») procesa los datos personales de los usuarios y las medidas de seguridad aplicadas. Razón social y datos de registro de la persona jurídica o autónomo que actúa como Operador: [TODO: por confirmar]."
+        body: "La presente Política de Privacidad describe qué datos se tratan al utilizar el sitio web promocional oficial del proyecto TrustNode. En su versión actual, el sitio no recopila, procesa ni almacena datos personales de los usuarios, por lo que no se designa un operador de datos personales independiente. La funcionalidad del sitio se limita a ofrecer información sobre los productos TrustNode y enlaces para descargar la aplicación desde plataformas oficiales (GitHub, RuStore). Esta Política se ha elaborado teniendo en cuenta los requisitos de la Ley Federal Rusa N.º 152-FZ «Sobre Datos Personales» del 27 de julio de 2006. Si en el futuro se introducen formularios de recogida de datos (por ejemplo, lista de espera, comentarios, registro), la Política se actualizará indicando el operador de datos personales, las finalidades del tratamiento, los plazos de conservación, las bases jurídicas y los derechos de los interesados."
       },
       s2: {
-        heading: "[ EL PRINCIPIO DE LA CÚPULA: 100% SEGURO PARA TU PRIVACIDAD ]",
+        heading: "[ IMPORTANTE: EL SITIO NO RECOPILA TUS DATOS ]",
         noticeLabel: "Aviso crítico:",
-        noticeBody: "El sitio web de TrustNode NO recopila, procesa, almacena ni transmite directamente tus datos personales, dirección de correo, contraseñas o archivos privados. Todos los mecanismos de protección de la app PHANTOM funcionan exclusivamente de forma local (on-device) en el procesador de tu smartphone."
+        noticeBody: "El sitio web de TrustNode NO recopila, procesa ni almacena tus datos personales — direcciones de correo electrónico, nombres, contraseñas o archivos confidenciales. La funcionalidad del sitio se limita a la información sobre los productos y enlaces de descarga. La propia aplicación PHANTOM procesa todos los datos exclusivamente en el dispositivo (localmente) y no los transmite a los servidores del proyecto."
       },
       s3: {
-        heading: "[ DATOS PROCESADOS POR EL SITIO ]",
-        intro: "Visitar este recurso informativo puede implicar el procesamiento automático de datos técnicos exclusivamente anonimizados, como:",
+        heading: "[ DATOS TRATADOS AL VISITAR EL SITIO ]",
+        intro: "Al visitar el sitio no se recopilan datos personales. Solo pueden tratarse automáticamente datos técnicos anonimizados, como:",
         items: [
-          "Cookies (necesarias para almacenar en caché el rendimiento y la configuración del modo eco);",
-          "Encabezados técnicos anónimos e IP, sin vincularse a un nombre o persona concreta;",
-          "Ajustes de la interfaz (modos gráficos seleccionados)."
+          "Cookies necesarias para el correcto funcionamiento del sitio (por ejemplo, recordar el idioma y los ajustes de interfaz seleccionados);",
+          "Encabezados técnicos anónimos y dirección IP que no permiten identificar a un usuario concreto;",
+          "Ajustes de la interfaz (modos de visualización seleccionados)."
         ]
       },
       s4: {
@@ -1277,19 +1279,20 @@ const es: Translations = {
         body: "La descarga de la aplicación TrustNode se realiza a través de plataformas oficiales: la tienda RuStore y GitHub. El sitio web de TrustNode no recopila ni procesa los datos personales de los usuarios: todos los datos analizados por la aplicación se procesan exclusivamente de forma local en el dispositivo del usuario."
       },
       s5: {
-        heading: "[ LOCALIZACIÓN Y SEGURIDAD DEL ALMACENAMIENTO ]",
-        body: "De acuerdo con la legislación rusa, si durante la correspondencia individual por mensajería se registran datos personales de ciudadanos rusos, el Operador se compromete a almacenarlos, organizarlos y procesarlos exclusivamente mediante bases de datos ubicadas en territorio de la Federación de Rusia."
+        heading: "[ TRANSFERENCIA TRANSFRONTERIZA DE DATOS ]",
+        body: "En su versión actual, el sitio no recopila, procesa ni almacena datos personales, por lo que tampoco se realiza ninguna transferencia transfronteriza de datos personales. Si en el futuro se introducen formularios de recogida de datos, la Política se actualizará conforme al Artículo 18 de la Ley Federal Rusa N.º 152-FZ, incluido el uso de bases de datos ubicadas en el territorio de la Federación de Rusia."
       },
       s6: {
         heading: "[ INFORMACIÓN DE CONTACTO ]",
-        bodyPrefix: "Para cualquier pregunta sobre el procesamiento de información técnica o el cumplimiento de la Ley 152-FZ, puedes contactar directamente a los desarrolladores a través del canal oficial de Telegram del proyecto: ",
+        bodyPrefix: "Para cualquier pregunta sobre el sitio, la descarga de la aplicación o esta Política, puedes contactar directamente con los desarrolladores a través del canal oficial de Telegram del proyecto: ",
         bodySuffix: "."
       },
       s7: {
         heading: "[ PLATAFORMAS EXTERNAS DE DISTRIBUCIÓN ]",
-        bodyPrefix: "La descarga e instalación de la aplicación desde la tienda RuStore o GitHub se rige por las normas de las respectivas plataformas. TrustNode no actúa como operador de datos personales cuando se utilizan plataformas externas: ",
+        bodyPrefix: "La descarga e instalación de la aplicación desde la tienda RuStore o GitHub se rige por las normas de las respectivas plataformas. Al utilizar plataformas externas, TrustNode no actúa como operador de datos personales: ",
         bodySuffix: " La exactitud y aplicabilidad de estos enlaces debe ser confirmada por el propietario del sitio antes de su publicación."
-      }
+      },
+      date: "Fecha de publicación: 01.08.2026"
     },
     terms: {
       s1: {
@@ -1769,47 +1772,48 @@ const zh: Translations = {
   legal: {
     privacyTitle: "隐私政策",
     termsTitle: "用户协议",
-    tabPrivacy: "个人数据处理政策（俄第152-FZ号法律）",
+    tabPrivacy: "隐私政策",
     tabTerms: "用户协议",
     closeAria: "关闭",
     acknowledge: "已了解",
     privacy: {
       s1: {
         heading: "[ 总则 ]",
-        body: "本隐私政策依据2006年7月27日颁布的俄罗斯联邦第152-FZ号法律《个人数据法》制定，规定了 TrustNode Protocol 项目团队（以下简称“运营方”）处理用户个人数据的方式及相应的数据安全保障措施。 作为运营方的法人实体或个体工商户的名称及注册信息：[TODO：待确认]。"
+        body: "本隐私政策说明了在使用 TrustNode 项目官方网站时哪些数据会被处理。在当前的网站版本中，网站不收集、不处理、不存储用户的个人数据，因此不指定单独的个人数据运营方。网站的功能仅限于提供有关 TrustNode 产品的信息和来自官方平台（GitHub、RuStore）的应用下载链接。本政策在制定时参考了 2006 年 7 月 27 日俄罗斯联邦第 152-FZ 号法律《个人数据法》的要求。若未来引入数据收集表单（例如候补名单、反馈、注册），本政策将相应更新，说明个人数据运营方、处理目的、保存期限、法律依据和数据主体的权利。"
       },
       s2: {
-        heading: "[ 穹顶原则：100% 保护你的隐私 ]",
+        heading: "[ 重要：网站不收集你的数据 ]",
         noticeLabel: "重要提示：",
-        noticeBody: "TrustNode 网站不会直接收集、处理、存储或传输你的个人数据、电子邮箱地址、密码或私密文件。PHANTOM 应用的所有防护机制均完全在你的智能手机处理器本地（设备端）运行。"
+        noticeBody: "TrustNode 网站不收集、不处理、不存储你的个人数据——包括电子邮箱地址、姓名、密码或机密文件。网站功能仅限于产品信息和应用下载链接。PHANTOM 应用本身仅在你的设备上（本地）处理所有数据，不会将其发送至项目服务器。"
       },
       s3: {
-        heading: "[ 网站处理的数据 ]",
-        intro: "访问本信息网站时，可能会自动处理以下仅经过匿名化的技术数据：",
+        heading: "[ 访问网站时处理的数据 ]",
+        intro: "访问网站时不收集个人数据。仅可能自动处理以下匿名化的技术数据：",
         items: [
-          "Cookie（用于缓存性能参数和节能模式设置）；",
-          "匿名技术请求头及IP地址，不与具体姓名或个人身份关联；",
-          "界面设置（所选的图形模式）。"
+          "网站正常运行所需的 Cookie（例如记住所选语言和界面设置）；",
+          "无法识别具体用户的匿名技术请求头和 IP 地址；",
+          "界面设置（所选的显示模式）。"
         ]
       },
       s4: {
         heading: "[ 应用下载 ]",
-        body: "下载 TrustNode 应用需通过官方平台：RuStore 商店和 GitHub。TrustNode 网站不收集也不处理用户的个人数据：应用分析的所有数据仅存在用户设备本地处理。"
+        body: "下载 TrustNode 应用需通过官方平台：RuStore 商店和 GitHub。TrustNode 网站不收集也不处理用户的个人数据：应用分析的所有数据仅存于用户设备本地处理。"
       },
       s5: {
-        heading: "[ 数据本地化与存储安全 ]",
-        body: "根据俄罗斯法律规定，若在即时通讯个人往来过程中记录到俄罗斯公民的个人数据，运营方承诺仅使用位于俄罗斯联邦境内的数据库对其进行存储、整理和处理。"
+        heading: "[ 个人数据的跨境传输 ]",
+        body: "在当前版本中，网站不收集、不处理、不存储个人数据，因此也不进行任何个人数据的跨境传输。若未来引入数据收集表单，本政策将依据俄罗斯联邦第 152-FZ 号法律第 18 条更新，包括使用位于俄罗斯联邦境内的数据库。"
       },
       s6: {
         heading: "[ 联系方式 ]",
-        bodyPrefix: "如对技术信息处理或第152-FZ号法律合规性有任何疑问，可通过项目官方 Telegram 频道直接联系开发团队：",
+        bodyPrefix: "如有关于网站、应用下载或本政策的任何问题，可通过项目官方 Telegram 频道直接联系开发团队：",
         bodySuffix: "。"
       },
       s7: {
         heading: "[ 外部分发平台 ]",
-        bodyPrefix: "从 RuStore 商店或 GitHub 下载并安装应用须遵守相应平台的规则。使用外部平台时，TrustNode 不作为个人数据的运营方：",
+        bodyPrefix: "从 RuStore 商店或 GitHub 下载并安装应用须遵守相应平台的规则。在使用外部平台时，TrustNode 不作为个人数据的运营方：",
         bodySuffix: " 发布前，网站所有者必须确认这些链接的准确性和适用性。"
-      }
+      },
+      date: "发布日期：2026年8月1日"
     },
     terms: {
       s1: {
@@ -2289,27 +2293,27 @@ const tr: Translations = {
   legal: {
     privacyTitle: "Gizlilik Politikası",
     termsTitle: "Kullanıcı Sözleşmesi",
-    tabPrivacy: "KİŞİSEL VERİLERİN İŞLENMESİ POLİTİKASI",
+    tabPrivacy: "GİZLİLİK POLİTİKASI",
     tabTerms: "KULLANICI SÖZLEŞMESİ",
     closeAria: "Kapat",
     acknowledge: "Okudum ve anladım",
     privacy: {
       s1: {
         heading: "[ GENEL HÜKÜMLER ]",
-        body: "Bu Kişisel Verilerin İşlenmesi Politikası, 27.07.2006 tarihli ve 152-FZ sayılı \"Kişisel Veriler Hakkında\" Rusya Federal Kanunu gerekliliklerine uygun olarak hazırlanmıştır. Kullanıcıların kişisel verilerinin işlenme usullerini ve TrustNode Protocol proje ekibi (bundan böyle \"Veri Sorumlusu\" olarak anılacaktır) tarafından alınan veri güvenliği önlemlerini tanımlar. Veri Sorumlusu olarak hareket eden tüzel kişinin veya şahıs işletmesinin unvanı ve kayıt bilgileri: [TODO: teyit edilecek]."
+        body: "Bu Gizlilik Politikası, TrustNode projesinin resmi tanıtım web sitesini kullanırken hangi verilerin işlendiğini açıklar. Mevcut sürümde site, kullanıcıların kişisel verilerini toplamaz, işlemez veya saklamaz; bu nedenle ayrı bir kişisel veri sorumlusu belirlenmemiştir. Sitenin işlevi, TrustNode ürünleri hakkında bilgi sağlamak ve uygulamanın resmi platformlardan (GitHub, RuStore) indirilmesi için bağlantılar sunmakla sınırlıdır. Bu Politika, 27.07.2006 tarihli ve 152-FZ sayılı \"Kişisel Veriler Hakkında\" Rusya Federal Kanunu gereklilikleri dikkate alınarak hazırlanmıştır. Gelecekte veri toplama formları (ör. bekleme listesi, geri bildirim, kayıt) eklenirse, Politika; kişisel veri sorumlusunu, işleme amaçlarını, saklama sürelerini, yasal dayanakları ve veri sahibinin haklarını belirtecek şekilde güncellenecektir."
       },
       s2: {
-        heading: "[ KUBBE PRENSİBİ: GİZLİLİK İÇİN %100 GÜVENLİ ]",
+        heading: "[ ÖNEMLİ: SİTE VERİLERİNİZİ TOPLAMAZ ]",
         noticeLabel: "Kritik Uyarı:",
-        noticeBody: "TrustNode web sitesi kişisel verilerinizi, e-posta adreslerinizi, şifrelerinizi veya hassas dosyalarınızı doğrudan TOPLAMAZ, İŞLEMEZ, SAKLAMAZ ve AKTARMAZ. PHANTOM uygulamasının tüm koruma mekanizmaları tamamen yerel olarak (On-Device) akıllı telefonunuzun işlemcisinde çalışır."
+        noticeBody: "TrustNode web sitesi kişisel verilerinizi — e-posta adreslerinizi, adlarınızı, şifrelerinizi veya gizli dosyalarınızı TOPLAMAZ, İŞLEMEZ ve SAKLAMAZ. Sitenin işlevi ürün bilgileri ve uygulama indirme bağlantılarıyla sınırlıdır. PHANTOM uygulamasının kendisi tüm verileri yalnızca cihazınızda (yerel olarak) işler ve proje sunucularına aktarmaz."
       },
       s3: {
-        heading: "[ SİTEDE İŞLENEN VERİLER ]",
-        intro: "Bu bilgi kaynağını ziyaret etmeniz, yalnızca anonimleştirilmiş teknik verilerin otomatik olarak işlenmesiyle eşlik edebilir:",
+        heading: "[ SİTEYİ ZİYARET EDERKEN İŞLENEN VERİLER ]",
+        intro: "Siteyi ziyaret ettiğinizde kişisel veri toplanmaz. Yalnızca anonimleştirilmiş teknik veriler otomatik olarak işlenebilir:",
         items: [
-          "Çerezler (performans ve enerji tasarrufu ayarlarının önbelleğe alınması için gereklidir);",
-          "Ad-soyad veya belirli bir kişiyle ilişkilendirilemeyen anonim teknik başlıklar, IP adresi;",
-          "Kullanıcı arayüzü parametreleri (seçilen grafik modları)."
+          "Sitenin doğru çalışması için gerekli çerezler (ör. seçilen dil ve arayüz ayarlarının hatırlanması);",
+          "Belirli bir kullanıcının kimliğinin tespit edilmesine izin vermeyen anonim teknik başlıklar ve IP adresi;",
+          "Arayüz ayarları (seçilen görüntüleme modları)."
         ]
       },
       s4: {
@@ -2317,19 +2321,20 @@ const tr: Translations = {
         body: "TrustNode uygulamasının indirilmesi resmi platformlar üzerinden yapılır — RuStore mağazası ve GitHub. TrustNode web sitesi kullanıcıların kişisel verilerini toplamaz veya işlemez: uygulamanın analiz ettiği tüm veriler yalnızca kullanıcının cihazında yerel olarak işlenir."
       },
       s5: {
-        heading: "[ YERELLEŞTİRME VE DEPOLAMA GÜVENLİĞİ ]",
-        body: "Yasal mevzuata uygun olarak, mesajlaşma uygulamalarındaki kişisel yazışmalar sırasında vatandaşların kişisel verilerinin kaydedilmesi durumunda, Veri Sorumlusu bunları yalnızca Rusya Federasyonu sınırları içinde bulunan veri tabanlarını kullanarak saklamayı, düzenlemeyi ve işlemeyi taahhüt eder."
+        heading: "[ VERİLERİN SINIR ÖTESİ AKTARIMI ]",
+        body: "Mevcut sürümde site kişisel veri toplamadığı, işlemediği veya saklamadığı için kişisel verilerin sınır ötesi aktarımı da gerçekleştirilmez. Gelecekte veri toplama formları eklenirse, bu Politika 152-FZ sayılı Rusya Federal Kanunu'nun 18. maddesine uygun olarak, Rusya Federasyonu topraklarında bulunan veri tabanlarının kullanımı dahil olmak üzere güncellenecektir."
       },
       s6: {
         heading: "[ İLETİŞİM BİLGİLERİ ]",
-        bodyPrefix: "Teknik bilgilerin işlenmesi veya yasal gerekliliklere uyumla ilgili her türlü sorunuz için resmi Telegram kanalı üzerinden geliştiricilerle doğrudan iletişime geçebilirsiniz: ",
+        bodyPrefix: "Site, uygulama indirme veya bu Politika ile ilgili her türlü sorunuz için resmi Telegram kanalı üzerinden geliştiricilerle doğrudan iletişime geçebilirsiniz: ",
         bodySuffix: "."
       },
       s7: {
         heading: "[ HARİCİ DAĞITIM PLATFORMLARI ]",
         bodyPrefix: "Uygulamanın RuStore mağazasından veya GitHub'dan indirilmesi ve kurulması, ilgili platformların kurallarına tabidir. Harici platformlar kullanıldığında TrustNode kişisel verilerin sorumlusu değildir: ",
         bodySuffix: " Bu bağlantıların doğruluğu ve uygulanabilirliği yayınlanmadan önce site sahibi tarafından teyit edilmelidir."
-      }
+      },
+      date: "Yayınlanma tarihi: 01.08.2026"
     },
     terms: {
       s1: {
@@ -2809,27 +2814,27 @@ const hi: Translations = {
   legal: {
     privacyTitle: "गोपनीयता नीति",
     termsTitle: "उपयोग की शर्तें",
-    tabPrivacy: "व्यक्तिगत डेटा नीति (रूसी क़ानून 152-FZ)",
+    tabPrivacy: "गोपनीयता नीति",
     tabTerms: "उपयोग की शर्तें",
     closeAria: "बंद करें",
     acknowledge: "समझ गया",
     privacy: {
       s1: {
         heading: "[ सामान्य प्रावधान ]",
-        body: "यह गोपनीयता नीति 27 जुलाई 2006 के रूसी संघीय क़ानून संख्या 152-FZ \"व्यक्तिगत डेटा पर\" के अनुसार तैयार की गई है। यह तय करती है कि TrustNode Protocol प्रोजेक्ट टीम (\"ऑपरेटर\") यूज़र के व्यक्तिगत डेटा को कैसे प्रोसेस करती है और उसकी सुरक्षा के लिए क्या उपाय अपनाती है। ऑपरेटर के रूप में कार्यरत क़ानूनी संस्था या व्यक्तिगत उद्यमी का नाम और पंजीकरण विवरण: [TODO: पुष्टि की जानी है]।"
+        body: "यह गोपनीयता नीति बताती है कि TrustNode प्रोजेक्ट की आधिकारिक प्रचार वेबसाइट का उपयोग करते समय कौन-सा डेटा प्रोसेस होता है। अपने वर्तमान संस्करण में, वेबसाइट उपयोगकर्ताओं का व्यक्तिगत डेटा एकत्र, प्रोसेस या संग्रहीत नहीं करती है, इसलिए कोई अलग व्यक्तिगत डेटा ऑपरेटर नियुक्त नहीं किया गया है। वेबसाइट का कार्य TrustNode उत्पादों के बारे में जानकारी देने और आधिकारिक प्लेटफ़ॉर्म (GitHub, RuStore) से ऐप डाउनलोड करने के लिंक देने तक सीमित है। यह नीति 27 जुलाई 2006 के रूसी संघीय क़ानून संख्या 152-FZ \"व्यक्तिगत डेटा पर\" की आवश्यकताओं को ध्यान में रखते हुए तैयार की गई है। भविष्य में डेटा एकत्र करने के फ़ॉर्म (जैसे वेटलिस्ट, फ़ीडबैक, रजिस्ट्रेशन) जोड़े जाने पर, यह नीति व्यक्तिगत डेटा ऑपरेटर, प्रोसेसिंग के उद्देश्यों, भंडारण अवधि, क़ानूनी आधार और डेटा विषय के अधिकारों का उल्लेख करते हुए अद्यतन की जाएगी।"
       },
       s2: {
-        heading: "[ डोम सिद्धांत: आपकी निजता के लिए 100% सुरक्षित ]",
+        heading: "[ महत्वपूर्ण: वेबसाइट आपका डेटा एकत्र नहीं करती ]",
         noticeLabel: "अत्यंत महत्वपूर्ण सूचना:",
-        noticeBody: "TrustNode वेबसाइट आपके व्यक्तिगत डेटा, ईमेल पते, पासवर्ड या निजी फ़ाइलों को सीधे तौर पर एकत्र, प्रोसेस, संग्रहीत या ट्रांसमिट नहीं करती। PHANTOM ऐप के सभी सुरक्षा तंत्र केवल आपके स्मार्टफ़ोन के प्रोसेसर पर लोकली (ऑन-डिवाइस) काम करते हैं।"
+        noticeBody: "TrustNode वेबसाइट आपके व्यक्तिगत डेटा — ईमेल पते, नाम, पासवर्ड या गोपनीय फ़ाइलें — को एकत्र, प्रोसेस या संग्रहीत नहीं करती है। वेबसाइट का कार्य उत्पाद जानकारी और ऐप डाउनलोड लिंक तक सीमित है। PHANTOM ऐप स्वयं सभी डेटा को केवल आपके डिवाइस पर (स्थानीय रूप से) प्रोसेस करता है और उसे प्रोजेक्ट के सर्वर पर नहीं भेजता।"
       },
       s3: {
-        heading: "[ साइट पर प्रोसेस किया जाने वाला डेटा ]",
-        intro: "इस सूचनात्मक वेबसाइट पर आने पर केवल बेनाम तकनीकी डेटा का स्वचालित प्रोसेसिंग हो सकता है, जैसे:",
+        heading: "[ वेबसाइट पर जाते समय प्रोसेस किया जाने वाला डेटा ]",
+        intro: "वेबसाइट पर जाते समय व्यक्तिगत डेटा एकत्र नहीं किया जाता। केवल निम्न बेनाम तकनीकी डेटा स्वचालित रूप से प्रोसेस हो सकता है:",
         items: [
-          "कुकीज़ (परफ़ॉर्मेंस और इको-मोड सेटिंग्स कैश करने के लिए ज़रूरी);",
-          "बेनाम तकनीकी हेडर्स और IP एड्रेस, जो किसी नाम या व्यक्ति से नहीं जुड़ा होता;",
-          "इंटरफ़ेस सेटिंग्स (चुने गए ग्राफ़िक्स मोड)।"
+          "वेबसाइट के सही संचालन के लिए आवश्यक कुकीज़ (उदाहरण के लिए, चुनी गई भाषा और इंटरफ़ेस सेटिंग्स को याद रखना);",
+          "बेनाम तकनीकी हेडर्स और IP एड्रेस, जिनसे किसी विशेष उपयोगकर्ता की पहचान संभव नहीं होती;",
+          "इंटरफ़ेस सेटिंग्स (चुने गए डिस्प्ले मोड)।"
         ]
       },
       s4: {
@@ -2837,19 +2842,20 @@ const hi: Translations = {
         body: "TrustNode ऐप डाउनलोड करना आधिकारिक प्लेटफ़ॉर्म के माध्यम से किया जाता है — RuStore स्टोर और GitHub। TrustNode वेबसाइट उपयोगकर्ताओं का व्यक्तिगत डेटा एकत्र या संसाधित नहीं करती है: ऐप द्वारा विश्लेषित सभी डेटा केवल उपयोगकर्ता के डिवाइस पर स्थानीय रूप से संसाधित होता है।"
       },
       s5: {
-        heading: "[ डेटा लोकलाइज़ेशन और स्टोरेज सुरक्षा ]",
-        body: "रूसी क़ानून के अनुसार, अगर मैसेंजर पर व्यक्तिगत बातचीत के दौरान रूसी नागरिकों का व्यक्तिगत डेटा दर्ज होता है, तो ऑपरेटर उसे केवल रूसी संघ के क्षेत्र में स्थित डेटाबेस का उपयोग करके संग्रहीत, व्यवस्थित और प्रोसेस करने का वचन देता है।"
+        heading: "[ डेटा का सीमा-पार स्थानांतरण ]",
+        body: "वर्तमान संस्करण में, वेबसाइट व्यक्तिगत डेटा एकत्र, प्रोसेस या संग्रहीत नहीं करती है, इसलिए व्यक्तिगत डेटा का कोई सीमा-पार स्थानांतरण भी नहीं होता है। भविष्य में डेटा एकत्र करने के फ़ॉर्म जोड़े जाने पर, यह नीति रूसी संघीय क़ानून संख्या 152-FZ के अनुच्छेद 18 के अनुसार, रूसी संघ के क्षेत्र में स्थित डेटाबेस के उपयोग सहित, अद्यतन की जाएगी।"
       },
       s6: {
         heading: "[ संपर्क जानकारी ]",
-        bodyPrefix: "तकनीकी जानकारी की प्रोसेसिंग या क़ानून 152-FZ के अनुपालन से जुड़े किसी भी सवाल के लिए, आप प्रोजेक्ट के आधिकारिक Telegram चैनल के ज़रिए सीधे डेवलपर्स से संपर्क कर सकते हैं: ",
+        bodyPrefix: "वेबसाइट, ऐप डाउनलोड या इस नीति से जुड़े किसी भी प्रश्न के लिए, आप प्रोजेक्ट के आधिकारिक Telegram चैनल के ज़रिए सीधे डेवलपर्स से संपर्क कर सकते हैं: ",
         bodySuffix: "।"
       },
       s7: {
         heading: "[ बाहरी वितरण प्लेटफ़ॉर्म ]",
-        bodyPrefix: "RuStore स्टोर या GitHub से ऐप डाउनलोड और इंस्टॉल करना संबंधित प्लेटफ़ॉर्म के नियमों द्वारा नियंत्रित होता है। बाहरी प्लेटफ़ॉर्म का उपयोग करते समय TrustNode व्यक्तिगत डेटा की संचालक नहीं है: ",
+        bodyPrefix: "RuStore स्टोर या GitHub से ऐप डाउनलोड और इंस्टॉल करना संबंधित प्लेटफ़ॉर्म के नियमों द्वारा नियंत्रित होता है। बाहरी प्लेटफ़ॉर्म का उपयोग करते समय TrustNode व्यक्तिगत डेटा का संचालक नहीं है: ",
         bodySuffix: " प्रकाशन से पहले इन लिंक की सटीकता और प्रयोज्यता की पुष्टि साइट स्वामी द्वारा की जानी चाहिए।"
-      }
+      },
+      date: "प्रकाशन तिथि: 01.08.2026"
     },
     terms: {
       s1: {
@@ -3329,47 +3335,48 @@ const ar: Translations = {
   legal: {
     privacyTitle: "سياسة الخصوصية",
     termsTitle: "شروط الاستخدام",
-    tabPrivacy: "سياسة معالجة البيانات الشخصية (القانون الروسي 152-FZ)",
+    tabPrivacy: "سياسة الخصوصية",
     tabTerms: "شروط الاستخدام",
     closeAria: "إغلاق",
     acknowledge: "فهمت",
     privacy: {
       s1: {
         heading: "[ أحكام عامة ]",
-        body: "أُعدّت سياسة الخصوصية هذه وفقًا لمتطلبات القانون الفيدرالي الروسي رقم 152-FZ «بشأن البيانات الشخصية» الصادر بتاريخ 27 يوليو 2006. وهي تحدد كيفية معالجة فريق مشروع TrustNode Protocol (يُشار إليه فيما يلي بـ«المشغّل») للبيانات الشخصية للمستخدمين والتدابير المتخذة لحمايتها. الاسم القانوني وبيانات التسجيل للكيان القانوني أو صاحب المشروع الفردي الذي يعمل بصفته المشغّل: [TODO: بحاجة إلى تأكيد]."
+        body: "توضح سياسة الخصوصية هذه البيانات التي تتم معالجتها عند استخدام الموقع الترويجي الرسمي لمشروع TrustNode. في نسخته الحالية، لا يجمع الموقع البيانات الشخصية للمستخدمين ولا يعالجها ولا يخزنها، وبالتالي لا يتم تعيين مشغّل منفصل للبيانات الشخصية. تقتصر وظيفة الموقع على تقديم معلومات حول منتجات TrustNode وروابط لتحميل التطبيق من المنصات الرسمية (GitHub، RuStore). أُعدّت هذه السياسة مع مراعاة متطلبات القانون الفيدرالي الروسي رقم 152-FZ «بشأن البيانات الشخصية» الصادر بتاريخ 27 يوليو 2006. إذا أُضيفت في المستقبل نماذج لجمع البيانات (مثل قائمة الانتظار والتغذية الراجعة والتسجيل)، فسيتم تحديث السياسة لتحديد مشغّل البيانات الشخصية وأغراض المعالجة ومدد الاحتفاظ والأسس القانونية وحقوق صاحب البيانات."
       },
       s2: {
-        heading: "[ مبدأ القبة: حماية كاملة بنسبة 100% لخصوصيتك ]",
+        heading: "[ مهم: الموقع لا يجمع بياناتك ]",
         noticeLabel: "إشعار بالغ الأهمية:",
-        noticeBody: "لا يقوم موقع TrustNode بجمع أو معالجة أو تخزين أو نقل بياناتك الشخصية أو عنوان بريدك الإلكتروني أو كلمات المرور أو الملفات السرية بشكل مباشر. تعمل جميع آليات الحماية في تطبيق PHANTOM محليًا حصريًا على معالج هاتفك الذكي."
+        noticeBody: "لا يجمع موقع TrustNode بياناتك الشخصية — عناوين البريد الإلكتروني أو الأسماء أو كلمات المرور أو الملفات السرية — ولا يعالجها ولا يخزنها. تقتصر وظيفة الموقع على معلومات المنتجات وروابط تحميل التطبيق. يعالج تطبيق PHANTOM نفسه جميع البيانات حصريًا على جهازك (محليًا) ولا يرسلها إلى خوادم المشروع."
       },
       s3: {
-        heading: "[ البيانات التي يعالجها الموقع ]",
-        intro: "قد تتضمن زيارة هذا الموقع المعلوماتي معالجة تلقائية لبيانات تقنية مجهولة الهوية حصريًا، مثل:",
+        heading: "[ البيانات المعالجة عند زيارة الموقع ]",
+        intro: "لا تُجمع أي بيانات شخصية عند زيارة الموقع. قد تتم معالجة البيانات التقنية مجهولة الهوية فقط تلقائيًا، مثل:",
         items: [
-          "ملفات تعريف الارتباط (ضرورية لتخزين إعدادات الأداء ووضع توفير الطاقة مؤقتًا)؛",
-          "ترويسات تقنية مجهولة وعنوان IP، غير مرتبطة باسم أو هوية شخص محدد؛",
-          "إعدادات واجهة المستخدم (أوضاع الرسومات المختارة)."
+          "ملفات تعريف الارتباط اللازمة لصحة عمل الموقع (مثل تذكّر اللغة والإعدادات المختارة للواجهة)؛",
+          "ترويسات تقنية مجهولة وعنوان IP لا يسمحان بتحديد هوية مستخدم معين؛",
+          "إعدادات الواجهة (أوضاع العرض المختارة)."
         ]
       },
       s4: {
         heading: "[ تحميل التطبيق ]",
-        body: "يتم تحميل تطبيق TrustNode عبر المنصات الرسمية — متجر RuStore وGitHub. لا يجمع موقع TrustNode بيانات المستخدمين الشخصية أو يعالجها: فجميع البيانات التي يحللها التطبيق تُعالج حصريًا محليًا على جهاز المستخدم."
+        body: "يتم تحميل تطبيق TrustNode عبر المنصات الرسمية — متجر RuStore وGitHub. لا يجمع موقع TrustNode البيانات الشخصية للمستخدمين أو يعالجها: جميع البيانات التي يحللها التطبيق تُعالج حصريًا محليًا على جهاز المستخدم."
       },
       s5: {
-        heading: "[ توطين البيانات وأمن التخزين ]",
-        body: "وفقًا للتشريعات الروسية، في حال تسجيل بيانات شخصية لمواطنين روس أثناء المراسلات الفردية عبر تطبيقات المراسلة، يلتزم المشغّل بتخزينها وتنظيمها ومعالجتها باستخدام قواعد بيانات موجودة حصريًا داخل أراضي الاتحاد الروسي."
+        heading: "[ النقل العابر للحدود للبيانات ]",
+        body: "في النسخة الحالية، لا يجمع الموقع البيانات الشخصية ولا يعالجها ولا يخزنها، وبالتالي لا يتم أيضًا أي نقل عابر للحدود للبيانات الشخصية. إذا أُضيفت نماذج جمع بيانات في المستقبل، فسيتم تحديث هذه السياسة وفقًا للمادة 18 من القانون الفيدرالي الروسي رقم 152-FZ، بما في ذلك استخدام قواعد البيانات الموجودة داخل أراضي الاتحاد الروسي."
       },
       s6: {
         heading: "[ معلومات التواصل ]",
-        bodyPrefix: "لأي استفسارات تتعلق بمعالجة المعلومات التقنية أو الامتثال لمتطلبات القانون 152-FZ، يمكنك التواصل مباشرة مع المطورين عبر قناة تيليجرام الرسمية للمشروع: ",
+        bodyPrefix: "لأي استفسارات تتعلق بالموقع أو تحميل التطبيق أو هذه السياسة، يمكنك التواصل مباشرة مع المطورين عبر قناة تيليجرام الرسمية للمشروع: ",
         bodySuffix: "."
       },
       s7: {
         heading: "[ منصات التوزيع الخارجية ]",
-        bodyPrefix: "يخضع تحميل التطبيق وتثبيته من متجر RuStore أو GitHub لقواعد المنصات المعنية. لا تُعد TrustNode مشغّلة للبيانات الشخصية عند استخدام منصات خارجية: ",
+        bodyPrefix: "يخضع تحميل التطبيق وتثبيته من متجر RuStore أو GitHub لقواعد المنصات المعنية. عند استخدام منصات خارجية، لا تُعد TrustNode مشغّلة للبيانات الشخصية: ",
         bodySuffix: " يجب على مالك الموقع تأكيد دقة هذه الروابط وإمكانية تطبيقها قبل النشر."
-      }
+      },
+      date: "تاريخ النشر: 2026/08/01"
     },
     terms: {
       s1: {
@@ -3849,27 +3856,27 @@ const pt: Translations = {
   legal: {
     privacyTitle: "Política de Privacidade",
     termsTitle: "Termos de Uso",
-    tabPrivacy: "POLÍTICA DE DADOS PESSOAIS (LEI RUSSA 152-FZ)",
+    tabPrivacy: "POLÍTICA DE PRIVACIDADE",
     tabTerms: "TERMOS DE USO",
     closeAria: "Fechar",
     acknowledge: "Entendi",
     privacy: {
       s1: {
         heading: "[ DISPOSIÇÕES GERAIS ]",
-        body: "Esta Política de Privacidade é elaborada em conformidade com a Lei Federal Russa nº 152-FZ \"Sobre Dados Pessoais\", de 27 de julho de 2006. Ela define como a equipe do projeto TrustNode Protocol (o \"Operador\") processa os dados pessoais dos usuários e as salvaguardas aplicadas. Razão social e dados de registro da pessoa jurídica ou do profissional autônomo que atua como Operadora: [TODO: a confirmar]."
+        body: "Esta Política de Privacidade descreve quais dados são processados ao utilizar o site promocional oficial do projeto TrustNode. Na sua versão atual, o site não coleta, processa nem armazena dados pessoais dos usuários e, portanto, não é designado um operador de dados pessoais separado. A funcionalidade do site limita-se a fornecer informações sobre os produtos TrustNode e links para download do aplicativo em plataformas oficiais (GitHub, RuStore). Esta Política foi elaborada considerando os requisitos da Lei Federal Russa nº 152-FZ \"Sobre Dados Pessoais\", de 27 de julho de 2006. Caso formulários de coleta de dados (por exemplo, lista de espera, feedback, cadastro) sejam introduzidos no futuro, esta Política será atualizada para indicar o operador de dados pessoais, as finalidades do tratamento, os prazos de retenção, as bases legais e os direitos dos titulares."
       },
       s2: {
-        heading: "[ O PRINCÍPIO DA CÚPULA: 100% SEGURO PARA SUA PRIVACIDADE ]",
+        heading: "[ IMPORTANTE: O SITE NÃO COLETA SEUS DADOS ]",
         noticeLabel: "Aviso crítico:",
-        noticeBody: "O site do TrustNode NÃO coleta, processa, armazena ou transmite diretamente seus dados pessoais, endereço de e-mail, senhas ou arquivos privados. Todos os mecanismos de proteção do aplicativo PHANTOM funcionam exclusivamente de forma local (on-device) no processador do seu smartphone."
+        noticeBody: "O site da TrustNode NÃO coleta, processa nem armazena seus dados pessoais — endereços de e-mail, nomes, senhas ou arquivos confidenciais. A funcionalidade do site limita-se a informações sobre produtos e links de download. O próprio aplicativo PHANTOM processa todos os dados exclusivamente no seu dispositivo (localmente) e não os transmite aos servidores do projeto."
       },
       s3: {
-        heading: "[ DADOS PROCESSADOS PELO SITE ]",
-        intro: "Visitar este site informativo pode envolver o processamento automático apenas de dados técnicos anonimizados, como:",
+        heading: "[ DADOS PROCESSADOS AO VISITAR O SITE ]",
+        intro: "Nenhum dado pessoal é coletado ao visitar o site. Apenas dados técnicos anonimizados podem ser processados automaticamente, como:",
         items: [
-          "Cookies (necessários para armazenar em cache o desempenho e as configurações do modo eco);",
-          "Cabeçalhos técnicos anônimos e endereço IP, sem vínculo a um nome ou pessoa específica;",
-          "Configurações da interface (modos gráficos selecionados)."
+          "Cookies necessários para o correto funcionamento do site (por exemplo, lembrar o idioma e as configurações de interface selecionados);",
+          "Cabeçalhos técnicos anônimos e endereço IP que não permitem identificar um usuário específico;",
+          "Configurações da interface (modos de exibição selecionados)."
         ]
       },
       s4: {
@@ -3877,19 +3884,20 @@ const pt: Translations = {
         body: "O download do aplicativo TrustNode é feito por meio de plataformas oficiais — a loja RuStore e o GitHub. O site da TrustNode não coleta nem processa os dados pessoais dos usuários: todos os dados analisados pelo aplicativo são processados exclusivamente no dispositivo do usuário."
       },
       s5: {
-        heading: "[ LOCALIZAÇÃO E SEGURANÇA DO ARMAZENAMENTO ]",
-        body: "De acordo com a legislação russa, se dados pessoais de cidadãos russos forem registrados durante correspondência individual por mensageiro, o Operador se compromete a armazená-los, organizá-los e processá-los exclusivamente usando bancos de dados localizados no território da Federação Russa."
+        heading: "[ TRANSFERÊNCIA INTERNACIONAL DE DADOS ]",
+        body: "Na versão atual, o site não coleta, processa nem armazena dados pessoais, portanto também não ocorre nenhuma transferência internacional de dados pessoais. Caso formulários de coleta de dados sejam introduzidos no futuro, esta Política será atualizada de acordo com o Artigo 18 da Lei Federal Russa nº 152-FZ, incluindo o uso de bancos de dados localizados no território da Federação Russa."
       },
       s6: {
         heading: "[ INFORMAÇÕES DE CONTATO ]",
-        bodyPrefix: "Para quaisquer dúvidas sobre o processamento de informações técnicas ou conformidade com a Lei 152-FZ, você pode contatar os desenvolvedores diretamente pelo canal oficial do projeto no Telegram: ",
+        bodyPrefix: "Para quaisquer dúvidas sobre o site, o download do aplicativo ou esta Política, você pode contatar os desenvolvedores diretamente pelo canal oficial do projeto no Telegram: ",
         bodySuffix: "."
       },
       s7: {
         heading: "[ PLATAFORMAS EXTERNAS DE DISTRIBUIÇÃO ]",
-        bodyPrefix: "O download e a instalação do aplicativo pela loja RuStore ou pelo GitHub são regidos pelas regras das respectivas plataformas. A TrustNode não é operadora de dados pessoais quando plataformas externas são usadas: ",
+        bodyPrefix: "O download e a instalação do aplicativo pela loja RuStore ou pelo GitHub são regidos pelas regras das respectivas plataformas. Ao utilizar plataformas externas, a TrustNode não é operadora de dados pessoais: ",
         bodySuffix: " A exatidão e a aplicabilidade desses links devem ser confirmadas pelo proprietário do site antes da publicação."
-      }
+      },
+      date: "Data de publicação: 01.08.2026"
     },
     terms: {
       s1: {
@@ -4369,27 +4377,27 @@ const fr: Translations = {
   legal: {
     privacyTitle: "Politique de confidentialité",
     termsTitle: "Conditions d'utilisation",
-    tabPrivacy: "POLITIQUE DE DONNÉES PERSONNELLES (LOI RUSSE 152-FZ)",
+    tabPrivacy: "POLITIQUE DE CONFIDENTIALITÉ",
     tabTerms: "CONDITIONS D'UTILISATION",
     closeAria: "Fermer",
     acknowledge: "Compris",
     privacy: {
       s1: {
         heading: "[ DISPOSITIONS GÉNÉRALES ]",
-        body: "Cette Politique de confidentialité est rédigée conformément à la loi fédérale russe n° 152-FZ « Sur les données personnelles » du 27 juillet 2006. Elle définit la manière dont l'équipe du projet TrustNode Protocol (l'« Opérateur ») traite les données personnelles des utilisateurs et les mesures de sécurité appliquées. Dénomination et informations d'immatriculation de la personne morale ou de l'entrepreneur individuel agissant en tant qu'Opérateur : [TODO : à confirmer]."
+        body: "La présente Politique de confidentialité décrit les données traitées lors de l'utilisation du site promotionnel officiel du projet TrustNode. Dans sa version actuelle, le site ne collecte, ne traite et ne stocke pas les données personnelles des utilisateurs ; aucun opérateur de données personnelles distinct n'est donc désigné. La fonctionnalité du site se limite à fournir des informations sur les produits TrustNode et des liens de téléchargement de l'application depuis des plateformes officielles (GitHub, RuStore). La présente Politique a été rédigée en tenant compte des exigences de la loi fédérale russe n° 152-FZ « Sur les données personnelles » du 27 juillet 2006. Si des formulaires de collecte de données (par exemple, liste d'attente, retour d'information, inscription) sont introduits à l'avenir, la Politique sera mise à jour pour préciser l'opérateur des données personnelles, les finalités du traitement, les durées de conservation, les bases juridiques et les droits des personnes concernées."
       },
       s2: {
-        heading: "[ LE PRINCIPE DU DÔME : 100 % SÛR POUR VOTRE VIE PRIVÉE ]",
+        heading: "[ IMPORTANT : LE SITE NE COLLECTE PAS VOS DONNÉES ]",
         noticeLabel: "Avis critique :",
-        noticeBody: "Le site web de TrustNode NE collecte PAS, ne traite pas, ne stocke pas et ne transmet pas directement vos données personnelles, votre adresse e-mail, vos mots de passe ou vos fichiers privés. Tous les mécanismes de protection de l'application PHANTOM fonctionnent exclusivement en local (on-device) sur le processeur de votre smartphone."
+        noticeBody: "Le site web de TrustNode NE collecte, NE traite et NE stocke PAS vos données personnelles — adresses e-mail, noms, mots de passe ou fichiers confidentiels. La fonctionnalité du site se limite aux informations sur les produits et aux liens de téléchargement. L'application PHANTOM elle-même traite toutes les données exclusivement sur votre appareil (en local) et ne les transmet pas aux serveurs du projet."
       },
       s3: {
-        heading: "[ DONNÉES TRAITÉES PAR LE SITE ]",
-        intro: "La visite de ce site informatif peut impliquer le traitement automatique de données techniques exclusivement anonymisées, telles que :",
+        heading: "[ DONNÉES TRAITÉES LORS DE LA VISITE DU SITE ]",
+        intro: "Aucune donnée personnelle n'est collectée lors de la visite du site. Seules des données techniques anonymisées peuvent être traitées automatiquement, telles que :",
         items: [
-          "Les cookies (nécessaires à la mise en cache des performances et des réglages du mode éco) ;",
-          "Des en-têtes techniques anonymes et une adresse IP, non liés à un nom ou à une personne identifiée ;",
-          "Les paramètres de l'interface (modes graphiques sélectionnés)."
+          "Les cookies nécessaires au bon fonctionnement du site (par exemple, mémoriser la langue et les réglages d'interface sélectionnés) ;",
+          "Des en-têtes techniques anonymes et une adresse IP qui ne permettent pas d'identifier un utilisateur précis ;",
+          "Les réglages de l'interface (modes d'affichage sélectionnés)."
         ]
       },
       s4: {
@@ -4397,19 +4405,20 @@ const fr: Translations = {
         body: "Le téléchargement de l'application TrustNode s'effectue via les plateformes officielles — la boutique RuStore et GitHub. Le site TrustNode ne collecte ni ne traite les données personnelles des utilisateurs : toutes les données analysées par l'application sont traitées exclusivement en local sur l'appareil de l'utilisateur."
       },
       s5: {
-        heading: "[ LOCALISATION ET SÉCURITÉ DU STOCKAGE ]",
-        body: "Conformément à la législation russe, si des données personnelles de citoyens russes sont enregistrées lors d'une correspondance individuelle par messagerie, l'Opérateur s'engage à les stocker, les organiser et les traiter exclusivement à l'aide de bases de données situées sur le territoire de la Fédération de Russie."
+        heading: "[ TRANSFERT TRANSFRONTALIER DE DONNÉES ]",
+        body: "Dans sa version actuelle, le site ne collecte, ne traite et ne stocke pas de données personnelles ; aucun transfert transfrontalier de données personnelles n'est donc non plus effectué. Si des formulaires de collecte de données sont introduits à l'avenir, la présente Politique sera mise à jour conformément à l'article 18 de la loi fédérale russe n° 152-FZ, y compris l'utilisation de bases de données situées sur le territoire de la Fédération de Russie."
       },
       s6: {
         heading: "[ COORDONNÉES ]",
-        bodyPrefix: "Pour toute question relative au traitement d'informations techniques ou à la conformité avec la loi 152-FZ, vous pouvez contacter directement les développeurs via le canal Telegram officiel du projet : ",
+        bodyPrefix: "Pour toute question concernant le site, le téléchargement de l'application ou la présente Politique, vous pouvez contacter directement les développeurs via le canal Telegram officiel du projet : ",
         bodySuffix: "."
       },
       s7: {
         heading: "[ PLATEFORMES EXTERNES DE DISTRIBUTION ]",
-        bodyPrefix: "Le téléchargement et l'installation de l'application depuis la boutique RuStore ou GitHub sont régis par les règles des plateformes concernées. TrustNode n'est pas opérateur de données personnelles lorsque des plateformes externes sont utilisées : ",
+        bodyPrefix: "Le téléchargement et l'installation de l'application depuis la boutique RuStore ou GitHub sont régis par les règles des plateformes concernées. Lors de l'utilisation de plateformes externes, TrustNode n'est pas opérateur de données personnelles : ",
         bodySuffix: " L'exactitude et l'applicabilité de ces liens doivent être confirmées par le propriétaire du site avant publication."
-      }
+      },
+      date: "Date de publication : 01.08.2026"
     },
     terms: {
       s1: {
@@ -4889,27 +4898,27 @@ const de: Translations = {
   legal: {
     privacyTitle: "Datenschutzerklärung",
     termsTitle: "Nutzungsbedingungen",
-    tabPrivacy: "DATENSCHUTZRICHTLINIE (RU-GESETZ 152-FZ)",
+    tabPrivacy: "DATENSCHUTZRICHTLINIE",
     tabTerms: "NUTZUNGSBEDINGUNGEN",
     closeAria: "Schließen",
     acknowledge: "Verstanden",
     privacy: {
       s1: {
         heading: "[ ALLGEMEINE BESTIMMUNGEN ]",
-        body: "Diese Datenschutzerklärung wurde in Übereinstimmung mit dem russischen Bundesgesetz Nr. 152-FZ „Über personenbezogene Daten“ vom 27. Juli 2006 erstellt. Sie legt fest, wie das TrustNode-Protocol-Projektteam (der „Betreiber“) personenbezogene Nutzerdaten verarbeitet und welche Schutzmaßnahmen gelten. Firmenname und Registrierungsangaben der juristischen Person oder des Einzelunternehmers, der als Verantwortlicher handelt: [TODO: noch zu bestätigen]."
+        body: "Diese Datenschutzerklärung beschreibt, welche Daten bei der Nutzung der offiziellen Werbeseite des TrustNode-Projekts verarbeitet werden. In ihrer aktuellen Fassung erhebt, verarbeitet und speichert die Website keine personenbezogenen Daten der Nutzer, weshalb kein separater Verantwortlicher für personenbezogene Daten benannt wird. Die Funktionalität der Website beschränkt sich auf Informationen über TrustNode-Produkte und Links zum Herunterladen der App über offizielle Plattformen (GitHub, RuStore). Diese Erklärung wurde unter Berücksichtigung der Anforderungen des russischen Bundesgesetzes Nr. 152-FZ „Über personenbezogene Daten“ vom 27. Juli 2006 erstellt. Sollten künftig Datenerfassungsformulare (z. B. Warteliste, Feedback, Registrierung) eingeführt werden, wird diese Erklärung aktualisiert und den Verantwortlichen für personenbezogene Daten, die Verarbeitungszwecke, die Speicherfristen, die Rechtsgrundlagen und die Rechte der betroffenen Personen angeben."
       },
       s2: {
-        heading: "[ DAS KUPPEL-PRINZIP: 100 % SICHER FÜR IHRE PRIVATSPHÄRE ]",
+        heading: "[ WICHTIG: DIE WEBSITE ERHEBT KEINE IHRER DATEN ]",
         noticeLabel: "Wichtiger Hinweis:",
-        noticeBody: "Die TrustNode-Website sammelt, verarbeitet, speichert oder überträgt Ihre persönlichen Daten, E-Mail-Adresse, Passwörter oder privaten Dateien NICHT direkt. Alle Schutzmechanismen der PHANTOM-App laufen ausschließlich lokal (on-device) auf dem Prozessor Ihres Smartphones."
+        noticeBody: "Die TrustNode-Website erhebt, verarbeitet und speichert KEINE Ihrer personenbezogenen Daten — E-Mail-Adressen, Namen, Passwörter oder vertrauliche Dateien. Die Funktionalität der Website beschränkt sich auf Produktinformationen und Download-Links. Die PHANTOM-App selbst verarbeitet alle Daten ausschließlich lokal (on-device) auf Ihrem Gerät und überträgt sie nicht an Server des Projekts."
       },
       s3: {
-        heading: "[ VON DER WEBSITE VERARBEITETE DATEN ]",
-        intro: "Der Besuch dieser Informationswebsite kann die automatische Verarbeitung ausschließlich anonymisierter technischer Daten umfassen, wie zum Beispiel:",
+        heading: "[ BEIM BESUCH DER WEBSITE VERARBEITETE DATEN ]",
+        intro: "Beim Besuch der Website werden keine personenbezogenen Daten erhoben. Automatisch verarbeitet werden können ausschließlich anonymisierte technische Daten, wie zum Beispiel:",
         items: [
-          "Cookies (erforderlich zum Zwischenspeichern von Leistungs- und Öko-Modus-Einstellungen);",
-          "Anonyme technische Header und IP-Adresse, ohne Verknüpfung zu einem Namen oder einer bestimmten Person;",
-          "Oberflächen-Einstellungen (ausgewählte Grafikmodi)."
+          "Cookies, die für das ordnungsgemäße Funktionieren der Website erforderlich sind (z. B. zum Merken der gewählten Sprache und der Schnittstelleneinstellungen);",
+          "Anonyme technische Header und IP-Adresse, die keine Identifizierung eines bestimmten Nutzers ermöglichen;",
+          "Schnittstelleneinstellungen (ausgewählte Anzeigemodi)."
         ]
       },
       s4: {
@@ -4917,19 +4926,20 @@ const de: Translations = {
         body: "Der Download der TrustNode-App erfolgt über offizielle Plattformen — den RuStore-Store und GitHub. Die TrustNode-Website erhebt und verarbeitet keine personenbezogenen Daten der Nutzer: Alle von der App analysierten Daten werden ausschließlich lokal auf dem Gerät des Nutzers verarbeitet."
       },
       s5: {
-        heading: "[ DATENLOKALISIERUNG UND SPEICHERSICHERHEIT ]",
-        body: "Gemäß russischem Recht verpflichtet sich der Betreiber, personenbezogene Daten russischer Bürger, die während einer individuellen Messenger-Korrespondenz erfasst werden, ausschließlich in Datenbanken auf dem Gebiet der Russischen Föderation zu speichern, zu organisieren und zu verarbeiten."
+        heading: "[ GRENZÜBERSCHREITENDE DATENÜBERTRAGUNG ]",
+        body: "In ihrer aktuellen Fassung erhebt, verarbeitet und speichert die Website keine personenbezogenen Daten, weshalb auch keine grenzüberschreitende Übermittlung personenbezogener Daten stattfindet. Sollten künftig Datenerfassungsformulare eingeführt werden, wird diese Erklärung gemäß Artikel 18 des russischen Bundesgesetzes Nr. 152-FZ aktualisiert, einschließlich der Nutzung von Datenbanken im Hoheitsgebiet der Russischen Föderation."
       },
       s6: {
         heading: "[ KONTAKTINFORMATIONEN ]",
-        bodyPrefix: "Bei Fragen zur Verarbeitung technischer Informationen oder zur Einhaltung des Gesetzes 152-FZ können Sie die Entwickler direkt über den offiziellen Telegram-Kanal des Projekts kontaktieren: ",
+        bodyPrefix: "Bei Fragen zur Website, zum App-Download oder zu dieser Erklärung können Sie die Entwickler direkt über den offiziellen Telegram-Kanal des Projekts kontaktieren: ",
         bodySuffix: "."
       },
       s7: {
         heading: "[ EXTERNE VERTRIEBSPLATTFORMEN ]",
-        bodyPrefix: "Der Download und die Installation der App aus dem RuStore-Store oder von GitHub unterliegen den Regeln der jeweiligen Plattformen. TrustNode ist bei der Nutzung externer Plattformen nicht Verantwortlicher für personenbezogene Daten: ",
+        bodyPrefix: "Der Download und die Installation der App aus dem RuStore-Store oder von GitHub unterliegen den Regeln der jeweiligen Plattformen. Bei der Nutzung externer Plattformen ist TrustNode nicht Verantwortlicher für personenbezogene Daten: ",
         bodySuffix: " Die Richtigkeit und Anwendbarkeit dieser Links muss vom Website-Betreiber vor der Veröffentlichung bestätigt werden."
-      }
+      },
+      date: "Veröffentlichungsdatum: 01.08.2026"
     },
     terms: {
       s1: {
@@ -5409,27 +5419,27 @@ const ja: Translations = {
   legal: {
     privacyTitle: "プライバシーポリシー",
     termsTitle: "利用規約",
-    tabPrivacy: "個人データ取扱方針（ロシア法152-FZ）",
+    tabPrivacy: "プライバシーポリシー",
     tabTerms: "利用規約",
     closeAria: "閉じる",
     acknowledge: "確認しました",
     privacy: {
       s1: {
         heading: "[ 総則 ]",
-        body: "本プライバシーポリシーは、2006年7月27日付ロシア連邦法第152-FZ号「個人データについて」の要件に基づき作成されています。本ポリシーは、TrustNode Protocolプロジェクトチーム（以下「運営者」）によるユーザー個人データの取扱方法およびそのセキュリティ対策を定めるものです。 運営者として活動する法人または個人事業主の名称および登記情報：[TODO：要確認]。"
+        body: "本プライバシーポリシーは、TrustNodeプロジェクトの公式プロモーションサイトを利用する際に処理されるデータについて説明します。現行版では、本サイトはユーザーの個人データを収集・処理・保存しておらず、そのため別個の個人データ取扱事業者（運営者）は指定されていません。サイトの機能は、TrustNode製品に関する情報の提供と、公式プラットフォーム（GitHub、RuStore）からのアプリダウンロード用リンクの提示に限定されます。本ポリシーは、2006年7月27日付ロシア連邦法第152-FZ号「個人データについて」の要件を考慮して作成されています。将来、データ収集フォーム（例：ウェイトリスト、フィードバック、登録）が導入された場合、本ポリシーは、個人データ取扱事業者、処理目的、保存期間、法的根拠、および本人の権利を明記する形で更新されます。"
       },
       s2: {
-        heading: "[ ドームの原則：プライバシーを100%保護 ]",
+        heading: "[ 重要：サイトはお客様のデータを収集しません ]",
         noticeLabel: "重要なお知らせ：",
-        noticeBody: "TrustNodeのウェブサイトは、あなたの個人データ、メールアドレス、パスワード、機密ファイルを直接収集・処理・保存・送信することは一切ありません。PHANTOMアプリの保護機構はすべて、お使いのスマートフォンのプロセッサ上でローカル（オンデバイス）でのみ動作します。"
+        noticeBody: "TrustNodeのウェブサイトは、お客様の個人データ（メールアドレス、氏名、パスワード、機密ファイル）を収集・処理・保存することは一切ありません。サイトの機能は製品情報とダウンロードリンクに限定されます。PHANTOMアプリ自体は、すべてのデータをデバイス上でのみ（ローカルで）処理し、プロジェクトのサーバーに送信することはありません。"
       },
       s3: {
-        heading: "[ サイトが処理するデータ ]",
-        intro: "本情報サイトへのアクセスに伴い、以下のような匿名化された技術データのみが自動的に処理される場合があります。",
+        heading: "[ サイト訪問時に処理されるデータ ]",
+        intro: "サイトへのアクセス時に個人データが収集されることはありません。自動的に処理され得るのは、以下の匿名化された技術データのみです。",
         items: [
-          "Cookie（パフォーマンスおよびエコモード設定のキャッシュに必要）",
-          "氏名や特定の個人と結びつかない匿名の技術ヘッダーおよびIPアドレス",
-          "インターフェース設定（選択したグラフィックモード）"
+          "サイトの正常な動作に必要なCookie（選択した言語やインターフェース設定の記憶など）",
+          "特定のユーザーの識別を可能にしない匿名の技術ヘッダーおよびIPアドレス",
+          "インターフェース設定（選択した表示モード）"
         ]
       },
       s4: {
@@ -5437,19 +5447,20 @@ const ja: Translations = {
         body: "TrustNodeアプリのダウンロードは、公式プラットフォームであるRuStoreストアとGitHubを通じて行われます。TrustNodeのウェブサイトはユーザーの個人データを収集・処理しません。アプリが分析するすべてのデータは、ユーザーのデバイス上でのみローカル処理されます。"
       },
       s5: {
-        heading: "[ データのローカライゼーションと保管の安全性 ]",
-        body: "ロシアの法律に基づき、メッセージアプリでの個別のやり取りの中でロシア国民の個人データが記録された場合、運営者はロシア連邦領域内に設置されたデータベースのみを使用して、これを保管・整理・処理することを約束します。"
+        heading: "[ 個人データの越境移転 ]",
+        body: "現行版では、サイトは個人データを収集・処理・保存していないため、個人データの越境移転も行われていません。将来データ収集フォームが導入された場合、本ポリシーはロシア連邦法第152-FZ号第18条に基づき、ロシア連邦領域内に設置されたデータベースの利用を含めて更新されます。"
       },
       s6: {
         heading: "[ お問い合わせ先 ]",
-        bodyPrefix: "技術情報の取扱いや第152-FZ号法への準拠に関するご質問は、プロジェクトの公式Telegramチャンネルを通じて開発者に直接お問い合わせください：",
+        bodyPrefix: "サイト、アプリのダウンロード、または本ポリシーに関するご質問は、プロジェクトの公式Telegramチャンネルを通じて開発者に直接お問い合わせください：",
         bodySuffix: "。"
       },
       s7: {
         heading: "[ 外部配信プラットフォーム ]",
-        bodyPrefix: "RuStoreストアまたはGitHubからのアプリのダウンロードとインストールは、それぞれのプラットフォームの規則に従います。外部プラットフォームを利用する場合、TrustNodeは個人データの運営者ではありません：",
+        bodyPrefix: "RuStoreストアまたはGitHubからのアプリのダウンロードとインストールは、それぞれのプラットフォームの規則に従います。外部プラットフォームを利用する場合、TrustNodeは個人データの取扱事業者ではありません：",
         bodySuffix: " 公開前に、これらのリンクの正確性と適用可能性をサイト運営者が確認する必要があります。"
-      }
+      },
+      date: "公開日：2026年8月1日"
     },
     terms: {
       s1: {

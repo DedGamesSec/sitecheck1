@@ -132,6 +132,10 @@ export default function LegalModal({ isOpen, onClose, tab: initialTab }: LegalMo
                   {p.s7.bodySuffix}
                 </p>
               </div>
+
+              <div className="pt-4 border-t border-[#1F2937]/30">
+                <p className="font-mono text-[10px] text-gray-500">{p.date}</p>
+              </div>
             </>
           ) : (
             <>

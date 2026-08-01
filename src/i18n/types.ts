@@ -243,6 +243,7 @@ export interface Translations {
       s5: LegalSimpleSection;
       s6: LegalContactSection;
       s7: LegalContactSection;
+      date: string;
     };
     terms: {
       s1: LegalSimpleSection;
