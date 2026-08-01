@@ -2,7 +2,6 @@ import React from "react";
 import { ArrowLeft, ShieldCheck, Lock, Cpu, Smartphone } from "lucide-react";
 import { useTranslation } from "../i18n/LanguageContext";
 import { useNavigation } from "../navigation/NavigationContext";
-import { motion } from "motion/react";
 import { RUSTORE_URL, GITHUB_APK_URL } from "./Header";
 
 export default function EarlyAccessPage() {
@@ -85,12 +84,8 @@ export default function EarlyAccessPage() {
             const Icon = featureIcons[idx];
             const descs = [lp.feature1Desc, lp.feature2Desc, lp.feature3Desc];
             return (
-              <motion.div
+              <div
                 key={idx}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: idx * 0.1 }}
                 className="p-5 sm:p-6 rounded-2xl border border-[#1F2937]/40 bg-[#0F0F12]/80"
               >
                 <div className="w-11 h-11 rounded-xl bg-[#0A162C]/80 border border-[#2E7DFF]/25 flex items-center justify-center text-[#2E7DFF] mb-4">
@@ -102,7 +97,7 @@ export default function EarlyAccessPage() {
                 <p className="font-sans text-xs sm:text-sm text-gray-400 leading-relaxed">
                   {descs[idx]}
                 </p>
-              </motion.div>
+              </div>
             );
           })}
         </div>

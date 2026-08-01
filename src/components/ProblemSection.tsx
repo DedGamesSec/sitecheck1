@@ -89,11 +89,7 @@ const ProblemSection = React.memo(function ProblemSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           
           {/* PROBLEM CARD 1: SOCIAL ENGINEERING CALL SPOOFING */}
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          <div 
             className="group relative p-6 sm:p-8 rounded-2xl bg-[#0F0F11]/90 border border-[#1F2937]/40 hover:border-[#2E7DFF]/40 transition-all duration-300 hover:shadow-[0_0_30px_rgba(46,125,255,0.08)] flex flex-col justify-between overflow-hidden"
             id="prob-1"
           >
@@ -163,14 +159,10 @@ const ProblemSection = React.memo(function ProblemSection() {
             <div className="absolute top-0 right-0 w-8 h-8 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <div className="absolute top-3 right-3 w-1.5 h-1.5 border-t border-r border-[#2E7DFF]" />
             </div>
-          </motion.div>
+          </div>
 
           {/* PROBLEM CARD 2: PRIVACY LEAKS TO CLOUD SERVERS */}
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.6, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+          <div 
             className="group relative p-6 sm:p-8 rounded-2xl bg-[#0F0F11]/90 border border-[#1F2937]/40 hover:border-[#2E7DFF]/40 transition-all duration-300 hover:shadow-[0_0_30px_rgba(46,125,255,0.08)] flex flex-col justify-between overflow-hidden"
             id="prob-2"
           >
@@ -229,14 +221,10 @@ const ProblemSection = React.memo(function ProblemSection() {
             <div className="absolute top-0 right-0 w-8 h-8 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <div className="absolute top-3 right-3 w-1.5 h-1.5 border-t border-r border-[#2E7DFF]" />
             </div>
-          </motion.div>
+          </div>
 
           {/* PROBLEM CARD 3: INERT / OFFLINE WITHOUT NETWORK */}
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.6, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+          <div 
             className="group relative p-6 sm:p-8 rounded-2xl bg-[#0F0F11]/90 border border-[#1F2937]/40 hover:border-[#2E7DFF]/40 transition-all duration-300 hover:shadow-[0_0_30px_rgba(46,125,255,0.08)] flex flex-col justify-between overflow-hidden"
             id="prob-3"
           >
@@ -301,7 +289,7 @@ const ProblemSection = React.memo(function ProblemSection() {
             <div className="absolute top-0 right-0 w-8 h-8 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <div className="absolute top-3 right-3 w-1.5 h-1.5 border-t border-r border-[#2E7DFF]" />
             </div>
-          </motion.div>
+          </div>
 
         </div>
 

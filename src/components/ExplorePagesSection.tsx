@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "motion/react";
 import { useTranslation } from "../i18n/LanguageContext";
 import { useNavigation } from "../navigation/NavigationContext";
 import { PAGES_CONFIG } from "../navigation/pages.config";
@@ -213,15 +212,19 @@ export default function ExplorePagesSection() {
             const cta = PAGE_CTA[page.id]?.[language] || "";
 
             return (
-              <motion.div
+              <div
                 key={page.id}
-                whileHover={{ y: -4 }}
-                transition={{ duration: 0.3 }}
                 onClick={() => navigateTo(page.id)}
-                className="group relative flex flex-col justify-between p-6 sm:p-8 rounded-2xl border border-[#1F2937]/50 bg-[#070709]/90 hover:border-[#2E7DFF]/55 transition-all duration-300 cursor-pointer shadow-[0_4px_30px_rgba(0,0,0,0.6)]"
+                className={`group relative flex flex-col justify-between p-6 sm:p-8 rounded-2xl border bg-[#070709]/90 hover:border-[#2E7DFF]/55 transition-all duration-300 cursor-pointer ${
+                  page.id === "how-it-works"
+                    ? "border-[#2E7DFF]/30 shadow-[0_4px_35px_rgba(46,125,255,0.08)]"
+                    : "border-[#1F2937]/50 shadow-[0_4px_30px_rgba(0,0,0,0.6)]"
+                }`}
                 id={`explore-${page.id}-card`}
               >
-                <div className="absolute -inset-px rounded-2xl bg-gradient-to-b from-[#2E7DFF]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                <div className={`absolute -inset-px rounded-2xl bg-gradient-to-b from-[#2E7DFF]/10 to-transparent pointer-events-none transition-opacity duration-300 ${
+                  page.id === "how-it-works" ? "opacity-60" : "opacity-0 group-hover:opacity-100"
+                }`} />
 
                 <div>
                   <div className="flex items-center justify-between mb-6">
@@ -244,7 +247,7 @@ export default function ExplorePagesSection() {
                 <span className="inline-flex font-mono text-[11px] font-bold text-[#2E7DFF] group-hover:text-white group-hover:translate-x-1.5 transition-all">
                   {cta}
                 </span>
-              </motion.div>
+              </div>
             );
           })}
         </div>

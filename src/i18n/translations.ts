@@ -348,7 +348,7 @@ const ru: Translations = {
       {
         badge: "НИР // I МЕСТО",
         title: "Триумф на региональном НИР",
-        desc: "Комплексная работа и инновационный алгоритм TrustNode принесли проекту I МЕСТО на областном научно-исследовательском конкурсе (НИР) в секции «Информационные технологии»."
+        desc: "Комплексная работа над локальным алгоритмом антифрода TrustNode принесла проекту I МЕСТО на областном научно-исследовательском конкурсе (НИР) в секции «Информационные технологии»."
       },
       {
         badge: "МОСКВА // СЕНТЯБРЬ 2026",
@@ -872,7 +872,7 @@ const en: Translations = {
       {
         badge: "REGIONAL VICTORY",
         title: "Regional Science Triumph",
-        desc: "The comprehensive semantic framework of TrustNode won 1st place in the regional scientific and research competition (IT section) for its novel approach to real-time mobile fraud mitigation."
+        desc: "The comprehensive semantic framework of TrustNode won 1st place in the regional scientific and research competition (IT section) for detecting mobile fraud in real time entirely on-device."
       },
       {
         badge: "FEDERAL SUPERFINAL",
@@ -1396,7 +1396,7 @@ const es: Translations = {
       {
         badge: "INVESTIGACIÓN // 1.ER LUGAR",
         title: "Triunfo en el concurso regional",
-        desc: "El trabalho integral y el innovador algoritmo de TrustNode le otorgaron al proyecto el 1.er lugar en el concurso regional de investigación científica en la sección de 'Tecnologías de la Información'."
+        desc: "El trabajo sobre el algoritmo local de anti-fraude de TrustNode le otorgó al proyecto el 1.er lugar en el concurso regional de investigación científica en la sección de 'Tecnologías de la Información'."
       },
       {
         badge: "MOSCÚ // SEPTIEMBRE 2026",
@@ -1920,7 +1920,7 @@ const zh: Translations = {
       {
         badge: "科研竞赛 // 第一名",
         title: "区域科研竞赛中夺冠",
-        desc: "TrustNode 的综合语义框架和创新算法使该项目在区域科学研究竞赛（信息技术组）中斩获第一名，肯定了其在实时防欺诈方面的成就。"
+        desc: "针对 TrustNode 本地反欺诈算法的研究工作，使该项目在区域科学研究竞赛（信息技术组）中斩获第一名。"
       },
       {
         badge: "莫斯科 // 2026年9月",
@@ -2444,7 +2444,7 @@ const tr: Translations = {
       {
         badge: "ARAŞTIRMA // 1. LİK",
         title: "Bölgesel Araştırma Yarışmasında Zafer",
-        desc: "TrustNode'un kapsamlı anlamsal çerçevesi ve yenilikçi algoritması, projeye 'Bilgi Teknolojileri' bölümündeki bölgesel bilimsel ve araştırma yarışmasında 1.lik ödülünü getirdi."
+        desc: "TrustNode'un yerel dolandırıcılık önleme algoritması üzerindeki çalışmalar, projeye 'Bilgi Teknolojileri' bölümündeki bölgesel bilimsel ve araştırma yarışmasında 1.lik ödülünü getirdi."
       },
       {
         badge: "MOSKOVA // EYLÜL 2026",
@@ -2968,7 +2968,7 @@ const hi: Translations = {
       {
         badge: "अनुसंधान // प्रथम स्थान",
         title: "क्षेत्रीय अनुसंधान प्रतियोगिता में विजय",
-        desc: "TrustNode के व्यापक सिमेंटिक ढांचे और अभिनव एल्गोरिदम ने आईटी अनुभाग में क्षेत्रीय वैज्ञानिक और अनुसंधान प्रतियोगिता में परियोजना को पहला स्थान दिलाया।"
+        desc: "TrustNode के स्थानीय धोखाधड़ी-रोधी एल्गोरिदम पर किए गए कार्य ने आईटी अनुभाग में क्षेत्रीय वैज्ञानिक और अनुसंधान प्रतियोगिता में परियोजना को पहला स्थान दिलाया।"
       },
       {
         badge: "मास्को // सितंबर 2026",
@@ -3492,7 +3492,7 @@ const ar: Translations = {
       {
         badge: "البحث العلمي // المركز الأول",
         title: "الانتصار في البحث العلمي الإقليمي",
-        desc: "حصد الإطار الدلالي الشامل والخوارزمية المبتكرة لـ TrustNode المركز الأول في المسابقة العلمية والبحثية الإقليمية (قسم تكنولوجيا المعلومات)."
+        desc: "حصد العمل على خوارزمية مكافحة الاحتيال المحلية لـ TrustNode المركز الأول في المسابقة العلمية والبحثية الإقليمية (قسم تكنولوجيا المعلومات)."
       },
       {
         badge: "موسكو // سبتمبر 2026",
@@ -4016,7 +4016,7 @@ const pt: Translations = {
       {
         badge: "PESQUISA // 1º LUGAR",
         title: "Triunfo na pesquisa regional",
-        desc: "A estrutura semântica integrada e o algoritmo inovador do TrustNode trouxeram ao projeto o 1º lugar no concurso regional de pesquisa científica na seção de 'Tecnologia da Informação'."
+        desc: "O trabalho sobre o algoritmo local antifraude do TrustNode trouxe ao projeto o 1º lugar no concurso regional de pesquisa científica na seção de 'Tecnologia da Informação'."
       },
       {
         badge: "MOSCOU // SETEMBRO 2026",
@@ -4540,7 +4540,7 @@ const fr: Translations = {
       {
         badge: "VICTOIRE RÉGIONALE",
         title: "Triomphe Scientifique Régional",
-        desc: "Le cadre sémantique global de TrustNode a remporté la 1ère place du concours de recherche scientifique régional (section informatique) pour son approche novatrice de la lutte contre la fraude."
+        desc: "Le travail sur l'algorithme local antifraude de TrustNode a remporté la 1ère place du concours de recherche scientifique régional (section informatique)."
       },
       {
         badge: "SUPERFINALE FÉDÉRALE",
@@ -5064,7 +5064,7 @@ const de: Translations = {
       {
         badge: "REGIONALER SIEG",
         title: "Regionaler Forschungserfolg",
-        desc: "Das umfassende semantische Framework von TrustNode belegte den 1. Platz beim regionalen wissenschaftlichen Forschungswettbewerb in der Sektion Informationstechnologie."
+        desc: "Die Arbeit am lokalen Antifraud-Algorithmus von TrustNode belegte den 1. Platz beim regionalen wissenschaftlichen Forschungswettbewerb in der Sektion Informationstechnologie."
       },
       {
         badge: "SUPERFINALE MOSKAU",
@@ -5588,7 +5588,7 @@ const ja: Translations = {
       {
         badge: "学術研究 // 第1位",
         title: "地域研究コンテストでの優勝",
-        desc: "TrustNodeの高度なセマンティック解析フレームワークと革新的なアルゴリズムは、地域の学術研究コンペティションの「情報技術」セクションで第1位を獲得しました。"
+        desc: "TrustNodeのローカル不正防止アルゴリズムの研究により、地域の学術研究コンペティションの「情報技術」セクションで第1位を獲得しました。"
       },
       {
         badge: "モスクワ // 2026年9月",

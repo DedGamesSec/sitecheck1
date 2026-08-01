@@ -1,7 +1,6 @@
 import React from "react";
 import { Award, FileText, Compass, Percent } from "lucide-react";
 import { useTranslation } from "../i18n/LanguageContext";
-import { motion } from "motion/react";
 
 const STAT_ICONS = [FileText, Award, Compass, Percent];
 
@@ -93,12 +92,8 @@ const TrustSection = React.memo(function TrustSection() {
         {/* Stat Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7 sm:gap-9">
           {stats.map((stat, idx) => (
-            <motion.div 
+            <div 
               key={stat.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-40px" }}
-              transition={{ duration: 0.6, delay: idx * 0.12, ease: [0.16, 1, 0.3, 1] }}
               className="relative p-7 sm:p-9 rounded-3xl bg-[#070709]/75 backdrop-blur-md border border-[#1F2937]/30 hover:border-[#2E7DFF]/50 transition-all duration-300 group flex flex-col justify-between overflow-hidden hover:shadow-[0_8px_35px_rgba(46,125,255,0.12)]"
               id={stat.id}
             >
@@ -126,7 +121,7 @@ const TrustSection = React.memo(function TrustSection() {
               <p className="font-sans text-xs text-gray-400 leading-relaxed border-t border-[#1F2937]/30 pt-4 mt-2 relative z-10">
                 {stat.desc}
               </p>
-            </motion.div>
+            </div>
           ))}
         </div>
 

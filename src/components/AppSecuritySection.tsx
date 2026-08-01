@@ -2,7 +2,6 @@ import React from "react";
 import { Shield, Lock, Eye, AlertCircle, RefreshCw, ShieldCheck } from "lucide-react";
 import { useTranslation } from "../i18n/LanguageContext";
 import { LanguageCode } from "../i18n/languages";
-import { motion } from "motion/react";
 
 const TITLE_BY_LANG: Partial<Record<LanguageCode, string>> = {
   ru: "Безопасность купола",
@@ -305,15 +304,11 @@ const AppSecuritySection = React.memo(function AppSecuritySection() {
         </div>
 
         {/* Feature grid with clean layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto">
           {securityFeatures.map((feat, index) => (
-            <motion.div 
+            <div 
               key={index}
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="p-6 sm:p-8 rounded-2xl bg-[#0F0F11]/95 border border-white/[0.04] hover:border-[#2E7DFF]/40 transition-all duration-300 group flex gap-5"
+              className={`p-6 sm:p-8 rounded-2xl bg-[#0F0F11]/95 border border-white/[0.04] hover:border-[#2E7DFF]/40 transition-all duration-300 group flex gap-5 ${index === 3 ? "md:col-span-3" : ""}`}
             >
               <div className="w-10 h-10 rounded-xl bg-[#111622] flex items-center justify-center border border-[#2E7DFF]/10 shrink-0 group-hover:border-[#2E7DFF]/30 transition-all duration-300">
                 {feat.icon}
@@ -326,7 +321,7 @@ const AppSecuritySection = React.memo(function AppSecuritySection() {
                   {feat.desc}
                 </p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 

@@ -1,17 +1,16 @@
 import React from "react";
 import { Shield, Eye, HelpCircle, ArrowRight } from "lucide-react";
 import { useTranslation } from "../i18n/LanguageContext";
-import { motion } from "motion/react";
 
 const DICT: Record<string, { badge: string; title: string; subtitle: string; steps: Array<{ tag: string; title: string; desc: string }> }> = {
   ru: {
     badge: "ПРОСТОЕ ОБЪЯСНЕНИЕ",
     title: "Всё просто: о TrustNode за 1 минуту",
-    subtitle: "Простыми словами о том, как работает инновационная защита нового поколения",
+    subtitle: "Простыми словами о том, как TrustNode распознаёт мошеннические звонки прямо на устройстве",
     steps: [
       {
         tag: "ЧТО ЭТО?",
-        title: "Умный щит телефона",
+        title: "Купол защиты на устройстве",
         desc: "TrustNode — это персональный защитный купол для вашего смартфона. Приложение, которое оберегает вас и вашу семью от опасных звонков, текстового обмана, фишинга и финансовых угроз."
       },
       {
@@ -29,11 +28,11 @@ const DICT: Record<string, { badge: string; title: string; subtitle: string; ste
   en: {
     badge: "SIMPLE EXPLANATION",
     title: "TrustNode in 1 Minute",
-    subtitle: "A straightforward guide to how next-generation protection works",
+    subtitle: "A plain-language guide to how TrustNode detects fraudulent calls right on your device",
     steps: [
       {
         tag: "WHAT IS IT?",
-        title: "Smart Phone Shield",
+        title: "Defense Dome on Your Device",
         desc: "TrustNode is a personal defense dome for your smartphone. An on-device app that instantly shields you and your family from fraudulent calls, phishing, and financial threats."
       },
       {
@@ -51,11 +50,11 @@ const DICT: Record<string, { badge: string; title: string; subtitle: string; ste
   es: {
     badge: "EXPLICACIÓN SENCILLA",
     title: "Muy Sencillo: TrustNode en 1 Minuto",
-    subtitle: "Una guía directa sobre cómo funciona la protección de última generación",
+    subtitle: "Una guía sencilla de cómo TrustNode detecta llamadas fraudulentas directamente en su dispositivo",
     steps: [
       {
         tag: "¿QUÉ ES?",
-        title: "Escudo de Teléfono Inteligente",
+        title: "Cúpula de defensa en el dispositivo",
         desc: "TrustNode es una cúpula de defensa personal para su smartphone. Una aplicación en el dispositivo que lo protege instantáneamente a usted y a su familia de llamadas fraudulentas, phishing y amenazas financieras."
       },
       {
@@ -73,11 +72,11 @@ const DICT: Record<string, { badge: string; title: string; subtitle: string; ste
   zh: {
     badge: "极简说明",
     title: "只需一分钟，轻松了解 TrustNode",
-    subtitle: "以最通俗易懂的语言，为您剖析新一代创新安全防护的工作原理",
+    subtitle: "用最通俗的语言，讲清 TrustNode 如何在设备端直接识别诈骗电话",
     steps: [
       {
         tag: "它是什么？",
-        title: "智能手机防护罩",
+        title: "设备端防护穹顶",
         desc: "TrustNode 是您智能手机的专属个人防护穹顶。这是一款直接运行在设备端的应用程序，能够瞬间为您和您的家人阻挡诈骗电话、短信钓鱼及财产安全威胁。"
       },
       {
@@ -95,11 +94,11 @@ const DICT: Record<string, { badge: string; title: string; subtitle: string; ste
   tr: {
     badge: "BASİT AÇIKLAMA",
     title: "Çok Basit: 1 Dakikada TrustNode",
-    subtitle: "Yeni nesil inovatif korumanın nasıl çalıştığına dair basit bir kılavuz",
+    subtitle: "TrustNode'un dolandırıcı aramaları doğrudan cihazınızda nasıl tespit ettiğine dair sade bir rehber",
     steps: [
       {
         tag: "NEDİR?",
-        title: "Akıllı Telefon Kalkanı",
+        title: "Cihazda Savunma Kubbesi",
         desc: "TrustNode, akıllı telefonunuz için kişisel bir savunma kubbesidir. Sizi ve ailenizi dolandırıcı aramalardan, oltalama mesajlarından ve finansal tehditlerden anında koruyan cihaz içi bir uygulamadır."
       },
       {
@@ -117,11 +116,11 @@ const DICT: Record<string, { badge: string; title: string; subtitle: string; ste
   hi: {
     badge: "सरल व्याख्या",
     title: "बहुत सरल: 1 मिनट में TrustNode",
-    subtitle: "अगली पीढ़ी की नवीन सुरक्षा कैसे काम करती है, इसका एक सीधा मार्गदर्शक",
+    subtitle: "सीधी भाषा में जानें: TrustNode आपके डिवाइस पर ही धोखाधड़ी वाले कॉल कैसे पहचानता है",
     steps: [
       {
         tag: "यह क्या है?",
-        title: "स्मार्ट फोन शील्ड",
+        title: "डिवाइस पर सुरक्षा डोम",
         desc: "TrustNode आपके स्मार्टफोन के लिए एक व्यक्तिगत सुरक्षा डोम है। एक ऑन-डिवाइस ऐप जो आपको और आपके परिवार को कपटपूर्ण कॉल, फ़िशिंग और वित्तीय खतरों से तुरंत बचाता है।"
       },
       {
@@ -139,11 +138,11 @@ const DICT: Record<string, { badge: string; title: string; subtitle: string; ste
   ar: {
     badge: "شرح مبسط",
     title: "بكل بساطة: TrustNode في دقيقة واحدة",
-    subtitle: "دليل مبسط يوضح كيفية عمل الجيل القادم من الحماية المبتكرة",
+    subtitle: "دليل مبسط يشرح كيف يرصد TrustNode المكالمات الاحتيالية مباشرة على جهازك",
     steps: [
       {
         tag: "ما هو؟",
-        title: "درع الهاتف الذكي",
+        title: "قبة دفاع على الجهاز",
         desc: "TrustNode عبارة عن قبة دفاع شخصية لهاتفك الذكي. تطبيق يعمل على الجهاز ليحميك ويحمي عائلتك فورًا من المكالمات الاحتيالية والتصيد والتهديدات المالية."
       },
       {
@@ -161,11 +160,11 @@ const DICT: Record<string, { badge: string; title: string; subtitle: string; ste
   pt: {
     badge: "EXPLICAÇÃO SIMPLES",
     title: "Tudo Simples: TrustNode em 1 Minuto",
-    subtitle: "Um guia direto sobre como funciona a proteção de última geração",
+    subtitle: "Um guia direto de como o TrustNode detecta chamadas fraudulentas direto no seu dispositivo",
     steps: [
       {
         tag: "O QUE É?",
-        title: "Escudo Inteligente",
+        title: "Domo de defesa no dispositivo",
         desc: "O TrustNode é um domo de defesa pessoal para o seu smartphone. Um app no dispositivo que protege instantaneamente você e sua família de chamadas fraudulentas, phishing e ameaças financeiras."
       },
       {
@@ -183,11 +182,11 @@ const DICT: Record<string, { badge: string; title: string; subtitle: string; ste
   fr: {
     badge: "EXPLICATION SIMPLE",
     title: "Tout Simple : TrustNode en 1 Minute",
-    subtitle: "Un guide direct pour comprendre le fonctionnement de cette protection de nouvelle génération",
+    subtitle: "Un guide simple pour comprendre comment TrustNode détecte les appels frauduleux directement sur l'appareil",
     steps: [
       {
         tag: "QU'EST-CE QUE C'EST ?",
-        title: "Bouclier Intelligent",
+        title: "Dôme de défense sur l'appareil",
         desc: "TrustNode est un dôme de défense personnelle pour votre smartphone. Une application locale qui vous protège instantanément, vous et votre famille, des appels frauduleux, du phishing et des menaces financières."
       },
       {
@@ -205,11 +204,11 @@ const DICT: Record<string, { badge: string; title: string; subtitle: string; ste
   de: {
     badge: "EINFACHE ERKLÄRUNG",
     title: "Ganz einfach: TrustNode in 1 Minute",
-    subtitle: "Eine unkomplizierte Anleitung zur Funktionsweise der neuen Sicherheitsgeneration",
+    subtitle: "Eine einfache Erklärung, wie TrustNode betrügerische Anrufe direkt auf Ihrem Gerät erkennt",
     steps: [
       {
         tag: "WAS IST ES?",
-        title: "Smarter Telefonschild",
+        title: "Schutzkuppel auf dem Gerät",
         desc: "TrustNode is eine persönliche Schutzkuppel für Ihr Smartphone. Eine On-Device-App, die Sie und Ihre Familie sofort vor betrügerischen Anrufen, Phishing und finanziellen Bedrohungen schützt."
       },
       {
@@ -227,11 +226,11 @@ const DICT: Record<string, { badge: string; title: string; subtitle: string; ste
   ja: {
     badge: "わかりやすい解説",
     title: "1分でわかる TrustNode",
-    subtitle: "次世代の革新的な保護システムの仕組みを、シンプルに分かりやすく解説します",
+    subtitle: "TrustNodeが端末上で直接、詐欺電話をどう見抜くかを分かりやすく解説します",
     steps: [
       {
         tag: "これは何？",
-        title: "スマホのスマートシールド",
+        title: "端末上の防衛ドーム",
         desc: "TrustNodeはスマートフォンのための個人防衛ドームです。悪質な電話やフィッシング、金融脅威からあなたと家族を瞬時に守る、端末内完結型アプリです。"
       },
       {
@@ -292,12 +291,8 @@ const IntroSection = React.memo(function IntroSection() {
             const IconComponent = ICONS[idx];
             const colorClass = COLORS[idx];
             return (
-              <motion.div
+              <div
                 key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.15 }}
                 className="relative p-6 sm:p-8 rounded-2xl bg-[#09090B] border border-[#1F2937]/30 hover:border-[#2E7DFF]/30 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
@@ -328,7 +323,7 @@ const IntroSection = React.memo(function IntroSection() {
                     <ArrowRight className="w-3.5 h-3.5" />
                   </div>
                 )}
-              </motion.div>
+              </div>
             );
           })}
         </div>
