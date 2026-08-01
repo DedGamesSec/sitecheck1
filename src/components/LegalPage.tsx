@@ -1,84 +1,62 @@
 import React from "react";
-import { X, ShieldAlert, FileText, Lock } from "lucide-react";
+import { ShieldAlert, FileText, Lock } from "lucide-react";
 import { useTranslation } from "../i18n/LanguageContext";
+import { useNavigation } from "../navigation/NavigationContext";
 
-// Verified signature for use in App.tsx
-interface LegalModalProps {
-  isOpen: boolean;
-  onClose: () => void;
+interface LegalPageProps {
   tab: "privacy" | "terms";
 }
 
-export default function LegalModal({ isOpen, onClose, tab: initialTab }: LegalModalProps) {
+export default function LegalPage({ tab }: LegalPageProps) {
   const { t } = useTranslation();
-  const [activeTab, setActiveTab] = React.useState<"privacy" | "terms">(initialTab);
-
-  React.useEffect(() => {
-    setActiveTab(initialTab);
-  }, [initialTab]);
-
-  if (!isOpen) return null;
-
+  const { navigateTo } = useNavigation();
   const p = t.legal.privacy;
   const s = t.legal.terms;
 
+  const switchTab = (next: "privacy" | "terms") => {
+    if (next !== tab) {
+      navigateTo(next);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
+  const tabClass = (active: boolean) =>
+    `py-3 px-4 font-mono text-[10px] sm:text-xs transition-colors cursor-pointer text-left border-b-2 ${
+      active
+        ? "border-[#2E7DFF] text-[#2E7DFF] font-semibold bg-[#2E7DFF]/5"
+        : "border-transparent text-gray-500 hover:text-gray-300"
+    }`;
+
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fade-in">
-      <div 
-        className="relative w-full max-w-3xl h-[80vh] flex flex-col rounded-2xl border border-[#2E7DFF]/30 bg-[#0F0F12]/95 text-[#F5F5F0] shadow-[0_0_50px_rgba(46,125,255,0.15)] overflow-hidden"
-        id="legal-modal-content"
-      >
-        {/* Modal Header */}
-        <div className="flex items-center justify-between px-6 py-4 border-b border-[#1F2937]/50 bg-[#0A0A0C]">
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-lg bg-[#2E7DFF]/10 border border-[#2E7DFF]/20 flex items-center justify-center">
-              {activeTab === "privacy" ? (
-                <Lock className="w-4 h-4 text-[#2E7DFF]" />
-              ) : (
-                <FileText className="w-4 h-4 text-[#2E7DFF]" />
-              )}
-            </div>
-            <h2 className="font-display font-bold text-base sm:text-lg">
-              {activeTab === "privacy" ? t.legal.privacyTitle : t.legal.termsTitle}
-            </h2>
+    <div className="w-full min-h-[100vh] flex flex-col justify-between bg-[#0A0A0B]/90 backdrop-blur-sm">
+      <div className="max-w-3xl w-full mx-auto px-4 pt-28 pb-16 flex flex-col gap-6">
+        {/* Page title */}
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 rounded-xl bg-[#2E7DFF]/10 border border-[#2E7DFF]/25 flex items-center justify-center shrink-0">
+            {tab === "privacy" ? (
+              <Lock className="w-5 h-5 text-[#2E7DFF]" />
+            ) : (
+              <FileText className="w-5 h-5 text-[#2E7DFF]" />
+            )}
           </div>
-          
-          <button 
-            onClick={onClose}
-            className="p-1.5 rounded-lg bg-[#111827] border border-[#1F2937] text-gray-400 hover:text-white transition-colors cursor-pointer"
-            aria-label={t.legal.closeAria}
-          >
-            <X className="w-4 h-4" />
-          </button>
+          <h1 className="font-display font-bold text-xl sm:text-2xl text-[#F5F5F0]">
+            {tab === "privacy" ? t.legal.privacyTitle : t.legal.termsTitle}
+          </h1>
         </div>
 
-        {/* Tab Switcher */}
-        <div className="flex flex-col sm:flex-row border-b border-[#1F2937]/30 bg-[#070709] px-4 sm:px-6">
-          <button
-            onClick={() => setActiveTab("privacy")}
-            className={`py-2.5 sm:py-3 px-3 sm:px-4 font-mono text-[10px] sm:text-xs border-l-2 sm:border-l-0 sm:border-b-2 transition-colors cursor-pointer text-left ${
-              activeTab === "privacy" 
-                ? "border-[#2E7DFF] text-[#2E7DFF] font-semibold bg-[#2E7DFF]/5 sm:bg-transparent" 
-                : "border-transparent text-gray-500 hover:text-gray-300"
-            }`}
-          >
+        {/* Tab switcher */}
+        <div className="flex border-b border-[#1F2937]/30">
+          <button onClick={() => switchTab("privacy")} className={tabClass(tab === "privacy")}>
             {t.legal.tabPrivacy}
           </button>
-          <button
-            onClick={() => setActiveTab("terms")}
-            className={`py-2.5 sm:py-3 px-3 sm:px-4 font-mono text-[10px] sm:text-xs border-l-2 sm:border-l-0 sm:border-b-2 transition-colors cursor-pointer text-left ${
-              activeTab === "terms" 
-                ? "border-[#2E7DFF] text-[#2E7DFF] font-semibold bg-[#2E7DFF]/5 sm:bg-transparent" 
-                : "border-transparent text-gray-500 hover:text-gray-300"
-            }`}
-          >
+          <button onClick={() => switchTab("terms")} className={tabClass(tab === "terms")}>
             {t.legal.tabTerms}
           </button>
         </div>
 
-        {/* Scrollable Content */}
-        <div className="flex-1 overflow-y-auto p-6 font-sans text-xs sm:text-sm text-gray-300 leading-relaxed space-y-6">
-          {activeTab === "privacy" ? (
+        {/* Document content */}
+        <div className="flex flex-col gap-6 font-sans text-xs sm:text-sm text-gray-300 leading-relaxed">
+          {tab === "privacy" ? (
             <>
               <div>
                 <p className="font-mono text-[10px] text-[#2E7DFF] uppercase tracking-wider mb-2">{p.s1.heading}</p>
@@ -170,16 +148,6 @@ export default function LegalModal({ isOpen, onClose, tab: initialTab }: LegalMo
               </div>
             </>
           )}
-        </div>
-
-        {/* Modal Footer */}
-        <div className="px-6 py-4 border-t border-[#1F2937]/50 bg-[#0A0A0C] flex justify-end">
-          <button 
-            onClick={onClose}
-            className="px-5 py-2 rounded-lg bg-[#2E7DFF] hover:bg-[#2E7DFF]/85 text-white font-sans text-xs sm:text-sm font-semibold transition-all shadow-[0_0_15px_rgba(46,125,255,0.3)] cursor-pointer"
-          >
-            {t.legal.acknowledge}
-          </button>
         </div>
       </div>
     </div>

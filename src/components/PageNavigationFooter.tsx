@@ -112,6 +112,8 @@ const PAGE_DESCRIPTIONS: Record<PageId, Record<string, string>> = {
     ja: "TrustNodeをダウンロードしてベータアクセスを入手",
   },
   "not-found": {},
+  privacy: {},
+  terms: {},
 };
 
 interface PageNavigationFooterProps {

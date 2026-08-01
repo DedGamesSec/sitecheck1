@@ -59,6 +59,20 @@ export const PAGES_CONFIG: PageConfig[] = [
     showInHeader: true,
     showInFooterSitemap: true,
   },
+  {
+    id: "privacy",
+    labelKey: "privacy",
+    order: 8,
+    showInHeader: false,
+    showInFooterSitemap: false,
+  },
+  {
+    id: "terms",
+    labelKey: "terms",
+    order: 9,
+    showInHeader: false,
+    showInFooterSitemap: false,
+  },
 ];
 
 export const ORDERED_PAGES = [...PAGES_CONFIG].sort((a, b) => a.order - b.order);

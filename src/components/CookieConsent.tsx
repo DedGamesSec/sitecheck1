@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { ShieldCheck, ArrowRight, X } from "lucide-react";
 import { useTranslation } from "../i18n/LanguageContext";
+import { useNavigation } from "../navigation/NavigationContext";
 
-interface CookieConsentProps {
-  onOpenPrivacy: () => void;
-}
-
-export default function CookieConsent({ onOpenPrivacy }: CookieConsentProps) {
+export default function CookieConsent() {
   const { t } = useTranslation();
+  const { navigateTo } = useNavigation();
   const [isVisible, setIsVisible] = useState(false);
+
+  const openPrivacy = () => navigateTo("privacy");
 
   useEffect(() => {
     // Only technical/functional storage is used on this site (language,
@@ -62,7 +62,7 @@ export default function CookieConsent({ onOpenPrivacy }: CookieConsentProps) {
             <p className="font-sans text-xs text-gray-300 leading-relaxed">
               {t.cookie.text}{" "}
               <button 
-                onClick={onOpenPrivacy}
+                onClick={openPrivacy}
                 className="text-[#2E7DFF] hover:underline cursor-pointer inline-flex items-center font-semibold"
               >
                 {t.cookie.privacyLinkText}
@@ -75,7 +75,7 @@ export default function CookieConsent({ onOpenPrivacy }: CookieConsentProps) {
         {/* Banner Actions */}
         <div className="flex items-center justify-between gap-3 pt-2 border-t border-[#1F2937]/30">
           <button
-            onClick={onOpenPrivacy}
+            onClick={openPrivacy}
             className="font-mono text-[10px] text-gray-400 hover:text-white transition-colors cursor-pointer"
           >
             {t.cookie.audit}

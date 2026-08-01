@@ -31,7 +31,7 @@ import AppSecuritySection from "./components/AppSecuritySection";
 import KiraAssistantSection from "./components/KiraAssistantSection";
 import RealDevelopmentSection from "./components/RealDevelopmentSection";
 import OriginStorySection from "./components/OriginStorySection";
-import LegalModal from "./components/LegalModals";
+import LegalPage from "./components/LegalPage";
 import CookieConsent from "./components/CookieConsent";
 import Breadcrumbs from "./components/Breadcrumbs";
 import NotFoundPage from "./components/NotFoundPage";
@@ -51,8 +51,6 @@ export default function App() {
   const [windowHeight, setWindowHeight] = useState(0);
   const [activeMobileCard, setActiveMobileCard] = useState(0);
   const [userInteractedWithMobileCards, setUserInteractedWithMobileCards] = useState(false);
-  const [isLegalModalOpen, setIsLegalModalOpen] = useState(false);
-  const [legalModalTab, setLegalModalTab] = useState<"privacy" | "terms">("privacy");
   const [skyStatus, setSkyStatus] = useState<string>("");
 
   const mobileCards = t.mobileCards;
@@ -131,6 +129,8 @@ export default function App() {
         tech: "Безопасность и Технологии // TrustNode Protocol",
         about: "О проекте и команде // TrustNode Protocol",
         roadmap: "Карта разработки // TrustNode Protocol",
+        privacy: "Политика конфиденциальности // TrustNode Protocol",
+        terms: "Пользовательское соглашение // TrustNode Protocol",
       },
       en: {
         home: "TrustNode — On-Device Anti-Fraud & Spam Shield",
@@ -138,6 +138,8 @@ export default function App() {
         tech: "Security & Tech // TrustNode Protocol",
         about: "About Us & Team // TrustNode Protocol",
         roadmap: "Development Roadmap // TrustNode Protocol",
+        privacy: "Privacy Policy // TrustNode Protocol",
+        terms: "Terms of Service // TrustNode Protocol",
       },
       es: {
         home: "TrustNode — Escudo Contra el Fraude en el Dispositivo",
@@ -145,6 +147,8 @@ export default function App() {
         tech: "Seguridad y Tecnología // TrustNode Protocol",
         about: "Sobre Nosotros // TrustNode Protocol",
         roadmap: "Hoja de Ruta de Desarrollo // TrustNode Protocol",
+        privacy: "Política de Privacidad // TrustNode Protocol",
+        terms: "Términos de Uso // TrustNode Protocol",
       },
       zh: {
         home: "TrustNode — 移动端离线防诈骗安全盾",
@@ -152,6 +156,8 @@ export default function App() {
         tech: "安全与技术 // TrustNode Protocol",
         about: "关于我们与团队 // TrustNode Protocol",
         roadmap: "发展路线图 // TrustNode Protocol",
+        privacy: "隐私政策 // TrustNode Protocol",
+        terms: "用户协议 // TrustNode Protocol",
       },
       tr: {
         home: "TrustNode — Cihaz Üstü Dolandırıcılık Kalkanı",
@@ -159,6 +165,8 @@ export default function App() {
         tech: "Güvenlik ve Teknoloji // TrustNode Protocol",
         about: "Hakkımızda // TrustNode Protocol",
         roadmap: "Geliştirme Yol Haritası // TrustNode Protocol",
+        privacy: "Gizlilik Politikası // TrustNode Protocol",
+        terms: "Kullanıcı Sözleşmesi // TrustNode Protocol",
       },
       hi: {
         home: "TrustNode — ऑन-डिवाइस धोखाधड़ी सुरक्षा कवच",
@@ -166,6 +174,8 @@ export default function App() {
         tech: "सुरक्षा और तकनीक // TrustNode Protocol",
         about: "हमारे बारे में // TrustNode Protocol",
         roadmap: "विकास रोडमैप // TrustNode Protocol",
+        privacy: "गोपनीयता नीति // TrustNode Protocol",
+        terms: "उपयोग की शर्तें // TrustNode Protocol",
       },
       ar: {
         home: "TrustNode — درع مكافحة الاحتيال على الجهاز",
@@ -173,6 +183,8 @@ export default function App() {
         tech: "الأمان والتكنولوجيا // TrustNode Protocol",
         about: "من نحن والوصول // TrustNode Protocol",
         roadmap: "خارطة طريق التطوير // TrustNode Protocol",
+        privacy: "سياسة الخصوصية // TrustNode Protocol",
+        terms: "شروط الاستخدام // TrustNode Protocol",
       },
       pt: {
         home: "TrustNode — Escudo Anti-Fraude no Dispositivo",
@@ -180,6 +192,8 @@ export default function App() {
         tech: "Segurança e Tecnologia // TrustNode Protocol",
         about: "Sobre Nós // TrustNode Protocol",
         roadmap: "Roteiro de Desenvolvimento // TrustNode Protocol",
+        privacy: "Política de Privacidade // TrustNode Protocol",
+        terms: "Termos de Uso // TrustNode Protocol",
       },
       fr: {
         home: "TrustNode — Protection Anti-Fraude sur l'Appareil",
@@ -187,6 +201,8 @@ export default function App() {
         tech: "Sécurité & Technologie // TrustNode Protocol",
         about: "À Propos // TrustNode Protocol",
         roadmap: "Feuille de route de développement // TrustNode Protocol",
+        privacy: "Politique de confidentialité // TrustNode Protocol",
+        terms: "Conditions d'utilisation // TrustNode Protocol",
       },
       de: {
         home: "TrustNode — On-Device Anti-Betrugs-Schutzschild",
@@ -194,6 +210,8 @@ export default function App() {
         tech: "Sicherheit & Technologie // TrustNode Protocol",
         about: "Über Uns // TrustNode Protocol",
         roadmap: "Entwicklungs-Roadmap // TrustNode Protocol",
+        privacy: "Datenschutzerklärung // TrustNode Protocol",
+        terms: "Nutzungsbedingungen // TrustNode Protocol",
       },
       ja: {
         home: "TrustNode — オンデバイス特殊詐欺対策シールド",
@@ -201,6 +219,8 @@ export default function App() {
         tech: "セキュリティとテクノロジー // TrustNode Protocol",
         about: "私たちについて // TrustNode Protocol",
         roadmap: "開発ロードマップ // TrustNode Protocol",
+        privacy: "プライバシーポリシー // TrustNode Protocol",
+        terms: "利用規約 // TrustNode Protocol",
       }
     };
 
@@ -225,7 +245,9 @@ export default function App() {
         tech: "Технические подробности и замеры скорости работы TrustNode: локальные ONNX-модели с INT8-квантованием прямо на вашем процессоре.",
         about: "История создания TrustNode, наша миссия против мошеннических сетей и команда разработчиков систем ИБ.",
         "not-found": "Страница не найдена. Вернитесь в защищённый периметр TrustNode.",
-        roadmap: "Статус разработки TrustNode, политика безопасного раскрытия и фазы развертывания интеллектуальных модулей"
+        roadmap: "Статус разработки TrustNode, политика безопасного раскрытия и фазы развертывания интеллектуальных модулей",
+        privacy: "Политика конфиденциальности TrustNode: сайт не собирает, не обрабатывает и не хранит персональные данные пользователей.",
+        terms: "Пользовательское соглашение TrustNode: статус промо-ресурса, лицензии, интеллектуальная собственность и ответственность.",
       },
       en: {
         home: "TrustNode — the world's first fully offline AI-powered security shield protecting your Android device from calls/SMS scam, phish links, and leaks.",
@@ -233,7 +255,9 @@ export default function App() {
         tech: "Explore the technical stack: secure sandboxed execution, quantized INT8 local ONNX models, and real latency metrics.",
         about: "The story behind TrustNode, our battle against organized fraud networks, and our core open-source team.",
         "not-found": "Page not found. Return to the secure TrustNode perimeter.",
-        roadmap: "Current progress of TrustNode, responsible disclosure policy, and semantic core deployment timeline"
+        roadmap: "Current progress of TrustNode, responsible disclosure policy, and semantic core deployment timeline",
+        privacy: "TrustNode Privacy Policy: the website does not collect, process, or store users' personal data.",
+        terms: "TrustNode Terms of Service: site status, licenses, intellectual property, and liability.",
       },
       es: {
         home: "TrustNode — el primer escudo de seguridad impulsado por IA 100% offline que protege su dispositivo contra llamadas fraudulentas y spam.",
@@ -241,7 +265,9 @@ export default function App() {
         tech: "Detalles técnicos y métricas de latencia de TrustNode: modelos ONNX locales con cuantización INT8.",
         about: "La historia de TrustNode, nuestra lucha contra las redes delictivas organizadas y el equipo de desarrollo.",
         "not-found": "Página no encontrada. Regrese al perímetro seguro de TrustNode.",
-        roadmap: "Progreso actual de TrustNode, política de divulgación responsable y cronograma de despliegue del núcleo semántico"
+        roadmap: "Progreso actual de TrustNode, política de divulgación responsable y cronograma de despliegue del núcleo semántico",
+        privacy: "Política de privacidad de TrustNode: el sitio no recopila, procesa ni almacena datos personales de los usuarios.",
+        terms: "Términos de uso de TrustNode: estado del sitio, licencias, propiedad intelectual y responsabilidad.",
       },
       zh: {
         home: "TrustNode — 全球首款完全离线运行的 AI 移动安全防护盾，全面防御电话诈骗、垃圾短信和数据泄露。",
@@ -249,7 +275,9 @@ export default function App() {
         tech: "技术细节与性能表现：直接在移动处理器上运行的 INT8 量化本地 ONNX 引擎。",
         about: "TrustNode 的创立历程、我们与网络诈骗集团的对抗以及核心开源技术团队。",
         "not-found": "未找到页面，请返回 TrustNode 安全区域。",
-        roadmap: "TrustNode 的当前进展、负责任披露政策与语义核心部署时间表"
+        roadmap: "TrustNode 的当前进展、负责任披露政策与语义核心部署时间表",
+        privacy: "TrustNode 隐私政策：网站不收集、不处理、不存储用户的个人数据。",
+        terms: "TrustNode 用户协议：网站性质、许可、知识产权与责任。",
       },
       tr: {
         home: "TrustNode — Telefon dolandırıcılığı ve spama karşı %100 çevrimdışı çalışan yapay zeka destekli mobil güvenlik kalkanı.",
@@ -257,7 +285,9 @@ export default function App() {
         tech: "Teknik detaylar ve hız ölçümleri: Doğrudan cihazınızda çalışan INT8 nicemlemeli yerel ONNX modelleri.",
         about: "TrustNode'un kuruluş hikayesi, organize dolandırıcılık ağlarına karşı mücadelemiz ve geliştirici ekibimiz.",
         "not-found": "Sayfa bulunamadı. Güvenli TrustNode alanına geri dönün.",
-        roadmap: "TrustNode'un mevcut ilerlemesi, sorumlu açıklama politikası ve anlamsal çekirdek dağıtım zaman çizelgesi"
+        roadmap: "TrustNode'un mevcut ilerlemesi, sorumlu açıklama politikası ve anlamsal çekirdek dağıtım zaman çizelgesi",
+        privacy: "TrustNode Gizlilik Politikası: site kullanıcıların kişisel verilerini toplamaz, işlemez veya saklamaz.",
+        terms: "TrustNode Kullanıcı Sözleşmesi: kaynak durumu, lisanslar, fikri mülkiyet ve sorumluluk.",
       },
       hi: {
         home: "TrustNode — दुनिया का पहला पूरी तरह से ऑफलाइन AI-संचालित मोबाइल सुरक्षा कवच जो आपको स्पैम और धोखाधड़ी से बचाता है।",
@@ -265,7 +295,9 @@ export default function App() {
         tech: "तकनीकी विवरण और गति माप: सीधे आपके प्रोसेसर पर चलने वाले INT8 स्थानीय ONNX मॉडल।",
         about: "TrustNode की कहानी, संगठित धोखाधड़ी नेटवर्क के खिलाफ हमारी लड़ाई और हमारी टीम।",
         "not-found": "पृष्ठ नहीं मिला। सुरक्षित TrustNode सीमा पर लौटें।",
-        roadmap: "TrustNode की वर्तमान प्रगति, जिम्मेदार प्रकटीकरण नीति और सिमेंटिक कोर परिनियोजन समयरेखा"
+        roadmap: "TrustNode की वर्तमान प्रगति, जिम्मेदार प्रकटीकरण नीति और सिमेंटिक कोर परिनियोजन समयरेखा",
+        privacy: "TrustNode गोपनीयता नीति: वेबसाइट उपयोगकर्ताओं का व्यक्तिगत डेटा एकत्र, प्रोसेस या संग्रहीत नहीं करती।",
+        terms: "TrustNode उपयोग की शर्तें: साइट स्थिति, लाइसेंस, बौद्धिक संपदा और दायित्व।",
       },
       ar: {
         home: "TrustNode — أول درع أمني بالذكاء الاصطناعي يعمل محلياً 100% لحماية هاتفك من المكالمات الاحتيالية والرسائل المزعجة.",
@@ -273,7 +305,9 @@ export default function App() {
         tech: "التفاصيل التقنية ومقاييس الأداء: نماذج ONNX المحلية بدقة INT8 تعمل مباشرة على معالج هاتفك.",
         about: "قصة إنشاء TrustNode ومهمتنا ضد شبكات الاحتيال المنظمة وفريق المطورين.",
         "not-found": "الصفحة غير موجودة. عد إلى محيط TrustNode الآمن.",
-        roadmap: "التقدم الحالي لـ TrustNode، سياسة الكشف المسؤول، والجدول الزمني لتطوير النواة الدلالية"
+        roadmap: "التقدم الحالي لـ TrustNode، سياسة الكشف المسؤول، والجدول الزمني لتطوير النواة الدلالية",
+        privacy: "سياسة خصوصية TrustNode: الموقع لا يجمع بيانات المستخدمين الشخصية ولا يعالجها ولا يخزنها.",
+        terms: "شروط استخدام TrustNode: وضع الموقع والتراخيص والملكية الفكرية والمسؤولية.",
       },
       pt: {
         home: "TrustNode — o primeiro escudo de segurança 100% offline com IA para proteger seu celular contra fraudes e spam.",
@@ -281,7 +315,9 @@ export default function App() {
         tech: "Detalhes técnicos e métricas de velocidade: modelos ONNX locais INT8 rodando diretamente no processador.",
         about: "A história do TrustNode, nossa luta contra redes de fraude organizadas e nossa equipe de engenharia.",
         "not-found": "Página não encontrada. Retorne ao perímetro seguro do TrustNode.",
-        roadmap: "Progresso atual do TrustNode, política de divulgação responsável e cronograma de implantação do núcleo semântico"
+        roadmap: "Progresso atual do TrustNode, política de divulgação responsável e cronograma de implantação do núcleo semântico",
+        privacy: "Política de Privacidade da TrustNode: o site não coleta, processa nem armazena dados pessoais dos usuários.",
+        terms: "Termos de Uso da TrustNode: status do site, licenças, propriedade intelectual e responsabilidade.",
       },
       fr: {
         home: "TrustNode — le premier bouclier de sécurité mobile 100% hors ligne propulsé par l'IA contre les fraudes et le spam.",
@@ -289,7 +325,9 @@ export default function App() {
         tech: "Détails techniques et performances : modèles ONNX locaux quantifiés en INT8 fonctionnant sur votre processeur.",
         about: "L'histoire de TrustNode, notre combat contre les réseaux de fraude organisés et notre équipe d'ingénieurs.",
         "not-found": "Page introuvable. Retournez dans le périmètre sécurisé TrustNode.",
-        roadmap: "Progrès actuels de TrustNode, politique de divulgation responsable et calendrier de déploiement du noyau sémantique"
+        roadmap: "Progrès actuels de TrustNode, politique de divulgation responsable et calendrier de déploiement du noyau sémantique",
+        privacy: "Politique de confidentialité de TrustNode : le site ne collecte, ne traite et ne stocke pas les données personnelles des utilisateurs.",
+        terms: "Conditions d'utilisation de TrustNode : statut du site, licences, propriété intellectuelle et responsabilité.",
       },
       de: {
         home: "TrustNode — der weltweit erste vollständig offline funktionierende KI-Schutzschild gegen Telefonbetrug und Spam.",
@@ -297,7 +335,9 @@ export default function App() {
         tech: "Technische Details und Latenzmetriken: INT8-quantisierte lokale ONNX-Modelle direkt auf Ihrem Prozessor.",
         about: "Die Geschichte von TrustNode, unser Kampf gegen organisierte Betrugsnetzwerke und unser Kernteam.",
         "not-found": "Seite nicht gefunden. Kehren Sie zum sicheren TrustNode-Bereich zurück.",
-        roadmap: "Aktueller Fortschritt von TrustNode, Richtlinie zur verantwortungsvollen Offenlegung und Zeitplan für die Bereitstellung des semantischen Kerns"
+        roadmap: "Aktueller Fortschritt von TrustNode, Richtlinie zur verantwortungsvollen Offenlegung und Zeitplan für die Bereitstellung des semantischen Kerns",
+        privacy: "Datenschutzerklärung von TrustNode: Die Website erhebt, verarbeitet und speichert keine personenbezogenen Daten der Nutzer.",
+        terms: "Nutzungsbedingungen von TrustNode: Website-Status, Lizenzen, geistiges Eigentum und Haftung.",
       },
       ja: {
         home: "TrustNode — 世界初の完全オフライン動作AI搭載モバイルセキュリティシールド。特殊詐欺やスパム通話を防ぎます。",
@@ -305,7 +345,9 @@ export default function App() {
         tech: "技術仕様と遅延メトリクス：プロセッサ上で直接動作するINT8量子化ローカルONNXモデル。",
         about: "TrustNode誕生のストーリー、組織的詐欺ネットワークとの戦い、そして開発チームのご紹介。",
         "not-found": "ページが見つかりません。安全なTrustNodeエリアへお戻りください。",
-        roadmap: "TrustNode の現在の進捗状況、責任ある開示ポリシー、セマンティックコア展開のタイムライン"
+        roadmap: "TrustNode の現在の進捗状況、責任ある開示ポリシー、セマンティックコア展開のタイムライン",
+        privacy: "TrustNode プライバシーポリシー：当サイトはユーザーの個人データを収集・処理・保存しません。",
+        terms: "TrustNode 利用規約：サイトの位置付け、ライセンス、知的財産、および責任。",
       }
     };
 
@@ -614,16 +656,7 @@ export default function App() {
                 <TrustSection />
                 <LiveSimulatorSection />
                 <ExplorePagesSection />
-                <Footer 
-                  onOpenPrivacy={() => {
-                    setLegalModalTab("privacy");
-                    setIsLegalModalOpen(true);
-                  }}
-                  onOpenTerms={() => {
-                    setLegalModalTab("terms");
-                    setIsLegalModalOpen(true);
-                  }}
-                />
+                <Footer />
               </div>
             </motion.div>
           )}
@@ -643,16 +676,7 @@ export default function App() {
                 <KiraAssistantSection />
               </div>
               <PageNavigationFooter currentPage={activePage} />
-              <Footer 
-                onOpenPrivacy={() => {
-                  setLegalModalTab("privacy");
-                  setIsLegalModalOpen(true);
-                }}
-                onOpenTerms={() => {
-                  setLegalModalTab("terms");
-                  setIsLegalModalOpen(true);
-                }}
-              />
+              <Footer />
             </motion.div>
           )}
 
@@ -671,16 +695,7 @@ export default function App() {
                 <RealDevelopmentSection onlyRoadmap={false} />
               </div>
               <PageNavigationFooter currentPage={activePage} />
-              <Footer 
-                onOpenPrivacy={() => {
-                  setLegalModalTab("privacy");
-                  setIsLegalModalOpen(true);
-                }}
-                onOpenTerms={() => {
-                  setLegalModalTab("terms");
-                  setIsLegalModalOpen(true);
-                }}
-              />
+              <Footer />
             </motion.div>
           )}
 
@@ -698,16 +713,7 @@ export default function App() {
                 <RealDevelopmentSection onlyRoadmap={true} />
               </div>
               <PageNavigationFooter currentPage={activePage} />
-              <Footer 
-                onOpenPrivacy={() => {
-                  setLegalModalTab("privacy");
-                  setIsLegalModalOpen(true);
-                }}
-                onOpenTerms={() => {
-                  setLegalModalTab("terms");
-                  setIsLegalModalOpen(true);
-                }}
-              />
+              <Footer />
             </motion.div>
           )}
 
@@ -725,16 +731,7 @@ export default function App() {
                 <OriginStorySection />
               </div>
               <PageNavigationFooter currentPage={activePage} />
-              <Footer 
-                onOpenPrivacy={() => {
-                  setLegalModalTab("privacy");
-                  setIsLegalModalOpen(true);
-                }}
-                onOpenTerms={() => {
-                  setLegalModalTab("terms");
-                  setIsLegalModalOpen(true);
-                }}
-              />
+              <Footer />
             </motion.div>
           )}
           {activePage === "download" && (
@@ -751,16 +748,7 @@ export default function App() {
                 <EarlyAccessPage />
               </div>
               <PageNavigationFooter currentPage={activePage} />
-              <Footer 
-                onOpenPrivacy={() => {
-                  setLegalModalTab("privacy");
-                  setIsLegalModalOpen(true);
-                }}
-                onOpenTerms={() => {
-                  setLegalModalTab("terms");
-                  setIsLegalModalOpen(true);
-                }}
-              />
+              <Footer />
             </motion.div>
           )}
 
@@ -778,16 +766,7 @@ export default function App() {
                 <ComparisonSection />
               </div>
               <PageNavigationFooter currentPage={activePage} />
-              <Footer 
-                onOpenPrivacy={() => {
-                  setLegalModalTab("privacy");
-                  setIsLegalModalOpen(true);
-                }}
-                onOpenTerms={() => {
-                  setLegalModalTab("terms");
-                  setIsLegalModalOpen(true);
-                }}
-              />
+              <Footer />
             </motion.div>
           )}
 
@@ -804,34 +783,44 @@ export default function App() {
               <div className="flex-1 flex flex-col bg-[#0A0A0B]/90 backdrop-blur-sm">
                 <NotFoundPage />
               </div>
-              <Footer 
-                onOpenPrivacy={() => {
-                  setLegalModalTab("privacy");
-                  setIsLegalModalOpen(true);
-                }}
-                onOpenTerms={() => {
-                  setLegalModalTab("terms");
-                  setIsLegalModalOpen(true);
-                }}
-              />
+              <Footer />
+            </motion.div>
+          )}
+
+          {activePage === "privacy" && (
+            <motion.div
+              key="privacy-page"
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -15 }}
+              transition={{ duration: 0.35, ease: "easeOut" }}
+              className="w-full min-h-[100vh] flex flex-col justify-between"
+            >
+              <Breadcrumbs currentPage={activePage} />
+              <LegalPage tab="privacy" />
+              <Footer />
+            </motion.div>
+          )}
+
+          {activePage === "terms" && (
+            <motion.div
+              key="terms-page"
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -15 }}
+              transition={{ duration: 0.35, ease: "easeOut" }}
+              className="w-full min-h-[100vh] flex flex-col justify-between"
+            >
+              <Breadcrumbs currentPage={activePage} />
+              <LegalPage tab="terms" />
+              <Footer />
             </motion.div>
           )}
         </AnimatePresence>
       </div>
 
       {/* Legal documents and FZ-152 Cookie Consent modules */}
-      <CookieConsent 
-        onOpenPrivacy={() => {
-          setLegalModalTab("privacy");
-          setIsLegalModalOpen(true);
-        }}
-      />
-
-      <LegalModal 
-        isOpen={isLegalModalOpen} 
-        onClose={() => setIsLegalModalOpen(false)} 
-        tab={legalModalTab} 
-      />
+      <CookieConsent />
 
     </div>
   );

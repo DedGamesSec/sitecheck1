@@ -12,13 +12,7 @@ const SiVkIcon = SiVk as React.ComponentType<any>;
 const SiTiktokIcon = SiTiktok as React.ComponentType<any>;
 const SiGithubIcon = SiGithub as React.ComponentType<any>;
 
-// Verified signature for use in App.tsx
-interface FooterProps {
-  onOpenPrivacy: () => void;
-  onOpenTerms: () => void;
-}
-
-const Footer = React.memo(function Footer({ onOpenPrivacy, onOpenTerms }: FooterProps) {
+const Footer = React.memo(function Footer() {
   const { t, language } = useTranslation();
   const { navigateTo } = useNavigation();
   const currentYear = new Date().getFullYear();
@@ -138,14 +132,14 @@ const Footer = React.memo(function Footer({ onOpenPrivacy, onOpenTerms }: Footer
           </p>
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 mt-1.5 max-w-full">
             <button 
-              onClick={onOpenPrivacy} 
+              onClick={() => navigateTo("privacy")} 
               className="font-sans text-xs sm:text-sm text-gray-400 hover:text-[#2E7DFF] hover:underline cursor-pointer transition-colors break-words text-center md:text-left"
             >
               {t.footer.privacyLink}
             </button>
             <span className="text-gray-700 text-xs hidden sm:inline select-none">|</span>
             <button 
-              onClick={onOpenTerms} 
+              onClick={() => navigateTo("terms")} 
               className="font-sans text-xs sm:text-sm text-gray-400 hover:text-[#2E7DFF] hover:underline cursor-pointer transition-colors break-words text-center md:text-left"
             >
               {t.footer.termsLink}

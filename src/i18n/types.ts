@@ -65,6 +65,8 @@ export interface PageNames {
   "comparison": string;
   "not-found": string;
   roadmap?: string;
+  privacy?: string;
+  terms?: string;
 }
 
 export interface Translations {
